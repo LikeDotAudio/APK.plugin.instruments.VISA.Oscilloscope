@@ -1944,7 +1944,7 @@
         },
         "returns": {
           "count": 1,
-          "type": "NR2"
+          "type": "ERROR"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Error",
@@ -1971,7 +1971,7 @@
         },
         "returns": {
           "count": 1,
-          "type": "NR2"
+          "type": "ERROR"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Oscilloscope/Read_Error",
@@ -11310,7 +11310,7 @@
         },
         "returns": {
           "count": 1,
-          "type": "NR2"
+          "type": "ERROR"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Error",
@@ -11337,7 +11337,7 @@
         },
         "returns": {
           "count": 1,
-          "type": "NR2"
+          "type": "ERROR"
         },
         "mqtt": {
           "topic": "APK.audio/Gui/Komands/Oscilloscope/Read_Error",

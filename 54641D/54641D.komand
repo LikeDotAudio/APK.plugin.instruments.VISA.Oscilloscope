@@ -4306,7 +4306,7 @@
       "description": "Get Error",
       "returns": {
         "count": 1,
-        "type": "NR2"
+        "type": "ERROR"
       },
       "group": "System Utilities",
       "subsystem": "SYSTem"
@@ -4317,7 +4317,7 @@
       "description": "Read Error",
       "returns": {
         "count": 1,
-        "type": "NR2"
+        "type": "ERROR"
       },
       "group": "Errors and ID",
       "subsystem": "System",
