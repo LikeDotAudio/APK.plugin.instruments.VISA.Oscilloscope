@@ -17,7 +17,7 @@ The **Oscilloscope** instruments of the APK.audio bench, as one thing: 33 models
 | Model | Maker | What | Commands | Table | API |
 |---|---|---|---:|:---:|---|
 | [54622D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54622D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 100MHz) | 452 |  | :15200 |
-| [54641D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54641D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 350MHz) | 452 | ✅ | :15201 |
+| [54641D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54641D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 350MHz) | 458 | ✅ | :15201 |
 | [DHO804](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DHO804.md) | Rigol | 70 MHz 4 Ch (12-bit High Res) | 452 |  | :15202 |
 | [DS1054Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1054Z.md) | Rigol | 50 MHz 4 Ch (The 'Hobbyist Standard') | 452 |  | :15203 |
 | [DS1074Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1074Z.md) | Rigol | 70 MHz 4 Ch | 452 |  | :15204 |

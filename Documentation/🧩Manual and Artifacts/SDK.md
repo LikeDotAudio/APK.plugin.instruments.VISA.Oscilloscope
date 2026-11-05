@@ -15,7 +15,7 @@ Every Oscilloscope model this library drives, and how to drive it. Each model an
 | Model | Maker | get | set | nab | rig | do | Port |
 |---|---|---:|---:|---:|---:|---:|---:|
 | [54622D](SDK/54622D.md) | HP / Agilent / Keysight | 157 | 174 | 171 | 1 | 106 | 15200 |
-| [54641D](SDK/54641D.md) | HP / Agilent / Keysight | 157 | 174 | 171 | 1 | 106 | 15201 |
+| [54641D](SDK/54641D.md) | HP / Agilent / Keysight | 157 | 174 | 177 | 1 | 106 | 15201 |
 | [DHO804](SDK/DHO804.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15202 |
 | [DS1054Z](SDK/DS1054Z.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15203 |
 | [DS1074Z](SDK/DS1074Z.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15204 |

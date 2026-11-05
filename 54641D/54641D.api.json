@@ -80,10 +80,10 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 452,
+    "total_commands": 458,
     "get_count": 157,
     "set_count": 174,
-    "nab_count": 171,
+    "nab_count": 177,
     "rig_count": 1,
     "do_count": 106
   },
@@ -13816,6 +13816,580 @@
           "reading_direction": "out"
         },
         "unverified": true
+      },
+      "GRAB": {
+        "command": "GRAB",
+        "verb": "nab",
+        "description": "GRAB \u2014 all 79 queries this model answered alone on the bench, stacked; the answers come back `;`-separated in the order of grab.commands",
+        "scpi": "*ESE?;*SRE?;*STB?;:ACQ:COMP?;:ACQ:COUN?;:ACQ:MODE?;:ACQ:POIN?;:ACQ:SRAT?;:CHAN1:COUP?;:CHAN1:RANG?;:DISP:LAB?;:DISP:PERS?;:DISP:SOUR?;:DISP:VECT?;:EXT:BWL?;:EXT:IMP?;:EXT:PROB?;:EXT:PROT?;:EXT:RANG?;:EXT:UNIT?;:FUNC:CENT?;:FUNC:DISP?;:FUNC:OFFS?;:FUNC:OPER?;:FUNC:RANG?;:FUNC:REF?;:FUNC:SOUR?;:FUNC:SPAN?;:FUNC:WIND?;:HARD:FACT?;:HARD:FFE?;:HARD:FORM?;:MARK:MODE?;:SYST:DATE?;:SYST:LOCK?;:SYST:TIME?;:TIM:MODE?;:TIM:POS?;:TIM:RANG?;:TIM:REF?;:TIM:WIND:POS?;:TIM:WIND:RANG?;:TRIG:CAN:ACKN?;:TRIG:CAN:PATT:ID:MODE?;:TRIG:CAN:PATT:ID?;:TRIG:CAN:SAMP?;:TRIG:CAN:SIGN:BAUD?;:TRIG:CAN:SOUR?;:TRIG:CAN:TRIG?;:TRIG:COUP?;:TRIG:DUR:GRE?;:TRIG:DUR:LESS?;:TRIG:DUR:PATT?;:TRIG:DUR:QUAL?;:TRIG:DUR:RANG?;:TRIG:EDGE:LEV?;:TRIG:EDGE:SLOP?;:TRIG:EDGE:SOUR?;:TRIG:GLIT:GRE?;:TRIG:GLIT:LESS?;:TRIG:GLIT:LEV?;:TRIG:GLIT:POL?;:TRIG:GLIT:QUAL?;:TRIG:GLIT:RANG?;:TRIG:GLIT:SOUR?;:TRIG:HFR?;:TRIG:HOLD?;:TRIG:IIC:PATT:ADDR?;:TRIG:IIC:TRIG:QUAL?;:TRIG:LIN:SOUR?;:TRIG:LIN:TRIG?;:TRIG:MODE?;:TRIG:NREJ?;:TRIG:PATT?;:TRIG:REJ?;:TRIG:SEQ:COUN?;:TRIG:SEQ:FIND?;*IDN?;*OPT?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 79,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "commands": [
+            "Get_Ese",
+            "Get_Sre",
+            "Get_Stb",
+            "Get_Acquire_Complete",
+            "Get_Acquire_Count",
+            "Get_Acquire_Mode",
+            "Get_Acquire_Points",
+            "Get_Sample_Rate",
+            "Get_Channel_Coupling",
+            "Get_Channel_Range",
+            "Get_Display_Label",
+            "Get_Display_Persistence",
+            "Get_Display_Source",
+            "Get_Display_Vectors",
+            "Get_External_Bwlimit",
+            "Get_External_Impedance",
+            "Get_External_Probe",
+            "Get_External_Protection",
+            "Get_External_Range",
+            "Get_External_Units",
+            "Get_Function_Center",
+            "Get_Function_Display",
+            "Get_Function_Offset",
+            "Get_Function_Operation",
+            "Get_Function_Range",
+            "Get_Function_Reference",
+            "Get_Function_Source",
+            "Get_Function_Span",
+            "Get_Function_Window",
+            "Get_Hardcopy_Factors",
+            "Get_Hardcopy_Ffeed",
+            "Get_Hardcopy_Format",
+            "Get_Marker_Mode",
+            "Get_System_Date",
+            "Get_System_Lock",
+            "Get_System_Time",
+            "Get_Timebase_Mode",
+            "Get_Timebase_Position",
+            "Get_Timebase_Range",
+            "Get_Timebase_Reference",
+            "Get_Timebase_Window_Position",
+            "Get_Timebase_Window_Range",
+            "Get_Trigger_Can_Acknowledge",
+            "Get_Trigger_Can_Pattern_Id_Mode",
+            "Get_Trigger_Can_Pattern_Id",
+            "Get_Trigger_Can_Samplepoint",
+            "Get_Trigger_Can_Signal_Baudrate",
+            "Get_Trigger_Can_Source",
+            "Get_Trigger_Can_Trigger",
+            "Get_Trigger_Coupling",
+            "Get_Trigger_Duration_Greaterthan",
+            "Get_Trigger_Duration_Lessthan",
+            "Get_Trigger_Duration_Pattern",
+            "Get_Trigger_Duration_Qualifier",
+            "Get_Trigger_Duration_Range",
+            "Get_Trigger_Edge_Level",
+            "Get_Trigger_Edge_Slope",
+            "Get_Trigger_Edge_Source",
+            "Get_Trigger_Glitch_Greaterthan",
+            "Get_Trigger_Glitch_Lessthan",
+            "Get_Trigger_Glitch_Level",
+            "Get_Trigger_Glitch_Polarity",
+            "Get_Trigger_Glitch_Qualifier",
+            "Get_Trigger_Glitch_Range",
+            "Get_Trigger_Glitch_Source",
+            "Get_Trigger_Hfreject",
+            "Get_Trigger_Holdoff",
+            "Get_Trigger_Iic_Pattern_Address",
+            "Get_Trigger_Iic_Trigger_Qualifier",
+            "Get_Trigger_Lin_Source",
+            "Get_Trigger_Lin_Trigger",
+            "Get_Trigger_Mode",
+            "Get_Trigger_Nreject",
+            "Get_Trigger_Pattern",
+            "Get_Trigger_Reject",
+            "Get_Trigger_Sequence_Count",
+            "Get_Trigger_Sequence_Find",
+            "Read_IDN",
+            "Get_Opt"
+          ],
+          "queries": [
+            "*ESE?",
+            "*SRE?",
+            "*STB?",
+            ":ACQ:COMP?",
+            ":ACQ:COUN?",
+            ":ACQ:MODE?",
+            ":ACQ:POIN?",
+            ":ACQ:SRAT?",
+            ":CHAN1:COUP?",
+            ":CHAN1:RANG?",
+            ":DISP:LAB?",
+            ":DISP:PERS?",
+            ":DISP:SOUR?",
+            ":DISP:VECT?",
+            ":EXT:BWL?",
+            ":EXT:IMP?",
+            ":EXT:PROB?",
+            ":EXT:PROT?",
+            ":EXT:RANG?",
+            ":EXT:UNIT?",
+            ":FUNC:CENT?",
+            ":FUNC:DISP?",
+            ":FUNC:OFFS?",
+            ":FUNC:OPER?",
+            ":FUNC:RANG?",
+            ":FUNC:REF?",
+            ":FUNC:SOUR?",
+            ":FUNC:SPAN?",
+            ":FUNC:WIND?",
+            ":HARD:FACT?",
+            ":HARD:FFE?",
+            ":HARD:FORM?",
+            ":MARK:MODE?",
+            ":SYST:DATE?",
+            ":SYST:LOCK?",
+            ":SYST:TIME?",
+            ":TIM:MODE?",
+            ":TIM:POS?",
+            ":TIM:RANG?",
+            ":TIM:REF?",
+            ":TIM:WIND:POS?",
+            ":TIM:WIND:RANG?",
+            ":TRIG:CAN:ACKN?",
+            ":TRIG:CAN:PATT:ID:MODE?",
+            ":TRIG:CAN:PATT:ID?",
+            ":TRIG:CAN:SAMP?",
+            ":TRIG:CAN:SIGN:BAUD?",
+            ":TRIG:CAN:SOUR?",
+            ":TRIG:CAN:TRIG?",
+            ":TRIG:COUP?",
+            ":TRIG:DUR:GRE?",
+            ":TRIG:DUR:LESS?",
+            ":TRIG:DUR:PATT?",
+            ":TRIG:DUR:QUAL?",
+            ":TRIG:DUR:RANG?",
+            ":TRIG:EDGE:LEV?",
+            ":TRIG:EDGE:SLOP?",
+            ":TRIG:EDGE:SOUR?",
+            ":TRIG:GLIT:GRE?",
+            ":TRIG:GLIT:LESS?",
+            ":TRIG:GLIT:LEV?",
+            ":TRIG:GLIT:POL?",
+            ":TRIG:GLIT:QUAL?",
+            ":TRIG:GLIT:RANG?",
+            ":TRIG:GLIT:SOUR?",
+            ":TRIG:HFR?",
+            ":TRIG:HOLD?",
+            ":TRIG:IIC:PATT:ADDR?",
+            ":TRIG:IIC:TRIG:QUAL?",
+            ":TRIG:LIN:SOUR?",
+            ":TRIG:LIN:TRIG?",
+            ":TRIG:MODE?",
+            ":TRIG:NREJ?",
+            ":TRIG:PATT?",
+            ":TRIG:REJ?",
+            ":TRIG:SEQ:COUN?",
+            ":TRIG:SEQ:FIND?",
+            "*IDN?",
+            "*OPT?"
+          ],
+          "chunks": [
+            "GRAB_1",
+            "GRAB_2",
+            "GRAB_3",
+            "GRAB_4",
+            "GRAB_5"
+          ],
+          "max_command_bytes": 240,
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
+      },
+      "GRAB_1": {
+        "command": "GRAB_1",
+        "verb": "nab",
+        "description": "GRAB part 1 of 5 \u2014 22 of the qualified queries",
+        "scpi": "*ESE?;*SRE?;*STB?;:ACQ:COMP?;:ACQ:COUN?;:ACQ:MODE?;:ACQ:POIN?;:ACQ:SRAT?;:CHAN1:COUP?;:CHAN1:RANG?;:DISP:LAB?;:DISP:PERS?;:DISP:SOUR?;:DISP:VECT?;:EXT:BWL?;:EXT:IMP?;:EXT:PROB?;:EXT:PROT?;:EXT:RANG?;:EXT:UNIT?;:FUNC:CENT?;:FUNC:DISP?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 22,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB_1",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB_1"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB_1",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "part": 1,
+          "of": 5,
+          "commands": [
+            "Get_Ese",
+            "Get_Sre",
+            "Get_Stb",
+            "Get_Acquire_Complete",
+            "Get_Acquire_Count",
+            "Get_Acquire_Mode",
+            "Get_Acquire_Points",
+            "Get_Sample_Rate",
+            "Get_Channel_Coupling",
+            "Get_Channel_Range",
+            "Get_Display_Label",
+            "Get_Display_Persistence",
+            "Get_Display_Source",
+            "Get_Display_Vectors",
+            "Get_External_Bwlimit",
+            "Get_External_Impedance",
+            "Get_External_Probe",
+            "Get_External_Protection",
+            "Get_External_Range",
+            "Get_External_Units",
+            "Get_Function_Center",
+            "Get_Function_Display"
+          ],
+          "queries": [
+            "*ESE?",
+            "*SRE?",
+            "*STB?",
+            ":ACQ:COMP?",
+            ":ACQ:COUN?",
+            ":ACQ:MODE?",
+            ":ACQ:POIN?",
+            ":ACQ:SRAT?",
+            ":CHAN1:COUP?",
+            ":CHAN1:RANG?",
+            ":DISP:LAB?",
+            ":DISP:PERS?",
+            ":DISP:SOUR?",
+            ":DISP:VECT?",
+            ":EXT:BWL?",
+            ":EXT:IMP?",
+            ":EXT:PROB?",
+            ":EXT:PROT?",
+            ":EXT:RANG?",
+            ":EXT:UNIT?",
+            ":FUNC:CENT?",
+            ":FUNC:DISP?"
+          ],
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
+      },
+      "GRAB_2": {
+        "command": "GRAB_2",
+        "verb": "nab",
+        "description": "GRAB part 2 of 5 \u2014 20 of the qualified queries",
+        "scpi": ":FUNC:OFFS?;:FUNC:OPER?;:FUNC:RANG?;:FUNC:REF?;:FUNC:SOUR?;:FUNC:SPAN?;:FUNC:WIND?;:HARD:FACT?;:HARD:FFE?;:HARD:FORM?;:MARK:MODE?;:SYST:DATE?;:SYST:LOCK?;:SYST:TIME?;:TIM:MODE?;:TIM:POS?;:TIM:RANG?;:TIM:REF?;:TIM:WIND:POS?;:TIM:WIND:RANG?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 20,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB_2",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB_2"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB_2",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "part": 2,
+          "of": 5,
+          "commands": [
+            "Get_Function_Offset",
+            "Get_Function_Operation",
+            "Get_Function_Range",
+            "Get_Function_Reference",
+            "Get_Function_Source",
+            "Get_Function_Span",
+            "Get_Function_Window",
+            "Get_Hardcopy_Factors",
+            "Get_Hardcopy_Ffeed",
+            "Get_Hardcopy_Format",
+            "Get_Marker_Mode",
+            "Get_System_Date",
+            "Get_System_Lock",
+            "Get_System_Time",
+            "Get_Timebase_Mode",
+            "Get_Timebase_Position",
+            "Get_Timebase_Range",
+            "Get_Timebase_Reference",
+            "Get_Timebase_Window_Position",
+            "Get_Timebase_Window_Range"
+          ],
+          "queries": [
+            ":FUNC:OFFS?",
+            ":FUNC:OPER?",
+            ":FUNC:RANG?",
+            ":FUNC:REF?",
+            ":FUNC:SOUR?",
+            ":FUNC:SPAN?",
+            ":FUNC:WIND?",
+            ":HARD:FACT?",
+            ":HARD:FFE?",
+            ":HARD:FORM?",
+            ":MARK:MODE?",
+            ":SYST:DATE?",
+            ":SYST:LOCK?",
+            ":SYST:TIME?",
+            ":TIM:MODE?",
+            ":TIM:POS?",
+            ":TIM:RANG?",
+            ":TIM:REF?",
+            ":TIM:WIND:POS?",
+            ":TIM:WIND:RANG?"
+          ],
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
+      },
+      "GRAB_3": {
+        "command": "GRAB_3",
+        "verb": "nab",
+        "description": "GRAB part 3 of 5 \u2014 14 of the qualified queries",
+        "scpi": ":TRIG:CAN:ACKN?;:TRIG:CAN:PATT:ID:MODE?;:TRIG:CAN:PATT:ID?;:TRIG:CAN:SAMP?;:TRIG:CAN:SIGN:BAUD?;:TRIG:CAN:SOUR?;:TRIG:CAN:TRIG?;:TRIG:COUP?;:TRIG:DUR:GRE?;:TRIG:DUR:LESS?;:TRIG:DUR:PATT?;:TRIG:DUR:QUAL?;:TRIG:DUR:RANG?;:TRIG:EDGE:LEV?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 14,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB_3",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB_3"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB_3",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "part": 3,
+          "of": 5,
+          "commands": [
+            "Get_Trigger_Can_Acknowledge",
+            "Get_Trigger_Can_Pattern_Id_Mode",
+            "Get_Trigger_Can_Pattern_Id",
+            "Get_Trigger_Can_Samplepoint",
+            "Get_Trigger_Can_Signal_Baudrate",
+            "Get_Trigger_Can_Source",
+            "Get_Trigger_Can_Trigger",
+            "Get_Trigger_Coupling",
+            "Get_Trigger_Duration_Greaterthan",
+            "Get_Trigger_Duration_Lessthan",
+            "Get_Trigger_Duration_Pattern",
+            "Get_Trigger_Duration_Qualifier",
+            "Get_Trigger_Duration_Range",
+            "Get_Trigger_Edge_Level"
+          ],
+          "queries": [
+            ":TRIG:CAN:ACKN?",
+            ":TRIG:CAN:PATT:ID:MODE?",
+            ":TRIG:CAN:PATT:ID?",
+            ":TRIG:CAN:SAMP?",
+            ":TRIG:CAN:SIGN:BAUD?",
+            ":TRIG:CAN:SOUR?",
+            ":TRIG:CAN:TRIG?",
+            ":TRIG:COUP?",
+            ":TRIG:DUR:GRE?",
+            ":TRIG:DUR:LESS?",
+            ":TRIG:DUR:PATT?",
+            ":TRIG:DUR:QUAL?",
+            ":TRIG:DUR:RANG?",
+            ":TRIG:EDGE:LEV?"
+          ],
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
+      },
+      "GRAB_4": {
+        "command": "GRAB_4",
+        "verb": "nab",
+        "description": "GRAB part 4 of 5 \u2014 14 of the qualified queries",
+        "scpi": ":TRIG:EDGE:SLOP?;:TRIG:EDGE:SOUR?;:TRIG:GLIT:GRE?;:TRIG:GLIT:LESS?;:TRIG:GLIT:LEV?;:TRIG:GLIT:POL?;:TRIG:GLIT:QUAL?;:TRIG:GLIT:RANG?;:TRIG:GLIT:SOUR?;:TRIG:HFR?;:TRIG:HOLD?;:TRIG:IIC:PATT:ADDR?;:TRIG:IIC:TRIG:QUAL?;:TRIG:LIN:SOUR?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 14,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB_4",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB_4"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB_4",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "part": 4,
+          "of": 5,
+          "commands": [
+            "Get_Trigger_Edge_Slope",
+            "Get_Trigger_Edge_Source",
+            "Get_Trigger_Glitch_Greaterthan",
+            "Get_Trigger_Glitch_Lessthan",
+            "Get_Trigger_Glitch_Level",
+            "Get_Trigger_Glitch_Polarity",
+            "Get_Trigger_Glitch_Qualifier",
+            "Get_Trigger_Glitch_Range",
+            "Get_Trigger_Glitch_Source",
+            "Get_Trigger_Hfreject",
+            "Get_Trigger_Holdoff",
+            "Get_Trigger_Iic_Pattern_Address",
+            "Get_Trigger_Iic_Trigger_Qualifier",
+            "Get_Trigger_Lin_Source"
+          ],
+          "queries": [
+            ":TRIG:EDGE:SLOP?",
+            ":TRIG:EDGE:SOUR?",
+            ":TRIG:GLIT:GRE?",
+            ":TRIG:GLIT:LESS?",
+            ":TRIG:GLIT:LEV?",
+            ":TRIG:GLIT:POL?",
+            ":TRIG:GLIT:QUAL?",
+            ":TRIG:GLIT:RANG?",
+            ":TRIG:GLIT:SOUR?",
+            ":TRIG:HFR?",
+            ":TRIG:HOLD?",
+            ":TRIG:IIC:PATT:ADDR?",
+            ":TRIG:IIC:TRIG:QUAL?",
+            ":TRIG:LIN:SOUR?"
+          ],
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
+      },
+      "GRAB_5": {
+        "command": "GRAB_5",
+        "verb": "nab",
+        "description": "GRAB part 5 of 5 \u2014 9 of the qualified queries",
+        "scpi": ":TRIG:LIN:TRIG?;:TRIG:MODE?;:TRIG:NREJ?;:TRIG:PATT?;:TRIG:REJ?;:TRIG:SEQ:COUN?;:TRIG:SEQ:FIND?;*IDN?;*OPT?",
+        "subsystem": "GRAB",
+        "group": "GRAB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 9,
+          "type": "LIST"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/GRAB_5",
+          "direction": "in",
+          "payload_format": {
+            "command": "GRAB_5"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/GRAB_5",
+          "reading_direction": "out"
+        },
+        "unverified": false,
+        "grab": {
+          "part": 5,
+          "of": 5,
+          "commands": [
+            "Get_Trigger_Lin_Trigger",
+            "Get_Trigger_Mode",
+            "Get_Trigger_Nreject",
+            "Get_Trigger_Pattern",
+            "Get_Trigger_Reject",
+            "Get_Trigger_Sequence_Count",
+            "Get_Trigger_Sequence_Find",
+            "Read_IDN",
+            "Get_Opt"
+          ],
+          "queries": [
+            ":TRIG:LIN:TRIG?",
+            ":TRIG:MODE?",
+            ":TRIG:NREJ?",
+            ":TRIG:PATT?",
+            ":TRIG:REJ?",
+            ":TRIG:SEQ:COUN?",
+            ":TRIG:SEQ:FIND?",
+            "*IDN?",
+            "*OPT?"
+          ],
+          "qualified": {
+            "compiled": "2026-11-05T03:49:35Z",
+            "units": [
+              "visa/Oscilloscope/54641D/Dev716",
+              "visa/Oscilloscope/54641D/Dev76"
+            ],
+            "source": "54641D.qualified.json"
+          }
+        }
       }
     },
     "rig": {

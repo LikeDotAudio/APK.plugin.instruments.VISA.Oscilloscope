@@ -1,0 +1,798 @@
+{
+  "model": "54641D",
+  "family": "Oscilloscope",
+  "compiled": "2026-11-05T03:49:35Z",
+  "source": "WEB.OsApi /api/os/captures/qualified (Nabber nab_known: each query asked alone, once per unit)",
+  "units": [
+    "visa/Oscilloscope/54641D/Dev716",
+    "visa/Oscilloscope/54641D/Dev76"
+  ],
+  "commands": [
+    {
+      "endpoint": "Get_Ese",
+      "query": "*ESE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849456.517444
+    },
+    {
+      "endpoint": "Read_IDN",
+      "query": "*IDN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849250.9899235
+    },
+    {
+      "endpoint": "Get_Opt",
+      "query": "*OPT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849457.014297
+    },
+    {
+      "endpoint": "Get_Sre",
+      "query": "*SRE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849457.7033362
+    },
+    {
+      "endpoint": "Get_Stb",
+      "query": "*STB?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849458.3983724
+    },
+    {
+      "endpoint": "Get_Acquire_Complete",
+      "query": ":ACQ:COMP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849459.0873756
+    },
+    {
+      "endpoint": "Get_Acquire_Count",
+      "query": ":ACQ:COUN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849718.238424
+    },
+    {
+      "endpoint": "Get_Acquire_Mode",
+      "query": ":ACQ:MODE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849471.3031666
+    },
+    {
+      "endpoint": "Get_Acquire_Points",
+      "query": ":ACQ:POIN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849754.0793347
+    },
+    {
+      "endpoint": "Get_Sample_Rate",
+      "query": ":ACQ:SRAT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849251.0715177
+    },
+    {
+      "endpoint": "Get_Channel_Coupling",
+      "query": ":CHAN1:COUP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849760.2384346
+    },
+    {
+      "endpoint": "Get_Channel_Range",
+      "query": ":CHAN1:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849819.085303
+    },
+    {
+      "endpoint": "Get_Display_Label",
+      "query": ":DISP:LAB?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849511.910121
+    },
+    {
+      "endpoint": "Get_Display_Persistence",
+      "query": ":DISP:PERS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849517.471321
+    },
+    {
+      "endpoint": "Get_Display_Source",
+      "query": ":DISP:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849825.5833828
+    },
+    {
+      "endpoint": "Get_Display_Vectors",
+      "query": ":DISP:VECT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849831.783399
+    },
+    {
+      "endpoint": "Get_External_Bwlimit",
+      "query": ":EXT:BWL?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849870.698715
+    },
+    {
+      "endpoint": "Get_External_Impedance",
+      "query": ":EXT:IMP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849557.475368
+    },
+    {
+      "endpoint": "Get_External_Probe",
+      "query": ":EXT:PROB?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849567.0284057
+    },
+    {
+      "endpoint": "Get_External_Protection",
+      "query": ":EXT:PROT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849576.7927046
+    },
+    {
+      "endpoint": "Get_External_Range",
+      "query": ":EXT:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849597.0599327
+    },
+    {
+      "endpoint": "Get_External_Units",
+      "query": ":EXT:UNIT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849605.450988
+    },
+    {
+      "endpoint": "Get_Function_Center",
+      "query": ":FUNC:CENT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849605.9264488
+    },
+    {
+      "endpoint": "Get_Function_Display",
+      "query": ":FUNC:DISP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.1153607
+    },
+    {
+      "endpoint": "Get_Function_Offset",
+      "query": ":FUNC:OFFS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.196542
+    },
+    {
+      "endpoint": "Get_Function_Operation",
+      "query": ":FUNC:OPER?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.2794337
+    },
+    {
+      "endpoint": "Get_Function_Range",
+      "query": ":FUNC:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.3615491
+    },
+    {
+      "endpoint": "Get_Function_Reference",
+      "query": ":FUNC:REF?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.4444945
+    },
+    {
+      "endpoint": "Get_Function_Source",
+      "query": ":FUNC:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.5265353
+    },
+    {
+      "endpoint": "Get_Function_Span",
+      "query": ":FUNC:SPAN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.6104288
+    },
+    {
+      "endpoint": "Get_Function_Window",
+      "query": ":FUNC:WIND?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.6934438
+    },
+    {
+      "endpoint": "Get_Hardcopy_Factors",
+      "query": ":HARD:FACT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849611.7755485
+    },
+    {
+      "endpoint": "Get_Hardcopy_Ffeed",
+      "query": ":HARD:FFE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849616.8689582
+    },
+    {
+      "endpoint": "Get_Hardcopy_Format",
+      "query": ":HARD:FORM?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849622.0503538
+    },
+    {
+      "endpoint": "Get_Marker_Mode",
+      "query": ":MARK:MODE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849627.195355
+    },
+    {
+      "endpoint": "Get_System_Date",
+      "query": ":SYST:DATE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849656.5958445
+    },
+    {
+      "endpoint": "Get_System_Lock",
+      "query": ":SYST:LOCK?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849659.8737812
+    },
+    {
+      "endpoint": "Get_System_Time",
+      "query": ":SYST:TIME?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849663.1533933
+    },
+    {
+      "endpoint": "Get_Timebase_Mode",
+      "query": ":TIM:MODE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849665.058398
+    },
+    {
+      "endpoint": "Get_Timebase_Position",
+      "query": ":TIM:POS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849665.1404974
+    },
+    {
+      "endpoint": "Get_Timebase_Range",
+      "query": ":TIM:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849665.222491
+    },
+    {
+      "endpoint": "Get_Timebase_Reference",
+      "query": ":TIM:REF?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev716",
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793849670.342384
+    },
+    {
+      "endpoint": "Get_Timebase_Window_Position",
+      "query": ":TIM:WIND:POS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850553.8104875
+    },
+    {
+      "endpoint": "Get_Timebase_Window_Range",
+      "query": ":TIM:WIND:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850553.8936052
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Acknowledge",
+      "query": ":TRIG:CAN:ACKN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850553.9775229
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Pattern_Id_Mode",
+      "query": ":TRIG:CAN:PATT:ID:MODE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.0605695
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Pattern_Id",
+      "query": ":TRIG:CAN:PATT:ID?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.1439443
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Samplepoint",
+      "query": ":TRIG:CAN:SAMP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.2265365
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Signal_Baudrate",
+      "query": ":TRIG:CAN:SIGN:BAUD?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.309535
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Source",
+      "query": ":TRIG:CAN:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.409716
+    },
+    {
+      "endpoint": "Get_Trigger_Can_Trigger",
+      "query": ":TRIG:CAN:TRIG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.4915392
+    },
+    {
+      "endpoint": "Get_Trigger_Coupling",
+      "query": ":TRIG:COUP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.5735056
+    },
+    {
+      "endpoint": "Get_Trigger_Duration_Greaterthan",
+      "query": ":TRIG:DUR:GRE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.6565332
+    },
+    {
+      "endpoint": "Get_Trigger_Duration_Lessthan",
+      "query": ":TRIG:DUR:LESS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.7405682
+    },
+    {
+      "endpoint": "Get_Trigger_Duration_Pattern",
+      "query": ":TRIG:DUR:PATT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.822848
+    },
+    {
+      "endpoint": "Get_Trigger_Duration_Qualifier",
+      "query": ":TRIG:DUR:QUAL?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.9063609
+    },
+    {
+      "endpoint": "Get_Trigger_Duration_Range",
+      "query": ":TRIG:DUR:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850554.987613
+    },
+    {
+      "endpoint": "Get_Trigger_Edge_Level",
+      "query": ":TRIG:EDGE:LEV?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.0704198
+    },
+    {
+      "endpoint": "Get_Trigger_Edge_Slope",
+      "query": ":TRIG:EDGE:SLOP?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.1535716
+    },
+    {
+      "endpoint": "Get_Trigger_Edge_Source",
+      "query": ":TRIG:EDGE:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.2368054
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Greaterthan",
+      "query": ":TRIG:GLIT:GRE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.3196566
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Lessthan",
+      "query": ":TRIG:GLIT:LESS?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.4025156
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Level",
+      "query": ":TRIG:GLIT:LEV?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.484559
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Polarity",
+      "query": ":TRIG:GLIT:POL?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.568554
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Qualifier",
+      "query": ":TRIG:GLIT:QUAL?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.6515272
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Range",
+      "query": ":TRIG:GLIT:RANG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.7345407
+    },
+    {
+      "endpoint": "Get_Trigger_Glitch_Source",
+      "query": ":TRIG:GLIT:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.8165102
+    },
+    {
+      "endpoint": "Get_Trigger_Hfreject",
+      "query": ":TRIG:HFR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.8995106
+    },
+    {
+      "endpoint": "Get_Trigger_Holdoff",
+      "query": ":TRIG:HOLD?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850555.9815392
+    },
+    {
+      "endpoint": "Get_Trigger_Iic_Pattern_Address",
+      "query": ":TRIG:IIC:PATT:ADDR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850556.0635135
+    },
+    {
+      "endpoint": "Get_Trigger_Iic_Trigger_Qualifier",
+      "query": ":TRIG:IIC:TRIG:QUAL?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850556.1466484
+    },
+    {
+      "endpoint": "Get_Trigger_Lin_Source",
+      "query": ":TRIG:LIN:SOUR?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.2834847
+    },
+    {
+      "endpoint": "Get_Trigger_Lin_Trigger",
+      "query": ":TRIG:LIN:TRIG?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.3675761
+    },
+    {
+      "endpoint": "Get_Trigger_Mode",
+      "query": ":TRIG:MODE?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.4496305
+    },
+    {
+      "endpoint": "Get_Trigger_Nreject",
+      "query": ":TRIG:NREJ?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.5334594
+    },
+    {
+      "endpoint": "Get_Trigger_Pattern",
+      "query": ":TRIG:PATT?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.61578
+    },
+    {
+      "endpoint": "Get_Trigger_Reject",
+      "query": ":TRIG:REJ?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.69856
+    },
+    {
+      "endpoint": "Get_Trigger_Sequence_Count",
+      "query": ":TRIG:SEQ:COUN?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850561.7815545
+    },
+    {
+      "endpoint": "Get_Trigger_Sequence_Find",
+      "query": ":TRIG:SEQ:FIND?",
+      "units": [
+        "visa/Oscilloscope/54641D/Dev76"
+      ],
+      "first": 1793850565.3034284
+    }
+  ],
+  "refused": [
+    {
+      "query": ":MAR:XDEL?",
+      "why": "refused: -113,\"Undefined header\" | -420,\"Query UNTERMINATED\""
+    },
+    {
+      "query": ":MARK:XDEL?",
+      "why": "refused: -221,\"Settings conflict\" | -420,\"Query UNTERMINATED\""
+    },
+    {
+      "query": ":MARK:YDEL?",
+      "why": "refused: -410,\"Query INTERRUPTED\" | -221,\"Settings conflict\" | -420,\"Query UNTERMINATED\""
+    },
+    {
+      "query": ":PROB:SKEW?",
+      "why": "refused: -113,\"Undefined header\" | -420,\"Query UNTERMINATED\""
+    },
+    {
+      "query": ":SYST:SET?",
+      "why": "refused: no answer, three times, while it answers others"
+    },
+    {
+      "query": ":TRIG:LIN:SIGN:BAUD?",
+      "why": "refused: -222,\"Data out of range\" | -420,\"Query UNTERMINATED\""
+    }
+  ],
+  "grab_qualified": [
+    {
+      "unit": "visa/Oscilloscope/54641D/Dev716",
+      "when": "2026-11-05T03:51:21Z",
+      "ok": true,
+      "parts": [
+        {
+          "part": "GRAB_1",
+          "expected": 22,
+          "answered": 22,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_2",
+          "expected": 20,
+          "answered": 20,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_3",
+          "expected": 14,
+          "answered": 14,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_4",
+          "expected": 14,
+          "answered": 14,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_5",
+          "expected": 9,
+          "answered": 9,
+          "ok": true,
+          "error": null
+        }
+      ]
+    },
+    {
+      "unit": "visa/Oscilloscope/54641D/Dev76",
+      "when": "2026-11-05T03:51:44Z",
+      "ok": true,
+      "parts": [
+        {
+          "part": "GRAB_1",
+          "expected": 22,
+          "answered": 22,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_2",
+          "expected": 20,
+          "answered": 20,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_3",
+          "expected": 14,
+          "answered": 14,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_4",
+          "expected": 14,
+          "answered": 14,
+          "ok": true,
+          "error": null
+        },
+        {
+          "part": "GRAB_5",
+          "expected": 9,
+          "answered": 9,
+          "ok": true,
+          "error": null
+        }
+      ]
+    }
+  ]
+}
