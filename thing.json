@@ -9,5 +9,8 @@
   ],
   "about": "Oscilloscopes: waveforms on screen and measurements on them.",
   "io": "every model's inputs and outputs — its connectors (from its BIM part), its commands' arguments and returns, and its bus topics — are on its SDK page: Documentation/🧩Manual and Artifacts/SDK/<Model>.md",
+  "no_box": {
+    "Z204": "it is the generic Z-series reference model the family's models inherit from, not an instrument anyone can buy."
+  },
   "repository": "https://github.com/LikeDotAudio/APK.plugin.instruments.VISA.Oscilloscope.git"
 }
