@@ -4550,7 +4550,7 @@
       "unverified": true
     },
     "Get_Trigger_Can_Trigger": {
-      "scpi": ":TRIGger:CAN:TRIGer?",
+      "scpi": ":TRIGger:CAN:TRIGger?",
       "scpiFast": ":TRIG:CAN:TRIG?",
       "description": "Get trigger can trigger",
       "returns": {

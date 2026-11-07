@@ -161,7 +161,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Trigger_Can_Samplepoint` | `:TRIGger:CAN:SAMPlepoint?` | — | → `…/Reading/Get_Trigger_Can_Samplepoint` | TRIG | unverified |
 | `Get_Trigger_Can_Signal_Baudrate` | `:TRIGger:CAN:SIGNal:BAUDrate?` | — | → `…/Reading/Get_Trigger_Can_Signal_Baudrate` | TRIG | unverified |
 | `Get_Trigger_Can_Source` | `:TRIGger:CAN:SOURce?` | — | CRD → `…/Reading/Get_Trigger_Can_Source` | TRIG | unverified |
-| `Get_Trigger_Can_Trigger` | `:TRIGger:CAN:TRIGer?` | — | → `…/Reading/Get_Trigger_Can_Trigger` | TRIG | unverified |
+| `Get_Trigger_Can_Trigger` | `:TRIGger:CAN:TRIGger?` | — | → `…/Reading/Get_Trigger_Can_Trigger` | TRIG | unverified |
 | `Get_Trigger_Coupling` | `:TRIGger:COUPling?` | — | CRD → `…/Reading/Get_Trigger_Coupling` | TRIG | unverified |
 | `Get_Trigger_Duration_Greaterthan` | `:TRIGger:DURation:GREaterthan?` | — | → `…/Reading/Get_Trigger_Duration_Greaterthan` | TRIG | unverified |
 | `Get_Trigger_Duration_Lessthan` | `:TRIGger:DURation:LESSthan?` | — | → `…/Reading/Get_Trigger_Duration_Lessthan` | TRIG | unverified |
@@ -513,7 +513,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Trigger_Can_Samplepoint` | `:TRIGger:CAN:SAMPlepoint?` | — | → `…/Reading/Get_Trigger_Can_Samplepoint` | TRIG | unverified |
 | `Get_Trigger_Can_Signal_Baudrate` | `:TRIGger:CAN:SIGNal:BAUDrate?` | — | → `…/Reading/Get_Trigger_Can_Signal_Baudrate` | TRIG | unverified |
 | `Get_Trigger_Can_Source` | `:TRIGger:CAN:SOURce?` | — | CRD → `…/Reading/Get_Trigger_Can_Source` | TRIG | unverified |
-| `Get_Trigger_Can_Trigger` | `:TRIGger:CAN:TRIGer?` | — | → `…/Reading/Get_Trigger_Can_Trigger` | TRIG | unverified |
+| `Get_Trigger_Can_Trigger` | `:TRIGger:CAN:TRIGger?` | — | → `…/Reading/Get_Trigger_Can_Trigger` | TRIG | unverified |
 | `Get_Trigger_Coupling` | `:TRIGger:COUPling?` | — | CRD → `…/Reading/Get_Trigger_Coupling` | TRIG | unverified |
 | `Get_Trigger_Duration_Greaterthan` | `:TRIGger:DURation:GREaterthan?` | — | → `…/Reading/Get_Trigger_Duration_Greaterthan` | TRIG | unverified |
 | `Get_Trigger_Duration_Lessthan` | `:TRIGger:DURation:LESSthan?` | — | → `…/Reading/Get_Trigger_Duration_Lessthan` | TRIG | unverified |
