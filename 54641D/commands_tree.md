@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**476 commands** — SET 198 · RIG 1 · NAB 171 · DO 106 · 363 unverified (76%)
+**652 commands** — SET 374 · RIG 1 · NAB 171 · DO 106 · 540 unverified (82%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -57,12 +57,16 @@ Several statements in one message, so they hang off no single branch. Every stat
 - `STOP` — **DO** `Stop`
 - **`ACQuire`**
   - `COMPlete` — **SET** `Set_Acquire_Complete` · `<value>` · args: `value` · †
-  - `MODE` — **SET** `Set_Acquire_Mode` · `<value>` · args: `value` · enum · †
-  - `TYPE` — **SET** `Set_Acquire_Mode_AVERage` · `<type>` · args: `type` · enum
-  - `TYPE` — **SET** `Set_Acquire_Mode_HRESolution` · `<type>` · args: `type` · enum
-  - `TYPE` — **SET** `Set_Acquire_Mode_NORMal` · `<type>` · args: `type` · enum
-  - `TYPE` — **SET** `Set_Acquire_Mode_PEAK` · `<type>` · args: `type` · enum
-  - `TYPE` — **SET** `Set_Acquire_Type` · `<type>` · args: `type` · enum
+  - `MODE` — **SET** `Set_Acquire_Mode` · `<value>` · args: `value` · enum: `RTIMe` | `ETIMe` · †
+  - `TYPE` — **SET** `Set_Acquire_Mode_AVERage` · `AVERage` · none
+  - `MODE` — **SET** `Set_Acquire_Mode_ETIMe` · `ETIMe` · †<br>Set_Acquire_Mode → ETIMe. Set acquire mode
+  - `TYPE` — **SET** `Set_Acquire_Mode_NORMal` · `NORMal` · none
+  - `TYPE` — **SET** `Set_Acquire_Mode_PEAK` · `PEAK` · none
+  - `MODE` — **SET** `Set_Acquire_Mode_RTIMe` · `RTIMe` · †<br>Set_Acquire_Mode → RTIMe. Set acquire mode
+  - `TYPE` — **SET** `Set_Acquire_Type` · `<type>` · args: `type` · enum: `NORMal` | `AVERage` | `PEAK`
+  - `TYPE` — **SET** `Set_Acquire_Type_AVERage` · `AVERage` · †<br>Set_Acquire_Type → AVERage. Set Acquire Type
+  - `TYPE` — **SET** `Set_Acquire_Type_NORMal` · `NORMal` · †<br>Set_Acquire_Type → NORMal. Set Acquire Type
+  - `TYPE` — **SET** `Set_Acquire_Type_PEAK` · `PEAK` · †<br>Set_Acquire_Type → PEAK. Set Acquire Type
   - `COUNt` — **SET** `Set_Average_Count` · `<count>` · args: `count` · integer
   - `COUNt` — **SET** `Set_Averaging_Count` · `<count>` · args: `count` · integer
   - `POINts` — **SET** `Set_Points` · `<points>` · args: `points` · integer
@@ -78,7 +82,9 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `SWITch?` — **NAB** `Get_Calibrate_Switch` · → 1 value · †
   - `TIME?` — **NAB** `Get_Calibrate_Time` · → NR3 s · †
 - **`CHANNEL1`**
-  - `COUPLING` — **SET** `Set_Channel_Coupling` · `<value>` · args: `value` · enum · †<br>Receiving Information from the Instrument
+  - `COUPLING` — **SET** `Set_Channel_Coupling` · `<value>` · args: `value` · enum: `AC` | `DC` · †<br>Receiving Information from the Instrument
+  - `COUPLING` — **SET** `Set_Channel_Coupling_AC` · `AC` · †<br>Set_Channel_Coupling → AC. Receiving Information from the Instrument
+  - `COUPLING` — **SET** `Set_Channel_Coupling_DC` · `DC` · †<br>Set_Channel_Coupling → DC. Receiving Information from the Instrument
   - `COUPLING?` — **NAB** `Get_Channel_Coupling` · → CRD · †<br>Receiving Information from the Instrument
   - `RANGE?` — **NAB** `Get_Channel_Range` · → NR3 · †<br>Address Varies According to Configuration
   - `BWLIMIT` — **DO** `Do_Channel_Bwlimit` · †
@@ -92,7 +98,9 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `BWLimit` — **SET** `CH1_BWLimit` · `<state>` · args: `state` · bool: `OFF` | `ON`
   - `BWLimit` — **SET** `CH1_BWLimit_OFF` · `OFF` · †<br>CH1_BWLimit → OFF. CH1 BWLimit
   - `BWLimit` — **SET** `CH1_BWLimit_ON` · `ON` · †<br>CH1_BWLimit → ON. CH1 BWLimit
-  - `COUPling` — **SET** `CH1_Coupling` · `<coupling>` · args: `coupling` · enum
+  - `COUPling` — **SET** `CH1_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC`
+  - `COUPling` — **SET** `CH1_Coupling_AC` · `AC` · †<br>CH1_Coupling → AC. CH1 Coupling
+  - `COUPling` — **SET** `CH1_Coupling_DC` · `DC` · †<br>CH1_Coupling → DC. CH1 Coupling
   - `INVert` — **SET** `CH1_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON`
   - `INVert` — **SET** `CH1_Invert_OFF` · `OFF` · †<br>CH1_Invert → OFF. CH1 Invert
   - `INVert` — **SET** `CH1_Invert_ON` · `ON` · †<br>CH1_Invert → ON. CH1 Invert
@@ -107,7 +115,9 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `BWLimit` — **SET** `CH2_BWLimit` · `<state>` · args: `state` · bool: `OFF` | `ON`
   - `BWLimit` — **SET** `CH2_BWLimit_OFF` · `OFF` · †<br>CH2_BWLimit → OFF. CH2 BWLimit
   - `BWLimit` — **SET** `CH2_BWLimit_ON` · `ON` · †<br>CH2_BWLimit → ON. CH2 BWLimit
-  - `COUPling` — **SET** `CH2_Coupling` · `<coupling>` · args: `coupling` · enum
+  - `COUPling` — **SET** `CH2_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC`
+  - `COUPling` — **SET** `CH2_Coupling_AC` · `AC` · †<br>CH2_Coupling → AC. CH2 Coupling
+  - `COUPling` — **SET** `CH2_Coupling_DC` · `DC` · †<br>CH2_Coupling → DC. CH2 Coupling
   - `INVert` — **SET** `CH2_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON`
   - `INVert` — **SET** `CH2_Invert_OFF` · `OFF` · †<br>CH2_Invert → OFF. CH2 Invert
   - `INVert` — **SET** `CH2_Invert_ON` · `ON` · †<br>CH2_Invert → ON. CH2 Invert
@@ -122,9 +132,9 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `BWLimit` — **SET** `Set_Bandwidth_Limit` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
   - `OFFSet` — **SET** `Set_Channel_Offset` · `<offset>` · args: `offset` · numeric (V) · per-instance: `n` · †<br>Vertical offset on one channel.
   - `SCALe` — **SET** `Set_Channel_Scale` · `<scale>` · args: `scale` · numeric (V) · per-instance: `n` · †<br>Volts per division on one channel.
-  - `COUPling` — **SET** `Set_Coupling` · `<coupling>` · args: `coupling` · enum · per-instance: `n`
+  - `COUPling` — **SET** `Set_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC` · per-instance: `n`
   - `DISPlay` — **SET** `Set_Display` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
-  - `IMPedance` — **SET** `Set_Impedance` · `<imp>` · args: `imp` · enum · per-instance: `n`
+  - `IMPedance` — **SET** `Set_Impedance` · `<imp>` · args: `imp` · enum: `ONEMeg` | `FIFTy` · per-instance: `n`
   - `INVert` — **SET** `Set_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
   - `PROBe` — **SET** `Set_Probe` · `<atten>` · args: `atten` · numeric · per-instance: `n`
   - **`PROBe`**
@@ -138,7 +148,10 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DATA` — **SET** `Set_Display_Data` · `<value>` · args: `value` · block · †
   - `LABel` — **SET** `Set_Display_Label` · `<value>` · args: `value` · †
   - `PERSistence` — **SET** `Set_Display_Persistence` · `<value>` · args: `value` · numeric (s) · †
-  - `SOURce` — **SET** `Set_Display_Source` · `<value>` · args: `value` · enum · †
+  - `SOURce` — **SET** `Set_Display_Source` · `<value>` · args: `value` · enum: `PMEMory0` | `PMEMory1` | `PMEMory2` · †
+  - `SOURce` — **SET** `Set_Display_Source_PMEMory0` · `PMEMory0` · †<br>Set_Display_Source → PMEMory0. Set display source
+  - `SOURce` — **SET** `Set_Display_Source_PMEMory1` · `PMEMory1` · †<br>Set_Display_Source → PMEMory1. Set display source
+  - `SOURce` — **SET** `Set_Display_Source_PMEMory2` · `PMEMory2` · †<br>Set_Display_Source → PMEMory2. Set display source
   - `VECTors` — **SET** `Set_Display_Vectors` · `<value>` · args: `value` · †
   - `DATA?` — **NAB** `Get_Display_Data` · → BLOCK · †
   - `LABel?` — **NAB** `Get_Display_Label` · → 1 value · †
@@ -160,10 +173,14 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `BWLimit` — **SET** `Set_External_Bwlimit` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
   - `BWLimit` — **SET** `Set_External_Bwlimit_OFF` · `OFF` · †<br>Set_External_Bwlimit → OFF. Set external bwlimit
   - `BWLimit` — **SET** `Set_External_Bwlimit_ON` · `ON` · †<br>Set_External_Bwlimit → ON. Set external bwlimit
-  - `IMPedance` — **SET** `Set_External_Impedance` · `<value>` · args: `value` · enum · †
+  - `IMPedance` — **SET** `Set_External_Impedance` · `<value>` · args: `value` · enum: `ONEMeg` | `FIFTy` · †
+  - `IMPedance` — **SET** `Set_External_Impedance_FIFTy` · `FIFTy` · †<br>Set_External_Impedance → FIFTy. Set external impedance
+  - `IMPedance` — **SET** `Set_External_Impedance_ONEMeg` · `ONEMeg` · †<br>Set_External_Impedance → ONEMeg. Set external impedance
   - `PROBe` — **SET** `Set_External_Probe` · `<value>` · args: `value` · numeric · †
   - `RANGe` — **SET** `Set_External_Range` · `<value>` · args: `value` · numeric · †
-  - `UNITs` — **SET** `Set_External_Units` · `<value>` · args: `value` · enum · †
+  - `UNITs` — **SET** `Set_External_Units` · `<value>` · args: `value` · enum: `VOLT` | `AMPere` · †
+  - `UNITs` — **SET** `Set_External_Units_AMPere` · `AMPere` · †<br>Set_External_Units → AMPere. Set external units
+  - `UNITs` — **SET** `Set_External_Units_VOLT` · `VOLT` · †<br>Set_External_Units → VOLT. Set external units
   - `BWLimit?` — **NAB** `Get_External_Bwlimit` · → BOOL · †
   - `IMPedance?` — **NAB** `Get_External_Impedance` · → CRD · †
   - `PROBe?` — **NAB** `Get_External_Probe` · → NR3 · †
@@ -177,8 +194,14 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`FUNCtion`**
   - `CENTer` — **SET** `Set_Center_Frequency` · `<frequency>` · args: `frequency` · numeric
   - `SCALe` — **SET** `Set_FFT_Scale` · `<scale>` · args: `scale` · numeric
-  - `OPERation` — **SET** `Set_Function_Operation` · `<op>` · args: `op` · enum
-  - `REFerence` — **SET** `Set_Function_Reference` · `<value>` · args: `value` · enum · †
+  - `OPERation` — **SET** `Set_Function_Operation` · `<op>` · args: `op` · enum: `SUBTract` | `MULTiply` | `INTegrate` | `DIFFerentiate` | `FFT` | `SQRT`
+  - `OPERation` — **SET** `Set_Function_Operation_DIFFerentiate` · `DIFFerentiate` · †<br>Set_Function_Operation → DIFFerentiate. Set Function Operation
+  - `OPERation` — **SET** `Set_Function_Operation_FFT` · `FFT` · †<br>Set_Function_Operation → FFT. Set Function Operation
+  - `OPERation` — **SET** `Set_Function_Operation_INTegrate` · `INTegrate` · †<br>Set_Function_Operation → INTegrate. Set Function Operation
+  - `OPERation` — **SET** `Set_Function_Operation_MULTiply` · `MULTiply` · †<br>Set_Function_Operation → MULTiply. Set Function Operation
+  - `OPERation` — **SET** `Set_Function_Operation_SQRT` · `SQRT` · †<br>Set_Function_Operation → SQRT. Set Function Operation
+  - `OPERation` — **SET** `Set_Function_Operation_SUBTract` · `SUBTract` · †<br>Set_Function_Operation → SUBTract. Set Function Operation
+  - `REFerence` — **SET** `Set_Function_Reference` · `<value>` · args: `value` · numeric (V) · †
   - `DISPlay` — **SET** `Set_Math_Display` · `<state>` · args: `state` · bool: `OFF` | `ON` · †<br>Show or hide the math trace.
   - `DISPlay` — **SET** `Set_Math_Display_OFF` · `OFF` · †<br>Set_Math_Display → OFF. Show or hide the math trace.
   - `DISPlay` — **SET** `Set_Math_Display_ON` · `ON` · †<br>Set_Math_Display → ON. Show or hide the math trace.
@@ -192,13 +215,19 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `OPERation` — **SET** `Set_Math_Operator_SUBT` · `SUBT` · †<br>Set_Math_Operator → SUBT. The math operation.
   - `RANGe` — **SET** `Set_Math_Range` · `<range>` · args: `range` · numeric
   - `RANGe` — **SET** `Set_Math_Scale` · `<value>` · args: `value` · numeric (V) · †<br>Vertical scale of the math result.
-  - `OPERation` — **SET** `Set_Operation` · `<operation>` · args: `operation` · enum
+  - `OPERation` — **SET** `Set_Operation` · `<operation>` · args: `operation` · enum: `SUBTract` | `MULTiply` | `INTegrate` | `DIFFerentiate` | `FFT` | `SQRT`
+  - `OPERation` — **SET** `Set_Operation_DIFFerentiate` · `DIFFerentiate` · †<br>Set_Operation → DIFFerentiate. Set Operation
+  - `OPERation` — **SET** `Set_Operation_FFT` · `FFT` · †<br>Set_Operation → FFT. Set Operation
+  - `OPERation` — **SET** `Set_Operation_INTegrate` · `INTegrate` · †<br>Set_Operation → INTegrate. Set Operation
+  - `OPERation` — **SET** `Set_Operation_MULTiply` · `MULTiply` · †<br>Set_Operation → MULTiply. Set Operation
+  - `OPERation` — **SET** `Set_Operation_SQRT` · `SQRT` · †<br>Set_Operation → SQRT. Set Operation
+  - `OPERation` — **SET** `Set_Operation_SUBTract` · `SUBTract` · †<br>Set_Operation → SUBTract. Set Operation
   - `SOURce1` — **SET** `Set_Source1` · `<src>` · args: `src` · enum
   - `SOURce2` — **SET** `Set_Source2` · `<src>` · args: `src` · enum
   - `SPAN` — **SET** `Set_Span` · `<span>` · args: `span` · numeric
-  - `WINDow` — **SET** `Set_Window_FLATtop` · `<window>` · args: `window` · enum
-  - `WINDow` — **SET** `Set_Window_HANNing` · `<window>` · args: `window` · enum
-  - `WINDow` — **SET** `Set_Window_RECTangular` · `<window>` · args: `window` · enum
+  - `WINDow` — **SET** `Set_Window_FLATtop` · `FLATtop` · none
+  - `WINDow` — **SET** `Set_Window_HANNing` · `HANNing` · none
+  - `WINDow` — **SET** `Set_Window_RECTangular` · `RECTangular` · none
   - `CENTer?` — **NAB** `Get_Function_Center` · → NR3 · †
   - `DISPlay?` — **NAB** `Get_Function_Display` · → BOOL · †<br>Obsolete and Discontinued Commands
   - `OFFSet?` — **NAB** `Get_Function_Offset` · → NR3 · †
@@ -228,7 +257,10 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DESTination` — **DO** `Do_Hardcopy_Destination` · †
   - `DEVice` — **DO** `Do_Hardcopy_Device` · †<br>Obsolete and Discontinued Commands
 - **`MARKer`**
-  - `MODE` — **SET** `Set_Marker_Mode` · `<mode>` · args: `mode` · enum
+  - `MODE` — **SET** `Set_Marker_Mode` · `<mode>` · args: `mode` · enum: `OFF` | `MEASurement` | `MANual`
+  - `MODE` — **SET** `Set_Marker_Mode_MANual` · `MANual` · †<br>Set_Marker_Mode → MANual. Set Marker Mode
+  - `MODE` — **SET** `Set_Marker_Mode_MEASurement` · `MEASurement` · †<br>Set_Marker_Mode → MEASurement. Set Marker Mode
+  - `MODE` — **SET** `Set_Marker_Mode_OFF` · `OFF` · †<br>Set_Marker_Mode → OFF. Set Marker Mode
   - `X1Position` — **SET** `Set_X1` · `<pos>` · args: `pos` · numeric
   - `X2Position` — **SET** `Set_X2` · `<pos>` · args: `pos` · numeric
   - `Y1Position` — **SET** `Set_Y1` · `<lev>` · args: `lev` · numeric
@@ -251,7 +283,27 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `PREShoot` — **SET** `Set_Measure_Preshoot` · `<value>` · args: `value` · block · †
   - `PWIDth` — **SET** `Set_Measure_Pwidth` · `<value>` · args: `value` · †
   - `SHOW` — **SET** `Set_Measure_Show` · `<value>` · args: `value` · †
-  - `SOURce` — **SET** `Set_Measure_Source` · `<source>` · args: `source` · enum
+  - `SOURce` — **SET** `Set_Measure_Source` · `<source>` · args: `source` · enum: `CHANnel1` | `CHANnel2` | `FUNCtion` | `EXTernal` | `DIGital0` | `DIGital1` | `DIGital2` | `DIGital3` | `DIGital4` | `DIGital5` | `DIGital6` | `DIGital7` | `DIGital8` | `DIGital9` | `DIGital10` | `DIGital11` | `DIGital12` | `DIGital13` | `DIGital14` | `DIGital15`
+  - `SOURce` — **SET** `Set_Measure_Source_CHANnel1` · `CHANnel1` · †<br>Set_Measure_Source → CHANnel1. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_CHANnel2` · `CHANnel2` · †<br>Set_Measure_Source → CHANnel2. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital0` · `DIGital0` · †<br>Set_Measure_Source → DIGital0. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital1` · `DIGital1` · †<br>Set_Measure_Source → DIGital1. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital10` · `DIGital10` · †<br>Set_Measure_Source → DIGital10. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital11` · `DIGital11` · †<br>Set_Measure_Source → DIGital11. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital12` · `DIGital12` · †<br>Set_Measure_Source → DIGital12. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital13` · `DIGital13` · †<br>Set_Measure_Source → DIGital13. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital14` · `DIGital14` · †<br>Set_Measure_Source → DIGital14. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital15` · `DIGital15` · †<br>Set_Measure_Source → DIGital15. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital2` · `DIGital2` · †<br>Set_Measure_Source → DIGital2. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital3` · `DIGital3` · †<br>Set_Measure_Source → DIGital3. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital4` · `DIGital4` · †<br>Set_Measure_Source → DIGital4. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital5` · `DIGital5` · †<br>Set_Measure_Source → DIGital5. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital6` · `DIGital6` · †<br>Set_Measure_Source → DIGital6. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital7` · `DIGital7` · †<br>Set_Measure_Source → DIGital7. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital8` · `DIGital8` · †<br>Set_Measure_Source → DIGital8. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_DIGital9` · `DIGital9` · †<br>Set_Measure_Source → DIGital9. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_EXTernal` · `EXTernal` · †<br>Set_Measure_Source → EXTernal. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_FUNCtion` · `FUNCtion` · †<br>Set_Measure_Source → FUNCtion. Set Measure Source
   - `TEDGe` — **SET** `Set_Measure_Tedge` · `<value>` · args: `value` · †
   - `TVALue` — **SET** `Set_Measure_Tvalue` · `<value>` · args: `value` · †
   - `VAMPlitude` — **SET** `Set_Measure_Vamplitude` · `<value>` · args: `value` · †
@@ -315,9 +367,16 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`TIM`**
   - `DEL` — **DO** `Do_Timebase_Delay` · †<br>Program Header Options
 - **`TIMebase`**
-  - `MODE` — **SET** `Set_Mode` · `<mode>` · args: `mode` · enum
+  - `MODE` — **SET** `Set_Mode` · `<mode>` · args: `mode` · enum: `MAIN` | `WINDow` | `XY` | `ROLL`
+  - `MODE` — **SET** `Set_Mode_MAIN` · `MAIN` · †<br>Set_Mode → MAIN. Set Mode
+  - `MODE` — **SET** `Set_Mode_ROLL` · `ROLL` · †<br>Set_Mode → ROLL. Set Mode
+  - `MODE` — **SET** `Set_Mode_WINDow` · `WINDow` · †<br>Set_Mode → WINDow. Set Mode
+  - `MODE` — **SET** `Set_Mode_XY` · `XY` · †<br>Set_Mode → XY. Set Mode
   - `POSition` — **SET** `Set_Position` · `<pos>` · args: `pos` · numeric (s)
-  - `REFerence` — **SET** `Set_Reference` · `<ref>` · args: `ref` · enum
+  - `REFerence` — **SET** `Set_Reference` · `<ref>` · args: `ref` · enum: `LEFT` | `CENTer` | `RIGHt`
+  - `REFerence` — **SET** `Set_Reference_CENTer` · `CENTer` · †<br>Set_Reference → CENTer. Set Reference
+  - `REFerence` — **SET** `Set_Reference_LEFT` · `LEFT` · †<br>Set_Reference → LEFT. Set Reference
+  - `REFerence` — **SET** `Set_Reference_RIGHt` · `RIGHt` · †<br>Set_Reference → RIGHt. Set Reference
   - `POSition` — **SET** `Set_Timebase_Delay` · `<delay>` · args: `delay` · numeric (s) · †<br>Horizontal delay — where the trigger sits in the captured window.
   - `POSition` — **SET** `Set_Timebase_Position` · `<position>` · args: `position` · numeric (s)
   - `RANGe` — **SET** `Set_Timebase_Range` · `<value>` · args: `value` · numeric (s) · †
@@ -356,12 +415,25 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`TRIGger`**
   - `HOLDoff` — **SET** `Set_Holdoff` · `<time>` · args: `time` · numeric
   - `HFReject` — **SET** `Set_Trigger_Hfreject` · `<value>` · args: `value` · †
-  - `MODE` — **SET** `Set_Trigger_Mode` · `<mode>` · args: `mode` · enum
+  - `MODE` — **SET** `Set_Trigger_Mode` · `<mode>` · args: `mode` · enum: `EDGE` | `GLITch` | `PATTern` | `CAN` | `DURation` | `IIC` | `LIN` | `SEQuence` | `SPI` | `TV` | `USB`
+  - `MODE` — **SET** `Set_Trigger_Mode_CAN` · `CAN` · †<br>Set_Trigger_Mode → CAN. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_DURation` · `DURation` · †<br>Set_Trigger_Mode → DURation. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_EDGE` · `EDGE` · †<br>Set_Trigger_Mode → EDGE. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_GLITch` · `GLITch` · †<br>Set_Trigger_Mode → GLITch. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_IIC` · `IIC` · †<br>Set_Trigger_Mode → IIC. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_LIN` · `LIN` · †<br>Set_Trigger_Mode → LIN. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_PATTern` · `PATTern` · †<br>Set_Trigger_Mode → PATTern. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_SEQuence` · `SEQuence` · †<br>Set_Trigger_Mode → SEQuence. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_SPI` · `SPI` · †<br>Set_Trigger_Mode → SPI. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_TV` · `TV` · †<br>Set_Trigger_Mode → TV. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_USB` · `USB` · †<br>Set_Trigger_Mode → USB. Set Trigger Mode
   - `NREJect` — **SET** `Set_Trigger_Nreject` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
   - `NREJect` — **SET** `Set_Trigger_Nreject_OFF` · `OFF` · †<br>Set_Trigger_Nreject → OFF. Set trigger nreject
   - `NREJect` — **SET** `Set_Trigger_Nreject_ON` · `ON` · †<br>Set_Trigger_Nreject → ON. Set trigger nreject
   - `PATTern` — **SET** `Set_Trigger_Pattern` · `<value>` · args: `value` · †
-  - `SWEep` — **SET** `Set_Trigger_Sweep` · `<sweep>` · args: `sweep` · enum
+  - `SWEep` — **SET** `Set_Trigger_Sweep` · `<sweep>` · args: `sweep` · enum: `AUTO` | `NORMal`
+  - `SWEep` — **SET** `Set_Trigger_Sweep_AUTO` · `AUTO` · †<br>Set_Trigger_Sweep → AUTO. Set Trigger Sweep
+  - `SWEep` — **SET** `Set_Trigger_Sweep_NORMal` · `NORMal` · †<br>Set_Trigger_Sweep → NORMal. Set Trigger Sweep
   - `COUPling?` — **NAB** `Get_Trigger_Coupling` · → CRD · †
   - `HFReject?` — **NAB** `Get_Trigger_Hfreject` · → 1 value · †
   - `HOLDoff?` — **NAB** `Get_Trigger_Holdoff` · → NR3 · †
@@ -386,7 +458,25 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`CAN`**
     - `ACKNowledge` — **SET** `Set_Trigger_Can_Acknowledge` · `<value>` · args: `value` · †
     - `SAMPlepoint` — **SET** `Set_Trigger_Can_Samplepoint` · `<value>` · args: `value` · †
-    - `SOURce` — **SET** `Set_Trigger_Can_Source` · `<value>` · args: `value` · enum · †
+    - `SOURce` — **SET** `Set_Trigger_Can_Source` · `<value>` · args: `value` · enum: `CHANnel1` | `CHANnel2` | `DIGital0` | `DIGital1` | `DIGital2` | `DIGital3` | `DIGital4` | `DIGital5` | `DIGital6` | `DIGital7` | `DIGital8` | `DIGital9` | `DIGital10` | `DIGital11` | `DIGital12` | `DIGital13` | `DIGital14` | `DIGital15` · †
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_CHANnel1` · `CHANnel1` · †<br>Set_Trigger_Can_Source → CHANnel1. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_CHANnel2` · `CHANnel2` · †<br>Set_Trigger_Can_Source → CHANnel2. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital0` · `DIGital0` · †<br>Set_Trigger_Can_Source → DIGital0. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital1` · `DIGital1` · †<br>Set_Trigger_Can_Source → DIGital1. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital10` · `DIGital10` · †<br>Set_Trigger_Can_Source → DIGital10. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital11` · `DIGital11` · †<br>Set_Trigger_Can_Source → DIGital11. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital12` · `DIGital12` · †<br>Set_Trigger_Can_Source → DIGital12. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital13` · `DIGital13` · †<br>Set_Trigger_Can_Source → DIGital13. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital14` · `DIGital14` · †<br>Set_Trigger_Can_Source → DIGital14. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital15` · `DIGital15` · †<br>Set_Trigger_Can_Source → DIGital15. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital2` · `DIGital2` · †<br>Set_Trigger_Can_Source → DIGital2. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital3` · `DIGital3` · †<br>Set_Trigger_Can_Source → DIGital3. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital4` · `DIGital4` · †<br>Set_Trigger_Can_Source → DIGital4. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital5` · `DIGital5` · †<br>Set_Trigger_Can_Source → DIGital5. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital6` · `DIGital6` · †<br>Set_Trigger_Can_Source → DIGital6. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital7` · `DIGital7` · †<br>Set_Trigger_Can_Source → DIGital7. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital8` · `DIGital8` · †<br>Set_Trigger_Can_Source → DIGital8. Set trigger can source
+    - `SOURce` — **SET** `Set_Trigger_Can_Source_DIGital9` · `DIGital9` · †<br>Set_Trigger_Can_Source → DIGital9. Set trigger can source
     - `TRIGger` — **SET** `Set_Trigger_Can_Trigger` · `<value>` · args: `value` · †
     - `ACKNowledge?` — **NAB** `Get_Trigger_Can_Acknowledge` · → 1 value · †
     - `SAMPlepoint?` — **NAB** `Get_Trigger_Can_Samplepoint` · → 1 value · †
@@ -400,7 +490,9 @@ Several statements in one message, so they hang off no single branch. Every stat
       - `DATA?` — **NAB** `Get_Trigger_Can_Pattern_Data` · → BLOCK · †<br>Table 5-1
       - `ID?` — **NAB** `Get_Trigger_Can_Pattern_Id` · → 1 value · †<br>Table 5-1
       - **`ID`**
-        - `MODE` — **SET** `Set_Trigger_Can_Pattern_Id_Mode` · `<value>` · args: `value` · enum · †
+        - `MODE` — **SET** `Set_Trigger_Can_Pattern_Id_Mode` · `<value>` · args: `value` · enum: `STANdard` | `EXTended` · †
+        - `MODE` — **SET** `Set_Trigger_Can_Pattern_Id_Mode_EXTended` · `EXTended` · †<br>Set_Trigger_Can_Pattern_Id_Mode → EXTended. Set trigger can pattern id mode
+        - `MODE` — **SET** `Set_Trigger_Can_Pattern_Id_Mode_STANdard` · `STANdard` · †<br>Set_Trigger_Can_Pattern_Id_Mode → STANdard. Set trigger can pattern id mode
         - `MODE?` — **NAB** `Get_Trigger_Can_Pattern_Id_Mode` · → CRD · †
     - **`SIGNal`**
       - `BAUDrate` — **SET** `Set_Trigger_Can_Signal_Baudrate` · `<value>` · args: `value` · †
@@ -415,21 +507,63 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `QUALifier?` — **NAB** `Get_Trigger_Duration_Qualifier` · → 1 value · †
     - `RANGe?` — **NAB** `Get_Trigger_Duration_Range` · → NR3 · †
   - **`EDGE`**
-    - `SLOPe` — **SET** `Set_Edge_Slope` · `<slope>` · args: `slope` · enum
-    - `SOURce` — **SET** `Set_Edge_Source` · `<source>` · args: `source` · enum
-    - `SOURce` — **SET** `Set_Edge_Source_CH1` · `<source>` · args: `source` · enum
-    - `SOURce` — **SET** `Set_Edge_Source_CH2` · `<source>` · args: `source` · enum
-    - `SOURce` — **SET** `Set_Edge_Source_EXT` · `<source>` · args: `source` · enum
+    - `SLOPe` — **SET** `Set_Edge_Slope` · `<slope>` · args: `slope` · enum: `POSitive` | `NEGative`
+    - `SLOPe` — **SET** `Set_Edge_Slope_NEGative` · `NEGative` · †<br>Set_Edge_Slope → NEGative. Set Edge Slope
+    - `SLOPe` — **SET** `Set_Edge_Slope_POSitive` · `POSitive` · †<br>Set_Edge_Slope → POSitive. Set Edge Slope
+    - `SOURce` — **SET** `Set_Edge_Source` · `<source>` · args: `source` · enum: `CHANnel1` | `CHANnel2` | `DIGital0` | `DIGital1` | `DIGital2` | `DIGital3` | `DIGital4` | `DIGital5` | `DIGital6` | `DIGital7` | `DIGital8` | `DIGital9` | `DIGital10` | `DIGital11` | `DIGital12` | `DIGital13` | `DIGital14` | `DIGital15` | `EXTernal` | `LINE`
+    - `SOURce` — **SET** `Set_Edge_Source_CH1` · `CHANnel1` · none
+    - `SOURce` — **SET** `Set_Edge_Source_CH2` · `CHANnel2` · none
+    - `SOURce` — **SET** `Set_Edge_Source_CHANnel1` · `CHANnel1` · †<br>Set_Edge_Source → CHANnel1. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_CHANnel2` · `CHANnel2` · †<br>Set_Edge_Source → CHANnel2. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital0` · `DIGital0` · †<br>Set_Edge_Source → DIGital0. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital1` · `DIGital1` · †<br>Set_Edge_Source → DIGital1. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital10` · `DIGital10` · †<br>Set_Edge_Source → DIGital10. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital11` · `DIGital11` · †<br>Set_Edge_Source → DIGital11. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital12` · `DIGital12` · †<br>Set_Edge_Source → DIGital12. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital13` · `DIGital13` · †<br>Set_Edge_Source → DIGital13. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital14` · `DIGital14` · †<br>Set_Edge_Source → DIGital14. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital15` · `DIGital15` · †<br>Set_Edge_Source → DIGital15. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital2` · `DIGital2` · †<br>Set_Edge_Source → DIGital2. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital3` · `DIGital3` · †<br>Set_Edge_Source → DIGital3. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital4` · `DIGital4` · †<br>Set_Edge_Source → DIGital4. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital5` · `DIGital5` · †<br>Set_Edge_Source → DIGital5. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital6` · `DIGital6` · †<br>Set_Edge_Source → DIGital6. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital7` · `DIGital7` · †<br>Set_Edge_Source → DIGital7. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital8` · `DIGital8` · †<br>Set_Edge_Source → DIGital8. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_DIGital9` · `DIGital9` · †<br>Set_Edge_Source → DIGital9. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_EXT` · `EXTernal` · none
+    - `SOURce` — **SET** `Set_Edge_Source_EXTernal` · `EXTernal` · †<br>Set_Edge_Source → EXTernal. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_LINE` · `LINE` · †<br>Set_Edge_Source → LINE. Set Edge Source
     - `LEVel` — **SET** `Set_Trigger_Level` · `<level>` · args: `level` · numeric
     - `LEVel?` — **NAB** `Get_Trigger_Edge_Level` · → NR3 · †
     - `SLOPe?` — **NAB** `Get_Trigger_Edge_Slope` · → CRD · †
     - `SOURce?` — **NAB** `Get_Trigger_Edge_Source` · → CRD · †
   - **`GLITch`**
     - `QUALifier` — **SET** `Set_Glitch_Condition` · `<qual>` · args: `qual`
-    - `SOURce` — **SET** `Set_Glitch_Source` · `<source>` · args: `source` · enum
+    - `SOURce` — **SET** `Set_Glitch_Source` · `<source>` · args: `source` · enum: `CHANnel1` | `CHANnel2` | `DIGital0` | `DIGital1` | `DIGital2` | `DIGital3` | `DIGital4` | `DIGital5` | `DIGital6` | `DIGital7` | `DIGital8` | `DIGital9` | `DIGital10` | `DIGital11` | `DIGital12` | `DIGital13` | `DIGital14` | `DIGital15`
+    - `SOURce` — **SET** `Set_Glitch_Source_CHANnel1` · `CHANnel1` · †<br>Set_Glitch_Source → CHANnel1. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_CHANnel2` · `CHANnel2` · †<br>Set_Glitch_Source → CHANnel2. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital0` · `DIGital0` · †<br>Set_Glitch_Source → DIGital0. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital1` · `DIGital1` · †<br>Set_Glitch_Source → DIGital1. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital10` · `DIGital10` · †<br>Set_Glitch_Source → DIGital10. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital11` · `DIGital11` · †<br>Set_Glitch_Source → DIGital11. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital12` · `DIGital12` · †<br>Set_Glitch_Source → DIGital12. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital13` · `DIGital13` · †<br>Set_Glitch_Source → DIGital13. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital14` · `DIGital14` · †<br>Set_Glitch_Source → DIGital14. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital15` · `DIGital15` · †<br>Set_Glitch_Source → DIGital15. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital2` · `DIGital2` · †<br>Set_Glitch_Source → DIGital2. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital3` · `DIGital3` · †<br>Set_Glitch_Source → DIGital3. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital4` · `DIGital4` · †<br>Set_Glitch_Source → DIGital4. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital5` · `DIGital5` · †<br>Set_Glitch_Source → DIGital5. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital6` · `DIGital6` · †<br>Set_Glitch_Source → DIGital6. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital7` · `DIGital7` · †<br>Set_Glitch_Source → DIGital7. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital8` · `DIGital8` · †<br>Set_Glitch_Source → DIGital8. Set Glitch Source
+    - `SOURce` — **SET** `Set_Glitch_Source_DIGital9` · `DIGital9` · †<br>Set_Glitch_Source → DIGital9. Set Glitch Source
     - `LESSthan` — **SET** `Set_Glitch_Width` · `<time>` · args: `time` · numeric (s)
     - `LEVel` — **SET** `Set_Trigger_Glitch_Level` · `<value>` · args: `value` · numeric · †
-    - `POLarity` — **SET** `Set_Trigger_Glitch_Polarity` · `<value>` · args: `value` · enum · †
+    - `POLarity` — **SET** `Set_Trigger_Glitch_Polarity` · `<value>` · args: `value` · enum: `POSitive` | `NEGative` · †
+    - `POLarity` — **SET** `Set_Trigger_Glitch_Polarity_NEGative` · `NEGative` · †<br>Set_Trigger_Glitch_Polarity → NEGative. Set trigger glitch polarity
+    - `POLarity` — **SET** `Set_Trigger_Glitch_Polarity_POSitive` · `POSitive` · †<br>Set_Trigger_Glitch_Polarity → POSitive. Set trigger glitch polarity
     - `RANGe` — **SET** `Set_Trigger_Glitch_Range` · `<value>` · args: `value` · numeric · †
     - `GREaterthan?` — **NAB** `Get_Trigger_Glitch_Greaterthan` · → 1 value · †
     - `LESSthan?` — **NAB** `Get_Trigger_Glitch_Lessthan` · → 1 value · †
@@ -451,7 +585,25 @@ Several statements in one message, so they hang off no single branch. Every stat
       - `QUALifier` — **SET** `Set_Trigger_Iic_Trigger_Qualifier` · `<value>` · args: `value` · †
       - `QUALifer?` — **NAB** `Get_Trigger_Iic_Trigger_Qualifier` · → 1 value · †
   - **`LIN`**
-    - `SOURce` — **SET** `Set_Trigger_Lin_Source` · `<value>` · args: `value` · enum · †
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source` · `<value>` · args: `value` · enum: `CHANnel1` | `CHANnel2` | `DIGital0` | `DIGital1` | `DIGital2` | `DIGital3` | `DIGital4` | `DIGital5` | `DIGital6` | `DIGital7` | `DIGital8` | `DIGital9` | `DIGital10` | `DIGital11` | `DIGital12` | `DIGital13` | `DIGital14` | `DIGital15` · †
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_CHANnel1` · `CHANnel1` · †<br>Set_Trigger_Lin_Source → CHANnel1. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_CHANnel2` · `CHANnel2` · †<br>Set_Trigger_Lin_Source → CHANnel2. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital0` · `DIGital0` · †<br>Set_Trigger_Lin_Source → DIGital0. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital1` · `DIGital1` · †<br>Set_Trigger_Lin_Source → DIGital1. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital10` · `DIGital10` · †<br>Set_Trigger_Lin_Source → DIGital10. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital11` · `DIGital11` · †<br>Set_Trigger_Lin_Source → DIGital11. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital12` · `DIGital12` · †<br>Set_Trigger_Lin_Source → DIGital12. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital13` · `DIGital13` · †<br>Set_Trigger_Lin_Source → DIGital13. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital14` · `DIGital14` · †<br>Set_Trigger_Lin_Source → DIGital14. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital15` · `DIGital15` · †<br>Set_Trigger_Lin_Source → DIGital15. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital2` · `DIGital2` · †<br>Set_Trigger_Lin_Source → DIGital2. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital3` · `DIGital3` · †<br>Set_Trigger_Lin_Source → DIGital3. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital4` · `DIGital4` · †<br>Set_Trigger_Lin_Source → DIGital4. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital5` · `DIGital5` · †<br>Set_Trigger_Lin_Source → DIGital5. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital6` · `DIGital6` · †<br>Set_Trigger_Lin_Source → DIGital6. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital7` · `DIGital7` · †<br>Set_Trigger_Lin_Source → DIGital7. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital8` · `DIGital8` · †<br>Set_Trigger_Lin_Source → DIGital8. Set trigger lin source
+    - `SOURce` — **SET** `Set_Trigger_Lin_Source_DIGital9` · `DIGital9` · †<br>Set_Trigger_Lin_Source → DIGital9. Set trigger lin source
     - `TRIGger` — **SET** `Set_Trigger_Lin_Trigger` · `<value>` · args: `value` · †
     - `SOURce?` — **NAB** `Get_Trigger_Lin_Source` · → CRD · †
     - `TRIGger?` — **NAB** `Get_Trigger_Lin_Trigger` · → 1 value · †
@@ -471,7 +623,9 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `PATTERN` — **DO** `Do_Trigger_Spi_Pattern` · †<br>Table 5-1
     - `SOURce` — **DO** `Do_Trigger_Spi_Source` · †<br>Table 5-1
     - **`CLOCk`**
-      - `SLOPe` — **SET** `Set_Trigger_Spi_Clock_Slope` · `<value>` · args: `value` · enum · †
+      - `SLOPe` — **SET** `Set_Trigger_Spi_Clock_Slope` · `<value>` · args: `value` · enum: `POSitive` | `NEGative` · †
+      - `SLOPe` — **SET** `Set_Trigger_Spi_Clock_Slope_NEGative` · `NEGative` · †<br>Set_Trigger_Spi_Clock_Slope → NEGative. Set trigger spi clock slope
+      - `SLOPe` — **SET** `Set_Trigger_Spi_Clock_Slope_POSitive` · `POSitive` · †<br>Set_Trigger_Spi_Clock_Slope → POSitive. Set trigger spi clock slope
       - `TIMeout` — **SET** `Set_Trigger_Spi_Clock_Timebase` · `<value>` · args: `value` · numeric (s) · †
       - `SLOPe?` — **NAB** `Get_Trigger_Spi_Clock_Slope` · → CRD · †
       - `TIMeout?` — **NAB** `Get_Trigger_Spi_Clock_Timebase` · → NR3 s · †
@@ -489,9 +643,23 @@ Several statements in one message, so they hang off no single branch. Every stat
       - `FRAMe?` — **NAB** `Get_Trigger_Spi_Source_Frame` · → 1 value · †
   - **`TV`**
     - `LINE` — **SET** `Set_Trigger_Tv_Line` · `<value>` · args: `value` · †
-    - `MODE` — **SET** `Set_Trigger_Tv_Mode` · `<value>` · args: `value` · enum · †
-    - `POLarity` — **SET** `Set_Trigger_Tv_Polarity` · `<value>` · args: `value` · enum · †
-    - `SOURce` — **SET** `Set_Trigger_Tv_Source` · `<value>` · args: `value` · enum · †
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode` · `<value>` · args: `value` · enum: `F1` | `F2` | `ALLFields` | `ALLLines` | `LINE` | `VERTical` | `LINEF1` | `LINEF2` | `LINEAlt` | `LINEVert` · †
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_ALLFields` · `ALLFields` · †<br>Set_Trigger_Tv_Mode → ALLFields. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_ALLLines` · `ALLLines` · †<br>Set_Trigger_Tv_Mode → ALLLines. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_F1` · `F1` · †<br>Set_Trigger_Tv_Mode → F1. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_F2` · `F2` · †<br>Set_Trigger_Tv_Mode → F2. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_LINE` · `LINE` · †<br>Set_Trigger_Tv_Mode → LINE. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_LINEAlt` · `LINEAlt` · †<br>Set_Trigger_Tv_Mode → LINEAlt. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_LINEF1` · `LINEF1` · †<br>Set_Trigger_Tv_Mode → LINEF1. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_LINEF2` · `LINEF2` · †<br>Set_Trigger_Tv_Mode → LINEF2. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_LINEVert` · `LINEVert` · †<br>Set_Trigger_Tv_Mode → LINEVert. Set trigger tv mode
+    - `MODE` — **SET** `Set_Trigger_Tv_Mode_VERTical` · `VERTical` · †<br>Set_Trigger_Tv_Mode → VERTical. Set trigger tv mode
+    - `POLarity` — **SET** `Set_Trigger_Tv_Polarity` · `<value>` · args: `value` · enum: `POSitive` | `NEGative` · †
+    - `POLarity` — **SET** `Set_Trigger_Tv_Polarity_NEGative` · `NEGative` · †<br>Set_Trigger_Tv_Polarity → NEGative. Set trigger tv polarity
+    - `POLarity` — **SET** `Set_Trigger_Tv_Polarity_POSitive` · `POSitive` · †<br>Set_Trigger_Tv_Polarity → POSitive. Set trigger tv polarity
+    - `SOURce` — **SET** `Set_Trigger_Tv_Source` · `<value>` · args: `value` · enum: `CHANnel1` | `CHANnel2` · †
+    - `SOURce` — **SET** `Set_Trigger_Tv_Source_CHANnel1` · `CHANnel1` · †<br>Set_Trigger_Tv_Source → CHANnel1. Set trigger tv source
+    - `SOURce` — **SET** `Set_Trigger_Tv_Source_CHANnel2` · `CHANnel2` · †<br>Set_Trigger_Tv_Source → CHANnel2. Set trigger tv source
     - `STANdard` — **SET** `Set_Trigger_Tv_Standard` · `<value>` · args: `value` · †
     - `LINE?` — **NAB** `Get_Trigger_Tv_Line` · → 1 value · †
     - `MODE?` — **NAB** `Get_Trigger_Tv_Mode` · → CRD · †
@@ -519,9 +687,17 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `UNSigned` — **SET** `Set_Unsigned` · `<state>` · args: `state` · bool: `OFF` | `ON`
   - `UNSigned` — **SET** `Set_Unsigned_OFF` · `OFF` · †<br>Set_Unsigned → OFF. Set Unsigned
   - `UNSigned` — **SET** `Set_Unsigned_ON` · `ON` · †<br>Set_Unsigned → ON. Set Unsigned
-  - `FORMat` — **SET** `Set_Waveform_Format` · `<format>` · args: `format` · enum
+  - `FORMat` — **SET** `Set_Waveform_Format` · `<format>` · args: `format` · enum: `WORD` | `BYTE` | `ASCii`
+  - `FORMat` — **SET** `Set_Waveform_Format_ASCii` · `ASCii` · †<br>Set_Waveform_Format → ASCii. Set Waveform Format
+  - `FORMat` — **SET** `Set_Waveform_Format_BYTE` · `BYTE` · †<br>Set_Waveform_Format → BYTE. Set Waveform Format
+  - `FORMat` — **SET** `Set_Waveform_Format_WORD` · `WORD` · †<br>Set_Waveform_Format → WORD. Set Waveform Format
   - `POINts` — **SET** `Set_Waveform_Points` · `<points>` · args: `points` · integer
-  - `SOURce` — **SET** `Set_Waveform_Source` · `<source>` · args: `source` · enum
+  - `SOURce` — **SET** `Set_Waveform_Source` · `<source>` · args: `source` · enum: `CHANnel1` | `CHANnel2` | `POD1` | `POD2` | `FUNCtion`
+  - `SOURce` — **SET** `Set_Waveform_Source_CHANnel1` · `CHANnel1` · †<br>Set_Waveform_Source → CHANnel1. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_CHANnel2` · `CHANnel2` · †<br>Set_Waveform_Source → CHANnel2. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_FUNCtion` · `FUNCtion` · †<br>Set_Waveform_Source → FUNCtion. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_POD1` · `POD1` · †<br>Set_Waveform_Source → POD1. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_POD2` · `POD2` · †<br>Set_Waveform_Source → POD2. Set Waveform Source
   - `VIEW` — **SET** `Set_Waveform_View` · `<value>` · args: `value` · †
   - `PREamble?` — **NAB** `Get_Preamble` · → BLOCK
   - `BYTeorder?` — **NAB** `Get_Waveform_Byteorder` · → 1 value · †

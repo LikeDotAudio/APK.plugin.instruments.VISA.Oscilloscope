@@ -74,9 +74,9 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 476,
+    "total_commands": 652,
     "get_count": 157,
-    "set_count": 198,
+    "set_count": 374,
     "nab_count": 171,
     "rig_count": 1,
     "do_count": 106
@@ -4470,7 +4470,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "RTIMe",
+            "ETIMe"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -4478,6 +4482,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Acquire_Mode",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Acquire_Mode_ETIMe": {
+        "command": "Set_Acquire_Mode_ETIMe",
+        "verb": "set",
+        "description": "Set_Acquire_Mode \u2192 ETIMe. Set acquire mode",
+        "scpi": ":ACQuire:MODE ETIMe",
+        "scpi_fast": ":ACQ:MODE ETIMe",
+        "subsystem": "ACQ",
+        "group": "ACQ",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_ETIMe",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Mode_ETIMe",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Acquire_Mode_RTIMe": {
+        "command": "Set_Acquire_Mode_RTIMe",
+        "verb": "set",
+        "description": "Set_Acquire_Mode \u2192 RTIMe. Set acquire mode",
+        "scpi": ":ACQuire:MODE RTIMe",
+        "scpi_fast": ":ACQ:MODE RTIMe",
+        "subsystem": "ACQ",
+        "group": "ACQ",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_RTIMe",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Mode_RTIMe",
             "value": "<value>",
             "input_name": "value"
           }
@@ -4510,110 +4562,6 @@
         },
         "unverified": false
       },
-      "Set_Acquire_Mode_AVERage": {
-        "command": "Set_Acquire_Mode_AVERage",
-        "verb": "set",
-        "description": "Set Acquire Mode AVERage",
-        "scpi": ":ACQuire:TYPE <type>",
-        "scpi_fast": ":ACQ:TYPE <type>",
-        "subsystem": "Trigger",
-        "group": "Acquire Mode & Averaging",
-        "args": [
-          "type"
-        ],
-        "arg": {
-          "kind": "enum"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_AVERage",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Acquire_Mode_AVERage",
-            "value": "<value>",
-            "input_name": "type"
-          }
-        },
-        "unverified": false
-      },
-      "Set_Acquire_Mode_HRESolution": {
-        "command": "Set_Acquire_Mode_HRESolution",
-        "verb": "set",
-        "description": "Set Acquire Mode HRESolution",
-        "scpi": ":ACQuire:TYPE <type>",
-        "scpi_fast": ":ACQ:TYPE <type>",
-        "subsystem": "Trigger",
-        "group": "Acquire Mode & Averaging",
-        "args": [
-          "type"
-        ],
-        "arg": {
-          "kind": "enum"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_HRESolution",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Acquire_Mode_HRESolution",
-            "value": "<value>",
-            "input_name": "type"
-          }
-        },
-        "unverified": false
-      },
-      "Set_Acquire_Mode_NORMal": {
-        "command": "Set_Acquire_Mode_NORMal",
-        "verb": "set",
-        "description": "Set Acquire Mode NORMal",
-        "scpi": ":ACQuire:TYPE <type>",
-        "scpi_fast": ":ACQ:TYPE <type>",
-        "subsystem": "Trigger",
-        "group": "Acquire Mode & Averaging",
-        "args": [
-          "type"
-        ],
-        "arg": {
-          "kind": "enum"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_NORMal",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Acquire_Mode_NORMal",
-            "value": "<value>",
-            "input_name": "type"
-          }
-        },
-        "unverified": false
-      },
-      "Set_Acquire_Mode_PEAK": {
-        "command": "Set_Acquire_Mode_PEAK",
-        "verb": "set",
-        "description": "Set Acquire Mode PEAK",
-        "scpi": ":ACQuire:TYPE <type>",
-        "scpi_fast": ":ACQ:TYPE <type>",
-        "subsystem": "Trigger",
-        "group": "Acquire Mode & Averaging",
-        "args": [
-          "type"
-        ],
-        "arg": {
-          "kind": "enum"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_PEAK",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Acquire_Mode_PEAK",
-            "value": "<value>",
-            "input_name": "type"
-          }
-        },
-        "unverified": false
-      },
       "Set_Acquire_Type": {
         "command": "Set_Acquire_Type",
         "verb": "set",
@@ -4626,7 +4574,12 @@
           "type"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "NORMal",
+            "AVERage",
+            "PEAK"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -4639,6 +4592,150 @@
           }
         },
         "unverified": false
+      },
+      "Set_Acquire_Mode_AVERage": {
+        "command": "Set_Acquire_Mode_AVERage",
+        "verb": "set",
+        "description": "Set Acquire Mode AVERage",
+        "scpi": ":ACQuire:TYPE AVERage",
+        "scpi_fast": ":ACQ:TYPE AVERage",
+        "subsystem": "Trigger",
+        "group": "Acquire Mode & Averaging",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_AVERage",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Mode_AVERage",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": false
+      },
+      "Set_Acquire_Type_AVERage": {
+        "command": "Set_Acquire_Type_AVERage",
+        "verb": "set",
+        "description": "Set_Acquire_Type \u2192 AVERage. Set Acquire Type",
+        "scpi": "ACQuire:TYPE AVERage",
+        "scpi_fast": "ACQ:TYPE AVERage",
+        "subsystem": "ACQuire",
+        "group": "Acquisition Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Type_AVERage",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Type_AVERage",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Acquire_Mode_NORMal": {
+        "command": "Set_Acquire_Mode_NORMal",
+        "verb": "set",
+        "description": "Set Acquire Mode NORMal",
+        "scpi": ":ACQuire:TYPE NORMal",
+        "scpi_fast": ":ACQ:TYPE NORMal",
+        "subsystem": "Trigger",
+        "group": "Acquire Mode & Averaging",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_NORMal",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Mode_NORMal",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": false
+      },
+      "Set_Acquire_Type_NORMal": {
+        "command": "Set_Acquire_Type_NORMal",
+        "verb": "set",
+        "description": "Set_Acquire_Type \u2192 NORMal. Set Acquire Type",
+        "scpi": "ACQuire:TYPE NORMal",
+        "scpi_fast": "ACQ:TYPE NORMal",
+        "subsystem": "ACQuire",
+        "group": "Acquisition Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Type_NORMal",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Type_NORMal",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Acquire_Mode_PEAK": {
+        "command": "Set_Acquire_Mode_PEAK",
+        "verb": "set",
+        "description": "Set Acquire Mode PEAK",
+        "scpi": ":ACQuire:TYPE PEAK",
+        "scpi_fast": ":ACQ:TYPE PEAK",
+        "subsystem": "Trigger",
+        "group": "Acquire Mode & Averaging",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Mode_PEAK",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Mode_PEAK",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": false
+      },
+      "Set_Acquire_Type_PEAK": {
+        "command": "Set_Acquire_Type_PEAK",
+        "verb": "set",
+        "description": "Set_Acquire_Type \u2192 PEAK. Set Acquire Type",
+        "scpi": "ACQuire:TYPE PEAK",
+        "scpi_fast": "ACQ:TYPE PEAK",
+        "subsystem": "ACQuire",
+        "group": "Acquisition Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Acquire_Type_PEAK",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Acquire_Type_PEAK",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Calibrate_Label": {
         "command": "Set_Calibrate_Label",
@@ -4756,7 +4853,11 @@
           "coupling"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "AC",
+            "DC"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -4782,7 +4883,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "AC",
+            "DC"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -4790,6 +4895,102 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Channel_Coupling",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH1_Coupling_AC": {
+        "command": "CH1_Coupling_AC",
+        "verb": "set",
+        "description": "CH1_Coupling \u2192 AC. CH1 Coupling",
+        "scpi": ":CHANnel1:COUPling AC",
+        "scpi_fast": ":CHAN1:COUP AC",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_Coupling_AC",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_Coupling_AC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Channel_Coupling_AC": {
+        "command": "Set_Channel_Coupling_AC",
+        "verb": "set",
+        "description": "Set_Channel_Coupling \u2192 AC. Receiving Information from the Instrument",
+        "scpi": ":CHANNEL1:COUPLING AC",
+        "scpi_fast": ":CHAN1:COUP AC",
+        "subsystem": "CHANNEL",
+        "group": "CHANNEL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Channel_Coupling_AC",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Channel_Coupling_AC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH1_Coupling_DC": {
+        "command": "CH1_Coupling_DC",
+        "verb": "set",
+        "description": "CH1_Coupling \u2192 DC. CH1 Coupling",
+        "scpi": ":CHANnel1:COUPling DC",
+        "scpi_fast": ":CHAN1:COUP DC",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_Coupling_DC",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_Coupling_DC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Channel_Coupling_DC": {
+        "command": "Set_Channel_Coupling_DC",
+        "verb": "set",
+        "description": "Set_Channel_Coupling \u2192 DC. Receiving Information from the Instrument",
+        "scpi": ":CHANNEL1:COUPLING DC",
+        "scpi_fast": ":CHAN1:COUP DC",
+        "subsystem": "CHANNEL",
+        "group": "CHANNEL",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Channel_Coupling_DC",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Channel_Coupling_DC",
             "value": "<value>",
             "input_name": "value"
           }
@@ -5094,7 +5295,11 @@
           "coupling"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "AC",
+            "DC"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5107,6 +5312,54 @@
           }
         },
         "unverified": false
+      },
+      "CH2_Coupling_AC": {
+        "command": "CH2_Coupling_AC",
+        "verb": "set",
+        "description": "CH2_Coupling \u2192 AC. CH2 Coupling",
+        "scpi": ":CHANnel2:COUPling AC",
+        "scpi_fast": ":CHAN2:COUP AC",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_Coupling_AC",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_Coupling_AC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH2_Coupling_DC": {
+        "command": "CH2_Coupling_DC",
+        "verb": "set",
+        "description": "CH2_Coupling \u2192 DC. CH2 Coupling",
+        "scpi": ":CHANnel2:COUPling DC",
+        "scpi_fast": ":CHAN2:COUP DC",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_Coupling_DC",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_Coupling_DC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "CH2_Invert": {
         "command": "CH2_Invert",
@@ -5332,7 +5585,11 @@
           "coupling"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "AC",
+            "DC"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5388,7 +5645,11 @@
           "imp"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "ONEMeg",
+            "FIFTy"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5711,7 +5972,12 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "PMEMory0",
+            "PMEMory1",
+            "PMEMory2"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5719,6 +5985,78 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Display_Source",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Display_Source_PMEMory0": {
+        "command": "Set_Display_Source_PMEMory0",
+        "verb": "set",
+        "description": "Set_Display_Source \u2192 PMEMory0. Set display source",
+        "scpi": ":DISPlay:SOURce PMEMory0",
+        "scpi_fast": ":DISP:SOUR PMEMory0",
+        "subsystem": "DISP",
+        "group": "DISP",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Display_Source_PMEMory0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Display_Source_PMEMory0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Display_Source_PMEMory1": {
+        "command": "Set_Display_Source_PMEMory1",
+        "verb": "set",
+        "description": "Set_Display_Source \u2192 PMEMory1. Set display source",
+        "scpi": ":DISPlay:SOURce PMEMory1",
+        "scpi_fast": ":DISP:SOUR PMEMory1",
+        "subsystem": "DISP",
+        "group": "DISP",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Display_Source_PMEMory1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Display_Source_PMEMory1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Display_Source_PMEMory2": {
+        "command": "Set_Display_Source_PMEMory2",
+        "verb": "set",
+        "description": "Set_Display_Source \u2192 PMEMory2. Set display source",
+        "scpi": ":DISPlay:SOURce PMEMory2",
+        "scpi_fast": ":DISP:SOUR PMEMory2",
+        "subsystem": "DISP",
+        "group": "DISP",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Display_Source_PMEMory2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Display_Source_PMEMory2",
             "value": "<value>",
             "input_name": "value"
           }
@@ -5841,7 +6179,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "ONEMeg",
+            "FIFTy"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5849,6 +6191,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_External_Impedance",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_External_Impedance_FIFTy": {
+        "command": "Set_External_Impedance_FIFTy",
+        "verb": "set",
+        "description": "Set_External_Impedance \u2192 FIFTy. Set external impedance",
+        "scpi": "EXTernal:IMPedance FIFTy",
+        "scpi_fast": "EXT:IMP FIFTy",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Impedance_FIFTy",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Impedance_FIFTy",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_External_Impedance_ONEMeg": {
+        "command": "Set_External_Impedance_ONEMeg",
+        "verb": "set",
+        "description": "Set_External_Impedance \u2192 ONEMeg. Set external impedance",
+        "scpi": "EXTernal:IMPedance ONEMeg",
+        "scpi_fast": "EXT:IMP ONEMeg",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Impedance_ONEMeg",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Impedance_ONEMeg",
             "value": "<value>",
             "input_name": "value"
           }
@@ -5919,7 +6309,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "VOLT",
+            "AMPere"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -5927,6 +6321,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_External_Units",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_External_Units_AMPere": {
+        "command": "Set_External_Units_AMPere",
+        "verb": "set",
+        "description": "Set_External_Units \u2192 AMPere. Set external units",
+        "scpi": ":EXTernal:UNITs AMPere",
+        "scpi_fast": ":EXT:UNIT AMPere",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Units_AMPere",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Units_AMPere",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_External_Units_VOLT": {
+        "command": "Set_External_Units_VOLT",
+        "verb": "set",
+        "description": "Set_External_Units \u2192 VOLT. Set external units",
+        "scpi": ":EXTernal:UNITs VOLT",
+        "scpi_fast": ":EXT:UNIT VOLT",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Units_VOLT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Units_VOLT",
             "value": "<value>",
             "input_name": "value"
           }
@@ -6075,7 +6517,15 @@
           "op"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "SUBTract",
+            "MULTiply",
+            "INTegrate",
+            "DIFFerentiate",
+            "FFT",
+            "SQRT"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -6101,7 +6551,15 @@
           "operation"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "SUBTract",
+            "MULTiply",
+            "INTegrate",
+            "DIFFerentiate",
+            "FFT",
+            "SQRT"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -6198,6 +6656,78 @@
         },
         "unverified": true
       },
+      "Set_Function_Operation_DIFFerentiate": {
+        "command": "Set_Function_Operation_DIFFerentiate",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 DIFFerentiate. Set Function Operation",
+        "scpi": "FUNCtion:OPERation DIFFerentiate",
+        "scpi_fast": "FUNC:OPER DIFFerentiate",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_DIFFerentiate",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_DIFFerentiate",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_DIFFerentiate": {
+        "command": "Set_Operation_DIFFerentiate",
+        "verb": "set",
+        "description": "Set_Operation \u2192 DIFFerentiate. Set Operation",
+        "scpi": ":FUNCtion:OPERation DIFFerentiate",
+        "scpi_fast": ":FUNC:OPER DIFFerentiate",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_DIFFerentiate",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_DIFFerentiate",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Function_Operation_FFT": {
+        "command": "Set_Function_Operation_FFT",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 FFT. Set Function Operation",
+        "scpi": "FUNCtion:OPERation FFT",
+        "scpi_fast": "FUNC:OPER FFT",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_FFT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_FFT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Math_Operator_FFT": {
         "command": "Set_Math_Operator_FFT",
         "verb": "set",
@@ -6216,6 +6746,30 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Math_Operator_FFT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_FFT": {
+        "command": "Set_Operation_FFT",
+        "verb": "set",
+        "description": "Set_Operation \u2192 FFT. Set Operation",
+        "scpi": ":FUNCtion:OPERation FFT",
+        "scpi_fast": ":FUNC:OPER FFT",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_FFT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_FFT",
             "value": "<value>",
             "input_name": "value"
           }
@@ -6246,6 +6800,54 @@
         },
         "unverified": true
       },
+      "Set_Function_Operation_INTegrate": {
+        "command": "Set_Function_Operation_INTegrate",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 INTegrate. Set Function Operation",
+        "scpi": "FUNCtion:OPERation INTegrate",
+        "scpi_fast": "FUNC:OPER INTegrate",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_INTegrate",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_INTegrate",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_INTegrate": {
+        "command": "Set_Operation_INTegrate",
+        "verb": "set",
+        "description": "Set_Operation \u2192 INTegrate. Set Operation",
+        "scpi": ":FUNCtion:OPERation INTegrate",
+        "scpi_fast": ":FUNC:OPER INTegrate",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_INTegrate",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_INTegrate",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Math_Operator_MULT": {
         "command": "Set_Math_Operator_MULT",
         "verb": "set",
@@ -6270,6 +6872,102 @@
         },
         "unverified": true
       },
+      "Set_Function_Operation_MULTiply": {
+        "command": "Set_Function_Operation_MULTiply",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 MULTiply. Set Function Operation",
+        "scpi": "FUNCtion:OPERation MULTiply",
+        "scpi_fast": "FUNC:OPER MULTiply",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_MULTiply",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_MULTiply",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_MULTiply": {
+        "command": "Set_Operation_MULTiply",
+        "verb": "set",
+        "description": "Set_Operation \u2192 MULTiply. Set Operation",
+        "scpi": ":FUNCtion:OPERation MULTiply",
+        "scpi_fast": ":FUNC:OPER MULTiply",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_MULTiply",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_MULTiply",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Function_Operation_SQRT": {
+        "command": "Set_Function_Operation_SQRT",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 SQRT. Set Function Operation",
+        "scpi": "FUNCtion:OPERation SQRT",
+        "scpi_fast": "FUNC:OPER SQRT",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_SQRT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_SQRT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_SQRT": {
+        "command": "Set_Operation_SQRT",
+        "verb": "set",
+        "description": "Set_Operation \u2192 SQRT. Set Operation",
+        "scpi": ":FUNCtion:OPERation SQRT",
+        "scpi_fast": ":FUNC:OPER SQRT",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_SQRT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_SQRT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Math_Operator_SUBT": {
         "command": "Set_Math_Operator_SUBT",
         "verb": "set",
@@ -6288,6 +6986,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Math_Operator_SUBT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Function_Operation_SUBTract": {
+        "command": "Set_Function_Operation_SUBTract",
+        "verb": "set",
+        "description": "Set_Function_Operation \u2192 SUBTract. Set Function Operation",
+        "scpi": "FUNCtion:OPERation SUBTract",
+        "scpi_fast": "FUNC:OPER SUBTract",
+        "subsystem": "FUNCtion",
+        "group": "Math Function Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Function_Operation_SUBTract",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Function_Operation_SUBTract",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Operation_SUBTract": {
+        "command": "Set_Operation_SUBTract",
+        "verb": "set",
+        "description": "Set_Operation \u2192 SUBTract. Set Operation",
+        "scpi": ":FUNCtion:OPERation SUBTract",
+        "scpi_fast": ":FUNC:OPER SUBTract",
+        "subsystem": "Math_FFT",
+        "group": "Select Operation",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Operation_SUBTract",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Operation_SUBTract",
             "value": "<value>",
             "input_name": "value"
           }
@@ -6359,7 +7105,8 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "numeric",
+          "unit": "V"
         },
         "returns": null,
         "mqtt": {
@@ -6481,15 +7228,13 @@
         "command": "Set_Window_FLATtop",
         "verb": "set",
         "description": "Set Window FLATtop",
-        "scpi": ":FUNCtion:WINDow <window>",
-        "scpi_fast": ":FUNC:WIND <window>",
+        "scpi": ":FUNCtion:WINDow FLATtop",
+        "scpi_fast": ":FUNC:WIND FLATtop",
         "subsystem": "Math_FFT",
         "group": "FFT Specific Configuration",
-        "args": [
-          "window"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -6498,7 +7243,7 @@
           "payload_format": {
             "command": "Set_Window_FLATtop",
             "value": "<value>",
-            "input_name": "window"
+            "input_name": "value"
           }
         },
         "unverified": false
@@ -6507,15 +7252,13 @@
         "command": "Set_Window_HANNing",
         "verb": "set",
         "description": "Set Window HANNing",
-        "scpi": ":FUNCtion:WINDow <window>",
-        "scpi_fast": ":FUNC:WIND <window>",
+        "scpi": ":FUNCtion:WINDow HANNing",
+        "scpi_fast": ":FUNC:WIND HANNing",
         "subsystem": "Math_FFT",
         "group": "FFT Specific Configuration",
-        "args": [
-          "window"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -6524,7 +7267,7 @@
           "payload_format": {
             "command": "Set_Window_HANNing",
             "value": "<value>",
-            "input_name": "window"
+            "input_name": "value"
           }
         },
         "unverified": false
@@ -6533,15 +7276,13 @@
         "command": "Set_Window_RECTangular",
         "verb": "set",
         "description": "Set Window RECTangular",
-        "scpi": ":FUNCtion:WINDow <window>",
-        "scpi_fast": ":FUNC:WIND <window>",
+        "scpi": ":FUNCtion:WINDow RECTangular",
+        "scpi_fast": ":FUNC:WIND RECTangular",
         "subsystem": "Math_FFT",
         "group": "FFT Specific Configuration",
-        "args": [
-          "window"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -6550,7 +7291,7 @@
           "payload_format": {
             "command": "Set_Window_RECTangular",
             "value": "<value>",
-            "input_name": "window"
+            "input_name": "value"
           }
         },
         "unverified": false
@@ -6671,7 +7412,12 @@
           "mode"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "OFF",
+            "MEASurement",
+            "MANual"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -6684,6 +7430,78 @@
           }
         },
         "unverified": false
+      },
+      "Set_Marker_Mode_MANual": {
+        "command": "Set_Marker_Mode_MANual",
+        "verb": "set",
+        "description": "Set_Marker_Mode \u2192 MANual. Set Marker Mode",
+        "scpi": "MARKer:MODE MANual",
+        "scpi_fast": "MARK:MODE MANual",
+        "subsystem": "MARKer",
+        "group": "Cursor Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Marker_Mode_MANual",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Marker_Mode_MANual",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Marker_Mode_MEASurement": {
+        "command": "Set_Marker_Mode_MEASurement",
+        "verb": "set",
+        "description": "Set_Marker_Mode \u2192 MEASurement. Set Marker Mode",
+        "scpi": "MARKer:MODE MEASurement",
+        "scpi_fast": "MARK:MODE MEASurement",
+        "subsystem": "MARKer",
+        "group": "Cursor Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Marker_Mode_MEASurement",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Marker_Mode_MEASurement",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Marker_Mode_OFF": {
+        "command": "Set_Marker_Mode_OFF",
+        "verb": "set",
+        "description": "Set_Marker_Mode \u2192 OFF. Set Marker Mode",
+        "scpi": "MARKer:MODE OFF",
+        "scpi_fast": "MARK:MODE OFF",
+        "subsystem": "MARKer",
+        "group": "Cursor Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Marker_Mode_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Marker_Mode_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_X1": {
         "command": "Set_X1",
@@ -7063,7 +7881,29 @@
           "source"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "FUNCtion",
+            "EXTernal",
+            "DIGital0",
+            "DIGital1",
+            "DIGital2",
+            "DIGital3",
+            "DIGital4",
+            "DIGital5",
+            "DIGital6",
+            "DIGital7",
+            "DIGital8",
+            "DIGital9",
+            "DIGital10",
+            "DIGital11",
+            "DIGital12",
+            "DIGital13",
+            "DIGital14",
+            "DIGital15"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -7076,6 +7916,486 @@
           }
         },
         "unverified": false
+      },
+      "Set_Measure_Source_CHANnel1": {
+        "command": "Set_Measure_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 CHANnel1. Set Measure Source",
+        "scpi": "MEASure:SOURce CHANnel1",
+        "scpi_fast": "MEAS:SOUR CHANnel1",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_CHANnel2": {
+        "command": "Set_Measure_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 CHANnel2. Set Measure Source",
+        "scpi": "MEASure:SOURce CHANnel2",
+        "scpi_fast": "MEAS:SOUR CHANnel2",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital0": {
+        "command": "Set_Measure_Source_DIGital0",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital0. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital0",
+        "scpi_fast": "MEAS:SOUR DIGital0",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital1": {
+        "command": "Set_Measure_Source_DIGital1",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital1. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital1",
+        "scpi_fast": "MEAS:SOUR DIGital1",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital10": {
+        "command": "Set_Measure_Source_DIGital10",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital10. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital10",
+        "scpi_fast": "MEAS:SOUR DIGital10",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital10",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital10",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital11": {
+        "command": "Set_Measure_Source_DIGital11",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital11. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital11",
+        "scpi_fast": "MEAS:SOUR DIGital11",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital11",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital11",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital12": {
+        "command": "Set_Measure_Source_DIGital12",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital12. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital12",
+        "scpi_fast": "MEAS:SOUR DIGital12",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital12",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital12",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital13": {
+        "command": "Set_Measure_Source_DIGital13",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital13. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital13",
+        "scpi_fast": "MEAS:SOUR DIGital13",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital13",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital13",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital14": {
+        "command": "Set_Measure_Source_DIGital14",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital14. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital14",
+        "scpi_fast": "MEAS:SOUR DIGital14",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital14",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital14",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital15": {
+        "command": "Set_Measure_Source_DIGital15",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital15. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital15",
+        "scpi_fast": "MEAS:SOUR DIGital15",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital15",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital15",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital2": {
+        "command": "Set_Measure_Source_DIGital2",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital2. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital2",
+        "scpi_fast": "MEAS:SOUR DIGital2",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital3": {
+        "command": "Set_Measure_Source_DIGital3",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital3. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital3",
+        "scpi_fast": "MEAS:SOUR DIGital3",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital3",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital3",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital4": {
+        "command": "Set_Measure_Source_DIGital4",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital4. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital4",
+        "scpi_fast": "MEAS:SOUR DIGital4",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital4",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital4",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital5": {
+        "command": "Set_Measure_Source_DIGital5",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital5. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital5",
+        "scpi_fast": "MEAS:SOUR DIGital5",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital5",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital5",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital6": {
+        "command": "Set_Measure_Source_DIGital6",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital6. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital6",
+        "scpi_fast": "MEAS:SOUR DIGital6",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital6",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital6",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital7": {
+        "command": "Set_Measure_Source_DIGital7",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital7. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital7",
+        "scpi_fast": "MEAS:SOUR DIGital7",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital7",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital7",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital8": {
+        "command": "Set_Measure_Source_DIGital8",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital8. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital8",
+        "scpi_fast": "MEAS:SOUR DIGital8",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital8",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital8",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_DIGital9": {
+        "command": "Set_Measure_Source_DIGital9",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 DIGital9. Set Measure Source",
+        "scpi": "MEASure:SOURce DIGital9",
+        "scpi_fast": "MEAS:SOUR DIGital9",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_DIGital9",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_DIGital9",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_EXTernal": {
+        "command": "Set_Measure_Source_EXTernal",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 EXTernal. Set Measure Source",
+        "scpi": "MEASure:SOURce EXTernal",
+        "scpi_fast": "MEAS:SOUR EXTernal",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_EXTernal",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_EXTernal",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Measure_Source_FUNCtion": {
+        "command": "Set_Measure_Source_FUNCtion",
+        "verb": "set",
+        "description": "Set_Measure_Source \u2192 FUNCtion. Set Measure Source",
+        "scpi": "MEASure:SOURce FUNCtion",
+        "scpi_fast": "MEAS:SOUR FUNCtion",
+        "subsystem": "MEASure",
+        "group": "Measurement Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Measure_Source_FUNCtion",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Measure_Source_FUNCtion",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Measure_Tedge": {
         "command": "Set_Measure_Tedge",
@@ -7455,7 +8775,13 @@
           "mode"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "MAIN",
+            "WINDow",
+            "XY",
+            "ROLL"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -7468,6 +8794,102 @@
           }
         },
         "unverified": false
+      },
+      "Set_Mode_MAIN": {
+        "command": "Set_Mode_MAIN",
+        "verb": "set",
+        "description": "Set_Mode \u2192 MAIN. Set Mode",
+        "scpi": "TIMebase:MODE MAIN",
+        "scpi_fast": "TIM:MODE MAIN",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Mode_MAIN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_MAIN",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Mode_ROLL": {
+        "command": "Set_Mode_ROLL",
+        "verb": "set",
+        "description": "Set_Mode \u2192 ROLL. Set Mode",
+        "scpi": "TIMebase:MODE ROLL",
+        "scpi_fast": "TIM:MODE ROLL",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Mode_ROLL",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_ROLL",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Mode_WINDow": {
+        "command": "Set_Mode_WINDow",
+        "verb": "set",
+        "description": "Set_Mode \u2192 WINDow. Set Mode",
+        "scpi": "TIMebase:MODE WINDow",
+        "scpi_fast": "TIM:MODE WINDow",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Mode_WINDow",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_WINDow",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Mode_XY": {
+        "command": "Set_Mode_XY",
+        "verb": "set",
+        "description": "Set_Mode \u2192 XY. Set Mode",
+        "scpi": "TIMebase:MODE XY",
+        "scpi_fast": "TIM:MODE XY",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Mode_XY",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Mode_XY",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Timebase_Delay": {
         "command": "Set_Timebase_Delay",
@@ -7589,7 +9011,12 @@
           "ref"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "LEFT",
+            "CENTer",
+            "RIGHt"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -7602,6 +9029,78 @@
           }
         },
         "unverified": false
+      },
+      "Set_Reference_CENTer": {
+        "command": "Set_Reference_CENTer",
+        "verb": "set",
+        "description": "Set_Reference \u2192 CENTer. Set Reference",
+        "scpi": "TIMebase:REFerence CENTer",
+        "scpi_fast": "TIM:REF CENTer",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Reference_CENTer",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Reference_CENTer",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Reference_LEFT": {
+        "command": "Set_Reference_LEFT",
+        "verb": "set",
+        "description": "Set_Reference \u2192 LEFT. Set Reference",
+        "scpi": "TIMebase:REFerence LEFT",
+        "scpi_fast": "TIM:REF LEFT",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Reference_LEFT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Reference_LEFT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Reference_RIGHt": {
+        "command": "Set_Reference_RIGHt",
+        "verb": "set",
+        "description": "Set_Reference \u2192 RIGHt. Set Reference",
+        "scpi": "TIMebase:REFerence RIGHt",
+        "scpi_fast": "TIM:REF RIGHt",
+        "subsystem": "TIMebase",
+        "group": "Timebase (Horizontal) Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Reference_RIGHt",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Reference_RIGHt",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Timebase_Scale": {
         "command": "Set_Timebase_Scale",
@@ -7801,7 +9300,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "STANdard",
+            "EXTended"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -7809,6 +9312,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Can_Pattern_Id_Mode",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Pattern_Id_Mode_EXTended": {
+        "command": "Set_Trigger_Can_Pattern_Id_Mode_EXTended",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Pattern_Id_Mode \u2192 EXTended. Set trigger can pattern id mode",
+        "scpi": ":TRIGger:CAN:PATTern:ID:MODE EXTended",
+        "scpi_fast": ":TRIG:CAN:PATT:ID:MODE EXTended",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Pattern_Id_Mode_EXTended",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Pattern_Id_Mode_EXTended",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Pattern_Id_Mode_STANdard": {
+        "command": "Set_Trigger_Can_Pattern_Id_Mode_STANdard",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Pattern_Id_Mode \u2192 STANdard. Set trigger can pattern id mode",
+        "scpi": ":TRIGger:CAN:PATTern:ID:MODE STANdard",
+        "scpi_fast": ":TRIG:CAN:PATT:ID:MODE STANdard",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Pattern_Id_Mode_STANdard",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Pattern_Id_Mode_STANdard",
             "value": "<value>",
             "input_name": "value"
           }
@@ -7879,7 +9430,27 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "DIGital0",
+            "DIGital1",
+            "DIGital2",
+            "DIGital3",
+            "DIGital4",
+            "DIGital5",
+            "DIGital6",
+            "DIGital7",
+            "DIGital8",
+            "DIGital9",
+            "DIGital10",
+            "DIGital11",
+            "DIGital12",
+            "DIGital13",
+            "DIGital14",
+            "DIGital15"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -7887,6 +9458,438 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Can_Source",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_CHANnel1": {
+        "command": "Set_Trigger_Can_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 CHANnel1. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce CHANnel1",
+        "scpi_fast": ":TRIG:CAN:SOUR CHANnel1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_CHANnel2": {
+        "command": "Set_Trigger_Can_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 CHANnel2. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce CHANnel2",
+        "scpi_fast": ":TRIG:CAN:SOUR CHANnel2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital0": {
+        "command": "Set_Trigger_Can_Source_DIGital0",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital0. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital0",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital0",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital1": {
+        "command": "Set_Trigger_Can_Source_DIGital1",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital1. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital1",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital10": {
+        "command": "Set_Trigger_Can_Source_DIGital10",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital10. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital10",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital10",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital10",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital10",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital11": {
+        "command": "Set_Trigger_Can_Source_DIGital11",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital11. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital11",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital11",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital11",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital11",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital12": {
+        "command": "Set_Trigger_Can_Source_DIGital12",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital12. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital12",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital12",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital12",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital12",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital13": {
+        "command": "Set_Trigger_Can_Source_DIGital13",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital13. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital13",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital13",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital13",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital13",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital14": {
+        "command": "Set_Trigger_Can_Source_DIGital14",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital14. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital14",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital14",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital14",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital14",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital15": {
+        "command": "Set_Trigger_Can_Source_DIGital15",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital15. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital15",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital15",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital15",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital15",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital2": {
+        "command": "Set_Trigger_Can_Source_DIGital2",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital2. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital2",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital3": {
+        "command": "Set_Trigger_Can_Source_DIGital3",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital3. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital3",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital3",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital3",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital3",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital4": {
+        "command": "Set_Trigger_Can_Source_DIGital4",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital4. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital4",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital4",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital4",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital4",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital5": {
+        "command": "Set_Trigger_Can_Source_DIGital5",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital5. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital5",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital5",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital5",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital5",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital6": {
+        "command": "Set_Trigger_Can_Source_DIGital6",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital6. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital6",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital6",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital6",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital6",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital7": {
+        "command": "Set_Trigger_Can_Source_DIGital7",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital7. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital7",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital7",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital7",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital7",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital8": {
+        "command": "Set_Trigger_Can_Source_DIGital8",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital8. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital8",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital8",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital8",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital8",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Can_Source_DIGital9": {
+        "command": "Set_Trigger_Can_Source_DIGital9",
+        "verb": "set",
+        "description": "Set_Trigger_Can_Source \u2192 DIGital9. Set trigger can source",
+        "scpi": ":TRIGger:CAN:SOURce DIGital9",
+        "scpi_fast": ":TRIG:CAN:SOUR DIGital9",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Can_Source_DIGital9",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Can_Source_DIGital9",
             "value": "<value>",
             "input_name": "value"
           }
@@ -8035,7 +10038,11 @@
           "slope"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "POSitive",
+            "NEGative"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8049,6 +10056,54 @@
         },
         "unverified": false
       },
+      "Set_Edge_Slope_NEGative": {
+        "command": "Set_Edge_Slope_NEGative",
+        "verb": "set",
+        "description": "Set_Edge_Slope \u2192 NEGative. Set Edge Slope",
+        "scpi": "TRIGger:EDGE:SLOPe NEGative",
+        "scpi_fast": "TRIG:EDGE:SLOP NEGative",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Slope_NEGative",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Slope_NEGative",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Slope_POSitive": {
+        "command": "Set_Edge_Slope_POSitive",
+        "verb": "set",
+        "description": "Set_Edge_Slope \u2192 POSitive. Set Edge Slope",
+        "scpi": "TRIGger:EDGE:SLOPe POSitive",
+        "scpi_fast": "TRIG:EDGE:SLOP POSitive",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Slope_POSitive",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Slope_POSitive",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Edge_Source": {
         "command": "Set_Edge_Source",
         "verb": "set",
@@ -8061,7 +10116,29 @@
           "source"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "DIGital0",
+            "DIGital1",
+            "DIGital2",
+            "DIGital3",
+            "DIGital4",
+            "DIGital5",
+            "DIGital6",
+            "DIGital7",
+            "DIGital8",
+            "DIGital9",
+            "DIGital10",
+            "DIGital11",
+            "DIGital12",
+            "DIGital13",
+            "DIGital14",
+            "DIGital15",
+            "EXTernal",
+            "LINE"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8079,15 +10156,13 @@
         "command": "Set_Edge_Source_CH1",
         "verb": "set",
         "description": "Set Edge Source CH1",
-        "scpi": ":TRIGger:EDGE:SOURce <source>",
-        "scpi_fast": ":TRIG:EDGE:SOUR <source>",
+        "scpi": ":TRIGger:EDGE:SOURce CHANnel1",
+        "scpi_fast": ":TRIG:EDGE:SOUR CHANnel1",
         "subsystem": "Trigger",
         "group": "Trigger Configuration",
-        "args": [
-          "source"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -8096,24 +10171,46 @@
           "payload_format": {
             "command": "Set_Edge_Source_CH1",
             "value": "<value>",
-            "input_name": "source"
+            "input_name": "value"
           }
         },
         "unverified": false
+      },
+      "Set_Edge_Source_CHANnel1": {
+        "command": "Set_Edge_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 CHANnel1. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce CHANnel1",
+        "scpi_fast": "TRIG:EDGE:SOUR CHANnel1",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Edge_Source_CH2": {
         "command": "Set_Edge_Source_CH2",
         "verb": "set",
         "description": "Set Edge Source CH2",
-        "scpi": ":TRIGger:EDGE:SOURce <source>",
-        "scpi_fast": ":TRIG:EDGE:SOUR <source>",
+        "scpi": ":TRIGger:EDGE:SOURce CHANnel2",
+        "scpi_fast": ":TRIG:EDGE:SOUR CHANnel2",
         "subsystem": "Trigger",
         "group": "Trigger Configuration",
-        "args": [
-          "source"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -8122,24 +10219,430 @@
           "payload_format": {
             "command": "Set_Edge_Source_CH2",
             "value": "<value>",
-            "input_name": "source"
+            "input_name": "value"
           }
         },
         "unverified": false
+      },
+      "Set_Edge_Source_CHANnel2": {
+        "command": "Set_Edge_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 CHANnel2. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce CHANnel2",
+        "scpi_fast": "TRIG:EDGE:SOUR CHANnel2",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital0": {
+        "command": "Set_Edge_Source_DIGital0",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital0. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital0",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital0",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital1": {
+        "command": "Set_Edge_Source_DIGital1",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital1. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital1",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital1",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital10": {
+        "command": "Set_Edge_Source_DIGital10",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital10. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital10",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital10",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital10",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital10",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital11": {
+        "command": "Set_Edge_Source_DIGital11",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital11. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital11",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital11",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital11",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital11",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital12": {
+        "command": "Set_Edge_Source_DIGital12",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital12. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital12",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital12",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital12",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital12",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital13": {
+        "command": "Set_Edge_Source_DIGital13",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital13. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital13",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital13",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital13",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital13",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital14": {
+        "command": "Set_Edge_Source_DIGital14",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital14. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital14",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital14",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital14",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital14",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital15": {
+        "command": "Set_Edge_Source_DIGital15",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital15. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital15",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital15",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital15",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital15",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital2": {
+        "command": "Set_Edge_Source_DIGital2",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital2. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital2",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital2",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital3": {
+        "command": "Set_Edge_Source_DIGital3",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital3. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital3",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital3",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital3",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital3",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital4": {
+        "command": "Set_Edge_Source_DIGital4",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital4. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital4",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital4",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital4",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital4",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital5": {
+        "command": "Set_Edge_Source_DIGital5",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital5. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital5",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital5",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital5",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital5",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital6": {
+        "command": "Set_Edge_Source_DIGital6",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital6. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital6",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital6",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital6",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital6",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital7": {
+        "command": "Set_Edge_Source_DIGital7",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital7. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital7",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital7",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital7",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital7",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital8": {
+        "command": "Set_Edge_Source_DIGital8",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital8. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital8",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital8",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital8",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital8",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_DIGital9": {
+        "command": "Set_Edge_Source_DIGital9",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 DIGital9. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce DIGital9",
+        "scpi_fast": "TRIG:EDGE:SOUR DIGital9",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_DIGital9",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_DIGital9",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Edge_Source_EXT": {
         "command": "Set_Edge_Source_EXT",
         "verb": "set",
         "description": "Set Edge Source EXT",
-        "scpi": ":TRIGger:EDGE:SOURce <source>",
-        "scpi_fast": ":TRIG:EDGE:SOUR <source>",
+        "scpi": ":TRIGger:EDGE:SOURce EXTernal",
+        "scpi_fast": ":TRIG:EDGE:SOUR EXTernal",
         "subsystem": "Trigger",
         "group": "Trigger Configuration",
-        "args": [
-          "source"
-        ],
+        "args": [],
         "arg": {
-          "kind": "enum"
+          "kind": "none"
         },
         "returns": null,
         "mqtt": {
@@ -8148,10 +10651,58 @@
           "payload_format": {
             "command": "Set_Edge_Source_EXT",
             "value": "<value>",
-            "input_name": "source"
+            "input_name": "value"
           }
         },
         "unverified": false
+      },
+      "Set_Edge_Source_EXTernal": {
+        "command": "Set_Edge_Source_EXTernal",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 EXTernal. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce EXTernal",
+        "scpi_fast": "TRIG:EDGE:SOUR EXTernal",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_EXTernal",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_EXTernal",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Edge_Source_LINE": {
+        "command": "Set_Edge_Source_LINE",
+        "verb": "set",
+        "description": "Set_Edge_Source \u2192 LINE. Set Edge Source",
+        "scpi": "TRIGger:EDGE:SOURce LINE",
+        "scpi_fast": "TRIG:EDGE:SOUR LINE",
+        "subsystem": "TRIGger",
+        "group": "Edge Trigger Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Edge_Source_LINE",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Edge_Source_LINE",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Glitch_Width": {
         "command": "Set_Glitch_Width",
@@ -8218,7 +10769,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "POSitive",
+            "NEGative"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8226,6 +10781,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Glitch_Polarity",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Glitch_Polarity_NEGative": {
+        "command": "Set_Trigger_Glitch_Polarity_NEGative",
+        "verb": "set",
+        "description": "Set_Trigger_Glitch_Polarity \u2192 NEGative. Set trigger glitch polarity",
+        "scpi": ":TRIGger:GLITch:POLarity NEGative",
+        "scpi_fast": ":TRIG:GLIT:POL NEGative",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Glitch_Polarity_NEGative",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Glitch_Polarity_NEGative",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Glitch_Polarity_POSitive": {
+        "command": "Set_Trigger_Glitch_Polarity_POSitive",
+        "verb": "set",
+        "description": "Set_Trigger_Glitch_Polarity \u2192 POSitive. Set trigger glitch polarity",
+        "scpi": ":TRIGger:GLITch:POLarity POSitive",
+        "scpi_fast": ":TRIG:GLIT:POL POSitive",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Glitch_Polarity_POSitive",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Glitch_Polarity_POSitive",
             "value": "<value>",
             "input_name": "value"
           }
@@ -8296,7 +10899,27 @@
           "source"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "DIGital0",
+            "DIGital1",
+            "DIGital2",
+            "DIGital3",
+            "DIGital4",
+            "DIGital5",
+            "DIGital6",
+            "DIGital7",
+            "DIGital8",
+            "DIGital9",
+            "DIGital10",
+            "DIGital11",
+            "DIGital12",
+            "DIGital13",
+            "DIGital14",
+            "DIGital15"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8309,6 +10932,438 @@
           }
         },
         "unverified": false
+      },
+      "Set_Glitch_Source_CHANnel1": {
+        "command": "Set_Glitch_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 CHANnel1. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce CHANnel1",
+        "scpi_fast": "TRIG:GLIT:SOUR CHANnel1",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_CHANnel2": {
+        "command": "Set_Glitch_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 CHANnel2. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce CHANnel2",
+        "scpi_fast": "TRIG:GLIT:SOUR CHANnel2",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital0": {
+        "command": "Set_Glitch_Source_DIGital0",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital0. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital0",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital0",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital1": {
+        "command": "Set_Glitch_Source_DIGital1",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital1. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital1",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital1",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital10": {
+        "command": "Set_Glitch_Source_DIGital10",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital10. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital10",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital10",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital10",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital10",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital11": {
+        "command": "Set_Glitch_Source_DIGital11",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital11. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital11",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital11",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital11",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital11",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital12": {
+        "command": "Set_Glitch_Source_DIGital12",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital12. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital12",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital12",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital12",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital12",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital13": {
+        "command": "Set_Glitch_Source_DIGital13",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital13. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital13",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital13",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital13",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital13",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital14": {
+        "command": "Set_Glitch_Source_DIGital14",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital14. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital14",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital14",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital14",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital14",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital15": {
+        "command": "Set_Glitch_Source_DIGital15",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital15. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital15",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital15",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital15",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital15",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital2": {
+        "command": "Set_Glitch_Source_DIGital2",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital2. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital2",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital2",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital3": {
+        "command": "Set_Glitch_Source_DIGital3",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital3. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital3",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital3",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital3",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital3",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital4": {
+        "command": "Set_Glitch_Source_DIGital4",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital4. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital4",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital4",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital4",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital4",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital5": {
+        "command": "Set_Glitch_Source_DIGital5",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital5. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital5",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital5",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital5",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital5",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital6": {
+        "command": "Set_Glitch_Source_DIGital6",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital6. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital6",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital6",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital6",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital6",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital7": {
+        "command": "Set_Glitch_Source_DIGital7",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital7. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital7",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital7",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital7",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital7",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital8": {
+        "command": "Set_Glitch_Source_DIGital8",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital8. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital8",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital8",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital8",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital8",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Glitch_Source_DIGital9": {
+        "command": "Set_Glitch_Source_DIGital9",
+        "verb": "set",
+        "description": "Set_Glitch_Source \u2192 DIGital9. Set Glitch Source",
+        "scpi": "TRIGger:GLITch:SOURce DIGital9",
+        "scpi_fast": "TRIG:GLIT:SOUR DIGital9",
+        "subsystem": "TRIGger",
+        "group": "Glitch/Pulse Width Config",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Glitch_Source_DIGital9",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Glitch_Source_DIGital9",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Trigger_Hfreject": {
         "command": "Set_Trigger_Hfreject",
@@ -8478,7 +11533,27 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "DIGital0",
+            "DIGital1",
+            "DIGital2",
+            "DIGital3",
+            "DIGital4",
+            "DIGital5",
+            "DIGital6",
+            "DIGital7",
+            "DIGital8",
+            "DIGital9",
+            "DIGital10",
+            "DIGital11",
+            "DIGital12",
+            "DIGital13",
+            "DIGital14",
+            "DIGital15"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8486,6 +11561,438 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Lin_Source",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_CHANnel1": {
+        "command": "Set_Trigger_Lin_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 CHANnel1. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce CHANnel1",
+        "scpi_fast": ":TRIG:LIN:SOUR CHANnel1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_CHANnel2": {
+        "command": "Set_Trigger_Lin_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 CHANnel2. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce CHANnel2",
+        "scpi_fast": ":TRIG:LIN:SOUR CHANnel2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital0": {
+        "command": "Set_Trigger_Lin_Source_DIGital0",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital0. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital0",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital0",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital0",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital0",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital1": {
+        "command": "Set_Trigger_Lin_Source_DIGital1",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital1. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital1",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital10": {
+        "command": "Set_Trigger_Lin_Source_DIGital10",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital10. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital10",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital10",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital10",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital10",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital11": {
+        "command": "Set_Trigger_Lin_Source_DIGital11",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital11. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital11",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital11",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital11",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital11",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital12": {
+        "command": "Set_Trigger_Lin_Source_DIGital12",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital12. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital12",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital12",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital12",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital12",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital13": {
+        "command": "Set_Trigger_Lin_Source_DIGital13",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital13. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital13",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital13",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital13",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital13",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital14": {
+        "command": "Set_Trigger_Lin_Source_DIGital14",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital14. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital14",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital14",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital14",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital14",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital15": {
+        "command": "Set_Trigger_Lin_Source_DIGital15",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital15. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital15",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital15",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital15",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital15",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital2": {
+        "command": "Set_Trigger_Lin_Source_DIGital2",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital2. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital2",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital3": {
+        "command": "Set_Trigger_Lin_Source_DIGital3",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital3. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital3",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital3",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital3",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital3",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital4": {
+        "command": "Set_Trigger_Lin_Source_DIGital4",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital4. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital4",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital4",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital4",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital4",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital5": {
+        "command": "Set_Trigger_Lin_Source_DIGital5",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital5. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital5",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital5",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital5",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital5",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital6": {
+        "command": "Set_Trigger_Lin_Source_DIGital6",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital6. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital6",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital6",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital6",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital6",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital7": {
+        "command": "Set_Trigger_Lin_Source_DIGital7",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital7. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital7",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital7",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital7",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital7",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital8": {
+        "command": "Set_Trigger_Lin_Source_DIGital8",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital8. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital8",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital8",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital8",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital8",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Lin_Source_DIGital9": {
+        "command": "Set_Trigger_Lin_Source_DIGital9",
+        "verb": "set",
+        "description": "Set_Trigger_Lin_Source \u2192 DIGital9. Set trigger lin source",
+        "scpi": ":TRIGger:LIN:SOURce DIGital9",
+        "scpi_fast": ":TRIG:LIN:SOUR DIGital9",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Lin_Source_DIGital9",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Lin_Source_DIGital9",
             "value": "<value>",
             "input_name": "value"
           }
@@ -8530,7 +12037,20 @@
           "mode"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "EDGE",
+            "GLITch",
+            "PATTern",
+            "CAN",
+            "DURation",
+            "IIC",
+            "LIN",
+            "SEQuence",
+            "SPI",
+            "TV",
+            "USB"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8543,6 +12063,270 @@
           }
         },
         "unverified": false
+      },
+      "Set_Trigger_Mode_CAN": {
+        "command": "Set_Trigger_Mode_CAN",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 CAN. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE CAN",
+        "scpi_fast": ":TRIG:MODE CAN",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_CAN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_CAN",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_DURation": {
+        "command": "Set_Trigger_Mode_DURation",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 DURation. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE DURation",
+        "scpi_fast": ":TRIG:MODE DURation",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_DURation",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_DURation",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_EDGE": {
+        "command": "Set_Trigger_Mode_EDGE",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 EDGE. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE EDGE",
+        "scpi_fast": ":TRIG:MODE EDGE",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_EDGE",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_EDGE",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_GLITch": {
+        "command": "Set_Trigger_Mode_GLITch",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 GLITch. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE GLITch",
+        "scpi_fast": ":TRIG:MODE GLITch",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_GLITch",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_GLITch",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_IIC": {
+        "command": "Set_Trigger_Mode_IIC",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 IIC. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE IIC",
+        "scpi_fast": ":TRIG:MODE IIC",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_IIC",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_IIC",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_LIN": {
+        "command": "Set_Trigger_Mode_LIN",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 LIN. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE LIN",
+        "scpi_fast": ":TRIG:MODE LIN",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_LIN",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_LIN",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_PATTern": {
+        "command": "Set_Trigger_Mode_PATTern",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 PATTern. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE PATTern",
+        "scpi_fast": ":TRIG:MODE PATTern",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_PATTern",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_PATTern",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_SEQuence": {
+        "command": "Set_Trigger_Mode_SEQuence",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 SEQuence. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE SEQuence",
+        "scpi_fast": ":TRIG:MODE SEQuence",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_SEQuence",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_SEQuence",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_SPI": {
+        "command": "Set_Trigger_Mode_SPI",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 SPI. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE SPI",
+        "scpi_fast": ":TRIG:MODE SPI",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_SPI",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_SPI",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_TV": {
+        "command": "Set_Trigger_Mode_TV",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 TV. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE TV",
+        "scpi_fast": ":TRIG:MODE TV",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_TV",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_TV",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Mode_USB": {
+        "command": "Set_Trigger_Mode_USB",
+        "verb": "set",
+        "description": "Set_Trigger_Mode \u2192 USB. Set Trigger Mode",
+        "scpi": ":TRIGger:MODE USB",
+        "scpi_fast": ":TRIG:MODE USB",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Mode_USB",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Mode_USB",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Trigger_Nreject": {
         "command": "Set_Trigger_Nreject",
@@ -8792,7 +12576,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "POSitive",
+            "NEGative"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -8800,6 +12588,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Spi_Clock_Slope",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Spi_Clock_Slope_NEGative": {
+        "command": "Set_Trigger_Spi_Clock_Slope_NEGative",
+        "verb": "set",
+        "description": "Set_Trigger_Spi_Clock_Slope \u2192 NEGative. Set trigger spi clock slope",
+        "scpi": ":TRIGger:SPI:CLOCk:SLOPe NEGative",
+        "scpi_fast": ":TRIG:SPI:CLOC:SLOP NEGative",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Spi_Clock_Slope_NEGative",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Spi_Clock_Slope_NEGative",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Spi_Clock_Slope_POSitive": {
+        "command": "Set_Trigger_Spi_Clock_Slope_POSitive",
+        "verb": "set",
+        "description": "Set_Trigger_Spi_Clock_Slope \u2192 POSitive. Set trigger spi clock slope",
+        "scpi": ":TRIGger:SPI:CLOCk:SLOPe POSitive",
+        "scpi_fast": ":TRIG:SPI:CLOC:SLOP POSitive",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Spi_Clock_Slope_POSitive",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Spi_Clock_Slope_POSitive",
             "value": "<value>",
             "input_name": "value"
           }
@@ -9001,7 +12837,11 @@
           "sweep"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "AUTO",
+            "NORMal"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9014,6 +12854,54 @@
           }
         },
         "unverified": false
+      },
+      "Set_Trigger_Sweep_AUTO": {
+        "command": "Set_Trigger_Sweep_AUTO",
+        "verb": "set",
+        "description": "Set_Trigger_Sweep \u2192 AUTO. Set Trigger Sweep",
+        "scpi": ":TRIGger:SWEep AUTO",
+        "scpi_fast": ":TRIG:SWE AUTO",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Sweep_AUTO",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sweep_AUTO",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Sweep_NORMal": {
+        "command": "Set_Trigger_Sweep_NORMal",
+        "verb": "set",
+        "description": "Set_Trigger_Sweep \u2192 NORMal. Set Trigger Sweep",
+        "scpi": ":TRIGger:SWEep NORMal",
+        "scpi_fast": ":TRIG:SWE NORMal",
+        "subsystem": "Trigger",
+        "group": "Trigger Configuration",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Sweep_NORMal",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Sweep_NORMal",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Trigger_Tv_Line": {
         "command": "Set_Trigger_Tv_Line",
@@ -9053,7 +12941,19 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "F1",
+            "F2",
+            "ALLFields",
+            "ALLLines",
+            "LINE",
+            "VERTical",
+            "LINEF1",
+            "LINEF2",
+            "LINEAlt",
+            "LINEVert"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9061,6 +12961,246 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Tv_Mode",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_ALLFields": {
+        "command": "Set_Trigger_Tv_Mode_ALLFields",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 ALLFields. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE ALLFields",
+        "scpi_fast": "TRIG:TV:MODE ALLFields",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_ALLFields",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_ALLFields",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_ALLLines": {
+        "command": "Set_Trigger_Tv_Mode_ALLLines",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 ALLLines. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE ALLLines",
+        "scpi_fast": "TRIG:TV:MODE ALLLines",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_ALLLines",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_ALLLines",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_F1": {
+        "command": "Set_Trigger_Tv_Mode_F1",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 F1. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE F1",
+        "scpi_fast": "TRIG:TV:MODE F1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_F1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_F1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_F2": {
+        "command": "Set_Trigger_Tv_Mode_F2",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 F2. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE F2",
+        "scpi_fast": "TRIG:TV:MODE F2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_F2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_F2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_LINE": {
+        "command": "Set_Trigger_Tv_Mode_LINE",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 LINE. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE LINE",
+        "scpi_fast": "TRIG:TV:MODE LINE",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_LINE",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_LINE",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_LINEAlt": {
+        "command": "Set_Trigger_Tv_Mode_LINEAlt",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 LINEAlt. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE LINEAlt",
+        "scpi_fast": "TRIG:TV:MODE LINEAlt",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_LINEAlt",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_LINEAlt",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_LINEF1": {
+        "command": "Set_Trigger_Tv_Mode_LINEF1",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 LINEF1. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE LINEF1",
+        "scpi_fast": "TRIG:TV:MODE LINEF1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_LINEF1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_LINEF1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_LINEF2": {
+        "command": "Set_Trigger_Tv_Mode_LINEF2",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 LINEF2. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE LINEF2",
+        "scpi_fast": "TRIG:TV:MODE LINEF2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_LINEF2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_LINEF2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_LINEVert": {
+        "command": "Set_Trigger_Tv_Mode_LINEVert",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 LINEVert. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE LINEVert",
+        "scpi_fast": "TRIG:TV:MODE LINEVert",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_LINEVert",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_LINEVert",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Mode_VERTical": {
+        "command": "Set_Trigger_Tv_Mode_VERTical",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Mode \u2192 VERTical. Set trigger tv mode",
+        "scpi": "TRIGger:TV:MODE VERTical",
+        "scpi_fast": "TRIG:TV:MODE VERTical",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Mode_VERTical",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Mode_VERTical",
             "value": "<value>",
             "input_name": "value"
           }
@@ -9079,7 +13219,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "POSitive",
+            "NEGative"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9087,6 +13231,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Tv_Polarity",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Polarity_NEGative": {
+        "command": "Set_Trigger_Tv_Polarity_NEGative",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Polarity \u2192 NEGative. Set trigger tv polarity",
+        "scpi": ":TRIGger:TV:POLarity NEGative",
+        "scpi_fast": ":TRIG:TV:POL NEGative",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Polarity_NEGative",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Polarity_NEGative",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Polarity_POSitive": {
+        "command": "Set_Trigger_Tv_Polarity_POSitive",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Polarity \u2192 POSitive. Set trigger tv polarity",
+        "scpi": ":TRIGger:TV:POLarity POSitive",
+        "scpi_fast": ":TRIG:TV:POL POSitive",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Polarity_POSitive",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Polarity_POSitive",
             "value": "<value>",
             "input_name": "value"
           }
@@ -9105,7 +13297,11 @@
           "value"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9113,6 +13309,54 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Trigger_Tv_Source",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Source_CHANnel1": {
+        "command": "Set_Trigger_Tv_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Source \u2192 CHANnel1. Set trigger tv source",
+        "scpi": ":TRIGger:TV:SOURce CHANnel1",
+        "scpi_fast": ":TRIG:TV:SOUR CHANnel1",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Tv_Source_CHANnel2": {
+        "command": "Set_Trigger_Tv_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Trigger_Tv_Source \u2192 CHANnel2. Set trigger tv source",
+        "scpi": ":TRIGger:TV:SOURce CHANnel2",
+        "scpi_fast": ":TRIG:TV:SOUR CHANnel2",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Tv_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Tv_Source_CHANnel2",
             "value": "<value>",
             "input_name": "value"
           }
@@ -9287,7 +13531,12 @@
           "format"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "WORD",
+            "BYTE",
+            "ASCii"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9300,6 +13549,78 @@
           }
         },
         "unverified": false
+      },
+      "Set_Waveform_Format_ASCii": {
+        "command": "Set_Waveform_Format_ASCii",
+        "verb": "set",
+        "description": "Set_Waveform_Format \u2192 ASCii. Set Waveform Format",
+        "scpi": "WAVeform:FORMat ASCii",
+        "scpi_fast": "WAV:FORM ASCii",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Format_ASCii",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Format_ASCii",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Format_BYTE": {
+        "command": "Set_Waveform_Format_BYTE",
+        "verb": "set",
+        "description": "Set_Waveform_Format \u2192 BYTE. Set Waveform Format",
+        "scpi": "WAVeform:FORMat BYTE",
+        "scpi_fast": "WAV:FORM BYTE",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Format_BYTE",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Format_BYTE",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Format_WORD": {
+        "command": "Set_Waveform_Format_WORD",
+        "verb": "set",
+        "description": "Set_Waveform_Format \u2192 WORD. Set Waveform Format",
+        "scpi": "WAVeform:FORMat WORD",
+        "scpi_fast": "WAV:FORM WORD",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Format_WORD",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Format_WORD",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Waveform_Points": {
         "command": "Set_Waveform_Points",
@@ -9339,7 +13660,14 @@
           "source"
         ],
         "arg": {
-          "kind": "enum"
+          "kind": "enum",
+          "values": [
+            "CHANnel1",
+            "CHANnel2",
+            "POD1",
+            "POD2",
+            "FUNCtion"
+          ]
         },
         "returns": null,
         "mqtt": {
@@ -9352,6 +13680,126 @@
           }
         },
         "unverified": false
+      },
+      "Set_Waveform_Source_CHANnel1": {
+        "command": "Set_Waveform_Source_CHANnel1",
+        "verb": "set",
+        "description": "Set_Waveform_Source \u2192 CHANnel1. Set Waveform Source",
+        "scpi": "WAVeform:SOURce CHANnel1",
+        "scpi_fast": "WAV:SOUR CHANnel1",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Source_CHANnel1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Source_CHANnel1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Source_CHANnel2": {
+        "command": "Set_Waveform_Source_CHANnel2",
+        "verb": "set",
+        "description": "Set_Waveform_Source \u2192 CHANnel2. Set Waveform Source",
+        "scpi": "WAVeform:SOURce CHANnel2",
+        "scpi_fast": "WAV:SOUR CHANnel2",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Source_CHANnel2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Source_CHANnel2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Source_FUNCtion": {
+        "command": "Set_Waveform_Source_FUNCtion",
+        "verb": "set",
+        "description": "Set_Waveform_Source \u2192 FUNCtion. Set Waveform Source",
+        "scpi": "WAVeform:SOURce FUNCtion",
+        "scpi_fast": "WAV:SOUR FUNCtion",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Source_FUNCtion",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Source_FUNCtion",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Source_POD1": {
+        "command": "Set_Waveform_Source_POD1",
+        "verb": "set",
+        "description": "Set_Waveform_Source \u2192 POD1. Set Waveform Source",
+        "scpi": "WAVeform:SOURce POD1",
+        "scpi_fast": "WAV:SOUR POD1",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Source_POD1",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Source_POD1",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Waveform_Source_POD2": {
+        "command": "Set_Waveform_Source_POD2",
+        "verb": "set",
+        "description": "Set_Waveform_Source \u2192 POD2. Set Waveform Source",
+        "scpi": "WAVeform:SOURce POD2",
+        "scpi_fast": "WAV:SOUR POD2",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Waveform_Source_POD2",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Waveform_Source_POD2",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Unsigned": {
         "command": "Set_Unsigned",

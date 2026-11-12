@@ -74,3 +74,35 @@ The tree: `54641D.scpi.json`, read off Agilent 54620/54640 Series Programmer's G
 | `nab/Get_Probe_Skew` | scpi → `:CHANnel<n>:PROBe:SKEW?` | was `PROBe:SKEW?` |
 | `do/Do_Display_Line` | scpi → `:DISPlay:LINE` | was `DISPLay:LINE` |
 | `do/Do_Protection_Clear` | left as is, unverified — unresolved |  |
+
+## Options for the selectors (2026-11-11, owner: "if there are options, make it a selector AND individuals")
+
+Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf). The 54641D's own guide is still not obtainable; the 6000's version-1.00 set is the 54620/40 set less the differences on pp. 43-46, and its version log (pp. 21-42) names every option added since. Each list below is the 6000 list less those additions; every individual SET is unverified until the bench sends it.
+
+| Selector(s) | Options | Page — and what was left out |
+|---|---|---|
+| `Set_Acquire_Mode` | RTIMe ETIMe | p. 199 — SEGMented (v5.10) |
+| `Set_Acquire_Type` | NORMal AVERage PEAK | p. 208 — HRESolution (v3.00, p. 41) |
+| `CH1_Coupling` `CH2_Coupling` `Set_Channel_Coupling` `Set_Coupling` | AC DC | p. 233 |
+| `Set_Impedance`, `Set_External_Impedance` | ONEMeg FIFTy | :CHANnel<n>:IMPedance / :EXTernal:IMPedance |
+| `Set_Display_Source` | PMEMory0-2 | p. 264; p. 44: three pixel memories on the 5462x/4x |
+| `Set_External_Units` | VOLT AMPere | :EXTernal:UNITs |
+| `Set_Function_Operation` `Set_Operation` | SUBTract MULTiply INTegrate DIFFerentiate FFT SQRT | p. 285 — ADD (v5.15) |
+| `Set_Marker_Mode` | OFF MEASurement MANual | p. 309 — WAVeform (v5.20) |
+| `Set_Measure_Source` | CHANnel1-2 FUNCtion EXTernal DIGital0-15 | :MEASure:SOURce (MSO) |
+| `Set_Mode` / `Set_Reference` | MAIN WINDow XY ROLL / LEFT CENTer RIGHt | :TIMebase:MODE / :TIMebase:REFerence |
+| `Set_Trigger_Can_Pattern_Id_Mode` | STANdard EXTended | |
+| `Set_Trigger_Can_Source` `Set_Glitch_Source` `Set_Trigger_Lin_Source` | CHANnel1-2 DIGital0-15 | MSO lists |
+| `Set_Edge_Slope` | POSitive NEGative | p. 515 — EITHer/ALTernate left out (not shown on the 5462x/4x) |
+| `Set_Edge_Source` | CHANnel1-2 DIGital0-15 EXTernal LINE | |
+| `Set_Trigger_Glitch_Polarity` `Set_Trigger_Spi_Clock_Slope` `Set_Trigger_Tv_Polarity` | POSitive NEGative | |
+| `Set_Trigger_Mode` | EDGE GLITch PATTern CAN DURation IIC LIN SEQuence SPI TV USB | p. 485 — EBURst (v3.00), FLEXray (v4.10), UART (v5.00), I2S (v5.25), M1553 (v6.00) |
+| `Set_Trigger_Sweep` | AUTO NORMal | |
+| `Set_Trigger_Tv_Mode` | F1 F2 ALLFields ALLLines LINE VERTical LINEF1 LINEF2 LINEAlt LINEVert | p. 604 — the 5462x/4x names (p. 45 "renamed; old forms still accepted") |
+| `Set_Trigger_Tv_Source` | CHANnel1-2 | |
+| `Set_Waveform_Format` | WORD BYTE ASCii | :WAVeform:FORMat |
+| `Set_Waveform_Source` | CHANnel1-2 POD1-2 FUNCtion | p. 650 — SBUS (v3.00), BUS1/2 (v4.00) |
+
+Also: `Set_Function_Reference` is a level (p. 287, NR3), now `numeric` V. `Set_Acquire_Mode_AVERage/NORMal/PEAK`, `Set_Window_FLATtop/HANNing/RECTangular` and `Set_Edge_Source_CH1/CH2/EXT` still carried their `<placeholder>` (a press was refused as unfilled) — the option each name carries is written in. `Set_Acquire_Mode_HRESolution` retired (HRESolution came with the 6000's v3.00).
+
+Left without options: `Set_Source1` / `Set_Source2` — :FUNCtion:SOURce1/2 are 6000 v5.15 commands (p. 34); the 5462x/4x used :FUNCtion:SOURce. `Set_Hardcopy_Format` — p. 44 says the 5462x/4x list differed (TIFF, LASerjet, DESKjet, EPSon, SEIKo) but never gives it whole.

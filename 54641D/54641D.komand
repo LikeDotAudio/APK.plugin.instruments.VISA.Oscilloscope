@@ -97,13 +97,34 @@
       "scpiFast": ":ACQ:MODE <value>",
       "description": "Set acquire mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "RTIMe",
+          "ETIMe"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "ACQ",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :ACQuire:MODE p. 199 less SEGMented (v5.10). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Acquire_Mode_ETIMe": {
+      "scpi": ":ACQuire:MODE ETIMe",
+      "scpiFast": ":ACQ:MODE ETIMe",
+      "description": "Set_Acquire_Mode → ETIMe. Set acquire mode",
+      "subsystem": "ACQ",
+      "unverified": true,
+      "notes": "Individual of selector Set_Acquire_Mode = ETIMe — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Acquire_Mode_RTIMe": {
+      "scpi": ":ACQuire:MODE RTIMe",
+      "scpiFast": ":ACQ:MODE RTIMe",
+      "description": "Set_Acquire_Mode → RTIMe. Set acquire mode",
+      "subsystem": "ACQ",
+      "unverified": true,
+      "notes": "Individual of selector Set_Acquire_Mode = RTIMe — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Points": {
       "scpi": "ACQuire:POINts <points>",
@@ -118,74 +139,105 @@
       ],
       "subsystem": "ACQuire"
     },
-    "Set_Acquire_Mode_AVERage": {
-      "scpi": ":ACQuire:TYPE <type>",
-      "scpiFast": ":ACQ:TYPE <type>",
-      "description": "Set Acquire Mode AVERage",
-      "arg": {
-        "kind": "enum"
-      },
-      "group": "Acquire Mode & Averaging",
-      "args": [
-        "type"
-      ],
-      "subsystem": "Trigger"
-    },
-    "Set_Acquire_Mode_HRESolution": {
-      "scpi": ":ACQuire:TYPE <type>",
-      "scpiFast": ":ACQ:TYPE <type>",
-      "description": "Set Acquire Mode HRESolution",
-      "arg": {
-        "kind": "enum"
-      },
-      "group": "Acquire Mode & Averaging",
-      "args": [
-        "type"
-      ],
-      "subsystem": "Trigger",
-      "alias_of": "Set_Acquire_Mode_AVERage"
-    },
-    "Set_Acquire_Mode_NORMal": {
-      "scpi": ":ACQuire:TYPE <type>",
-      "scpiFast": ":ACQ:TYPE <type>",
-      "description": "Set Acquire Mode NORMal",
-      "arg": {
-        "kind": "enum"
-      },
-      "group": "Acquire Mode & Averaging",
-      "args": [
-        "type"
-      ],
-      "subsystem": "Trigger",
-      "alias_of": "Set_Acquire_Mode_AVERage"
-    },
-    "Set_Acquire_Mode_PEAK": {
-      "scpi": ":ACQuire:TYPE <type>",
-      "scpiFast": ":ACQ:TYPE <type>",
-      "description": "Set Acquire Mode PEAK",
-      "arg": {
-        "kind": "enum"
-      },
-      "group": "Acquire Mode & Averaging",
-      "args": [
-        "type"
-      ],
-      "subsystem": "Trigger",
-      "alias_of": "Set_Acquire_Mode_AVERage"
-    },
     "Set_Acquire_Type": {
       "scpi": "ACQuire:TYPE <type>",
       "scpiFast": "ACQ:TYPE <type>",
       "description": "Set Acquire Type",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "NORMal",
+          "AVERage",
+          "PEAK"
+        ]
       },
       "group": "Acquisition Settings",
       "args": [
         "type"
       ],
       "subsystem": "ACQuire",
-      "alias_of": "Set_Acquire_Mode_AVERage"
+      "alias_of": "Set_Acquire_Mode_AVERage",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :ACQuire:TYPE p. 208 less HRESolution (added v3.00). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Acquire_Mode_AVERage": {
+      "scpi": ":ACQuire:TYPE AVERage",
+      "scpiFast": ":ACQ:TYPE AVERage",
+      "description": "Set Acquire Mode AVERage",
+      "arg": {
+        "kind": "none"
+      },
+      "group": "Acquire Mode & Averaging",
+      "args": [],
+      "subsystem": "Trigger",
+      "notes": "2026-11-11: the option its name carries written in (AVERage); it still held <type>, so a press was refused as unfilled"
+    },
+    "Set_Acquire_Type_AVERage": {
+      "scpi": "ACQuire:TYPE AVERage",
+      "scpiFast": "ACQ:TYPE AVERage",
+      "description": "Set_Acquire_Type → AVERage. Set Acquire Type",
+      "subsystem": "ACQuire",
+      "group": "Acquisition Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Acquire_Type = AVERage — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Acquire_Mode_HRESolution": {
+      "scpi": ":ACQuire:TYPE HRESolution",
+      "scpiFast": ":ACQ:TYPE HRESolution",
+      "description": "Set Acquire Mode HRESolution",
+      "arg": {
+        "kind": "none"
+      },
+      "group": "Acquire Mode & Averaging",
+      "args": [],
+      "subsystem": "Trigger",
+      "alias_of": "Set_Acquire_Mode_AVERage",
+      "notes": "2026-11-11: the option its name carries written in (HRESolution); it still held <type>, so a press was refused as unfilled",
+      "retired": true,
+      "retired_because": "Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) p. 41 (What's New in v3.00): 'The HRESolution type has been added' to :ACQuire:TYPE — after the 54620/40 command set the 6000 started from; not a 54641D acquisition type"
+    },
+    "Set_Acquire_Mode_NORMal": {
+      "scpi": ":ACQuire:TYPE NORMal",
+      "scpiFast": ":ACQ:TYPE NORMal",
+      "description": "Set Acquire Mode NORMal",
+      "arg": {
+        "kind": "none"
+      },
+      "group": "Acquire Mode & Averaging",
+      "args": [],
+      "subsystem": "Trigger",
+      "alias_of": "Set_Acquire_Mode_AVERage",
+      "notes": "2026-11-11: the option its name carries written in (NORMal); it still held <type>, so a press was refused as unfilled"
+    },
+    "Set_Acquire_Type_NORMal": {
+      "scpi": "ACQuire:TYPE NORMal",
+      "scpiFast": "ACQ:TYPE NORMal",
+      "description": "Set_Acquire_Type → NORMal. Set Acquire Type",
+      "subsystem": "ACQuire",
+      "group": "Acquisition Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Acquire_Type = NORMal — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Acquire_Mode_PEAK": {
+      "scpi": ":ACQuire:TYPE PEAK",
+      "scpiFast": ":ACQ:TYPE PEAK",
+      "description": "Set Acquire Mode PEAK",
+      "arg": {
+        "kind": "none"
+      },
+      "group": "Acquire Mode & Averaging",
+      "args": [],
+      "subsystem": "Trigger",
+      "alias_of": "Set_Acquire_Mode_AVERage",
+      "notes": "2026-11-11: the option its name carries written in (PEAK); it still held <type>, so a press was refused as unfilled"
+    },
+    "Set_Acquire_Type_PEAK": {
+      "scpi": "ACQuire:TYPE PEAK",
+      "scpiFast": "ACQ:TYPE PEAK",
+      "description": "Set_Acquire_Type → PEAK. Set Acquire Type",
+      "subsystem": "ACQuire",
+      "group": "Acquisition Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Acquire_Type = PEAK — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Calibrate_Label": {
       "scpi": ":CALibrate:LABel <value>",
@@ -240,27 +292,71 @@
       "scpiFast": ":CHAN1:COUP <coupling>",
       "description": "CH1 Coupling",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "AC",
+          "DC"
+        ]
       },
       "group": "Vertical Setup CH1",
       "args": [
         "coupling"
       ],
-      "subsystem": "Channel_1"
+      "subsystem": "Channel_1",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:COUPling p. 233). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Channel_Coupling": {
       "scpi": ":CHANNEL1:COUPLING <value>",
       "scpiFast": ":CHAN1:COUP <value>",
       "description": "Receiving Information from the Instrument",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "AC",
+          "DC"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "CHANNEL",
       "unverified": true,
-      "alias_of": "CH1_Coupling"
+      "alias_of": "CH1_Coupling",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:COUPling p. 233). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "CH1_Coupling_AC": {
+      "scpi": ":CHANnel1:COUPling AC",
+      "scpiFast": ":CHAN1:COUP AC",
+      "description": "CH1_Coupling → AC. CH1 Coupling",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_Coupling = AC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Channel_Coupling_AC": {
+      "scpi": ":CHANNEL1:COUPLING AC",
+      "scpiFast": ":CHAN1:COUP AC",
+      "description": "Set_Channel_Coupling → AC. Receiving Information from the Instrument",
+      "subsystem": "CHANNEL",
+      "unverified": true,
+      "notes": "Individual of selector Set_Channel_Coupling = AC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH1_Coupling_DC": {
+      "scpi": ":CHANnel1:COUPling DC",
+      "scpiFast": ":CHAN1:COUP DC",
+      "description": "CH1_Coupling → DC. CH1 Coupling",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_Coupling = DC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Channel_Coupling_DC": {
+      "scpi": ":CHANNEL1:COUPLING DC",
+      "scpiFast": ":CHAN1:COUP DC",
+      "description": "Set_Channel_Coupling → DC. Receiving Information from the Instrument",
+      "subsystem": "CHANNEL",
+      "unverified": true,
+      "notes": "Individual of selector Set_Channel_Coupling = DC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "CH1_Invert": {
       "scpi": ":CHANnel1:INVert <state>",
@@ -402,13 +498,36 @@
       "scpiFast": ":CHAN2:COUP <coupling>",
       "description": "CH2 Coupling",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "AC",
+          "DC"
+        ]
       },
       "group": "Vertical Setup CH2",
       "args": [
         "coupling"
       ],
-      "subsystem": "Channel_2"
+      "subsystem": "Channel_2",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:COUPling p. 233). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "CH2_Coupling_AC": {
+      "scpi": ":CHANnel2:COUPling AC",
+      "scpiFast": ":CHAN2:COUP AC",
+      "description": "CH2_Coupling → AC. CH2 Coupling",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_Coupling = AC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH2_Coupling_DC": {
+      "scpi": ":CHANnel2:COUPling DC",
+      "scpiFast": ":CHAN2:COUP DC",
+      "description": "CH2_Coupling → DC. CH2 Coupling",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_Coupling = DC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "CH2_Invert": {
       "scpi": ":CHANnel2:INVert <state>",
@@ -519,13 +638,18 @@
       "scpiFast": "CHAN<n>:COUP <coupling>",
       "description": "Set Coupling",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "AC",
+          "DC"
+        ]
       },
       "group": "Analog Channel Settings",
       "args": [
         "coupling"
       ],
-      "subsystem": "CHANnel"
+      "subsystem": "CHANnel",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:COUPling p. 233). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Display": {
       "scpi": "CHANnel<n>:DISPlay <state>",
@@ -549,13 +673,18 @@
       "scpiFast": "CHAN<n>:IMP <imp>",
       "description": "Set Impedance",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "ONEMeg",
+          "FIFTy"
+        ]
       },
       "group": "Analog Channel Settings",
       "args": [
         "imp"
       ],
-      "subsystem": "CHANnel"
+      "subsystem": "CHANnel",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:IMPedance). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Invert": {
       "scpi": "CHANnel<n>:INVert <state>",
@@ -721,13 +850,43 @@
       "scpiFast": ":DISP:SOUR <value>",
       "description": "Set display source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "PMEMory0",
+          "PMEMory1",
+          "PMEMory2"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "DISP",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :DISPlay:SOURce p. 264; p. 44: 3 pixel memories on the 5462x/4x (10 on the 6000). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Display_Source_PMEMory0": {
+      "scpi": ":DISPlay:SOURce PMEMory0",
+      "scpiFast": ":DISP:SOUR PMEMory0",
+      "description": "Set_Display_Source → PMEMory0. Set display source",
+      "subsystem": "DISP",
+      "unverified": true,
+      "notes": "Individual of selector Set_Display_Source = PMEMory0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Display_Source_PMEMory1": {
+      "scpi": ":DISPlay:SOURce PMEMory1",
+      "scpiFast": ":DISP:SOUR PMEMory1",
+      "description": "Set_Display_Source → PMEMory1. Set display source",
+      "subsystem": "DISP",
+      "unverified": true,
+      "notes": "Individual of selector Set_Display_Source = PMEMory1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Display_Source_PMEMory2": {
+      "scpi": ":DISPlay:SOURce PMEMory2",
+      "scpiFast": ":DISP:SOUR PMEMory2",
+      "description": "Set_Display_Source → PMEMory2. Set display source",
+      "subsystem": "DISP",
+      "unverified": true,
+      "notes": "Individual of selector Set_Display_Source = PMEMory2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Display_Vectors": {
       "scpi": "DISPlay:VECTors <value>",
@@ -780,13 +939,34 @@
       "scpiFast": "EXT:IMP <value>",
       "description": "Set external impedance",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "ONEMeg",
+          "FIFTy"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "EXT",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:EXTernal:IMPedance). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_External_Impedance_FIFTy": {
+      "scpi": "EXTernal:IMPedance FIFTy",
+      "scpiFast": "EXT:IMP FIFTy",
+      "description": "Set_External_Impedance → FIFTy. Set external impedance",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Impedance = FIFTy — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_External_Impedance_ONEMeg": {
+      "scpi": "EXTernal:IMPedance ONEMeg",
+      "scpiFast": "EXT:IMP ONEMeg",
+      "description": "Set_External_Impedance → ONEMeg. Set external impedance",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Impedance = ONEMeg — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_External_Probe": {
       "scpi": ":EXTernal:PROBe <value>",
@@ -819,13 +999,34 @@
       "scpiFast": ":EXT:UNIT <value>",
       "description": "Set external units",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "VOLT",
+          "AMPere"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "EXT",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:EXTernal:UNITs). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_External_Units_AMPere": {
+      "scpi": ":EXTernal:UNITs AMPere",
+      "scpiFast": ":EXT:UNIT AMPere",
+      "description": "Set_External_Units → AMPere. Set external units",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Units = AMPere — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_External_Units_VOLT": {
+      "scpi": ":EXTernal:UNITs VOLT",
+      "scpiFast": ":EXT:UNIT VOLT",
+      "description": "Set_External_Units → VOLT. Set external units",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Units = VOLT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Center_Frequency": {
       "scpi": ":FUNCtion:CENTer <frequency>",
@@ -895,27 +1096,45 @@
       "scpiFast": "FUNC:OPER <op>",
       "description": "Set Function Operation",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "SUBTract",
+          "MULTiply",
+          "INTegrate",
+          "DIFFerentiate",
+          "FFT",
+          "SQRT"
+        ]
       },
       "group": "Math Function Settings",
       "args": [
         "op"
       ],
-      "subsystem": "FUNCtion"
+      "subsystem": "FUNCtion",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :FUNCtion:OPERation p. 285 less ADD (added v5.15). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Operation": {
       "scpi": ":FUNCtion:OPERation <operation>",
       "scpiFast": ":FUNC:OPER <operation>",
       "description": "Set Operation",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "SUBTract",
+          "MULTiply",
+          "INTegrate",
+          "DIFFerentiate",
+          "FFT",
+          "SQRT"
+        ]
       },
       "group": "Select Operation",
       "args": [
         "operation"
       ],
       "subsystem": "Math_FFT",
-      "alias_of": "Set_Function_Operation"
+      "alias_of": "Set_Function_Operation",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :FUNCtion:OPERation p. 285 less ADD (added v5.15). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Math_Operator": {
       "scpi": ":FUNCtion:OPERation <value>",
@@ -960,6 +1179,33 @@
       "unverified": true,
       "notes": "Individual of selector Set_Math_Operator = DIFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
+    "Set_Function_Operation_DIFFerentiate": {
+      "scpi": "FUNCtion:OPERation DIFFerentiate",
+      "scpiFast": "FUNC:OPER DIFFerentiate",
+      "description": "Set_Function_Operation → DIFFerentiate. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = DIFFerentiate — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_DIFFerentiate": {
+      "scpi": ":FUNCtion:OPERation DIFFerentiate",
+      "scpiFast": ":FUNC:OPER DIFFerentiate",
+      "description": "Set_Operation → DIFFerentiate. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = DIFFerentiate — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Function_Operation_FFT": {
+      "scpi": "FUNCtion:OPERation FFT",
+      "scpiFast": "FUNC:OPER FFT",
+      "description": "Set_Function_Operation → FFT. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = FFT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Math_Operator_FFT": {
       "scpi": ":FUNCtion:OPERation FFT",
       "scpiFast": ":FUNC:OPER FFT",
@@ -968,6 +1214,15 @@
       "group": "Math_FFT",
       "unverified": true,
       "notes": "Individual of selector Set_Math_Operator = FFT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_FFT": {
+      "scpi": ":FUNCtion:OPERation FFT",
+      "scpiFast": ":FUNC:OPER FFT",
+      "description": "Set_Operation → FFT. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = FFT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Math_Operator_INT": {
       "scpi": ":FUNCtion:OPERation INT",
@@ -978,6 +1233,24 @@
       "unverified": true,
       "notes": "Individual of selector Set_Math_Operator = INT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
+    "Set_Function_Operation_INTegrate": {
+      "scpi": "FUNCtion:OPERation INTegrate",
+      "scpiFast": "FUNC:OPER INTegrate",
+      "description": "Set_Function_Operation → INTegrate. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = INTegrate — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_INTegrate": {
+      "scpi": ":FUNCtion:OPERation INTegrate",
+      "scpiFast": ":FUNC:OPER INTegrate",
+      "description": "Set_Operation → INTegrate. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = INTegrate — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Math_Operator_MULT": {
       "scpi": ":FUNCtion:OPERation MULT",
       "scpiFast": ":FUNC:OPER MULT",
@@ -987,6 +1260,42 @@
       "unverified": true,
       "notes": "Individual of selector Set_Math_Operator = MULT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
+    "Set_Function_Operation_MULTiply": {
+      "scpi": "FUNCtion:OPERation MULTiply",
+      "scpiFast": "FUNC:OPER MULTiply",
+      "description": "Set_Function_Operation → MULTiply. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = MULTiply — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_MULTiply": {
+      "scpi": ":FUNCtion:OPERation MULTiply",
+      "scpiFast": ":FUNC:OPER MULTiply",
+      "description": "Set_Operation → MULTiply. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = MULTiply — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Function_Operation_SQRT": {
+      "scpi": "FUNCtion:OPERation SQRT",
+      "scpiFast": "FUNC:OPER SQRT",
+      "description": "Set_Function_Operation → SQRT. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = SQRT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_SQRT": {
+      "scpi": ":FUNCtion:OPERation SQRT",
+      "scpiFast": ":FUNC:OPER SQRT",
+      "description": "Set_Operation → SQRT. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = SQRT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Math_Operator_SUBT": {
       "scpi": ":FUNCtion:OPERation SUBT",
       "scpiFast": ":FUNC:OPER SUBT",
@@ -995,6 +1304,24 @@
       "group": "Math_FFT",
       "unverified": true,
       "notes": "Individual of selector Set_Math_Operator = SUBT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Function_Operation_SUBTract": {
+      "scpi": "FUNCtion:OPERation SUBTract",
+      "scpiFast": "FUNC:OPER SUBTract",
+      "description": "Set_Function_Operation → SUBTract. Set Function Operation",
+      "subsystem": "FUNCtion",
+      "group": "Math Function Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Function_Operation = SUBTract — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Operation_SUBTract": {
+      "scpi": ":FUNCtion:OPERation SUBTract",
+      "scpiFast": ":FUNC:OPER SUBTract",
+      "description": "Set_Operation → SUBTract. Set Operation",
+      "subsystem": "Math_FFT",
+      "group": "Select Operation",
+      "unverified": true,
+      "notes": "Individual of selector Set_Operation = SUBTract — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Math_Range": {
       "scpi": ":FUNCtion:RANGe <range>",
@@ -1031,13 +1358,15 @@
       "scpiFast": ":FUNC:REF <value>",
       "description": "Set function reference",
       "arg": {
-        "kind": "enum"
+        "kind": "numeric",
+        "unit": "V"
       },
       "args": [
         "value"
       ],
       "subsystem": "FUNC",
-      "unverified": true
+      "unverified": true,
+      "notes": "2026-11-11: a level, not a choice — Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :FUNCtion:REFerence p. 287 <level> NR3 (= :FUNCtion:OFFSet)"
     },
     "Set_FFT_Scale": {
       "scpi": ":FUNCtion:SCALe <scale>",
@@ -1092,45 +1421,42 @@
       "subsystem": "Math_FFT"
     },
     "Set_Window_FLATtop": {
-      "scpi": ":FUNCtion:WINDow <window>",
-      "scpiFast": ":FUNC:WIND <window>",
+      "scpi": ":FUNCtion:WINDow FLATtop",
+      "scpiFast": ":FUNC:WIND FLATtop",
       "description": "Set Window FLATtop",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "FFT Specific Configuration",
-      "args": [
-        "window"
-      ],
-      "subsystem": "Math_FFT"
+      "args": [],
+      "subsystem": "Math_FFT",
+      "notes": "2026-11-11: the option its name carries written in (FLATtop); it still held <window>, so a press was refused as unfilled"
     },
     "Set_Window_HANNing": {
-      "scpi": ":FUNCtion:WINDow <window>",
-      "scpiFast": ":FUNC:WIND <window>",
+      "scpi": ":FUNCtion:WINDow HANNing",
+      "scpiFast": ":FUNC:WIND HANNing",
       "description": "Set Window HANNing",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "FFT Specific Configuration",
-      "args": [
-        "window"
-      ],
+      "args": [],
       "subsystem": "Math_FFT",
-      "alias_of": "Set_Window_FLATtop"
+      "alias_of": "Set_Window_FLATtop",
+      "notes": "2026-11-11: the option its name carries written in (HANNing); it still held <window>, so a press was refused as unfilled"
     },
     "Set_Window_RECTangular": {
-      "scpi": ":FUNCtion:WINDow <window>",
-      "scpiFast": ":FUNC:WIND <window>",
+      "scpi": ":FUNCtion:WINDow RECTangular",
+      "scpiFast": ":FUNC:WIND RECTangular",
       "description": "Set Window RECTangular",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "FFT Specific Configuration",
-      "args": [
-        "window"
-      ],
+      "args": [],
       "subsystem": "Math_FFT",
-      "alias_of": "Set_Window_FLATtop"
+      "alias_of": "Set_Window_FLATtop",
+      "notes": "2026-11-11: the option its name carries written in (RECTangular); it still held <window>, so a press was refused as unfilled"
     },
     "Set_Hardcopy_Factors": {
       "scpi": ":HARDcopy:FACTors <value>",
@@ -1189,13 +1515,46 @@
       "scpiFast": "MARK:MODE <mode>",
       "description": "Set Marker Mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "OFF",
+          "MEASurement",
+          "MANual"
+        ]
       },
       "group": "Cursor Settings",
       "args": [
         "mode"
       ],
-      "subsystem": "MARKer"
+      "subsystem": "MARKer",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :MARKer:MODE p. 309 less WAVeform (added v5.20). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Marker_Mode_MANual": {
+      "scpi": "MARKer:MODE MANual",
+      "scpiFast": "MARK:MODE MANual",
+      "description": "Set_Marker_Mode → MANual. Set Marker Mode",
+      "subsystem": "MARKer",
+      "group": "Cursor Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Marker_Mode = MANual — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Marker_Mode_MEASurement": {
+      "scpi": "MARKer:MODE MEASurement",
+      "scpiFast": "MARK:MODE MEASurement",
+      "description": "Set_Marker_Mode → MEASurement. Set Marker Mode",
+      "subsystem": "MARKer",
+      "group": "Cursor Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Marker_Mode = MEASurement — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Marker_Mode_OFF": {
+      "scpi": "MARKer:MODE OFF",
+      "scpiFast": "MARK:MODE OFF",
+      "description": "Set_Marker_Mode → OFF. Set Marker Mode",
+      "subsystem": "MARKer",
+      "group": "Cursor Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Marker_Mode = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_X1": {
       "scpi": "MARKer:X1Position <pos>",
@@ -1386,13 +1745,216 @@
       "scpiFast": "MEAS:SOUR <source>",
       "description": "Set Measure Source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "FUNCtion",
+          "EXTernal",
+          "DIGital0",
+          "DIGital1",
+          "DIGital2",
+          "DIGital3",
+          "DIGital4",
+          "DIGital5",
+          "DIGital6",
+          "DIGital7",
+          "DIGital8",
+          "DIGital9",
+          "DIGital10",
+          "DIGital11",
+          "DIGital12",
+          "DIGital13",
+          "DIGital14",
+          "DIGital15"
+        ]
       },
       "group": "Measurement Settings",
       "args": [
         "source"
       ],
-      "subsystem": "MEASure"
+      "subsystem": "MEASure",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:MEASure:SOURce, MSO: DIGital0-15; FUNCtion = MATH). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Measure_Source_CHANnel1": {
+      "scpi": "MEASure:SOURce CHANnel1",
+      "scpiFast": "MEAS:SOUR CHANnel1",
+      "description": "Set_Measure_Source → CHANnel1. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_CHANnel2": {
+      "scpi": "MEASure:SOURce CHANnel2",
+      "scpiFast": "MEAS:SOUR CHANnel2",
+      "description": "Set_Measure_Source → CHANnel2. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital0": {
+      "scpi": "MEASure:SOURce DIGital0",
+      "scpiFast": "MEAS:SOUR DIGital0",
+      "description": "Set_Measure_Source → DIGital0. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital1": {
+      "scpi": "MEASure:SOURce DIGital1",
+      "scpiFast": "MEAS:SOUR DIGital1",
+      "description": "Set_Measure_Source → DIGital1. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital10": {
+      "scpi": "MEASure:SOURce DIGital10",
+      "scpiFast": "MEAS:SOUR DIGital10",
+      "description": "Set_Measure_Source → DIGital10. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital11": {
+      "scpi": "MEASure:SOURce DIGital11",
+      "scpiFast": "MEAS:SOUR DIGital11",
+      "description": "Set_Measure_Source → DIGital11. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital12": {
+      "scpi": "MEASure:SOURce DIGital12",
+      "scpiFast": "MEAS:SOUR DIGital12",
+      "description": "Set_Measure_Source → DIGital12. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital13": {
+      "scpi": "MEASure:SOURce DIGital13",
+      "scpiFast": "MEAS:SOUR DIGital13",
+      "description": "Set_Measure_Source → DIGital13. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital14": {
+      "scpi": "MEASure:SOURce DIGital14",
+      "scpiFast": "MEAS:SOUR DIGital14",
+      "description": "Set_Measure_Source → DIGital14. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital15": {
+      "scpi": "MEASure:SOURce DIGital15",
+      "scpiFast": "MEAS:SOUR DIGital15",
+      "description": "Set_Measure_Source → DIGital15. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital2": {
+      "scpi": "MEASure:SOURce DIGital2",
+      "scpiFast": "MEAS:SOUR DIGital2",
+      "description": "Set_Measure_Source → DIGital2. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital3": {
+      "scpi": "MEASure:SOURce DIGital3",
+      "scpiFast": "MEAS:SOUR DIGital3",
+      "description": "Set_Measure_Source → DIGital3. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital4": {
+      "scpi": "MEASure:SOURce DIGital4",
+      "scpiFast": "MEAS:SOUR DIGital4",
+      "description": "Set_Measure_Source → DIGital4. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital5": {
+      "scpi": "MEASure:SOURce DIGital5",
+      "scpiFast": "MEAS:SOUR DIGital5",
+      "description": "Set_Measure_Source → DIGital5. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital6": {
+      "scpi": "MEASure:SOURce DIGital6",
+      "scpiFast": "MEAS:SOUR DIGital6",
+      "description": "Set_Measure_Source → DIGital6. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital7": {
+      "scpi": "MEASure:SOURce DIGital7",
+      "scpiFast": "MEAS:SOUR DIGital7",
+      "description": "Set_Measure_Source → DIGital7. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital8": {
+      "scpi": "MEASure:SOURce DIGital8",
+      "scpiFast": "MEAS:SOUR DIGital8",
+      "description": "Set_Measure_Source → DIGital8. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_DIGital9": {
+      "scpi": "MEASure:SOURce DIGital9",
+      "scpiFast": "MEAS:SOUR DIGital9",
+      "description": "Set_Measure_Source → DIGital9. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_EXTernal": {
+      "scpi": "MEASure:SOURce EXTernal",
+      "scpiFast": "MEAS:SOUR EXTernal",
+      "description": "Set_Measure_Source → EXTernal. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = EXTernal — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Measure_Source_FUNCtion": {
+      "scpi": "MEASure:SOURce FUNCtion",
+      "scpiFast": "MEAS:SOUR FUNCtion",
+      "description": "Set_Measure_Source → FUNCtion. Set Measure Source",
+      "subsystem": "MEASure",
+      "group": "Measurement Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Measure_Source = FUNCtion — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Tedge": {
       "scpi": ":MEASure:TEDGe <value>",
@@ -1579,13 +2141,56 @@
       "scpiFast": "TIM:MODE <mode>",
       "description": "Set Mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "MAIN",
+          "WINDow",
+          "XY",
+          "ROLL"
+        ]
       },
       "group": "Timebase (Horizontal) Settings",
       "args": [
         "mode"
       ],
-      "subsystem": "TIMebase"
+      "subsystem": "TIMebase",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TIMebase:MODE). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Mode_MAIN": {
+      "scpi": "TIMebase:MODE MAIN",
+      "scpiFast": "TIM:MODE MAIN",
+      "description": "Set_Mode → MAIN. Set Mode",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = MAIN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Mode_ROLL": {
+      "scpi": "TIMebase:MODE ROLL",
+      "scpiFast": "TIM:MODE ROLL",
+      "description": "Set_Mode → ROLL. Set Mode",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = ROLL — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Mode_WINDow": {
+      "scpi": "TIMebase:MODE WINDow",
+      "scpiFast": "TIM:MODE WINDow",
+      "description": "Set_Mode → WINDow. Set Mode",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = WINDow — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Mode_XY": {
+      "scpi": "TIMebase:MODE XY",
+      "scpiFast": "TIM:MODE XY",
+      "description": "Set_Mode → XY. Set Mode",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Mode = XY — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Timebase_Delay": {
       "scpi": ":TIMebase:POSition <delay>",
@@ -1652,13 +2257,46 @@
       "scpiFast": "TIM:REF <ref>",
       "description": "Set Reference",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "LEFT",
+          "CENTer",
+          "RIGHt"
+        ]
       },
       "group": "Timebase (Horizontal) Settings",
       "args": [
         "ref"
       ],
-      "subsystem": "TIMebase"
+      "subsystem": "TIMebase",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TIMebase:REFerence). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Reference_CENTer": {
+      "scpi": "TIMebase:REFerence CENTer",
+      "scpiFast": "TIM:REF CENTer",
+      "description": "Set_Reference → CENTer. Set Reference",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Reference = CENTer — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Reference_LEFT": {
+      "scpi": "TIMebase:REFerence LEFT",
+      "scpiFast": "TIM:REF LEFT",
+      "description": "Set_Reference → LEFT. Set Reference",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Reference = LEFT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Reference_RIGHt": {
+      "scpi": "TIMebase:REFerence RIGHt",
+      "scpiFast": "TIM:REF RIGHt",
+      "description": "Set_Reference → RIGHt. Set Reference",
+      "subsystem": "TIMebase",
+      "group": "Timebase (Horizontal) Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Reference = RIGHt — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Timebase_Scale": {
       "scpi": ":TIMebase:SCALe <scale>",
@@ -1760,13 +2398,34 @@
       "scpiFast": ":TRIG:CAN:PATT:ID:MODE <value>",
       "description": "Set trigger can pattern id mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "STANdard",
+          "EXTended"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:CAN:PATTern:ID:MODE). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Can_Pattern_Id_Mode_EXTended": {
+      "scpi": ":TRIGger:CAN:PATTern:ID:MODE EXTended",
+      "scpiFast": ":TRIG:CAN:PATT:ID:MODE EXTended",
+      "description": "Set_Trigger_Can_Pattern_Id_Mode → EXTended. Set trigger can pattern id mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Pattern_Id_Mode = EXTended — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Pattern_Id_Mode_STANdard": {
+      "scpi": ":TRIGger:CAN:PATTern:ID:MODE STANdard",
+      "scpiFast": ":TRIG:CAN:PATT:ID:MODE STANdard",
+      "description": "Set_Trigger_Can_Pattern_Id_Mode → STANdard. Set trigger can pattern id mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Pattern_Id_Mode = STANdard — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Can_Samplepoint": {
       "scpi": ":TRIGger:CAN:SAMPlepoint <value>",
@@ -1799,13 +2458,178 @@
       "scpiFast": ":TRIG:CAN:SOUR <value>",
       "description": "Set trigger can source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "DIGital0",
+          "DIGital1",
+          "DIGital2",
+          "DIGital3",
+          "DIGital4",
+          "DIGital5",
+          "DIGital6",
+          "DIGital7",
+          "DIGital8",
+          "DIGital9",
+          "DIGital10",
+          "DIGital11",
+          "DIGital12",
+          "DIGital13",
+          "DIGital14",
+          "DIGital15"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:CAN:SOURce, MSO). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Can_Source_CHANnel1": {
+      "scpi": ":TRIGger:CAN:SOURce CHANnel1",
+      "scpiFast": ":TRIG:CAN:SOUR CHANnel1",
+      "description": "Set_Trigger_Can_Source → CHANnel1. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_CHANnel2": {
+      "scpi": ":TRIGger:CAN:SOURce CHANnel2",
+      "scpiFast": ":TRIG:CAN:SOUR CHANnel2",
+      "description": "Set_Trigger_Can_Source → CHANnel2. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital0": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital0",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital0",
+      "description": "Set_Trigger_Can_Source → DIGital0. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital1": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital1",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital1",
+      "description": "Set_Trigger_Can_Source → DIGital1. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital10": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital10",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital10",
+      "description": "Set_Trigger_Can_Source → DIGital10. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital11": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital11",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital11",
+      "description": "Set_Trigger_Can_Source → DIGital11. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital12": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital12",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital12",
+      "description": "Set_Trigger_Can_Source → DIGital12. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital13": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital13",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital13",
+      "description": "Set_Trigger_Can_Source → DIGital13. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital14": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital14",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital14",
+      "description": "Set_Trigger_Can_Source → DIGital14. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital15": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital15",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital15",
+      "description": "Set_Trigger_Can_Source → DIGital15. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital2": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital2",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital2",
+      "description": "Set_Trigger_Can_Source → DIGital2. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital3": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital3",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital3",
+      "description": "Set_Trigger_Can_Source → DIGital3. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital4": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital4",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital4",
+      "description": "Set_Trigger_Can_Source → DIGital4. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital5": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital5",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital5",
+      "description": "Set_Trigger_Can_Source → DIGital5. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital6": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital6",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital6",
+      "description": "Set_Trigger_Can_Source → DIGital6. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital7": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital7",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital7",
+      "description": "Set_Trigger_Can_Source → DIGital7. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital8": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital8",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital8",
+      "description": "Set_Trigger_Can_Source → DIGital8. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Can_Source_DIGital9": {
+      "scpi": ":TRIGger:CAN:SOURce DIGital9",
+      "scpiFast": ":TRIG:CAN:SOUR DIGital9",
+      "description": "Set_Trigger_Can_Source → DIGital9. Set trigger can source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Can_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Can_Trigger": {
       "scpi": ":TRIGger:CAN:TRIGger <value>",
@@ -1877,68 +2701,291 @@
       "scpiFast": "TRIG:EDGE:SLOP <slope>",
       "description": "Set Edge Slope",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "POSitive",
+          "NEGative"
+        ]
       },
       "group": "Edge Trigger Config",
       "args": [
         "slope"
       ],
-      "subsystem": "TRIGger"
+      "subsystem": "TRIGger",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :TRIGger[:EDGE]:SLOPe p. 515; EITHer/ALTernate left out (not shown on the 5462x/4x). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Edge_Slope_NEGative": {
+      "scpi": "TRIGger:EDGE:SLOPe NEGative",
+      "scpiFast": "TRIG:EDGE:SLOP NEGative",
+      "description": "Set_Edge_Slope → NEGative. Set Edge Slope",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Slope = NEGative — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Slope_POSitive": {
+      "scpi": "TRIGger:EDGE:SLOPe POSitive",
+      "scpiFast": "TRIG:EDGE:SLOP POSitive",
+      "description": "Set_Edge_Slope → POSitive. Set Edge Slope",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Slope = POSitive — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Edge_Source": {
       "scpi": "TRIGger:EDGE:SOURce <source>",
       "scpiFast": "TRIG:EDGE:SOUR <source>",
       "description": "Set Edge Source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "DIGital0",
+          "DIGital1",
+          "DIGital2",
+          "DIGital3",
+          "DIGital4",
+          "DIGital5",
+          "DIGital6",
+          "DIGital7",
+          "DIGital8",
+          "DIGital9",
+          "DIGital10",
+          "DIGital11",
+          "DIGital12",
+          "DIGital13",
+          "DIGital14",
+          "DIGital15",
+          "EXTernal",
+          "LINE"
+        ]
       },
       "group": "Edge Trigger Config",
       "args": [
         "source"
       ],
-      "subsystem": "TRIGger"
+      "subsystem": "TRIGger",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger[:EDGE]:SOURce, MSO). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Edge_Source_CH1": {
-      "scpi": ":TRIGger:EDGE:SOURce <source>",
-      "scpiFast": ":TRIG:EDGE:SOUR <source>",
+      "scpi": ":TRIGger:EDGE:SOURce CHANnel1",
+      "scpiFast": ":TRIG:EDGE:SOUR CHANnel1",
       "description": "Set Edge Source CH1",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "Trigger Configuration",
-      "args": [
-        "source"
-      ],
+      "args": [],
       "subsystem": "Trigger",
-      "alias_of": "Set_Edge_Source"
+      "alias_of": "Set_Edge_Source",
+      "notes": "2026-11-11: the option its name carries written in (CHANnel1); it still held <source>, so a press was refused as unfilled"
+    },
+    "Set_Edge_Source_CHANnel1": {
+      "scpi": "TRIGger:EDGE:SOURce CHANnel1",
+      "scpiFast": "TRIG:EDGE:SOUR CHANnel1",
+      "description": "Set_Edge_Source → CHANnel1. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Edge_Source_CH2": {
-      "scpi": ":TRIGger:EDGE:SOURce <source>",
-      "scpiFast": ":TRIG:EDGE:SOUR <source>",
+      "scpi": ":TRIGger:EDGE:SOURce CHANnel2",
+      "scpiFast": ":TRIG:EDGE:SOUR CHANnel2",
       "description": "Set Edge Source CH2",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "Trigger Configuration",
-      "args": [
-        "source"
-      ],
+      "args": [],
       "subsystem": "Trigger",
-      "alias_of": "Set_Edge_Source"
+      "alias_of": "Set_Edge_Source",
+      "notes": "2026-11-11: the option its name carries written in (CHANnel2); it still held <source>, so a press was refused as unfilled"
+    },
+    "Set_Edge_Source_CHANnel2": {
+      "scpi": "TRIGger:EDGE:SOURce CHANnel2",
+      "scpiFast": "TRIG:EDGE:SOUR CHANnel2",
+      "description": "Set_Edge_Source → CHANnel2. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital0": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital0",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital0",
+      "description": "Set_Edge_Source → DIGital0. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital1": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital1",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital1",
+      "description": "Set_Edge_Source → DIGital1. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital10": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital10",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital10",
+      "description": "Set_Edge_Source → DIGital10. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital11": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital11",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital11",
+      "description": "Set_Edge_Source → DIGital11. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital12": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital12",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital12",
+      "description": "Set_Edge_Source → DIGital12. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital13": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital13",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital13",
+      "description": "Set_Edge_Source → DIGital13. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital14": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital14",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital14",
+      "description": "Set_Edge_Source → DIGital14. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital15": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital15",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital15",
+      "description": "Set_Edge_Source → DIGital15. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital2": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital2",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital2",
+      "description": "Set_Edge_Source → DIGital2. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital3": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital3",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital3",
+      "description": "Set_Edge_Source → DIGital3. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital4": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital4",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital4",
+      "description": "Set_Edge_Source → DIGital4. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital5": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital5",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital5",
+      "description": "Set_Edge_Source → DIGital5. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital6": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital6",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital6",
+      "description": "Set_Edge_Source → DIGital6. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital7": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital7",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital7",
+      "description": "Set_Edge_Source → DIGital7. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital8": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital8",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital8",
+      "description": "Set_Edge_Source → DIGital8. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_DIGital9": {
+      "scpi": "TRIGger:EDGE:SOURce DIGital9",
+      "scpiFast": "TRIG:EDGE:SOUR DIGital9",
+      "description": "Set_Edge_Source → DIGital9. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Edge_Source_EXT": {
-      "scpi": ":TRIGger:EDGE:SOURce <source>",
-      "scpiFast": ":TRIG:EDGE:SOUR <source>",
+      "scpi": ":TRIGger:EDGE:SOURce EXTernal",
+      "scpiFast": ":TRIG:EDGE:SOUR EXTernal",
       "description": "Set Edge Source EXT",
       "arg": {
-        "kind": "enum"
+        "kind": "none"
       },
       "group": "Trigger Configuration",
-      "args": [
-        "source"
-      ],
+      "args": [],
       "subsystem": "Trigger",
-      "alias_of": "Set_Edge_Source"
+      "alias_of": "Set_Edge_Source",
+      "notes": "2026-11-11: the option its name carries written in (EXTernal); it still held <source>, so a press was refused as unfilled"
+    },
+    "Set_Edge_Source_EXTernal": {
+      "scpi": "TRIGger:EDGE:SOURce EXTernal",
+      "scpiFast": "TRIG:EDGE:SOUR EXTernal",
+      "description": "Set_Edge_Source → EXTernal. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = EXTernal — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Edge_Source_LINE": {
+      "scpi": "TRIGger:EDGE:SOURce LINE",
+      "scpiFast": "TRIG:EDGE:SOUR LINE",
+      "description": "Set_Edge_Source → LINE. Set Edge Source",
+      "subsystem": "TRIGger",
+      "group": "Edge Trigger Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Edge_Source = LINE — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Glitch_Width": {
       "scpi": "TRIGger:GLITch:LESSthan <time>",
@@ -1972,13 +3019,34 @@
       "scpiFast": ":TRIG:GLIT:POL <value>",
       "description": "Set trigger glitch polarity",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "POSitive",
+          "NEGative"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:GLITch:POLarity). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Glitch_Polarity_NEGative": {
+      "scpi": ":TRIGger:GLITch:POLarity NEGative",
+      "scpiFast": ":TRIG:GLIT:POL NEGative",
+      "description": "Set_Trigger_Glitch_Polarity → NEGative. Set trigger glitch polarity",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Glitch_Polarity = NEGative — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Glitch_Polarity_POSitive": {
+      "scpi": ":TRIGger:GLITch:POLarity POSitive",
+      "scpiFast": ":TRIG:GLIT:POL POSitive",
+      "description": "Set_Trigger_Glitch_Polarity → POSitive. Set trigger glitch polarity",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Glitch_Polarity = POSitive — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Glitch_Condition": {
       "scpi": "TRIGger:GLITch:QUALifier <qual>",
@@ -2011,13 +3079,196 @@
       "scpiFast": "TRIG:GLIT:SOUR <source>",
       "description": "Set Glitch Source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "DIGital0",
+          "DIGital1",
+          "DIGital2",
+          "DIGital3",
+          "DIGital4",
+          "DIGital5",
+          "DIGital6",
+          "DIGital7",
+          "DIGital8",
+          "DIGital9",
+          "DIGital10",
+          "DIGital11",
+          "DIGital12",
+          "DIGital13",
+          "DIGital14",
+          "DIGital15"
+        ]
       },
       "group": "Glitch/Pulse Width Config",
       "args": [
         "source"
       ],
-      "subsystem": "TRIGger"
+      "subsystem": "TRIGger",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:GLITch:SOURce, MSO). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Glitch_Source_CHANnel1": {
+      "scpi": "TRIGger:GLITch:SOURce CHANnel1",
+      "scpiFast": "TRIG:GLIT:SOUR CHANnel1",
+      "description": "Set_Glitch_Source → CHANnel1. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_CHANnel2": {
+      "scpi": "TRIGger:GLITch:SOURce CHANnel2",
+      "scpiFast": "TRIG:GLIT:SOUR CHANnel2",
+      "description": "Set_Glitch_Source → CHANnel2. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital0": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital0",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital0",
+      "description": "Set_Glitch_Source → DIGital0. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital1": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital1",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital1",
+      "description": "Set_Glitch_Source → DIGital1. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital10": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital10",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital10",
+      "description": "Set_Glitch_Source → DIGital10. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital11": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital11",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital11",
+      "description": "Set_Glitch_Source → DIGital11. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital12": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital12",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital12",
+      "description": "Set_Glitch_Source → DIGital12. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital13": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital13",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital13",
+      "description": "Set_Glitch_Source → DIGital13. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital14": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital14",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital14",
+      "description": "Set_Glitch_Source → DIGital14. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital15": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital15",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital15",
+      "description": "Set_Glitch_Source → DIGital15. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital2": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital2",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital2",
+      "description": "Set_Glitch_Source → DIGital2. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital3": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital3",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital3",
+      "description": "Set_Glitch_Source → DIGital3. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital4": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital4",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital4",
+      "description": "Set_Glitch_Source → DIGital4. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital5": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital5",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital5",
+      "description": "Set_Glitch_Source → DIGital5. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital6": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital6",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital6",
+      "description": "Set_Glitch_Source → DIGital6. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital7": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital7",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital7",
+      "description": "Set_Glitch_Source → DIGital7. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital8": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital8",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital8",
+      "description": "Set_Glitch_Source → DIGital8. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Glitch_Source_DIGital9": {
+      "scpi": "TRIGger:GLITch:SOURce DIGital9",
+      "scpiFast": "TRIG:GLIT:SOUR DIGital9",
+      "description": "Set_Glitch_Source → DIGital9. Set Glitch Source",
+      "subsystem": "TRIGger",
+      "group": "Glitch/Pulse Width Config",
+      "unverified": true,
+      "notes": "Individual of selector Set_Glitch_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Hfreject": {
       "scpi": ":TRIGger:HFReject <value>",
@@ -2102,13 +3353,178 @@
       "scpiFast": ":TRIG:LIN:SOUR <value>",
       "description": "Set trigger lin source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "DIGital0",
+          "DIGital1",
+          "DIGital2",
+          "DIGital3",
+          "DIGital4",
+          "DIGital5",
+          "DIGital6",
+          "DIGital7",
+          "DIGital8",
+          "DIGital9",
+          "DIGital10",
+          "DIGital11",
+          "DIGital12",
+          "DIGital13",
+          "DIGital14",
+          "DIGital15"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:LIN:SOURce, MSO). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Lin_Source_CHANnel1": {
+      "scpi": ":TRIGger:LIN:SOURce CHANnel1",
+      "scpiFast": ":TRIG:LIN:SOUR CHANnel1",
+      "description": "Set_Trigger_Lin_Source → CHANnel1. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_CHANnel2": {
+      "scpi": ":TRIGger:LIN:SOURce CHANnel2",
+      "scpiFast": ":TRIG:LIN:SOUR CHANnel2",
+      "description": "Set_Trigger_Lin_Source → CHANnel2. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital0": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital0",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital0",
+      "description": "Set_Trigger_Lin_Source → DIGital0. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital1": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital1",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital1",
+      "description": "Set_Trigger_Lin_Source → DIGital1. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital10": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital10",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital10",
+      "description": "Set_Trigger_Lin_Source → DIGital10. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital11": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital11",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital11",
+      "description": "Set_Trigger_Lin_Source → DIGital11. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital12": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital12",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital12",
+      "description": "Set_Trigger_Lin_Source → DIGital12. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital13": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital13",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital13",
+      "description": "Set_Trigger_Lin_Source → DIGital13. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital14": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital14",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital14",
+      "description": "Set_Trigger_Lin_Source → DIGital14. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital15": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital15",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital15",
+      "description": "Set_Trigger_Lin_Source → DIGital15. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital2": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital2",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital2",
+      "description": "Set_Trigger_Lin_Source → DIGital2. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital3": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital3",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital3",
+      "description": "Set_Trigger_Lin_Source → DIGital3. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital4": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital4",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital4",
+      "description": "Set_Trigger_Lin_Source → DIGital4. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital5": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital5",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital5",
+      "description": "Set_Trigger_Lin_Source → DIGital5. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital6": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital6",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital6",
+      "description": "Set_Trigger_Lin_Source → DIGital6. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital7": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital7",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital7",
+      "description": "Set_Trigger_Lin_Source → DIGital7. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital8": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital8",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital8",
+      "description": "Set_Trigger_Lin_Source → DIGital8. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Lin_Source_DIGital9": {
+      "scpi": ":TRIGger:LIN:SOURce DIGital9",
+      "scpiFast": ":TRIG:LIN:SOUR DIGital9",
+      "description": "Set_Trigger_Lin_Source → DIGital9. Set trigger lin source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Lin_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Lin_Trigger": {
       "scpi": ":TRIGger:LIN:TRIGger <value>",
@@ -2128,13 +3544,126 @@
       "scpiFast": ":TRIG:MODE <mode>",
       "description": "Set Trigger Mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "EDGE",
+          "GLITch",
+          "PATTern",
+          "CAN",
+          "DURation",
+          "IIC",
+          "LIN",
+          "SEQuence",
+          "SPI",
+          "TV",
+          "USB"
+        ]
       },
       "group": "Trigger Configuration",
       "args": [
         "mode"
       ],
-      "subsystem": "Trigger"
+      "subsystem": "Trigger",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :TRIGger:MODE p. 485 less EBURst (v3.00), FLEXray (v4.10), UART (v5.00), I2S (v5.25), M1553 (v6.00). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Mode_CAN": {
+      "scpi": ":TRIGger:MODE CAN",
+      "scpiFast": ":TRIG:MODE CAN",
+      "description": "Set_Trigger_Mode → CAN. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = CAN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_DURation": {
+      "scpi": ":TRIGger:MODE DURation",
+      "scpiFast": ":TRIG:MODE DURation",
+      "description": "Set_Trigger_Mode → DURation. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = DURation — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_EDGE": {
+      "scpi": ":TRIGger:MODE EDGE",
+      "scpiFast": ":TRIG:MODE EDGE",
+      "description": "Set_Trigger_Mode → EDGE. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = EDGE — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_GLITch": {
+      "scpi": ":TRIGger:MODE GLITch",
+      "scpiFast": ":TRIG:MODE GLITch",
+      "description": "Set_Trigger_Mode → GLITch. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = GLITch — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_IIC": {
+      "scpi": ":TRIGger:MODE IIC",
+      "scpiFast": ":TRIG:MODE IIC",
+      "description": "Set_Trigger_Mode → IIC. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = IIC — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_LIN": {
+      "scpi": ":TRIGger:MODE LIN",
+      "scpiFast": ":TRIG:MODE LIN",
+      "description": "Set_Trigger_Mode → LIN. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = LIN — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_PATTern": {
+      "scpi": ":TRIGger:MODE PATTern",
+      "scpiFast": ":TRIG:MODE PATTern",
+      "description": "Set_Trigger_Mode → PATTern. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = PATTern — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_SEQuence": {
+      "scpi": ":TRIGger:MODE SEQuence",
+      "scpiFast": ":TRIG:MODE SEQuence",
+      "description": "Set_Trigger_Mode → SEQuence. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = SEQuence — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_SPI": {
+      "scpi": ":TRIGger:MODE SPI",
+      "scpiFast": ":TRIG:MODE SPI",
+      "description": "Set_Trigger_Mode → SPI. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = SPI — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_TV": {
+      "scpi": ":TRIGger:MODE TV",
+      "scpiFast": ":TRIG:MODE TV",
+      "description": "Set_Trigger_Mode → TV. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = TV — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Mode_USB": {
+      "scpi": ":TRIGger:MODE USB",
+      "scpiFast": ":TRIG:MODE USB",
+      "description": "Set_Trigger_Mode → USB. Set Trigger Mode",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Mode = USB — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Nreject": {
       "scpi": ":TRIGger:NREJect <value>",
@@ -2254,13 +3783,34 @@
       "scpiFast": ":TRIG:SPI:CLOC:SLOP <value>",
       "description": "Set trigger spi clock slope",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "POSitive",
+          "NEGative"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:SPI:CLOCk:SLOPe). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Spi_Clock_Slope_NEGative": {
+      "scpi": ":TRIGger:SPI:CLOCk:SLOPe NEGative",
+      "scpiFast": ":TRIG:SPI:CLOC:SLOP NEGative",
+      "description": "Set_Trigger_Spi_Clock_Slope → NEGative. Set trigger spi clock slope",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Spi_Clock_Slope = NEGative — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Spi_Clock_Slope_POSitive": {
+      "scpi": ":TRIGger:SPI:CLOCk:SLOPe POSitive",
+      "scpiFast": ":TRIG:SPI:CLOC:SLOP POSitive",
+      "description": "Set_Trigger_Spi_Clock_Slope → POSitive. Set trigger spi clock slope",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Spi_Clock_Slope = POSitive — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Spi_Clock_Timebase": {
       "scpi": ":TRIGger:SPI:CLOCk:TIMeout <value>",
@@ -2359,13 +3909,36 @@
       "scpiFast": ":TRIG:SWE <sweep>",
       "description": "Set Trigger Sweep",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "AUTO",
+          "NORMal"
+        ]
       },
       "group": "Trigger Configuration",
       "args": [
         "sweep"
       ],
-      "subsystem": "Trigger"
+      "subsystem": "Trigger",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:SWEep). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Sweep_AUTO": {
+      "scpi": ":TRIGger:SWEep AUTO",
+      "scpiFast": ":TRIG:SWE AUTO",
+      "description": "Set_Trigger_Sweep → AUTO. Set Trigger Sweep",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sweep = AUTO — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Sweep_NORMal": {
+      "scpi": ":TRIGger:SWEep NORMal",
+      "scpiFast": ":TRIG:SWE NORMal",
+      "description": "Set_Trigger_Sweep → NORMal. Set Trigger Sweep",
+      "subsystem": "Trigger",
+      "group": "Trigger Configuration",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Sweep = NORMal — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Tv_Line": {
       "scpi": ":TRIGger:TV:LINE <value>",
@@ -2385,39 +3958,174 @@
       "scpiFast": "TRIG:TV:MODE <value>",
       "description": "Set trigger tv mode",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "F1",
+          "F2",
+          "ALLFields",
+          "ALLLines",
+          "LINE",
+          "VERTical",
+          "LINEF1",
+          "LINEF2",
+          "LINEAlt",
+          "LINEVert"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :TRIGger:TV:MODE p. 604: the 5462x/4x mode names (p. 45: 'renamed; old forms still accepted', table of old forms). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Tv_Mode_ALLFields": {
+      "scpi": "TRIGger:TV:MODE ALLFields",
+      "scpiFast": "TRIG:TV:MODE ALLFields",
+      "description": "Set_Trigger_Tv_Mode → ALLFields. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = ALLFields — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_ALLLines": {
+      "scpi": "TRIGger:TV:MODE ALLLines",
+      "scpiFast": "TRIG:TV:MODE ALLLines",
+      "description": "Set_Trigger_Tv_Mode → ALLLines. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = ALLLines — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_F1": {
+      "scpi": "TRIGger:TV:MODE F1",
+      "scpiFast": "TRIG:TV:MODE F1",
+      "description": "Set_Trigger_Tv_Mode → F1. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = F1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_F2": {
+      "scpi": "TRIGger:TV:MODE F2",
+      "scpiFast": "TRIG:TV:MODE F2",
+      "description": "Set_Trigger_Tv_Mode → F2. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = F2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_LINE": {
+      "scpi": "TRIGger:TV:MODE LINE",
+      "scpiFast": "TRIG:TV:MODE LINE",
+      "description": "Set_Trigger_Tv_Mode → LINE. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = LINE — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_LINEAlt": {
+      "scpi": "TRIGger:TV:MODE LINEAlt",
+      "scpiFast": "TRIG:TV:MODE LINEAlt",
+      "description": "Set_Trigger_Tv_Mode → LINEAlt. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = LINEAlt — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_LINEF1": {
+      "scpi": "TRIGger:TV:MODE LINEF1",
+      "scpiFast": "TRIG:TV:MODE LINEF1",
+      "description": "Set_Trigger_Tv_Mode → LINEF1. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = LINEF1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_LINEF2": {
+      "scpi": "TRIGger:TV:MODE LINEF2",
+      "scpiFast": "TRIG:TV:MODE LINEF2",
+      "description": "Set_Trigger_Tv_Mode → LINEF2. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = LINEF2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_LINEVert": {
+      "scpi": "TRIGger:TV:MODE LINEVert",
+      "scpiFast": "TRIG:TV:MODE LINEVert",
+      "description": "Set_Trigger_Tv_Mode → LINEVert. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = LINEVert — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Mode_VERTical": {
+      "scpi": "TRIGger:TV:MODE VERTical",
+      "scpiFast": "TRIG:TV:MODE VERTical",
+      "description": "Set_Trigger_Tv_Mode → VERTical. Set trigger tv mode",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Mode = VERTical — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Tv_Polarity": {
       "scpi": ":TRIGger:TV:POLarity <value>",
       "scpiFast": ":TRIG:TV:POL <value>",
       "description": "Set trigger tv polarity",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "POSitive",
+          "NEGative"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:TV:POLarity). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Tv_Polarity_NEGative": {
+      "scpi": ":TRIGger:TV:POLarity NEGative",
+      "scpiFast": ":TRIG:TV:POL NEGative",
+      "description": "Set_Trigger_Tv_Polarity → NEGative. Set trigger tv polarity",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Polarity = NEGative — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Polarity_POSitive": {
+      "scpi": ":TRIGger:TV:POLarity POSitive",
+      "scpiFast": ":TRIG:TV:POL POSitive",
+      "description": "Set_Trigger_Tv_Polarity → POSitive. Set trigger tv polarity",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Polarity = POSitive — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Tv_Source": {
       "scpi": ":TRIGger:TV:SOURce <value>",
       "scpiFast": ":TRIG:TV:SOUR <value>",
       "description": "Set trigger tv source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2"
+        ]
       },
       "args": [
         "value"
       ],
       "subsystem": "TRIG",
-      "unverified": true
+      "unverified": true,
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:TRIGger:TV:SOURce). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Trigger_Tv_Source_CHANnel1": {
+      "scpi": ":TRIGger:TV:SOURce CHANnel1",
+      "scpiFast": ":TRIG:TV:SOUR CHANnel1",
+      "description": "Set_Trigger_Tv_Source → CHANnel1. Set trigger tv source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Tv_Source_CHANnel2": {
+      "scpi": ":TRIGger:TV:SOURce CHANnel2",
+      "scpiFast": ":TRIG:TV:SOUR CHANnel2",
+      "description": "Set_Trigger_Tv_Source → CHANnel2. Set trigger tv source",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Tv_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Trigger_Tv_Standard": {
       "scpi": ":TRIGger:TV:STANdard <value>",
@@ -2502,13 +4210,46 @@
       "scpiFast": "WAV:FORM <format>",
       "description": "Set Waveform Format",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "WORD",
+          "BYTE",
+          "ASCii"
+        ]
       },
       "group": "Waveform Data Transfer Settings",
       "args": [
         "format"
       ],
-      "subsystem": "WAVeform"
+      "subsystem": "WAVeform",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:WAVeform:FORMat). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Waveform_Format_ASCii": {
+      "scpi": "WAVeform:FORMat ASCii",
+      "scpiFast": "WAV:FORM ASCii",
+      "description": "Set_Waveform_Format → ASCii. Set Waveform Format",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Format = ASCii — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Format_BYTE": {
+      "scpi": "WAVeform:FORMat BYTE",
+      "scpiFast": "WAV:FORM BYTE",
+      "description": "Set_Waveform_Format → BYTE. Set Waveform Format",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Format = BYTE — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Format_WORD": {
+      "scpi": "WAVeform:FORMat WORD",
+      "scpiFast": "WAV:FORM WORD",
+      "description": "Set_Waveform_Format → WORD. Set Waveform Format",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Format = WORD — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Points": {
       "scpi": "WAVeform:POINts <points>",
@@ -2528,13 +4269,66 @@
       "scpiFast": "WAV:SOUR <source>",
       "description": "Set Waveform Source",
       "arg": {
-        "kind": "enum"
+        "kind": "enum",
+        "values": [
+          "CHANnel1",
+          "CHANnel2",
+          "POD1",
+          "POD2",
+          "FUNCtion"
+        ]
       },
       "group": "Waveform Data Transfer Settings",
       "args": [
         "source"
       ],
-      "subsystem": "WAVeform"
+      "subsystem": "WAVeform",
+      "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :WAVeform:SOURce p. 650 less SBUS (v3.00) and BUS1/2 (v4.00). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
+    },
+    "Set_Waveform_Source_CHANnel1": {
+      "scpi": "WAVeform:SOURce CHANnel1",
+      "scpiFast": "WAV:SOUR CHANnel1",
+      "description": "Set_Waveform_Source → CHANnel1. Set Waveform Source",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Source_CHANnel2": {
+      "scpi": "WAVeform:SOURce CHANnel2",
+      "scpiFast": "WAV:SOUR CHANnel2",
+      "description": "Set_Waveform_Source → CHANnel2. Set Waveform Source",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Source_FUNCtion": {
+      "scpi": "WAVeform:SOURce FUNCtion",
+      "scpiFast": "WAV:SOUR FUNCtion",
+      "description": "Set_Waveform_Source → FUNCtion. Set Waveform Source",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Source = FUNCtion — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Source_POD1": {
+      "scpi": "WAVeform:SOURce POD1",
+      "scpiFast": "WAV:SOUR POD1",
+      "description": "Set_Waveform_Source → POD1. Set Waveform Source",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Source = POD1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Waveform_Source_POD2": {
+      "scpi": "WAVeform:SOURce POD2",
+      "scpiFast": "WAV:SOUR POD2",
+      "description": "Set_Waveform_Source → POD2. Set Waveform Source",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Waveform_Source = POD2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Unsigned": {
       "scpi": "WAVeform:UNSigned <state>",

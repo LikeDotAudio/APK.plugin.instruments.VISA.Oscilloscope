@@ -16,39 +16,39 @@ The **Oscilloscope** instruments of the APK.audio bench, as one thing: 33 models
 
 | Model | Maker | What | Commands | Table | API |
 |---|---|---|---:|:---:|---|
-| [54622D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54622D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 100MHz) | 476 |  | :15200 |
-| [54641D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54641D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 350MHz) | 482 | ✅ | :15201 |
-| [DHO804](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DHO804.md) | Rigol | 70 MHz 4 Ch (12-bit High Res) | 476 |  | :15202 |
-| [DS1054Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1054Z.md) | Rigol | 50 MHz 4 Ch (The 'Hobbyist Standard') | 476 |  | :15203 |
-| [DS1074Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1074Z.md) | Rigol | 70 MHz 4 Ch | 476 |  | :15204 |
+| [54622D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54622D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 100MHz) | 652 |  | :15200 |
+| [54641D](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/54641D.md) | HP / Agilent / Keysight | Mixed Signal (2+16 Chan, 350MHz) | 658 | ✅ | :15201 |
+| [DHO804](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DHO804.md) | Rigol | 70 MHz 4 Ch (12-bit High Res) | 652 |  | :15202 |
+| [DS1054Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1054Z.md) | Rigol | 50 MHz 4 Ch (The 'Hobbyist Standard') | 652 |  | :15203 |
+| [DS1074Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1074Z.md) | Rigol | 70 MHz 4 Ch | 652 |  | :15204 |
 | [DS1104Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z.md) | Rigol | 100 MHz 4 Ch Digital | 1799 | ✅ | :15205 |
-| [DS1104Z Plus](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z%20Plus.md) | Rigol | 100 MHz 4 Ch (Upgradable) | 476 |  | :15206 |
-| [DS7014](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS7014.md) | Rigol | 100 MHz 4 Ch Performance | 476 |  | :15207 |
-| [DSO9064A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSO9064A.md) | HP / Agilent / Keysight | 600 MHz 4 Ch (Infiniium 9000) | 476 |  | :15208 |
-| [DSO9104A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSO9104A.md) | HP / Agilent / Keysight | 1 GHz 4 Ch (Infiniium 9000) | 476 |  | :15209 |
-| [DSOS054A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOS054A.md) | HP / Agilent / Keysight | 500 MHz 4 Ch (Infiniium S-Series) | 476 |  | :15210 |
-| [DSOS104A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOS104A.md) | HP / Agilent / Keysight | 1 GHz 4 Ch (Infiniium S-Series) | 476 |  | :15211 |
-| [DSOX1102G](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX1102G.md) | HP / Agilent / Keysight | 70/100 MHz 2 Ch + Gen (InfiniiVision 1000X) | 476 |  | :15212 |
-| [DSOX2002A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX2002A.md) | HP / Agilent / Keysight | 70 MHz 2 Ch (InfiniiVision 2000X) | 476 |  | :15213 |
-| [DSOX4024A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX4024A.md) | HP / Agilent / Keysight | 200 MHz 4 Ch (InfiniiVision 4000X) | 476 |  | :15214 |
-| [HMO1002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/HMO1002.md) | Rohde & Schwarz | Mixed Signal 50-100MHz (Legacy Hameg) | 476 |  | :15215 |
-| [MDO3014](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MDO3014.md) | Tektronix | Mixed Domain (Scope + Spectrum) | 476 |  | :15216 |
-| [MDO4000C](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MDO4000C.md) | Tektronix | High Perf Mixed Domain | 476 |  | :15217 |
-| [MSO24](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO24.md) | Tektronix | 2 Series Handheld/Bench (Battery) | 476 |  | :15218 |
-| [MSO44](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO44.md) | Tektronix | 4 Series Mixed Signal | 476 |  | :15219 |
-| [MSO5074](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO5074.md) | Rigol | 70 MHz 4 Ch Mixed Signal (Touch) | 476 |  | :15220 |
-| [MSO54](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO54.md) | Tektronix | 5 Series Mixed Signal (8 FlexCh) | 476 |  | :15221 |
-| [MSO64](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO64.md) | Tektronix | 6 Series Mixed Signal | 476 |  | :15222 |
-| [MSOX3014T](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSOX3014T.md) | HP / Agilent / Keysight | 100 MHz 4+16 Ch Touch (InfiniiVision 3000T) | 476 |  | :15223 |
-| [MXO4](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MXO4.md) | Rohde & Schwarz | Next Gen High Speed Scope | 476 |  | :15224 |
-| [RTB2002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTB2002.md) | Rohde & Schwarz | 70-300 MHz 2 Ch (10-bit ADC) | 476 |  | :15225 |
-| [RTB2004](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTB2004.md) | Rohde & Schwarz | 70-300 MHz 4 Ch (10-bit ADC) | 476 |  | :15226 |
-| [RTH1002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTH1002.md) | Rohde & Schwarz | Scope Rider Handheld (Isolated) | 476 |  | :15227 |
-| [RTM3004](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTM3004.md) | Rohde & Schwarz | 100-1000 MHz 4 Ch (10-bit ADC) | 476 |  | :15228 |
-| [TBS1052B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TBS1052B.md) | Tektronix | 50 MHz 2 Ch (Basic) | 476 |  | :15229 |
-| [TBS2000B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TBS2000B.md) | Tektronix | Digital Storage Scope (Modern Basic) | 476 |  | :15230 |
-| [TDS2024C](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TDS2024C.md) | Tektronix | 200 MHz 4 Ch (Legacy Workhorse) | 476 |  | :15231 |
-| [Z204](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/Z204.md) | HP / Agilent / Keysight | Generic Z-Series Reference | 476 |  | :15232 |
+| [DS1104Z Plus](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z%20Plus.md) | Rigol | 100 MHz 4 Ch (Upgradable) | 652 |  | :15206 |
+| [DS7014](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS7014.md) | Rigol | 100 MHz 4 Ch Performance | 652 |  | :15207 |
+| [DSO9064A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSO9064A.md) | HP / Agilent / Keysight | 600 MHz 4 Ch (Infiniium 9000) | 652 |  | :15208 |
+| [DSO9104A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSO9104A.md) | HP / Agilent / Keysight | 1 GHz 4 Ch (Infiniium 9000) | 652 |  | :15209 |
+| [DSOS054A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOS054A.md) | HP / Agilent / Keysight | 500 MHz 4 Ch (Infiniium S-Series) | 652 |  | :15210 |
+| [DSOS104A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOS104A.md) | HP / Agilent / Keysight | 1 GHz 4 Ch (Infiniium S-Series) | 652 |  | :15211 |
+| [DSOX1102G](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX1102G.md) | HP / Agilent / Keysight | 70/100 MHz 2 Ch + Gen (InfiniiVision 1000X) | 652 |  | :15212 |
+| [DSOX2002A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX2002A.md) | HP / Agilent / Keysight | 70 MHz 2 Ch (InfiniiVision 2000X) | 652 |  | :15213 |
+| [DSOX4024A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSOX4024A.md) | HP / Agilent / Keysight | 200 MHz 4 Ch (InfiniiVision 4000X) | 652 |  | :15214 |
+| [HMO1002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/HMO1002.md) | Rohde & Schwarz | Mixed Signal 50-100MHz (Legacy Hameg) | 652 |  | :15215 |
+| [MDO3014](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MDO3014.md) | Tektronix | Mixed Domain (Scope + Spectrum) | 652 |  | :15216 |
+| [MDO4000C](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MDO4000C.md) | Tektronix | High Perf Mixed Domain | 652 |  | :15217 |
+| [MSO24](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO24.md) | Tektronix | 2 Series Handheld/Bench (Battery) | 652 |  | :15218 |
+| [MSO44](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO44.md) | Tektronix | 4 Series Mixed Signal | 652 |  | :15219 |
+| [MSO5074](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO5074.md) | Rigol | 70 MHz 4 Ch Mixed Signal (Touch) | 652 |  | :15220 |
+| [MSO54](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO54.md) | Tektronix | 5 Series Mixed Signal (8 FlexCh) | 652 |  | :15221 |
+| [MSO64](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSO64.md) | Tektronix | 6 Series Mixed Signal | 652 |  | :15222 |
+| [MSOX3014T](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MSOX3014T.md) | HP / Agilent / Keysight | 100 MHz 4+16 Ch Touch (InfiniiVision 3000T) | 652 |  | :15223 |
+| [MXO4](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/MXO4.md) | Rohde & Schwarz | Next Gen High Speed Scope | 652 |  | :15224 |
+| [RTB2002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTB2002.md) | Rohde & Schwarz | 70-300 MHz 2 Ch (10-bit ADC) | 652 |  | :15225 |
+| [RTB2004](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTB2004.md) | Rohde & Schwarz | 70-300 MHz 4 Ch (10-bit ADC) | 652 |  | :15226 |
+| [RTH1002](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTH1002.md) | Rohde & Schwarz | Scope Rider Handheld (Isolated) | 652 |  | :15227 |
+| [RTM3004](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/RTM3004.md) | Rohde & Schwarz | 100-1000 MHz 4 Ch (10-bit ADC) | 652 |  | :15228 |
+| [TBS1052B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TBS1052B.md) | Tektronix | 50 MHz 2 Ch (Basic) | 652 |  | :15229 |
+| [TBS2000B](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TBS2000B.md) | Tektronix | Digital Storage Scope (Modern Basic) | 652 |  | :15230 |
+| [TDS2024C](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/TDS2024C.md) | Tektronix | 200 MHz 4 Ch (Legacy Workhorse) | 652 |  | :15231 |
+| [Z204](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/Z204.md) | HP / Agilent / Keysight | Generic Z-Series Reference | 652 |  | :15232 |
 
 ## Layout
 
