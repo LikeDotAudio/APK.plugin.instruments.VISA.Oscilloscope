@@ -217,6 +217,24 @@
       ],
       "subsystem": "Channel_1"
     },
+    "CH1_BWLimit_OFF": {
+      "scpi": ":CHANnel1:BWLimit OFF",
+      "scpiFast": ":CHAN1:BWL OFF",
+      "description": "CH1_BWLimit → OFF. CH1 BWLimit",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_BWLimit = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH1_BWLimit_ON": {
+      "scpi": ":CHANnel1:BWLimit ON",
+      "scpiFast": ":CHAN1:BWL ON",
+      "description": "CH1_BWLimit → ON. CH1 BWLimit",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_BWLimit = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "CH1_Coupling": {
       "scpi": ":CHANnel1:COUPling <coupling>",
       "scpiFast": ":CHAN1:COUP <coupling>",
@@ -260,6 +278,24 @@
         "state"
       ],
       "subsystem": "Channel_1"
+    },
+    "CH1_Invert_OFF": {
+      "scpi": ":CHANnel1:INVert OFF",
+      "scpiFast": ":CHAN1:INV OFF",
+      "description": "CH1_Invert → OFF. CH1 Invert",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_Invert = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH1_Invert_ON": {
+      "scpi": ":CHANnel1:INVert ON",
+      "scpiFast": ":CHAN1:INV ON",
+      "description": "CH1_Invert → ON. CH1 Invert",
+      "subsystem": "Channel_1",
+      "group": "Vertical Setup CH1",
+      "unverified": true,
+      "notes": "Individual of selector CH1_Invert = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "CH1_Label": {
       "scpi": ":CHANnel1:LABel <string>",
@@ -343,6 +379,24 @@
       ],
       "subsystem": "Channel_2"
     },
+    "CH2_BWLimit_OFF": {
+      "scpi": ":CHANnel2:BWLimit OFF",
+      "scpiFast": ":CHAN2:BWL OFF",
+      "description": "CH2_BWLimit → OFF. CH2 BWLimit",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_BWLimit = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH2_BWLimit_ON": {
+      "scpi": ":CHANnel2:BWLimit ON",
+      "scpiFast": ":CHAN2:BWL ON",
+      "description": "CH2_BWLimit → ON. CH2 BWLimit",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_BWLimit = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "CH2_Coupling": {
       "scpi": ":CHANnel2:COUPling <coupling>",
       "scpiFast": ":CHAN2:COUP <coupling>",
@@ -372,6 +426,24 @@
         "state"
       ],
       "subsystem": "Channel_2"
+    },
+    "CH2_Invert_OFF": {
+      "scpi": ":CHANnel2:INVert OFF",
+      "scpiFast": ":CHAN2:INV OFF",
+      "description": "CH2_Invert → OFF. CH2 Invert",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_Invert = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "CH2_Invert_ON": {
+      "scpi": ":CHANnel2:INVert ON",
+      "scpiFast": ":CHAN2:INV ON",
+      "description": "CH2_Invert → ON. CH2 Invert",
+      "subsystem": "Channel_2",
+      "group": "Vertical Setup CH2",
+      "unverified": true,
+      "notes": "Individual of selector CH2_Invert = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "CH2_Label": {
       "scpi": ":CHANnel2:LABel <string>",
@@ -687,6 +759,22 @@
       "subsystem": "EXT",
       "unverified": true
     },
+    "Set_External_Bwlimit_OFF": {
+      "scpi": ":EXTernal:BWLimit OFF",
+      "scpiFast": ":EXT:BWL OFF",
+      "description": "Set_External_Bwlimit → OFF. Set external bwlimit",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Bwlimit = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_External_Bwlimit_ON": {
+      "scpi": ":EXTernal:BWLimit ON",
+      "scpiFast": ":EXT:BWL ON",
+      "description": "Set_External_Bwlimit → ON. Set external bwlimit",
+      "subsystem": "EXT",
+      "unverified": true,
+      "notes": "Individual of selector Set_External_Bwlimit = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_External_Impedance": {
       "scpi": "EXTernal:IMPedance <value>",
       "scpiFast": "EXT:IMP <value>",
@@ -771,6 +859,24 @@
       "notes": "Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
     },
+    "Set_Math_Display_OFF": {
+      "scpi": ":FUNCtion:DISPlay OFF",
+      "scpiFast": ":FUNC:DISP OFF",
+      "description": "Set_Math_Display → OFF. Show or hide the math trace.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Display = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Display_ON": {
+      "scpi": ":FUNCtion:DISPlay ON",
+      "scpiFast": ":FUNC:DISP ON",
+      "description": "Set_Math_Display → ON. Show or hide the math trace.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Display = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Math_Offset": {
       "scpi": ":FUNCtion:OFFSet <offset>",
       "scpiFast": ":FUNC:OFFS <offset>",
@@ -835,6 +941,60 @@
       "notes": "The name the DS1104Z already uses for the same control. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true,
       "alias_of": "Set_Function_Operation"
+    },
+    "Set_Math_Operator_ADD": {
+      "scpi": ":FUNCtion:OPERation ADD",
+      "scpiFast": ":FUNC:OPER ADD",
+      "description": "Set_Math_Operator → ADD. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = ADD — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Operator_DIFF": {
+      "scpi": ":FUNCtion:OPERation DIFF",
+      "scpiFast": ":FUNC:OPER DIFF",
+      "description": "Set_Math_Operator → DIFF. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = DIFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Operator_FFT": {
+      "scpi": ":FUNCtion:OPERation FFT",
+      "scpiFast": ":FUNC:OPER FFT",
+      "description": "Set_Math_Operator → FFT. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = FFT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Operator_INT": {
+      "scpi": ":FUNCtion:OPERation INT",
+      "scpiFast": ":FUNC:OPER INT",
+      "description": "Set_Math_Operator → INT. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = INT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Operator_MULT": {
+      "scpi": ":FUNCtion:OPERation MULT",
+      "scpiFast": ":FUNC:OPER MULT",
+      "description": "Set_Math_Operator → MULT. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = MULT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Math_Operator_SUBT": {
+      "scpi": ":FUNCtion:OPERation SUBT",
+      "scpiFast": ":FUNC:OPER SUBT",
+      "description": "Set_Math_Operator → SUBT. The math operation.",
+      "subsystem": "Math_FFT",
+      "group": "Math_FFT",
+      "unverified": true,
+      "notes": "Individual of selector Set_Math_Operator = SUBT — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Math_Range": {
       "scpi": ":FUNCtion:RANGe <range>",
@@ -1381,6 +1541,24 @@
         "state"
       ],
       "subsystem": "SYSTem"
+    },
+    "Lock_Front_Panel_OFF": {
+      "scpi": "SYSTem:LOCK OFF",
+      "scpiFast": "SYST:LOCK OFF",
+      "description": "Lock_Front_Panel → OFF. Lock Front Panel",
+      "subsystem": "SYSTem",
+      "group": "System Control",
+      "unverified": true,
+      "notes": "Individual of selector Lock_Front_Panel = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Lock_Front_Panel_ON": {
+      "scpi": "SYSTem:LOCK ON",
+      "scpiFast": "SYST:LOCK ON",
+      "description": "Lock_Front_Panel → ON. Lock Front Panel",
+      "subsystem": "SYSTem",
+      "group": "System Control",
+      "unverified": true,
+      "notes": "Individual of selector Lock_Front_Panel = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_System_Time": {
       "scpi": ":SYSTem:TIME <value>",
@@ -1976,6 +2154,22 @@
       "subsystem": "TRIG",
       "unverified": true
     },
+    "Set_Trigger_Nreject_OFF": {
+      "scpi": ":TRIGger:NREJect OFF",
+      "scpiFast": ":TRIG:NREJ OFF",
+      "description": "Set_Trigger_Nreject → OFF. Set trigger nreject",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Nreject = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Trigger_Nreject_ON": {
+      "scpi": ":TRIGger:NREJect ON",
+      "scpiFast": ":TRIG:NREJ ON",
+      "description": "Set_Trigger_Nreject → ON. Set trigger nreject",
+      "subsystem": "TRIG",
+      "unverified": true,
+      "notes": "Individual of selector Set_Trigger_Nreject = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
     "Set_Trigger_Pattern": {
       "scpi": ":TRIGger:PATTern <value>",
       "scpiFast": ":TRIG:PATT <value>",
@@ -2358,6 +2552,24 @@
         "state"
       ],
       "subsystem": "WAVeform"
+    },
+    "Set_Unsigned_OFF": {
+      "scpi": "WAVeform:UNSigned OFF",
+      "scpiFast": "WAV:UNS OFF",
+      "description": "Set_Unsigned → OFF. Set Unsigned",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unsigned = OFF — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
+    },
+    "Set_Unsigned_ON": {
+      "scpi": "WAVeform:UNSigned ON",
+      "scpiFast": "WAV:UNS ON",
+      "description": "Set_Unsigned → ON. Set Unsigned",
+      "subsystem": "WAVeform",
+      "group": "Waveform Data Transfer Settings",
+      "unverified": true,
+      "notes": "Individual of selector Set_Unsigned = ON — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_View": {
       "scpi": ":WAVeform:VIEW <value>",

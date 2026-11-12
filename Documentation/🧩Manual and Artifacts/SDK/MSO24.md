@@ -62,7 +62,7 @@ mosquitto_pub -t "$T" -m '{"value": <value>}'
 
 A read's answer is published on `<box>/Reading/<command>` (the **Out** column below); `<box>` is `APK.audio/System/Protocols/visa/Device/<Family>/<Model>/<Dev…>`.
 
-## Commands (609) — inputs and outputs of the API
+## Commands (633) — inputs and outputs of the API
 
 **In** is what the command takes; **Out** is what it gives back and where. Every command arrives on `APK.audio/Gui/Komands/Oscilloscope/<Command>`.
 
@@ -228,7 +228,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Waveform_Yorigin` | `:WAVeform:YORigin?` | — | NR3 → `…/Reading/Get_Waveform_Yorigin` | WAV | unverified |
 | `Get_Waveform_Yreference` | `:WAVeform:YREFerence?` | — | NR3 → `…/Reading/Get_Waveform_Yreference` | WAV | unverified |
 
-### `set` — writes one value (174)
+### `set` — writes one value (198)
 
 | Command | SCPI | In | Out | Group | |
 |---|---|---|---|---|---|
@@ -248,17 +248,25 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Acquire_Type` | `ACQuire:TYPE <type>` | `type`: enum | — | Acquisition Settings |  |
 | `Set_Calibrate_Label` | `:CALibrate:LABel <value>` | `value`: unknown | — | CAL | unverified |
 | `CH1_BWLimit` | `:CHANnel1:BWLimit <state>` | `state`: `OFF` · `ON` | — | Vertical Setup CH1 |  |
+| `CH1_BWLimit_OFF` | `:CHANnel1:BWLimit OFF` | — | — | Vertical Setup CH1 | unverified |
+| `CH1_BWLimit_ON` | `:CHANnel1:BWLimit ON` | — | — | Vertical Setup CH1 | unverified |
 | `CH1_Coupling` | `:CHANnel1:COUPling <coupling>` | `coupling`: enum | — | Vertical Setup CH1 |  |
 | `Set_Channel_Coupling` | `:CHANNEL1:COUPLING <value>` | `value`: enum | — | CHANNEL | unverified |
 | `CH1_Invert` | `:CHANnel1:INVert <state>` | `state`: `OFF` · `ON` | — | Vertical Setup CH1 |  |
+| `CH1_Invert_OFF` | `:CHANnel1:INVert OFF` | — | — | Vertical Setup CH1 | unverified |
+| `CH1_Invert_ON` | `:CHANnel1:INVert ON` | — | — | Vertical Setup CH1 | unverified |
 | `CH1_Label` | `:CHANnel1:LABel <string>` | `string`: string | — | Vertical Setup CH1 |  |
 | `CH1_Offset` | `:CHANnel1:OFFSet <offset>` | `offset`: numeric | — | Vertical Setup CH1 |  |
 | `CH1_Probe` | `:CHANnel1:PROBe <attenuation>` | `attenuation`: numeric | — | Vertical Setup CH1 |  |
 | `Set_Channel_Range` | `CHANnel1:RANGe <range>` | `range`: numeric | — | Channel 1 Settings |  |
 | `CH1_Scale` | `:CHANnel1:SCALe <scale>` | `scale`: numeric | — | Vertical Setup CH1 |  |
 | `CH2_BWLimit` | `:CHANnel2:BWLimit <state>` | `state`: `OFF` · `ON` | — | Vertical Setup CH2 |  |
+| `CH2_BWLimit_OFF` | `:CHANnel2:BWLimit OFF` | — | — | Vertical Setup CH2 | unverified |
+| `CH2_BWLimit_ON` | `:CHANnel2:BWLimit ON` | — | — | Vertical Setup CH2 | unverified |
 | `CH2_Coupling` | `:CHANnel2:COUPling <coupling>` | `coupling`: enum | — | Vertical Setup CH2 |  |
 | `CH2_Invert` | `:CHANnel2:INVert <state>` | `state`: `OFF` · `ON` | — | Vertical Setup CH2 |  |
+| `CH2_Invert_OFF` | `:CHANnel2:INVert OFF` | — | — | Vertical Setup CH2 | unverified |
+| `CH2_Invert_ON` | `:CHANnel2:INVert ON` | — | — | Vertical Setup CH2 | unverified |
 | `CH2_Label` | `:CHANnel2:LABel <string>` | `string`: string | — | Vertical Setup CH2 |  |
 | `CH2_Offset` | `:CHANnel2:OFFSet <offset>` | `offset`: numeric | — | Vertical Setup CH2 |  |
 | `CH2_Probe` | `:CHANnel2:PROBe <attenuation>` | `attenuation`: numeric | — | Vertical Setup CH2 |  |
@@ -281,16 +289,26 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Display_Source` | `:DISPlay:SOURce <value>` | `value`: enum | — | DISP | unverified |
 | `Set_Display_Vectors` | `DISPlay:VECTors <value>` | `value`: unknown | — | DISP | unverified |
 | `Set_External_Bwlimit` | `:EXTernal:BWLimit <value>` | `value`: `OFF` · `ON` | — | EXT | unverified |
+| `Set_External_Bwlimit_OFF` | `:EXTernal:BWLimit OFF` | — | — | EXT | unverified |
+| `Set_External_Bwlimit_ON` | `:EXTernal:BWLimit ON` | — | — | EXT | unverified |
 | `Set_External_Impedance` | `EXTernal:IMPedance <value>` | `value`: enum | — | EXT | unverified |
 | `Set_External_Probe` | `:EXTernal:PROBe <value>` | `value`: numeric | — | EXT | unverified |
 | `Set_External_Range` | `:EXTernal:RANGe <value>` | `value`: numeric | — | EXT | unverified |
 | `Set_External_Units` | `:EXTernal:UNITs <value>` | `value`: enum | — | EXT | unverified |
 | `Set_Center_Frequency` | `:FUNCtion:CENTer <frequency>` | `frequency`: numeric | — | FFT Specific Configuration |  |
 | `Set_Math_Display` | `:FUNCtion:DISPlay <state>` | `state`: `OFF` · `ON` | — | Math_FFT | unverified |
+| `Set_Math_Display_OFF` | `:FUNCtion:DISPlay OFF` | — | — | Math_FFT | unverified |
+| `Set_Math_Display_ON` | `:FUNCtion:DISPlay ON` | — | — | Math_FFT | unverified |
 | `Set_Math_Offset` | `:FUNCtion:OFFSet <offset>` | `offset`: numeric | — | Vertical Scale & Offset |  |
 | `Set_Function_Operation` | `FUNCtion:OPERation <op>` | `op`: enum | — | Math Function Settings |  |
 | `Set_Operation` | `:FUNCtion:OPERation <operation>` | `operation`: enum | — | Select Operation |  |
 | `Set_Math_Operator` | `:FUNCtion:OPERation <value>` | `value`: `ADD` · `SUBT` · `MULT` · `DIFF` · `INT` · `FFT` | — | Math_FFT | unverified |
+| `Set_Math_Operator_ADD` | `:FUNCtion:OPERation ADD` | — | — | Math_FFT | unverified |
+| `Set_Math_Operator_DIFF` | `:FUNCtion:OPERation DIFF` | — | — | Math_FFT | unverified |
+| `Set_Math_Operator_FFT` | `:FUNCtion:OPERation FFT` | — | — | Math_FFT | unverified |
+| `Set_Math_Operator_INT` | `:FUNCtion:OPERation INT` | — | — | Math_FFT | unverified |
+| `Set_Math_Operator_MULT` | `:FUNCtion:OPERation MULT` | — | — | Math_FFT | unverified |
+| `Set_Math_Operator_SUBT` | `:FUNCtion:OPERation SUBT` | — | — | Math_FFT | unverified |
 | `Set_Math_Range` | `:FUNCtion:RANGe <range>` | `range`: numeric | — | Vertical Scale & Offset |  |
 | `Set_Math_Scale` | `:FUNCtion:RANGe <value>` | `value`: numeric V | — | Math_FFT | unverified |
 | `Set_Function_Reference` | `:FUNCtion:REFerence <value>` | `value`: enum | — | FUNC | unverified |
@@ -332,6 +350,8 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_System_Date` | `:SYSTem:DATE <value>` | `value`: unknown | — | SYST | unverified |
 | `Set_System_Dsp` | `SYSTem:DSP <string>` | `string`: string | — | SYST | unverified |
 | `Lock_Front_Panel` | `SYSTem:LOCK <state>` | `state`: `OFF` · `ON` | — | System Control |  |
+| `Lock_Front_Panel_OFF` | `SYSTem:LOCK OFF` | — | — | System Control | unverified |
+| `Lock_Front_Panel_ON` | `SYSTem:LOCK ON` | — | — | System Control | unverified |
 | `Set_System_Time` | `:SYSTem:TIME <value>` | `value`: numeric s | — | SYST | unverified |
 | `Set_Mode` | `TIMebase:MODE <mode>` | `mode`: enum | — | Timebase (Horizontal) Settings |  |
 | `Set_Timebase_Delay` | `:TIMebase:POSition <delay>` | `delay`: numeric s | — | Horizontal Controls | unverified |
@@ -376,6 +396,8 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Trigger_Lin_Trigger` | `:TRIGger:LIN:TRIGger <value>` | `value`: unknown | — | TRIG | unverified |
 | `Set_Trigger_Mode` | `:TRIGger:MODE <mode>` | `mode`: enum | — | Trigger Configuration |  |
 | `Set_Trigger_Nreject` | `:TRIGger:NREJect <value>` | `value`: `OFF` · `ON` | — | TRIG | unverified |
+| `Set_Trigger_Nreject_OFF` | `:TRIGger:NREJect OFF` | — | — | TRIG | unverified |
+| `Set_Trigger_Nreject_ON` | `:TRIGger:NREJect ON` | — | — | TRIG | unverified |
 | `Set_Trigger_Pattern` | `:TRIGger:PATTern <value>` | `value`: unknown | — | TRIG | unverified |
 | `Set_Trigger_Sequence_Count` | `:TRIGger:SEQuence:COUNt <value>` | `value`: integer | — | TRIG | unverified |
 | `Set_Trigger_Sequence_Find` | `:TRIGGER:SEQuence:FIND <value>` | `value`: unknown | — | TRIGGER | unverified |
@@ -405,6 +427,8 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Waveform_Points` | `WAVeform:POINts <points>` | `points`: integer | — | Waveform Data Transfer Settings |  |
 | `Set_Waveform_Source` | `WAVeform:SOURce <source>` | `source`: enum | — | Waveform Data Transfer Settings |  |
 | `Set_Unsigned` | `WAVeform:UNSigned <state>` | `state`: `OFF` · `ON` | — | Waveform Data Transfer Settings |  |
+| `Set_Unsigned_OFF` | `WAVeform:UNSigned OFF` | — | — | Waveform Data Transfer Settings | unverified |
+| `Set_Unsigned_ON` | `WAVeform:UNSigned ON` | — | — | Waveform Data Transfer Settings | unverified |
 | `Set_Waveform_View` | `:WAVeform:VIEW <value>` | `value`: unknown | — | WAV | unverified |
 
 ### `nab` — reads more than one thing (observation, telemetry) (171)

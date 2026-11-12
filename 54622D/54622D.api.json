@@ -74,9 +74,9 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 452,
+    "total_commands": 476,
     "get_count": 157,
-    "set_count": 174,
+    "set_count": 198,
     "nab_count": 171,
     "rig_count": 1,
     "do_count": 106
@@ -4696,6 +4696,54 @@
         },
         "unverified": false
       },
+      "CH1_BWLimit_OFF": {
+        "command": "CH1_BWLimit_OFF",
+        "verb": "set",
+        "description": "CH1_BWLimit \u2192 OFF. CH1 BWLimit",
+        "scpi": ":CHANnel1:BWLimit OFF",
+        "scpi_fast": ":CHAN1:BWL OFF",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_BWLimit_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_BWLimit_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH1_BWLimit_ON": {
+        "command": "CH1_BWLimit_ON",
+        "verb": "set",
+        "description": "CH1_BWLimit \u2192 ON. CH1 BWLimit",
+        "scpi": ":CHANnel1:BWLimit ON",
+        "scpi_fast": ":CHAN1:BWL ON",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_BWLimit_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_BWLimit_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "CH1_Coupling": {
         "command": "CH1_Coupling",
         "verb": "set",
@@ -4777,6 +4825,54 @@
           }
         },
         "unverified": false
+      },
+      "CH1_Invert_OFF": {
+        "command": "CH1_Invert_OFF",
+        "verb": "set",
+        "description": "CH1_Invert \u2192 OFF. CH1 Invert",
+        "scpi": ":CHANnel1:INVert OFF",
+        "scpi_fast": ":CHAN1:INV OFF",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_Invert_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_Invert_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH1_Invert_ON": {
+        "command": "CH1_Invert_ON",
+        "verb": "set",
+        "description": "CH1_Invert \u2192 ON. CH1 Invert",
+        "scpi": ":CHANnel1:INVert ON",
+        "scpi_fast": ":CHAN1:INV ON",
+        "subsystem": "Channel_1",
+        "group": "Vertical Setup CH1",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH1_Invert_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH1_Invert_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "CH1_Label": {
         "command": "CH1_Label",
@@ -4938,6 +5034,54 @@
         },
         "unverified": false
       },
+      "CH2_BWLimit_OFF": {
+        "command": "CH2_BWLimit_OFF",
+        "verb": "set",
+        "description": "CH2_BWLimit \u2192 OFF. CH2 BWLimit",
+        "scpi": ":CHANnel2:BWLimit OFF",
+        "scpi_fast": ":CHAN2:BWL OFF",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_BWLimit_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_BWLimit_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH2_BWLimit_ON": {
+        "command": "CH2_BWLimit_ON",
+        "verb": "set",
+        "description": "CH2_BWLimit \u2192 ON. CH2 BWLimit",
+        "scpi": ":CHANnel2:BWLimit ON",
+        "scpi_fast": ":CHAN2:BWL ON",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_BWLimit_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_BWLimit_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "CH2_Coupling": {
         "command": "CH2_Coupling",
         "verb": "set",
@@ -4993,6 +5137,54 @@
           }
         },
         "unverified": false
+      },
+      "CH2_Invert_OFF": {
+        "command": "CH2_Invert_OFF",
+        "verb": "set",
+        "description": "CH2_Invert \u2192 OFF. CH2 Invert",
+        "scpi": ":CHANnel2:INVert OFF",
+        "scpi_fast": ":CHAN2:INV OFF",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_Invert_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_Invert_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "CH2_Invert_ON": {
+        "command": "CH2_Invert_ON",
+        "verb": "set",
+        "description": "CH2_Invert \u2192 ON. CH2 Invert",
+        "scpi": ":CHANnel2:INVert ON",
+        "scpi_fast": ":CHAN2:INV ON",
+        "subsystem": "Channel_2",
+        "group": "Vertical Setup CH2",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/CH2_Invert_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "CH2_Invert_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "CH2_Label": {
         "command": "CH2_Label",
@@ -5589,6 +5781,54 @@
         },
         "unverified": true
       },
+      "Set_External_Bwlimit_OFF": {
+        "command": "Set_External_Bwlimit_OFF",
+        "verb": "set",
+        "description": "Set_External_Bwlimit \u2192 OFF. Set external bwlimit",
+        "scpi": ":EXTernal:BWLimit OFF",
+        "scpi_fast": ":EXT:BWL OFF",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Bwlimit_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Bwlimit_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_External_Bwlimit_ON": {
+        "command": "Set_External_Bwlimit_ON",
+        "verb": "set",
+        "description": "Set_External_Bwlimit \u2192 ON. Set external bwlimit",
+        "scpi": ":EXTernal:BWLimit ON",
+        "scpi_fast": ":EXT:BWL ON",
+        "subsystem": "EXT",
+        "group": "EXT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_External_Bwlimit_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_External_Bwlimit_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_External_Impedance": {
         "command": "Set_External_Impedance",
         "verb": "set",
@@ -5749,6 +5989,54 @@
         },
         "unverified": true
       },
+      "Set_Math_Display_OFF": {
+        "command": "Set_Math_Display_OFF",
+        "verb": "set",
+        "description": "Set_Math_Display \u2192 OFF. Show or hide the math trace.",
+        "scpi": ":FUNCtion:DISPlay OFF",
+        "scpi_fast": ":FUNC:DISP OFF",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Display_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Display_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Display_ON": {
+        "command": "Set_Math_Display_ON",
+        "verb": "set",
+        "description": "Set_Math_Display \u2192 ON. Show or hide the math trace.",
+        "scpi": ":FUNCtion:DISPlay ON",
+        "scpi_fast": ":FUNC:DISP ON",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Display_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Display_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Math_Offset": {
         "command": "Set_Math_Offset",
         "verb": "set",
@@ -5856,6 +6144,150 @@
           "direction": "in",
           "payload_format": {
             "command": "Set_Math_Operator",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_ADD": {
+        "command": "Set_Math_Operator_ADD",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 ADD. The math operation.",
+        "scpi": ":FUNCtion:OPERation ADD",
+        "scpi_fast": ":FUNC:OPER ADD",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_ADD",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_ADD",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_DIFF": {
+        "command": "Set_Math_Operator_DIFF",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 DIFF. The math operation.",
+        "scpi": ":FUNCtion:OPERation DIFF",
+        "scpi_fast": ":FUNC:OPER DIFF",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_DIFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_DIFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_FFT": {
+        "command": "Set_Math_Operator_FFT",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 FFT. The math operation.",
+        "scpi": ":FUNCtion:OPERation FFT",
+        "scpi_fast": ":FUNC:OPER FFT",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_FFT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_FFT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_INT": {
+        "command": "Set_Math_Operator_INT",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 INT. The math operation.",
+        "scpi": ":FUNCtion:OPERation INT",
+        "scpi_fast": ":FUNC:OPER INT",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_INT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_INT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_MULT": {
+        "command": "Set_Math_Operator_MULT",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 MULT. The math operation.",
+        "scpi": ":FUNCtion:OPERation MULT",
+        "scpi_fast": ":FUNC:OPER MULT",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_MULT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_MULT",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Math_Operator_SUBT": {
+        "command": "Set_Math_Operator_SUBT",
+        "verb": "set",
+        "description": "Set_Math_Operator \u2192 SUBT. The math operation.",
+        "scpi": ":FUNCtion:OPERation SUBT",
+        "scpi_fast": ":FUNC:OPER SUBT",
+        "subsystem": "Math_FFT",
+        "group": "Math_FFT",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Math_Operator_SUBT",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Math_Operator_SUBT",
             "value": "<value>",
             "input_name": "value"
           }
@@ -6935,6 +7367,54 @@
           }
         },
         "unverified": false
+      },
+      "Lock_Front_Panel_OFF": {
+        "command": "Lock_Front_Panel_OFF",
+        "verb": "set",
+        "description": "Lock_Front_Panel \u2192 OFF. Lock Front Panel",
+        "scpi": "SYSTem:LOCK OFF",
+        "scpi_fast": "SYST:LOCK OFF",
+        "subsystem": "SYSTem",
+        "group": "System Control",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Lock_Front_Panel_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Lock_Front_Panel_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Lock_Front_Panel_ON": {
+        "command": "Lock_Front_Panel_ON",
+        "verb": "set",
+        "description": "Lock_Front_Panel \u2192 ON. Lock Front Panel",
+        "scpi": "SYSTem:LOCK ON",
+        "scpi_fast": "SYST:LOCK ON",
+        "subsystem": "SYSTem",
+        "group": "System Control",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Lock_Front_Panel_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Lock_Front_Panel_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_System_Time": {
         "command": "Set_System_Time",
@@ -8095,6 +8575,54 @@
         },
         "unverified": true
       },
+      "Set_Trigger_Nreject_OFF": {
+        "command": "Set_Trigger_Nreject_OFF",
+        "verb": "set",
+        "description": "Set_Trigger_Nreject \u2192 OFF. Set trigger nreject",
+        "scpi": ":TRIGger:NREJect OFF",
+        "scpi_fast": ":TRIG:NREJ OFF",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Nreject_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Nreject_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Trigger_Nreject_ON": {
+        "command": "Set_Trigger_Nreject_ON",
+        "verb": "set",
+        "description": "Set_Trigger_Nreject \u2192 ON. Set trigger nreject",
+        "scpi": ":TRIGger:NREJect ON",
+        "scpi_fast": ":TRIG:NREJ ON",
+        "subsystem": "TRIG",
+        "group": "TRIG",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Trigger_Nreject_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Trigger_Nreject_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Trigger_Pattern": {
         "command": "Set_Trigger_Pattern",
         "verb": "set",
@@ -8854,6 +9382,54 @@
           }
         },
         "unverified": false
+      },
+      "Set_Unsigned_OFF": {
+        "command": "Set_Unsigned_OFF",
+        "verb": "set",
+        "description": "Set_Unsigned \u2192 OFF. Set Unsigned",
+        "scpi": "WAVeform:UNSigned OFF",
+        "scpi_fast": "WAV:UNS OFF",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Unsigned_OFF",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unsigned_OFF",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
+      "Set_Unsigned_ON": {
+        "command": "Set_Unsigned_ON",
+        "verb": "set",
+        "description": "Set_Unsigned \u2192 ON. Set Unsigned",
+        "scpi": "WAVeform:UNSigned ON",
+        "scpi_fast": "WAV:UNS ON",
+        "subsystem": "WAVeform",
+        "group": "Waveform Data Transfer Settings",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Unsigned_ON",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Unsigned_ON",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
       },
       "Set_Waveform_View": {
         "command": "Set_Waveform_View",

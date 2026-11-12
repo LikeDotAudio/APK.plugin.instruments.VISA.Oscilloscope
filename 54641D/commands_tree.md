@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**452 commands** — SET 174 · RIG 1 · NAB 171 · DO 106 · 339 unverified (75%)
+**476 commands** — SET 198 · RIG 1 · NAB 171 · DO 106 · 363 unverified (76%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -90,8 +90,12 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `THReshold` — **DO** `Do_Channel_Threshold` · †
 - **`CHANnel1`**
   - `BWLimit` — **SET** `CH1_BWLimit` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `BWLimit` — **SET** `CH1_BWLimit_OFF` · `OFF` · †<br>CH1_BWLimit → OFF. CH1 BWLimit
+  - `BWLimit` — **SET** `CH1_BWLimit_ON` · `ON` · †<br>CH1_BWLimit → ON. CH1 BWLimit
   - `COUPling` — **SET** `CH1_Coupling` · `<coupling>` · args: `coupling` · enum
   - `INVert` — **SET** `CH1_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `INVert` — **SET** `CH1_Invert_OFF` · `OFF` · †<br>CH1_Invert → OFF. CH1 Invert
+  - `INVert` — **SET** `CH1_Invert_ON` · `ON` · †<br>CH1_Invert → ON. CH1 Invert
   - `LABel` — **SET** `CH1_Label` · `<string>` · args: `string` · string
   - `OFFSet` — **SET** `CH1_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH1_Probe` · `<attenuation>` · args: `attenuation` · numeric
@@ -101,8 +105,12 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DISPlay` — **DO** `Do_CH1_ON` · `ON`
 - **`CHANnel2`**
   - `BWLimit` — **SET** `CH2_BWLimit` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `BWLimit` — **SET** `CH2_BWLimit_OFF` · `OFF` · †<br>CH2_BWLimit → OFF. CH2 BWLimit
+  - `BWLimit` — **SET** `CH2_BWLimit_ON` · `ON` · †<br>CH2_BWLimit → ON. CH2 BWLimit
   - `COUPling` — **SET** `CH2_Coupling` · `<coupling>` · args: `coupling` · enum
   - `INVert` — **SET** `CH2_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `INVert` — **SET** `CH2_Invert_OFF` · `OFF` · †<br>CH2_Invert → OFF. CH2 Invert
+  - `INVert` — **SET** `CH2_Invert_ON` · `ON` · †<br>CH2_Invert → ON. CH2 Invert
   - `LABel` — **SET** `CH2_Label` · `<string>` · args: `string` · string
   - `OFFSet` — **SET** `CH2_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH2_Probe` · `<attenuation>` · args: `attenuation` · numeric
@@ -150,6 +158,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `TEXT` — **DO** `Do_Display_Text` · †
 - **`EXTernal`**
   - `BWLimit` — **SET** `Set_External_Bwlimit` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `BWLimit` — **SET** `Set_External_Bwlimit_OFF` · `OFF` · †<br>Set_External_Bwlimit → OFF. Set external bwlimit
+  - `BWLimit` — **SET** `Set_External_Bwlimit_ON` · `ON` · †<br>Set_External_Bwlimit → ON. Set external bwlimit
   - `IMPedance` — **SET** `Set_External_Impedance` · `<value>` · args: `value` · enum · †
   - `PROBe` — **SET** `Set_External_Probe` · `<value>` · args: `value` · numeric · †
   - `RANGe` — **SET** `Set_External_Range` · `<value>` · args: `value` · numeric · †
@@ -170,8 +180,16 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `OPERation` — **SET** `Set_Function_Operation` · `<op>` · args: `op` · enum
   - `REFerence` — **SET** `Set_Function_Reference` · `<value>` · args: `value` · enum · †
   - `DISPlay` — **SET** `Set_Math_Display` · `<state>` · args: `state` · bool: `OFF` | `ON` · †<br>Show or hide the math trace.
+  - `DISPlay` — **SET** `Set_Math_Display_OFF` · `OFF` · †<br>Set_Math_Display → OFF. Show or hide the math trace.
+  - `DISPlay` — **SET** `Set_Math_Display_ON` · `ON` · †<br>Set_Math_Display → ON. Show or hide the math trace.
   - `OFFSet` — **SET** `Set_Math_Offset` · `<offset>` · args: `offset` · numeric
   - `OPERation` — **SET** `Set_Math_Operator` · `<value>` · args: `value` · enum: `ADD` | `SUBT` | `MULT` | `DIFF` | `INT` | `FFT` · †<br>The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_ADD` · `ADD` · †<br>Set_Math_Operator → ADD. The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_DIFF` · `DIFF` · †<br>Set_Math_Operator → DIFF. The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_FFT` · `FFT` · †<br>Set_Math_Operator → FFT. The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_INT` · `INT` · †<br>Set_Math_Operator → INT. The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_MULT` · `MULT` · †<br>Set_Math_Operator → MULT. The math operation.
+  - `OPERation` — **SET** `Set_Math_Operator_SUBT` · `SUBT` · †<br>Set_Math_Operator → SUBT. The math operation.
   - `RANGe` — **SET** `Set_Math_Range` · `<range>` · args: `range` · numeric
   - `RANGe` — **SET** `Set_Math_Scale` · `<value>` · args: `value` · numeric (V) · †<br>Vertical scale of the math result.
   - `OPERation` — **SET** `Set_Operation` · `<operation>` · args: `operation` · enum
@@ -282,6 +300,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CLEAR` — **DO** `Do_Protection_Clear` · †
 - **`SYSTem`**
   - `LOCK` — **SET** `Lock_Front_Panel` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `LOCK` — **SET** `Lock_Front_Panel_OFF` · `OFF` · †<br>Lock_Front_Panel → OFF. Lock Front Panel
+  - `LOCK` — **SET** `Lock_Front_Panel_ON` · `ON` · †<br>Lock_Front_Panel → ON. Lock Front Panel
   - `DATE` — **SET** `Set_System_Date` · `<value>` · args: `value` · †
   - `DSP` — **SET** `Set_System_Dsp` · `<string>` · args: `string` · string · †<br>Set display message
   - `TIME` — **SET** `Set_System_Time` · `<value>` · args: `value` · numeric (s) · †
@@ -338,6 +358,8 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `HFReject` — **SET** `Set_Trigger_Hfreject` · `<value>` · args: `value` · †
   - `MODE` — **SET** `Set_Trigger_Mode` · `<mode>` · args: `mode` · enum
   - `NREJect` — **SET** `Set_Trigger_Nreject` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `NREJect` — **SET** `Set_Trigger_Nreject_OFF` · `OFF` · †<br>Set_Trigger_Nreject → OFF. Set trigger nreject
+  - `NREJect` — **SET** `Set_Trigger_Nreject_ON` · `ON` · †<br>Set_Trigger_Nreject → ON. Set trigger nreject
   - `PATTern` — **SET** `Set_Trigger_Pattern` · `<value>` · args: `value` · †
   - `SWEep` — **SET** `Set_Trigger_Sweep` · `<sweep>` · args: `sweep` · enum
   - `COUPling?` — **NAB** `Get_Trigger_Coupling` · → CRD · †
@@ -495,6 +517,8 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`WAVeform`**
   - `BYTeorder` — **SET** `Set_Byte_Order` · `<order>` · args: `order`
   - `UNSigned` — **SET** `Set_Unsigned` · `<state>` · args: `state` · bool: `OFF` | `ON`
+  - `UNSigned` — **SET** `Set_Unsigned_OFF` · `OFF` · †<br>Set_Unsigned → OFF. Set Unsigned
+  - `UNSigned` — **SET** `Set_Unsigned_ON` · `ON` · †<br>Set_Unsigned → ON. Set Unsigned
   - `FORMat` — **SET** `Set_Waveform_Format` · `<format>` · args: `format` · enum
   - `POINts` — **SET** `Set_Waveform_Points` · `<points>` · args: `points` · integer
   - `SOURce` — **SET** `Set_Waveform_Source` · `<source>` · args: `source` · enum

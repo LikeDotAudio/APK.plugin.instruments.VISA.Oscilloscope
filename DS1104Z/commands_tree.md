@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**776 commands** — SET 341 · RIG 0 · NAB 373 · DO 62 · 703 unverified (90%)
+**1799 commands** — SET 1364 · RIG 0 · NAB 373 · DO 62 · 1726 unverified (95%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -80,14 +80,33 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DISP?` — **NAB** `Get_Channel_Display` · → BOOL · †
 - **`CHANnel1`**
   - `BWLimit` — **SET** `CH1_BWLimit` · `<limit>` · args: `limit` · enum: `20M` | `OFF`
+  - `BWLimit` — **SET** `CH1_BWLimit_20M` · `20M` · †<br>CH1_BWLimit → 20M. CH1 BWLimit
+  - `BWLimit` — **SET** `CH1_BWLimit_OFF` · `OFF` · †<br>CH1_BWLimit → OFF. CH1 BWLimit
   - `COUPling` — **SET** `CH1_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC` | `GND`
+  - `COUPling` — **SET** `CH1_Coupling_AC` · `AC` · †<br>CH1_Coupling → AC. CH1 Coupling
+  - `COUPling` — **SET** `CH1_Coupling_DC` · `DC` · †<br>CH1_Coupling → DC. CH1 Coupling
+  - `COUPling` — **SET** `CH1_Coupling_GND` · `GND` · †<br>CH1_Coupling → GND. CH1 Coupling
   - `OFFSet` — **SET** `CH1_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH1_Probe` · `<atten>` · args: `atten` · enum: `1` | `2` | `5` | `10` | `20` | `50` | `100` | `200` | `500` | `1000`
+  - `PROBe` — **SET** `CH1_Probe_1` · `1` · †<br>CH1_Probe → 1. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_10` · `10` · †<br>CH1_Probe → 10. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_100` · `100` · †<br>CH1_Probe → 100. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_1000` · `1000` · †<br>CH1_Probe → 1000. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_2` · `2` · †<br>CH1_Probe → 2. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_20` · `20` · †<br>CH1_Probe → 20. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_200` · `200` · †<br>CH1_Probe → 200. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_5` · `5` · †<br>CH1_Probe → 5. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_50` · `50` · †<br>CH1_Probe → 50. CH1 Probe
+  - `PROBe` — **SET** `CH1_Probe_500` · `500` · †<br>CH1_Probe → 500. CH1 Probe
   - `SCALe` — **SET** `CH1_Scale` · `<scale>` · args: `scale` · numeric (V)
   - `INVert` — **SET** `Set_Channel_Invert` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `INVert` — **SET** `Set_Channel_Invert_OFF` · `OFF` · †<br>Set_Channel_Invert → OFF. Set channel invert
+  - `INVert` — **SET** `Set_Channel_Invert_ON` · `ON` · †<br>Set_Channel_Invert → ON. Set channel invert
   - `RANGe` — **SET** `Set_Channel_Range` · `<value>` · args: `value` · numeric (V) · †
   - `TCAL` — **SET** `Set_Channel_Tcalibrate` · `<value>` · args: `value` · numeric (s) · †
   - `VERNier` — **SET** `Set_Channel_Vernier` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `VERNier` — **SET** `Set_Channel_Vernier_OFF` · `OFF` · †<br>Set_Channel_Vernier → OFF. Set channel vernier
+  - `VERNier` — **SET** `Set_Channel_Vernier_ON` · `ON` · †<br>Set_Channel_Vernier → ON. Set channel vernier
   - `BWLimit?` — **NAB** `Get_Channel_Bwlimit` · → BOOL · †
   - `COUPling?` — **NAB** `Get_Channel_Coupling` · → CRD · †
   - `INVert?` — **NAB** `Get_Channel_Invert` · → BOOL · †
@@ -102,25 +121,70 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DISPlay` — **DO** `CH1_ON` · `ON`
 - **`CHANnel2`**
   - `BWLimit` — **SET** `CH2_BWLimit` · `<limit>` · args: `limit` · enum: `20M` | `OFF`
+  - `BWLimit` — **SET** `CH2_BWLimit_20M` · `20M` · †<br>CH2_BWLimit → 20M. CH2 BWLimit
+  - `BWLimit` — **SET** `CH2_BWLimit_OFF` · `OFF` · †<br>CH2_BWLimit → OFF. CH2 BWLimit
   - `COUPling` — **SET** `CH2_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC` | `GND`
+  - `COUPling` — **SET** `CH2_Coupling_AC` · `AC` · †<br>CH2_Coupling → AC. CH2 Coupling
+  - `COUPling` — **SET** `CH2_Coupling_DC` · `DC` · †<br>CH2_Coupling → DC. CH2 Coupling
+  - `COUPling` — **SET** `CH2_Coupling_GND` · `GND` · †<br>CH2_Coupling → GND. CH2 Coupling
   - `OFFSet` — **SET** `CH2_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH2_Probe` · `<atten>` · args: `atten` · enum: `1` | `2` | `5` | `10` | `20` | `50` | `100` | `200` | `500` | `1000`
+  - `PROBe` — **SET** `CH2_Probe_1` · `1` · †<br>CH2_Probe → 1. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_10` · `10` · †<br>CH2_Probe → 10. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_100` · `100` · †<br>CH2_Probe → 100. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_1000` · `1000` · †<br>CH2_Probe → 1000. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_2` · `2` · †<br>CH2_Probe → 2. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_20` · `20` · †<br>CH2_Probe → 20. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_200` · `200` · †<br>CH2_Probe → 200. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_5` · `5` · †<br>CH2_Probe → 5. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_50` · `50` · †<br>CH2_Probe → 50. CH2 Probe
+  - `PROBe` — **SET** `CH2_Probe_500` · `500` · †<br>CH2_Probe → 500. CH2 Probe
   - `SCALe` — **SET** `CH2_Scale` · `<scale>` · args: `scale` · numeric (V)
   - `DISPlay` — **DO** `CH2_OFF` · `OFF`
   - `DISPlay` — **DO** `CH2_ON` · `ON`
 - **`CHANnel3`**
   - `BWLimit` — **SET** `CH3_BWLimit` · `<limit>` · args: `limit` · enum: `20M` | `OFF`
+  - `BWLimit` — **SET** `CH3_BWLimit_20M` · `20M` · †<br>CH3_BWLimit → 20M. CH3 BWLimit
+  - `BWLimit` — **SET** `CH3_BWLimit_OFF` · `OFF` · †<br>CH3_BWLimit → OFF. CH3 BWLimit
   - `COUPling` — **SET** `CH3_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC` | `GND`
+  - `COUPling` — **SET** `CH3_Coupling_AC` · `AC` · †<br>CH3_Coupling → AC. CH3 Coupling
+  - `COUPling` — **SET** `CH3_Coupling_DC` · `DC` · †<br>CH3_Coupling → DC. CH3 Coupling
+  - `COUPling` — **SET** `CH3_Coupling_GND` · `GND` · †<br>CH3_Coupling → GND. CH3 Coupling
   - `OFFSet` — **SET** `CH3_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH3_Probe` · `<atten>` · args: `atten` · enum: `1` | `2` | `5` | `10` | `20` | `50` | `100` | `200` | `500` | `1000`
+  - `PROBe` — **SET** `CH3_Probe_1` · `1` · †<br>CH3_Probe → 1. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_10` · `10` · †<br>CH3_Probe → 10. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_100` · `100` · †<br>CH3_Probe → 100. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_1000` · `1000` · †<br>CH3_Probe → 1000. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_2` · `2` · †<br>CH3_Probe → 2. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_20` · `20` · †<br>CH3_Probe → 20. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_200` · `200` · †<br>CH3_Probe → 200. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_5` · `5` · †<br>CH3_Probe → 5. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_50` · `50` · †<br>CH3_Probe → 50. CH3 Probe
+  - `PROBe` — **SET** `CH3_Probe_500` · `500` · †<br>CH3_Probe → 500. CH3 Probe
   - `SCALe` — **SET** `CH3_Scale` · `<scale>` · args: `scale` · numeric (V)
   - `DISPlay` — **DO** `CH3_OFF` · `OFF`
   - `DISPlay` — **DO** `CH3_ON` · `ON`
 - **`CHANnel4`**
   - `BWLimit` — **SET** `CH4_BWLimit` · `<limit>` · args: `limit` · enum: `20M` | `OFF`
+  - `BWLimit` — **SET** `CH4_BWLimit_20M` · `20M` · †<br>CH4_BWLimit → 20M. CH4 BWLimit
+  - `BWLimit` — **SET** `CH4_BWLimit_OFF` · `OFF` · †<br>CH4_BWLimit → OFF. CH4 BWLimit
   - `COUPling` — **SET** `CH4_Coupling` · `<coupling>` · args: `coupling` · enum: `AC` | `DC` | `GND`
+  - `COUPling` — **SET** `CH4_Coupling_AC` · `AC` · †<br>CH4_Coupling → AC. CH4 Coupling
+  - `COUPling` — **SET** `CH4_Coupling_DC` · `DC` · †<br>CH4_Coupling → DC. CH4 Coupling
+  - `COUPling` — **SET** `CH4_Coupling_GND` · `GND` · †<br>CH4_Coupling → GND. CH4 Coupling
   - `OFFSet` — **SET** `CH4_Offset` · `<offset>` · args: `offset` · numeric
   - `PROBe` — **SET** `CH4_Probe` · `<atten>` · args: `atten` · enum: `1` | `2` | `5` | `10` | `20` | `50` | `100` | `200` | `500` | `1000`
+  - `PROBe` — **SET** `CH4_Probe_1` · `1` · †<br>CH4_Probe → 1. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_10` · `10` · †<br>CH4_Probe → 10. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_100` · `100` · †<br>CH4_Probe → 100. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_1000` · `1000` · †<br>CH4_Probe → 1000. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_2` · `2` · †<br>CH4_Probe → 2. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_20` · `20` · †<br>CH4_Probe → 20. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_200` · `200` · †<br>CH4_Probe → 200. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_5` · `5` · †<br>CH4_Probe → 5. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_50` · `50` · †<br>CH4_Probe → 50. CH4 Probe
+  - `PROBe` — **SET** `CH4_Probe_500` · `500` · †<br>CH4_Probe → 500. CH4 Probe
   - `SCALe` — **SET** `CH4_Scale` · `<scale>` · args: `scale` · numeric (V)
   - `DISPlay` — **DO** `CH4_OFF` · `OFF`
   - `DISPlay` — **DO** `CH4_ON` · `ON`
@@ -134,6 +198,11 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `UNITs` — **SET** `Set_Units` · `<unit>` · args: `unit` · enum: `VOLT` | `WATT` | `AMP` | `UNKN` · per-instance: `n`
 - **`CURSor`**
   - `MODE` — **SET** `Set_Cursor_Mode` · `<value>` · args: `value` · enum: `OFF` | `MAN` | `TRAC` | `AUTO` | `XY` · †<br>Set or query the cursor measurement mode
+  - `MODE` — **SET** `Set_Cursor_Mode_AUTO` · `AUTO` · †<br>Set_Cursor_Mode → AUTO. Set or query the cursor measurement mode
+  - `MODE` — **SET** `Set_Cursor_Mode_MAN` · `MAN` · †<br>Set_Cursor_Mode → MAN. Set or query the cursor measurement mode
+  - `MODE` — **SET** `Set_Cursor_Mode_OFF` · `OFF` · †<br>Set_Cursor_Mode → OFF. Set or query the cursor measurement mode
+  - `MODE` — **SET** `Set_Cursor_Mode_TRAC` · `TRAC` · †<br>Set_Cursor_Mode → TRAC. Set or query the cursor measurement mode
+  - `MODE` — **SET** `Set_Cursor_Mode_XY` · `XY` · †<br>Set_Cursor_Mode → XY. Set or query the cursor measurement mode
   - `MODE?` — **NAB** `Get_Cursor_Mode` · → CRD · †<br>Set or query the cursor measurement mode
   - `MANual` — **DO** `Do_Cursor_Manual` · †<br>Set or query the cursor type in manual cursor measurement mode
   - `TRACk` — **DO** `Do_Cursor_Track` · †<br>Set or query the channel source of cursor A in the track cursor measurement mode
@@ -144,8 +213,20 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `BX` — **SET** `Set_Cursor_Manual_Bx` · `<value>` · args: `value` · integer · †<br>Set or query the cursor type in manual cursor measurement mode
     - `BY` — **SET** `Set_Cursor_Manual_By` · `<value>` · args: `value` · integer · †<br>Set or query the cursor type in manual cursor measurement mode
     - `SOURce` — **SET** `Set_Cursor_Manual_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `MATH` | `LA` · †<br>Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_CHAN1` · `CHAN1` · †<br>Set_Cursor_Manual_Source → CHAN1. Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_CHAN2` · `CHAN2` · †<br>Set_Cursor_Manual_Source → CHAN2. Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_CHAN3` · `CHAN3` · †<br>Set_Cursor_Manual_Source → CHAN3. Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_CHAN4` · `CHAN4` · †<br>Set_Cursor_Manual_Source → CHAN4. Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_LA` · `LA` · †<br>Set_Cursor_Manual_Source → LA. Set or query the cursor type in manual cursor measurement mode
+    - `SOURce` — **SET** `Set_Cursor_Manual_Source_MATH` · `MATH` · †<br>Set_Cursor_Manual_Source → MATH. Set or query the cursor type in manual cursor measurement mode
     - `TUNit` — **SET** `Set_Cursor_Manual_Tunit` · `<value>` · args: `value` · enum: `S` | `HZ` | `DEGR` | `PERC` · †<br>Set or query the cursor type in manual cursor measurement mode
+    - `TUNit` — **SET** `Set_Cursor_Manual_Tunit_DEGR` · `DEGR` · †<br>Set_Cursor_Manual_Tunit → DEGR. Set or query the cursor type in manual cursor measurement mode
+    - `TUNit` — **SET** `Set_Cursor_Manual_Tunit_HZ` · `HZ` · †<br>Set_Cursor_Manual_Tunit → HZ. Set or query the cursor type in manual cursor measurement mode
+    - `TUNit` — **SET** `Set_Cursor_Manual_Tunit_PERC` · `PERC` · †<br>Set_Cursor_Manual_Tunit → PERC. Set or query the cursor type in manual cursor measurement mode
+    - `TUNit` — **SET** `Set_Cursor_Manual_Tunit_S` · `S` · †<br>Set_Cursor_Manual_Tunit → S. Set or query the cursor type in manual cursor measurement mode
     - `VUNit` — **SET** `Set_Cursor_Manual_Vunit` · `<value>` · args: `value` · enum: `PERC` | `SOUR` · †<br>Set or query the cursor type in manual cursor measurement mode
+    - `VUNit` — **SET** `Set_Cursor_Manual_Vunit_PERC` · `PERC` · †<br>Set_Cursor_Manual_Vunit → PERC. Set or query the cursor type in manual cursor measurement mode
+    - `VUNit` — **SET** `Set_Cursor_Manual_Vunit_SOUR` · `SOUR` · †<br>Set_Cursor_Manual_Vunit → SOUR. Set or query the cursor type in manual cursor measurement mode
     - `AX?` — **NAB** `Get_Cursor_Manual_Ax` · → 1 value · †<br>Set or query the cursor type in manual cursor measurement mode
     - `AY?` — **NAB** `Get_Cursor_Manual_Ay` · → 1 value · †<br>Set or query the cursor type in manual cursor measurement mode
     - `BX?` — **NAB** `Get_Cursor_Manual_Bx` · → 1 value · †<br>Set or query the cursor type in manual cursor measurement mode
@@ -189,8 +270,19 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `INTerpolate?` — **NAB** `Get_Data_Points_Internal` · → 1 value · †<br>Set or query the interpolation mode of the editable points of the arbitrary waveform of the specified signal source channel
 - **`DECoder1`**
   - `DISPlay` — **SET** `Set_Decoder_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `DISPlay` — **SET** `Set_Decoder_Display_OFF` · `OFF` · †<br>Set_Decoder_Display → OFF. Set decoder display
+  - `DISPlay` — **SET** `Set_Decoder_Display_ON` · `ON` · †<br>Set_Decoder_Display → ON. Set decoder display
   - `FORMat` — **SET** `Set_Decoder_Format` · `<value>` · args: `value` · enum: `HEX` | `ASC` | `DEC` | `BIN` | `LINE` · †
+  - `FORMat` — **SET** `Set_Decoder_Format_ASC` · `ASC` · †<br>Set_Decoder_Format → ASC. Set decoder format
+  - `FORMat` — **SET** `Set_Decoder_Format_BIN` · `BIN` · †<br>Set_Decoder_Format → BIN. Set decoder format
+  - `FORMat` — **SET** `Set_Decoder_Format_DEC` · `DEC` · †<br>Set_Decoder_Format → DEC. Set decoder format
+  - `FORMat` — **SET** `Set_Decoder_Format_HEX` · `HEX` · †<br>Set_Decoder_Format → HEX. Set decoder format
+  - `FORMat` — **SET** `Set_Decoder_Format_LINE` · `LINE` · †<br>Set_Decoder_Format → LINE. Set decoder format
   - `MODE` — **SET** `Set_Decoder_Mode` · `<value>` · args: `value` · enum: `PAR` | `UART` | `SPI` | `IIC` · †
+  - `MODE` — **SET** `Set_Decoder_Mode_IIC` · `IIC` · †<br>Set_Decoder_Mode → IIC. Set decoder mode
+  - `MODE` — **SET** `Set_Decoder_Mode_PAR` · `PAR` · †<br>Set_Decoder_Mode → PAR. Set decoder mode
+  - `MODE` — **SET** `Set_Decoder_Mode_SPI` · `SPI` · †<br>Set_Decoder_Mode → SPI. Set decoder mode
+  - `MODE` — **SET** `Set_Decoder_Mode_UART` · `UART` · †<br>Set_Decoder_Mode → UART. Set decoder mode
   - `POSition` — **SET** `Set_Decoder_Positive` · `<value>` · args: `value` · integer · †
   - `DISPlay?` — **NAB** `Get_Decoder_Display` · → BOOL · †
   - `FORMat?` — **NAB** `Get_Decoder_Format` · → CRD · †
@@ -198,10 +290,20 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `POSition?` — **NAB** `Get_Decoder_Positive` · → NR3 · †
   - **`CONFig`**
     - `ENDian` — **SET** `Set_Decoder_Config_Endian` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `ENDian` — **SET** `Set_Decoder_Config_Endian_OFF` · `OFF` · †<br>Set_Decoder_Config_Endian → OFF. Set decoder config endian
+    - `ENDian` — **SET** `Set_Decoder_Config_Endian_ON` · `ON` · †<br>Set_Decoder_Config_Endian → ON. Set decoder config endian
     - `FORMat` — **SET** `Set_Decoder_Config_Format` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `FORMat` — **SET** `Set_Decoder_Config_Format_OFF` · `OFF` · †<br>Set_Decoder_Config_Format → OFF. Set decoder config format
+    - `FORMat` — **SET** `Set_Decoder_Config_Format_ON` · `ON` · †<br>Set_Decoder_Config_Format → ON. Set decoder config format
     - `LABel` — **SET** `Set_Decoder_Config_Label` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `LABel` — **SET** `Set_Decoder_Config_Label_OFF` · `OFF` · †<br>Set_Decoder_Config_Label → OFF. Set decoder config label
+    - `LABel` — **SET** `Set_Decoder_Config_Label_ON` · `ON` · †<br>Set_Decoder_Config_Label → ON. Set decoder config label
     - `LINE` — **SET** `Set_Decoder_Config_Line` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `LINE` — **SET** `Set_Decoder_Config_Line_OFF` · `OFF` · †<br>Set_Decoder_Config_Line → OFF. Set decoder config line
+    - `LINE` — **SET** `Set_Decoder_Config_Line_ON` · `ON` · †<br>Set_Decoder_Config_Line → ON. Set decoder config line
     - `WIDth` — **SET** `Set_Decoder_Config_Width` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `WIDth` — **SET** `Set_Decoder_Config_Width_OFF` · `OFF` · †<br>Set_Decoder_Config_Width → OFF. Set decoder config width
+    - `WIDth` — **SET** `Set_Decoder_Config_Width_ON` · `ON` · †<br>Set_Decoder_Config_Width → ON. Set decoder config width
     - `ENDian?` — **NAB** `Get_Decoder_Config_Endian` · → 1 value · †
     - `FORMat?` — **NAB** `Get_Decoder_Config_Format` · → CRD · †
     - `LABel?` — **NAB** `Get_Decoder_Config_Label` · → 1 value · †
@@ -210,8 +312,50 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `WIDth?` — **NAB** `Get_Decoder_Config_Width` · → NR3 · †
   - **`IIC`**
     - `ADDRess` — **SET** `Set_Decoder_Iic_Address` · `<value>` · args: `value` · enum: `NORM` | `RW` · †
+    - `ADDRess` — **SET** `Set_Decoder_Iic_Address_NORM` · `NORM` · †<br>Set_Decoder_Iic_Address → NORM. Set decoder iic address
+    - `ADDRess` — **SET** `Set_Decoder_Iic_Address_RW` · `RW` · †<br>Set_Decoder_Iic_Address → RW. Set decoder iic address
     - `CLK` — **SET** `Set_Decoder_Iic_Clk` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_CHAN1` · `CHAN1` · †<br>Set_Decoder_Iic_Clk → CHAN1. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_CHAN2` · `CHAN2` · †<br>Set_Decoder_Iic_Clk → CHAN2. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_CHAN3` · `CHAN3` · †<br>Set_Decoder_Iic_Clk → CHAN3. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_CHAN4` · `CHAN4` · †<br>Set_Decoder_Iic_Clk → CHAN4. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D0` · `D0` · †<br>Set_Decoder_Iic_Clk → D0. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D1` · `D1` · †<br>Set_Decoder_Iic_Clk → D1. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D10` · `D10` · †<br>Set_Decoder_Iic_Clk → D10. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D11` · `D11` · †<br>Set_Decoder_Iic_Clk → D11. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D12` · `D12` · †<br>Set_Decoder_Iic_Clk → D12. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D13` · `D13` · †<br>Set_Decoder_Iic_Clk → D13. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D14` · `D14` · †<br>Set_Decoder_Iic_Clk → D14. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D15` · `D15` · †<br>Set_Decoder_Iic_Clk → D15. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D2` · `D2` · †<br>Set_Decoder_Iic_Clk → D2. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D3` · `D3` · †<br>Set_Decoder_Iic_Clk → D3. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D4` · `D4` · †<br>Set_Decoder_Iic_Clk → D4. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D5` · `D5` · †<br>Set_Decoder_Iic_Clk → D5. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D6` · `D6` · †<br>Set_Decoder_Iic_Clk → D6. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D7` · `D7` · †<br>Set_Decoder_Iic_Clk → D7. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D8` · `D8` · †<br>Set_Decoder_Iic_Clk → D8. Set decoder iic clk
+    - `CLK` — **SET** `Set_Decoder_Iic_Clk_D9` · `D9` · †<br>Set_Decoder_Iic_Clk → D9. Set decoder iic clk
     - `DATA` — **SET** `Set_Decoder_Iic_Data` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_CHAN1` · `CHAN1` · †<br>Set_Decoder_Iic_Data → CHAN1. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_CHAN2` · `CHAN2` · †<br>Set_Decoder_Iic_Data → CHAN2. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_CHAN3` · `CHAN3` · †<br>Set_Decoder_Iic_Data → CHAN3. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_CHAN4` · `CHAN4` · †<br>Set_Decoder_Iic_Data → CHAN4. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D0` · `D0` · †<br>Set_Decoder_Iic_Data → D0. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D1` · `D1` · †<br>Set_Decoder_Iic_Data → D1. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D10` · `D10` · †<br>Set_Decoder_Iic_Data → D10. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D11` · `D11` · †<br>Set_Decoder_Iic_Data → D11. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D12` · `D12` · †<br>Set_Decoder_Iic_Data → D12. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D13` · `D13` · †<br>Set_Decoder_Iic_Data → D13. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D14` · `D14` · †<br>Set_Decoder_Iic_Data → D14. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D15` · `D15` · †<br>Set_Decoder_Iic_Data → D15. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D2` · `D2` · †<br>Set_Decoder_Iic_Data → D2. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D3` · `D3` · †<br>Set_Decoder_Iic_Data → D3. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D4` · `D4` · †<br>Set_Decoder_Iic_Data → D4. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D5` · `D5` · †<br>Set_Decoder_Iic_Data → D5. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D6` · `D6` · †<br>Set_Decoder_Iic_Data → D6. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D7` · `D7` · †<br>Set_Decoder_Iic_Data → D7. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D8` · `D8` · †<br>Set_Decoder_Iic_Data → D8. Set decoder iic data
+    - `DATA` — **SET** `Set_Decoder_Iic_Data_D9` · `D9` · †<br>Set_Decoder_Iic_Data → D9. Set decoder iic data
     - `ADDRess?` — **NAB** `Get_Decoder_Iic_Address` · → NR1 · †
     - `CLK?` — **NAB** `Get_Decoder_Iic_Clk` · → 1 value · †
     - `DATA?` — **NAB** `Get_Decoder_Iic_Data` · → BLOCK · †
@@ -219,12 +363,62 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `BITX` — **SET** `Set_Decoder_Parallel_Bitx` · `<value>` · args: `value` · integer · †
     - `CCOMpensation` — **SET** `Set_Decoder_Parallel_Ccompensation` · `<value>` · args: `value` · numeric (s) · †
     - `CLK` — **SET** `Set_Decoder_Parallel_Clk` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_CHAN1` · `CHAN1` · †<br>Set_Decoder_Parallel_Clk → CHAN1. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_CHAN2` · `CHAN2` · †<br>Set_Decoder_Parallel_Clk → CHAN2. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_CHAN3` · `CHAN3` · †<br>Set_Decoder_Parallel_Clk → CHAN3. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_CHAN4` · `CHAN4` · †<br>Set_Decoder_Parallel_Clk → CHAN4. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D0` · `D0` · †<br>Set_Decoder_Parallel_Clk → D0. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D1` · `D1` · †<br>Set_Decoder_Parallel_Clk → D1. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D10` · `D10` · †<br>Set_Decoder_Parallel_Clk → D10. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D11` · `D11` · †<br>Set_Decoder_Parallel_Clk → D11. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D12` · `D12` · †<br>Set_Decoder_Parallel_Clk → D12. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D13` · `D13` · †<br>Set_Decoder_Parallel_Clk → D13. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D14` · `D14` · †<br>Set_Decoder_Parallel_Clk → D14. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D15` · `D15` · †<br>Set_Decoder_Parallel_Clk → D15. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D2` · `D2` · †<br>Set_Decoder_Parallel_Clk → D2. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D3` · `D3` · †<br>Set_Decoder_Parallel_Clk → D3. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D4` · `D4` · †<br>Set_Decoder_Parallel_Clk → D4. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D5` · `D5` · †<br>Set_Decoder_Parallel_Clk → D5. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D6` · `D6` · †<br>Set_Decoder_Parallel_Clk → D6. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D7` · `D7` · †<br>Set_Decoder_Parallel_Clk → D7. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D8` · `D8` · †<br>Set_Decoder_Parallel_Clk → D8. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_D9` · `D9` · †<br>Set_Decoder_Parallel_Clk → D9. Set decoder parallel clk
+    - `CLK` — **SET** `Set_Decoder_Parallel_Clk_OFF` · `OFF` · †<br>Set_Decoder_Parallel_Clk → OFF. Set decoder parallel clk
     - `EDGE` — **SET** `Set_Decoder_Parallel_Edge` · `<value>` · args: `value` · enum: `RISE` | `FALL` | `BOTH` · †
+    - `EDGE` — **SET** `Set_Decoder_Parallel_Edge_BOTH` · `BOTH` · †<br>Set_Decoder_Parallel_Edge → BOTH. Set decoder parallel edge
+    - `EDGE` — **SET** `Set_Decoder_Parallel_Edge_FALL` · `FALL` · †<br>Set_Decoder_Parallel_Edge → FALL. Set decoder parallel edge
+    - `EDGE` — **SET** `Set_Decoder_Parallel_Edge_RISE` · `RISE` · †<br>Set_Decoder_Parallel_Edge → RISE. Set decoder parallel edge
     - `NREJect` — **SET** `Set_Decoder_Parallel_Nreject` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `NREJect` — **SET** `Set_Decoder_Parallel_Nreject_OFF` · `OFF` · †<br>Set_Decoder_Parallel_Nreject → OFF. Set decoder parallel nreject
+    - `NREJect` — **SET** `Set_Decoder_Parallel_Nreject_ON` · `ON` · †<br>Set_Decoder_Parallel_Nreject → ON. Set decoder parallel nreject
     - `NRTime` — **SET** `Set_Decoder_Parallel_Nrtime` · `<value>` · args: `value` · numeric (s) · †
     - `PLOT` — **SET** `Set_Decoder_Parallel_Plot` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `PLOT` — **SET** `Set_Decoder_Parallel_Plot_OFF` · `OFF` · †<br>Set_Decoder_Parallel_Plot → OFF. Set decoder parallel plot
+    - `PLOT` — **SET** `Set_Decoder_Parallel_Plot_ON` · `ON` · †<br>Set_Decoder_Parallel_Plot → ON. Set decoder parallel plot
     - `POLarity` — **SET** `Set_Decoder_Parallel_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †
+    - `POLarity` — **SET** `Set_Decoder_Parallel_Polarity_NEG` · `NEG` · †<br>Set_Decoder_Parallel_Polarity → NEG. Set decoder parallel polarity
+    - `POLarity` — **SET** `Set_Decoder_Parallel_Polarity_POS` · `POS` · †<br>Set_Decoder_Parallel_Polarity → POS. Set decoder parallel polarity
     - `SOURce` — **SET** `Set_Decoder_Parallel_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_CHAN1` · `CHAN1` · †<br>Set_Decoder_Parallel_Source → CHAN1. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_CHAN2` · `CHAN2` · †<br>Set_Decoder_Parallel_Source → CHAN2. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_CHAN3` · `CHAN3` · †<br>Set_Decoder_Parallel_Source → CHAN3. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_CHAN4` · `CHAN4` · †<br>Set_Decoder_Parallel_Source → CHAN4. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D0` · `D0` · †<br>Set_Decoder_Parallel_Source → D0. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D1` · `D1` · †<br>Set_Decoder_Parallel_Source → D1. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D10` · `D10` · †<br>Set_Decoder_Parallel_Source → D10. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D11` · `D11` · †<br>Set_Decoder_Parallel_Source → D11. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D12` · `D12` · †<br>Set_Decoder_Parallel_Source → D12. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D13` · `D13` · †<br>Set_Decoder_Parallel_Source → D13. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D14` · `D14` · †<br>Set_Decoder_Parallel_Source → D14. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D15` · `D15` · †<br>Set_Decoder_Parallel_Source → D15. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D2` · `D2` · †<br>Set_Decoder_Parallel_Source → D2. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D3` · `D3` · †<br>Set_Decoder_Parallel_Source → D3. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D4` · `D4` · †<br>Set_Decoder_Parallel_Source → D4. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D5` · `D5` · †<br>Set_Decoder_Parallel_Source → D5. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D6` · `D6` · †<br>Set_Decoder_Parallel_Source → D6. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D7` · `D7` · †<br>Set_Decoder_Parallel_Source → D7. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D8` · `D8` · †<br>Set_Decoder_Parallel_Source → D8. Set decoder parallel source
+    - `SOURce` — **SET** `Set_Decoder_Parallel_Source_D9` · `D9` · †<br>Set_Decoder_Parallel_Source → D9. Set decoder parallel source
     - `WIDTh` — **SET** `Set_Decoder_Parallel_Width` · `<value>` · args: `value` · integer · †
     - `BITX?` — **NAB** `Get_Decoder_Parallel_Bitx` · → 1 value · †
     - `CCOMpensation?` — **NAB** `Get_Decoder_Parallel_Ccompensation` · → 1 value · †
@@ -238,14 +432,106 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `WIDTh?` — **NAB** `Get_Decoder_Parallel_Width` · → NR3 · †
   - **`SPI`**
     - `CLK` — **SET** `Set_Decoder_Spi_Clk` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_CHAN1` · `CHAN1` · †<br>Set_Decoder_Spi_Clk → CHAN1. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_CHAN2` · `CHAN2` · †<br>Set_Decoder_Spi_Clk → CHAN2. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_CHAN3` · `CHAN3` · †<br>Set_Decoder_Spi_Clk → CHAN3. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_CHAN4` · `CHAN4` · †<br>Set_Decoder_Spi_Clk → CHAN4. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D0` · `D0` · †<br>Set_Decoder_Spi_Clk → D0. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D1` · `D1` · †<br>Set_Decoder_Spi_Clk → D1. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D10` · `D10` · †<br>Set_Decoder_Spi_Clk → D10. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D11` · `D11` · †<br>Set_Decoder_Spi_Clk → D11. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D12` · `D12` · †<br>Set_Decoder_Spi_Clk → D12. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D13` · `D13` · †<br>Set_Decoder_Spi_Clk → D13. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D14` · `D14` · †<br>Set_Decoder_Spi_Clk → D14. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D15` · `D15` · †<br>Set_Decoder_Spi_Clk → D15. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D2` · `D2` · †<br>Set_Decoder_Spi_Clk → D2. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D3` · `D3` · †<br>Set_Decoder_Spi_Clk → D3. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D4` · `D4` · †<br>Set_Decoder_Spi_Clk → D4. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D5` · `D5` · †<br>Set_Decoder_Spi_Clk → D5. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D6` · `D6` · †<br>Set_Decoder_Spi_Clk → D6. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D7` · `D7` · †<br>Set_Decoder_Spi_Clk → D7. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D8` · `D8` · †<br>Set_Decoder_Spi_Clk → D8. Set decoder spi clk
+    - `CLK` — **SET** `Set_Decoder_Spi_Clk_D9` · `D9` · †<br>Set_Decoder_Spi_Clk → D9. Set decoder spi clk
     - `CS` — **SET** `Set_Decoder_Spi_Csrc` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_CHAN1` · `CHAN1` · †<br>Set_Decoder_Spi_Csrc → CHAN1. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_CHAN2` · `CHAN2` · †<br>Set_Decoder_Spi_Csrc → CHAN2. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_CHAN3` · `CHAN3` · †<br>Set_Decoder_Spi_Csrc → CHAN3. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_CHAN4` · `CHAN4` · †<br>Set_Decoder_Spi_Csrc → CHAN4. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D0` · `D0` · †<br>Set_Decoder_Spi_Csrc → D0. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D1` · `D1` · †<br>Set_Decoder_Spi_Csrc → D1. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D10` · `D10` · †<br>Set_Decoder_Spi_Csrc → D10. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D11` · `D11` · †<br>Set_Decoder_Spi_Csrc → D11. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D12` · `D12` · †<br>Set_Decoder_Spi_Csrc → D12. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D13` · `D13` · †<br>Set_Decoder_Spi_Csrc → D13. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D14` · `D14` · †<br>Set_Decoder_Spi_Csrc → D14. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D15` · `D15` · †<br>Set_Decoder_Spi_Csrc → D15. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D2` · `D2` · †<br>Set_Decoder_Spi_Csrc → D2. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D3` · `D3` · †<br>Set_Decoder_Spi_Csrc → D3. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D4` · `D4` · †<br>Set_Decoder_Spi_Csrc → D4. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D5` · `D5` · †<br>Set_Decoder_Spi_Csrc → D5. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D6` · `D6` · †<br>Set_Decoder_Spi_Csrc → D6. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D7` · `D7` · †<br>Set_Decoder_Spi_Csrc → D7. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D8` · `D8` · †<br>Set_Decoder_Spi_Csrc → D8. Set decoder spi csrc
+    - `CS` — **SET** `Set_Decoder_Spi_Csrc_D9` · `D9` · †<br>Set_Decoder_Spi_Csrc → D9. Set decoder spi csrc
     - `EDGE` — **SET** `Set_Decoder_Spi_Edge` · `<value>` · args: `value` · enum: `RISE` | `FALL` · †
+    - `EDGE` — **SET** `Set_Decoder_Spi_Edge_FALL` · `FALL` · †<br>Set_Decoder_Spi_Edge → FALL. Set decoder spi edge
+    - `EDGE` — **SET** `Set_Decoder_Spi_Edge_RISE` · `RISE` · †<br>Set_Decoder_Spi_Edge → RISE. Set decoder spi edge
     - `ENDian` — **SET** `Set_Decoder_Spi_Endian` · `<value>` · args: `value` · enum: `LSB` | `MSB` · †
+    - `ENDian` — **SET** `Set_Decoder_Spi_Endian_LSB` · `LSB` · †<br>Set_Decoder_Spi_Endian → LSB. Set decoder spi endian
+    - `ENDian` — **SET** `Set_Decoder_Spi_Endian_MSB` · `MSB` · †<br>Set_Decoder_Spi_Endian → MSB. Set decoder spi endian
     - `MISO` — **SET** `Set_Decoder_Spi_Miso` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_CHAN1` · `CHAN1` · †<br>Set_Decoder_Spi_Miso → CHAN1. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_CHAN2` · `CHAN2` · †<br>Set_Decoder_Spi_Miso → CHAN2. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_CHAN3` · `CHAN3` · †<br>Set_Decoder_Spi_Miso → CHAN3. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_CHAN4` · `CHAN4` · †<br>Set_Decoder_Spi_Miso → CHAN4. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D0` · `D0` · †<br>Set_Decoder_Spi_Miso → D0. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D1` · `D1` · †<br>Set_Decoder_Spi_Miso → D1. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D10` · `D10` · †<br>Set_Decoder_Spi_Miso → D10. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D11` · `D11` · †<br>Set_Decoder_Spi_Miso → D11. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D12` · `D12` · †<br>Set_Decoder_Spi_Miso → D12. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D13` · `D13` · †<br>Set_Decoder_Spi_Miso → D13. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D14` · `D14` · †<br>Set_Decoder_Spi_Miso → D14. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D15` · `D15` · †<br>Set_Decoder_Spi_Miso → D15. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D2` · `D2` · †<br>Set_Decoder_Spi_Miso → D2. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D3` · `D3` · †<br>Set_Decoder_Spi_Miso → D3. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D4` · `D4` · †<br>Set_Decoder_Spi_Miso → D4. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D5` · `D5` · †<br>Set_Decoder_Spi_Miso → D5. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D6` · `D6` · †<br>Set_Decoder_Spi_Miso → D6. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D7` · `D7` · †<br>Set_Decoder_Spi_Miso → D7. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D8` · `D8` · †<br>Set_Decoder_Spi_Miso → D8. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_D9` · `D9` · †<br>Set_Decoder_Spi_Miso → D9. Set decoder spi miso
+    - `MISO` — **SET** `Set_Decoder_Spi_Miso_OFF` · `OFF` · †<br>Set_Decoder_Spi_Miso → OFF. Set decoder spi miso
     - `MODE` — **SET** `Set_Decoder_Spi_Mode` · `<value>` · args: `value` · enum: `CS` | `TIM` · †
+    - `MODE` — **SET** `Set_Decoder_Spi_Mode_CS` · `CS` · †<br>Set_Decoder_Spi_Mode → CS. Set decoder spi mode
+    - `MODE` — **SET** `Set_Decoder_Spi_Mode_TIM` · `TIM` · †<br>Set_Decoder_Spi_Mode → TIM. Set decoder spi mode
     - `MOSI` — **SET** `Set_Decoder_Spi_Mosi` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_CHAN1` · `CHAN1` · †<br>Set_Decoder_Spi_Mosi → CHAN1. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_CHAN2` · `CHAN2` · †<br>Set_Decoder_Spi_Mosi → CHAN2. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_CHAN3` · `CHAN3` · †<br>Set_Decoder_Spi_Mosi → CHAN3. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_CHAN4` · `CHAN4` · †<br>Set_Decoder_Spi_Mosi → CHAN4. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D0` · `D0` · †<br>Set_Decoder_Spi_Mosi → D0. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D1` · `D1` · †<br>Set_Decoder_Spi_Mosi → D1. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D10` · `D10` · †<br>Set_Decoder_Spi_Mosi → D10. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D11` · `D11` · †<br>Set_Decoder_Spi_Mosi → D11. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D12` · `D12` · †<br>Set_Decoder_Spi_Mosi → D12. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D13` · `D13` · †<br>Set_Decoder_Spi_Mosi → D13. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D14` · `D14` · †<br>Set_Decoder_Spi_Mosi → D14. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D15` · `D15` · †<br>Set_Decoder_Spi_Mosi → D15. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D2` · `D2` · †<br>Set_Decoder_Spi_Mosi → D2. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D3` · `D3` · †<br>Set_Decoder_Spi_Mosi → D3. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D4` · `D4` · †<br>Set_Decoder_Spi_Mosi → D4. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D5` · `D5` · †<br>Set_Decoder_Spi_Mosi → D5. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D6` · `D6` · †<br>Set_Decoder_Spi_Mosi → D6. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D7` · `D7` · †<br>Set_Decoder_Spi_Mosi → D7. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D8` · `D8` · †<br>Set_Decoder_Spi_Mosi → D8. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_D9` · `D9` · †<br>Set_Decoder_Spi_Mosi → D9. Set decoder spi mosi
+    - `MOSI` — **SET** `Set_Decoder_Spi_Mosi_OFF` · `OFF` · †<br>Set_Decoder_Spi_Mosi → OFF. Set decoder spi mosi
     - `POLarity` — **SET** `Set_Decoder_Spi_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †
+    - `POLarity` — **SET** `Set_Decoder_Spi_Polarity_NEG` · `NEG` · †<br>Set_Decoder_Spi_Polarity → NEG. Set decoder spi polarity
+    - `POLarity` — **SET** `Set_Decoder_Spi_Polarity_POS` · `POS` · †<br>Set_Decoder_Spi_Polarity → POS. Set decoder spi polarity
     - `SELect` — **SET** `Set_Decoder_Spi_Select` · `<value>` · args: `value` · enum: `NCS` | `CS` · †
+    - `SELect` — **SET** `Set_Decoder_Spi_Select_CS` · `CS` · †<br>Set_Decoder_Spi_Select → CS. Set decoder spi select
+    - `SELect` — **SET** `Set_Decoder_Spi_Select_NCS` · `NCS` · †<br>Set_Decoder_Spi_Select → NCS. Set decoder spi select
     - `TIMeout` — **SET** `Set_Decoder_Spi_Timebase` · `<value>` · args: `value` · numeric · †
     - `WIDTh` — **SET** `Set_Decoder_Spi_Width` · `<value>` · args: `value` · integer · †
     - `CLK?` — **NAB** `Get_Decoder_Spi_Clk` · → 1 value · †
@@ -265,11 +551,62 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`UART`**
     - `BAUD` — **SET** `Set_Decoder_Uart_Baud` · `<value>` · args: `value` · integer · †
     - `ENDian` — **SET** `Set_Decoder_Uart_Endian` · `<value>` · args: `value` · enum: `LSB` | `MSB` · †
+    - `ENDian` — **SET** `Set_Decoder_Uart_Endian_LSB` · `LSB` · †<br>Set_Decoder_Uart_Endian → LSB. Set decoder uart endian
+    - `ENDian` — **SET** `Set_Decoder_Uart_Endian_MSB` · `MSB` · †<br>Set_Decoder_Uart_Endian → MSB. Set decoder uart endian
     - `PARity` — **SET** `Set_Decoder_Uart_Parallel` · `<value>` · args: `value` · enum: `NONE` | `EVEN` | `ODD` · †
+    - `PARity` — **SET** `Set_Decoder_Uart_Parallel_EVEN` · `EVEN` · †<br>Set_Decoder_Uart_Parallel → EVEN. Set decoder uart parallel
+    - `PARity` — **SET** `Set_Decoder_Uart_Parallel_NONE` · `NONE` · †<br>Set_Decoder_Uart_Parallel → NONE. Set decoder uart parallel
+    - `PARity` — **SET** `Set_Decoder_Uart_Parallel_ODD` · `ODD` · †<br>Set_Decoder_Uart_Parallel → ODD. Set decoder uart parallel
     - `POLarity` — **SET** `Set_Decoder_Uart_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †
+    - `POLarity` — **SET** `Set_Decoder_Uart_Polarity_NEG` · `NEG` · †<br>Set_Decoder_Uart_Polarity → NEG. Set decoder uart polarity
+    - `POLarity` — **SET** `Set_Decoder_Uart_Polarity_POS` · `POS` · †<br>Set_Decoder_Uart_Polarity → POS. Set decoder uart polarity
     - `RX` — **SET** `Set_Decoder_Uart_Rx` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_CHAN1` · `CHAN1` · †<br>Set_Decoder_Uart_Rx → CHAN1. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_CHAN2` · `CHAN2` · †<br>Set_Decoder_Uart_Rx → CHAN2. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_CHAN3` · `CHAN3` · †<br>Set_Decoder_Uart_Rx → CHAN3. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_CHAN4` · `CHAN4` · †<br>Set_Decoder_Uart_Rx → CHAN4. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D0` · `D0` · †<br>Set_Decoder_Uart_Rx → D0. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D1` · `D1` · †<br>Set_Decoder_Uart_Rx → D1. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D10` · `D10` · †<br>Set_Decoder_Uart_Rx → D10. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D11` · `D11` · †<br>Set_Decoder_Uart_Rx → D11. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D12` · `D12` · †<br>Set_Decoder_Uart_Rx → D12. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D13` · `D13` · †<br>Set_Decoder_Uart_Rx → D13. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D14` · `D14` · †<br>Set_Decoder_Uart_Rx → D14. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D15` · `D15` · †<br>Set_Decoder_Uart_Rx → D15. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D2` · `D2` · †<br>Set_Decoder_Uart_Rx → D2. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D3` · `D3` · †<br>Set_Decoder_Uart_Rx → D3. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D4` · `D4` · †<br>Set_Decoder_Uart_Rx → D4. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D5` · `D5` · †<br>Set_Decoder_Uart_Rx → D5. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D6` · `D6` · †<br>Set_Decoder_Uart_Rx → D6. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D7` · `D7` · †<br>Set_Decoder_Uart_Rx → D7. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D8` · `D8` · †<br>Set_Decoder_Uart_Rx → D8. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_D9` · `D9` · †<br>Set_Decoder_Uart_Rx → D9. Set decoder uart rx
+    - `RX` — **SET** `Set_Decoder_Uart_Rx_OFF` · `OFF` · †<br>Set_Decoder_Uart_Rx → OFF. Set decoder uart rx
     - `STOP` — **SET** `Set_Decoder_Uart_Stop` · `<value>` · args: `value` · enum: `1` | `2` · †
+    - `STOP` — **SET** `Set_Decoder_Uart_Stop_1` · `1` · †<br>Set_Decoder_Uart_Stop → 1. Set decoder uart stop
+    - `STOP` — **SET** `Set_Decoder_Uart_Stop_2` · `2` · †<br>Set_Decoder_Uart_Stop → 2. Set decoder uart stop
     - `TX` — **SET** `Set_Decoder_Uart_Tx` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_CHAN1` · `CHAN1` · †<br>Set_Decoder_Uart_Tx → CHAN1. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_CHAN2` · `CHAN2` · †<br>Set_Decoder_Uart_Tx → CHAN2. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_CHAN3` · `CHAN3` · †<br>Set_Decoder_Uart_Tx → CHAN3. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_CHAN4` · `CHAN4` · †<br>Set_Decoder_Uart_Tx → CHAN4. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D0` · `D0` · †<br>Set_Decoder_Uart_Tx → D0. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D1` · `D1` · †<br>Set_Decoder_Uart_Tx → D1. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D10` · `D10` · †<br>Set_Decoder_Uart_Tx → D10. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D11` · `D11` · †<br>Set_Decoder_Uart_Tx → D11. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D12` · `D12` · †<br>Set_Decoder_Uart_Tx → D12. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D13` · `D13` · †<br>Set_Decoder_Uart_Tx → D13. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D14` · `D14` · †<br>Set_Decoder_Uart_Tx → D14. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D15` · `D15` · †<br>Set_Decoder_Uart_Tx → D15. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D2` · `D2` · †<br>Set_Decoder_Uart_Tx → D2. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D3` · `D3` · †<br>Set_Decoder_Uart_Tx → D3. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D4` · `D4` · †<br>Set_Decoder_Uart_Tx → D4. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D5` · `D5` · †<br>Set_Decoder_Uart_Tx → D5. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D6` · `D6` · †<br>Set_Decoder_Uart_Tx → D6. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D7` · `D7` · †<br>Set_Decoder_Uart_Tx → D7. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D8` · `D8` · †<br>Set_Decoder_Uart_Tx → D8. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_D9` · `D9` · †<br>Set_Decoder_Uart_Tx → D9. Set decoder uart tx
+    - `TX` — **SET** `Set_Decoder_Uart_Tx_OFF` · `OFF` · †<br>Set_Decoder_Uart_Tx → OFF. Set decoder uart tx
     - `WIDTh` — **SET** `Set_Decoder_Uart_Width` · `<value>` · args: `value` · integer · †
     - `BAUD?` — **NAB** `Get_Decoder_Uart_Baud` · → 1 value · †
     - `ENDian?` — **NAB** `Get_Decoder_Uart_Endian` · → 1 value · †
@@ -366,6 +703,9 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`DISPlay`**
   - `GBRightness` — **SET** `Set_Display_Gbrightness` · `<value>` · args: `value` · integer · †<br>Set or query the brightness of the screen grid
   - `GRID` — **SET** `Set_Display_Grid` · `<value>` · args: `value` · enum: `FULL` | `HALF` | `NONE` · †
+  - `GRID` — **SET** `Set_Display_Grid_FULL` · `FULL` · †<br>Set_Display_Grid → FULL. Set display grid
+  - `GRID` — **SET** `Set_Display_Grid_HALF` · `HALF` · †<br>Set_Display_Grid → HALF. Set display grid
+  - `GRID` — **SET** `Set_Display_Grid_NONE` · `NONE` · †<br>Set_Display_Grid → NONE. Set display grid
   - `WBRightness` — **SET** `Set_Display_Wbrightness` · `<value>` · args: `value` · integer · †<br>Set or query the waveform brightness
   - `DATA?` — **NAB** `Get_Display_Data` · → BLOCK · †<br>Read the data stream of the image currently displayed on the screen and set the color, invert display, and format of the image acquired
   - `GBRightness?` — **NAB** `Get_Display_Gbrightness` · → 1 value · †<br>Set or query the brightness of the screen grid
@@ -374,14 +714,34 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CLEar` — **DO** `Do_Display_Clear` · †<br>Clear all the waveforms on the screen
   - **`GRADing`**
     - `TIME` — **SET** `Set_Display_Grading_Time` · `<value>` · args: `value` · enum: `MIN` | `1` | `5` | `10` | `INF` · †<br>Set or query the persistence time
+    - `TIME` — **SET** `Set_Display_Grading_Time_1` · `1` · †<br>Set_Display_Grading_Time → 1. Set or query the persistence time
+    - `TIME` — **SET** `Set_Display_Grading_Time_10` · `10` · †<br>Set_Display_Grading_Time → 10. Set or query the persistence time
+    - `TIME` — **SET** `Set_Display_Grading_Time_5` · `5` · †<br>Set_Display_Grading_Time → 5. Set or query the persistence time
+    - `TIME` — **SET** `Set_Display_Grading_Time_INF` · `INF` · †<br>Set_Display_Grading_Time → INF. Set or query the persistence time
+    - `TIME` — **SET** `Set_Display_Grading_Time_MIN` · `MIN` · †<br>Set_Display_Grading_Time → MIN. Set or query the persistence time
     - `TIME?` — **NAB** `Get_Display_Grading_Time` · → NR3 s · †<br>Set or query the persistence time
 - **`ETABle1`**
   - `COLumn` — **SET** `Set_Etable_Color` · `<value>` · args: `value` · enum: `DATA` | `TX` | `RX` | `MISO` | `MOSI` · †
+  - `COLumn` — **SET** `Set_Etable_Color_DATA` · `DATA` · †<br>Set_Etable_Color → DATA. Set etable color
+  - `COLumn` — **SET** `Set_Etable_Color_MISO` · `MISO` · †<br>Set_Etable_Color → MISO. Set etable color
+  - `COLumn` — **SET** `Set_Etable_Color_MOSI` · `MOSI` · †<br>Set_Etable_Color → MOSI. Set etable color
+  - `COLumn` — **SET** `Set_Etable_Color_RX` · `RX` · †<br>Set_Etable_Color → RX. Set etable color
+  - `COLumn` — **SET** `Set_Etable_Color_TX` · `TX` · †<br>Set_Etable_Color → TX. Set etable color
   - `DISP` — **SET** `Set_Etable_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `DISP` — **SET** `Set_Etable_Display_OFF` · `OFF` · †<br>Set_Etable_Display → OFF. Set etable display
+  - `DISP` — **SET** `Set_Etable_Display_ON` · `ON` · †<br>Set_Etable_Display → ON. Set etable display
   - `FORMat` — **SET** `Set_Etable_Format` · `<value>` · args: `value` · enum: `HEX` | `ASC` | `DEC` · †
+  - `FORMat` — **SET** `Set_Etable_Format_ASC` · `ASC` · †<br>Set_Etable_Format → ASC. Set etable format
+  - `FORMat` — **SET** `Set_Etable_Format_DEC` · `DEC` · †<br>Set_Etable_Format → DEC. Set etable format
+  - `FORMat` — **SET** `Set_Etable_Format_HEX` · `HEX` · †<br>Set_Etable_Format → HEX. Set etable format
   - `ROW` — **SET** `Set_Etable_Row` · `<value>` · args: `value` · integer · †
   - `SORT` — **SET** `Set_Etable_Sort` · `<value>` · args: `value` · enum: `ASC` | `DESC` · †
+  - `SORT` — **SET** `Set_Etable_Sort_ASC` · `ASC` · †<br>Set_Etable_Sort → ASC. Set etable sort
+  - `SORT` — **SET** `Set_Etable_Sort_DESC` · `DESC` · †<br>Set_Etable_Sort → DESC. Set etable sort
   - `VIEW` — **SET** `Set_Etable_View` · `<value>` · args: `value` · enum: `PACK` | `DET` | `PAYL` · †
+  - `VIEW` — **SET** `Set_Etable_View_DET` · `DET` · †<br>Set_Etable_View → DET. Set etable view
+  - `VIEW` — **SET** `Set_Etable_View_PACK` · `PACK` · †<br>Set_Etable_View → PACK. Set etable view
+  - `VIEW` — **SET** `Set_Etable_View_PAYL` · `PAYL` · †<br>Set_Etable_View → PAYL. Set etable view
   - `COLumn?` — **NAB** `Get_Etable_Color` · → CRD · †
   - `DATA?` — **NAB** `Get_Etable_Data` · → BLOCK · †
   - `DISP?` — **NAB** `Get_Etable_Display` · → BOOL · †
@@ -394,16 +754,30 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `FIXed?` — **NAB** `Get_Frequency_Fixed` · → 1 value · †<br>Set or query the output frequency of the specified source channel if the modulation is not enabled or the carrier frequency if the modulation is enabled
 - **`FUNCtion`**
   - `SHAPe` — **SET** `Set_Function_Shape` · `<value>` · args: `value` · enum: `SIN` | `SQU` | `RAMP` | `PULS` | `NOIS` | `DC` | `INTE` | `EXT` · †<br>Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_DC` · `DC` · †<br>Set_Function_Shape → DC. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_EXT` · `EXT` · †<br>Set_Function_Shape → EXT. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_INTE` · `INTE` · †<br>Set_Function_Shape → INTE. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_NOIS` · `NOIS` · †<br>Set_Function_Shape → NOIS. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_PULS` · `PULS` · †<br>Set_Function_Shape → PULS. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_RAMP` · `RAMP` · †<br>Set_Function_Shape → RAMP. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_SIN` · `SIN` · †<br>Set_Function_Shape → SIN. Select or query the output waveform when the modulation of the specified source channel is not enabled
+  - `SHAPe` — **SET** `Set_Function_Shape_SQU` · `SQU` · †<br>Set_Function_Shape → SQU. Select or query the output waveform when the modulation of the specified source channel is not enabled
   - `SHAPe?` — **NAB** `Get_Function_Shape` · → CRD · †<br>Select or query the output waveform when the modulation of the specified source channel is not enabled
   - **`RAMP`**
     - `SYMMetry` — **SET** `Set_Function_Ramp_Symmetry` · `<value>` · args: `value` · †<br>Set or query the ramp symmetry (the percentage that the rising period takes up in the whole period) of the specified source channel
     - `SYMMetry?` — **NAB** `Get_Function_Ramp_Symmetry` · → 1 value · †<br>Set or query the ramp symmetry (the percentage that the rising period takes up in the whole period) of the specified source channel
   - **`WRECord`**
     - `ENABle` — **SET** `Set_Function_Wrecord_Enable` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the waveform recording function, or query the status of the waveform recording function
+    - `ENABle` — **SET** `Set_Function_Wrecord_Enable_OFF` · `OFF` · †<br>Set_Function_Wrecord_Enable → OFF. Turn on or off the waveform recording function, or query the status of the waveform recording function
+    - `ENABle` — **SET** `Set_Function_Wrecord_Enable_ON` · `ON` · †<br>Set_Function_Wrecord_Enable → ON. Turn on or off the waveform recording function, or query the status of the waveform recording function
     - `FEND` — **SET** `Set_Function_Wrecord_Fend` · `<value>` · args: `value` · integer · †<br>Set or query the end frame of waveform recording
     - `FINTerval` — **SET** `Set_Function_Wrecord_Finterval` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the time interval between frames in waveform recording
     - `OPERate` — **SET** `Set_Function_Wrecord_Operator` · `<value>` · args: `value` · enum: `RUN` | `STOP` · †<br>Start or stop the waveform recording, or query the status of the waveform recording
+    - `OPERate` — **SET** `Set_Function_Wrecord_Operator_RUN` · `RUN` · †<br>Set_Function_Wrecord_Operator → RUN. Start or stop the waveform recording, or query the status of the waveform recording
+    - `OPERate` — **SET** `Set_Function_Wrecord_Operator_STOP` · `STOP` · †<br>Set_Function_Wrecord_Operator → STOP. Start or stop the waveform recording, or query the status of the waveform recording
     - `PROMpt` — **SET** `Set_Function_Wrecord_Prompt` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the sound prompt when the recording finishes, or query the status of the sound prompt when the recording finishes
+    - `PROMpt` — **SET** `Set_Function_Wrecord_Prompt_OFF` · `OFF` · †<br>Set_Function_Wrecord_Prompt → OFF. Turn on or off the sound prompt when the recording finishes, or query the status of the sound prompt when the recording finishes
+    - `PROMpt` — **SET** `Set_Function_Wrecord_Prompt_ON` · `ON` · †<br>Set_Function_Wrecord_Prompt → ON. Turn on or off the sound prompt when the recording finishes, or query the status of the sound prompt when the recording finishes
     - `ENABle?` — **NAB** `Get_Function_Wrecord_Enable` · → NR1 · †<br>Turn on or off the waveform recording function, or query the status of the waveform recording function
     - `FEND?` — **NAB** `Get_Function_Wrecord_Fend` · → 1 value · †<br>Set or query the end frame of waveform recording
     - `FINTerval?` — **NAB** `Get_Function_Wrecord_Finterval` · → 1 value · †<br>Set or query the time interval between frames in waveform recording
@@ -412,12 +786,19 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `PROMpt?` — **NAB** `Get_Function_Wrecord_Prompt` · → 1 value · †<br>Turn on or off the sound prompt when the recording finishes, or query the status of the sound prompt when the recording finishes
   - **`WREPlay`**
     - `DIRection` — **SET** `Set_Function_Wreplay_Direction` · `<value>` · args: `value` · enum: `FORW` | `BACK` · †<br>Set or query the waveform playback direction
+    - `DIRection` — **SET** `Set_Function_Wreplay_Direction_BACK` · `BACK` · †<br>Set_Function_Wreplay_Direction → BACK. Set or query the waveform playback direction
+    - `DIRection` — **SET** `Set_Function_Wreplay_Direction_FORW` · `FORW` · †<br>Set_Function_Wreplay_Direction → FORW. Set or query the waveform playback direction
     - `FCURrent` — **SET** `Set_Function_Wreplay_Fcurrent` · `<value>` · args: `value` · integer · †<br>Set or query the current frame in waveform playback
     - `FEND` — **SET** `Set_Function_Wreplay_Fend` · `<value>` · args: `value` · integer · †<br>Set or query the end frame of waveform playback
     - `FINTerval` — **SET** `Set_Function_Wreplay_Finterval` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the time interval between frames in waveform playback
     - `FSTart` — **SET** `Set_Function_Wreplay_Fstart` · `<value>` · args: `value` · integer · †<br>Set or query the start frame of waveform playback
     - `MODE` — **SET** `Set_Function_Wreplay_Mode` · `<value>` · args: `value` · enum: `REP` | `SING` · †<br>Set or query the waveform playback mode
+    - `MODE` — **SET** `Set_Function_Wreplay_Mode_REP` · `REP` · †<br>Set_Function_Wreplay_Mode → REP. Set or query the waveform playback mode
+    - `MODE` — **SET** `Set_Function_Wreplay_Mode_SING` · `SING` · †<br>Set_Function_Wreplay_Mode → SING. Set or query the waveform playback mode
     - `OPERate` — **SET** `Set_Function_Wreplay_Operator` · `<value>` · args: `value` · enum: `PLAY` | `PAUS` | `STOP` · †<br>Start, pause, or stop the waveform playback, or query the status of the waveform playback
+    - `OPERate` — **SET** `Set_Function_Wreplay_Operator_PAUS` · `PAUS` · †<br>Set_Function_Wreplay_Operator → PAUS. Start, pause, or stop the waveform playback, or query the status of the waveform playback
+    - `OPERate` — **SET** `Set_Function_Wreplay_Operator_PLAY` · `PLAY` · †<br>Set_Function_Wreplay_Operator → PLAY. Start, pause, or stop the waveform playback, or query the status of the waveform playback
+    - `OPERate` — **SET** `Set_Function_Wreplay_Operator_STOP` · `STOP` · †<br>Set_Function_Wreplay_Operator → STOP. Start, pause, or stop the waveform playback, or query the status of the waveform playback
     - `DIRection?` — **NAB** `Get_Function_Wreplay_Direction` · → 1 value · †<br>Set or query the waveform playback direction
     - `FCURrent?` — **NAB** `Get_Function_Wreplay_Fcurrent` · → 1 value · †<br>Set or query the current frame in waveform playback
     - `FEND?` — **NAB** `Get_Function_Wreplay_Fend` · → 1 value · †<br>Set or query the end frame of waveform playback
@@ -428,9 +809,31 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `OPERate?` — **NAB** `Get_Function_Wreplay_Operator` · → CRD · †<br>Start, pause, or stop the waveform playback, or query the status of the waveform playback
 - **`LA`**
   - `ACTive` — **SET** `Set_La_Active` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` · †<br>Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D0` · `D0` · †<br>Set_La_Active → D0. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D1` · `D1` · †<br>Set_La_Active → D1. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D10` · `D10` · †<br>Set_La_Active → D10. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D11` · `D11` · †<br>Set_La_Active → D11. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D12` · `D12` · †<br>Set_La_Active → D12. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D13` · `D13` · †<br>Set_La_Active → D13. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D14` · `D14` · †<br>Set_La_Active → D14. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D15` · `D15` · †<br>Set_La_Active → D15. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D2` · `D2` · †<br>Set_La_Active → D2. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D3` · `D3` · †<br>Set_La_Active → D3. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D4` · `D4` · †<br>Set_La_Active → D4. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D5` · `D5` · †<br>Set_La_Active → D5. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D6` · `D6` · †<br>Set_La_Active → D6. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D7` · `D7` · †<br>Set_La_Active → D7. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D8` · `D8` · †<br>Set_La_Active → D8. Set or query the current active channel or channel group
+  - `ACTive` — **SET** `Set_La_Active_D9` · `D9` · †<br>Set_La_Active → D9. Set or query the current active channel or channel group
   - `DISPlay` — **SET** `Set_La_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the specified digital channel, user-defined channel group or default channel group, or query the status of the specified digital channel, user-defined channel group or default channel group
+  - `DISPlay` — **SET** `Set_La_Display_OFF` · `OFF` · †<br>Set_La_Display → OFF. Turn on or off the specified digital channel, user-defined channel group or default channel group, or query the status of the specified digital channel, user-defined channel group or default channel group
+  - `DISPlay` — **SET** `Set_La_Display_ON` · `ON` · †<br>Set_La_Display → ON. Turn on or off the specified digital channel, user-defined channel group or default channel group, or query the status of the specified digital channel, user-defined channel group or default channel group
   - `SIZE` — **SET** `Set_La_Size` · `<value>` · args: `value` · enum: `SMAL` | `LARG` · †<br>Set or query the display size of the waveforms of the channels turned on on the screen
+  - `SIZE` — **SET** `Set_La_Size_LARG` · `LARG` · †<br>Set_La_Size → LARG. Set or query the display size of the waveforms of the channels turned on on the screen
+  - `SIZE` — **SET** `Set_La_Size_SMAL` · `SMAL` · †<br>Set_La_Size → SMAL. Set or query the display size of the waveforms of the channels turned on on the screen
   - `STATe` — **SET** `Set_La_Statistic` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the LA function, or query the status of the LA function
+  - `STATe` — **SET** `Set_La_Statistic_OFF` · `OFF` · †<br>Set_La_Statistic → OFF. Turn on or off the LA function, or query the status of the LA function
+  - `STATe` — **SET** `Set_La_Statistic_ON` · `ON` · †<br>Set_La_Statistic → ON. Turn on or off the LA function, or query the status of the LA function
   - `TCALibrate` — **SET** `Set_La_Tcalibrate` · `<value>` · args: `value` · numeric (s) · †
   - `ACTive?` — **NAB** `Get_La_Active` · → BOOL · †<br>Set or query the current active channel or channel group
   - `DISPlay?` — **NAB** `Get_La_Display` · → BOOL · †<br>Turn on or off the specified digital channel, user-defined channel group or default channel group, or query the status of the specified digital channel, user-defined channel group or default channel group
@@ -445,19 +848,37 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `POSition?` — **NAB** `Get_La_Digital_Positive` · → NR3 · †
   - **`DIGital3`**
     - `DISPlay` — **SET** `Set_La_Digital_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `DISPlay` — **SET** `Set_La_Digital_Display_OFF` · `OFF` · †<br>Set_La_Digital_Display → OFF. Set la digital display
+    - `DISPlay` — **SET** `Set_La_Digital_Display_ON` · `ON` · †<br>Set_La_Digital_Display → ON. Set la digital display
     - `DISPlay?` — **NAB** `Get_La_Digital_Display` · → BOOL · †
   - **`POD1`**
     - `DISPlay` — **SET** `Set_La_Pod_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+    - `DISPlay` — **SET** `Set_La_Pod_Display_OFF` · `OFF` · †<br>Set_La_Pod_Display → OFF. Set la pod display
+    - `DISPlay` — **SET** `Set_La_Pod_Display_ON` · `ON` · †<br>Set_La_Pod_Display → ON. Set la pod display
     - `THReshold` — **SET** `Set_La_Pod_Threshold` · `<value>` · args: `value` · numeric · †
     - `DISPlay?` — **NAB** `Get_La_Pod_Display` · → BOOL · †
     - `THReshold?` — **NAB** `Get_La_Pod_Threshold` · → NR3 · †
 - **`MASK`**
   - `ENABle` — **SET** `Set_Mask_Enable` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the pass/fail test or query the status of the past/fail test
+  - `ENABle` — **SET** `Set_Mask_Enable_OFF` · `OFF` · †<br>Set_Mask_Enable → OFF. Enable or disable the pass/fail test or query the status of the past/fail test
+  - `ENABle` — **SET** `Set_Mask_Enable_ON` · `ON` · †<br>Set_Mask_Enable → ON. Enable or disable the pass/fail test or query the status of the past/fail test
   - `MDISplay` — **SET** `Set_Mask_Mdisplay` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the statistic information when the pass/fail test is enabled, or query the status of the statistic information
+  - `MDISplay` — **SET** `Set_Mask_Mdisplay_OFF` · `OFF` · †<br>Set_Mask_Mdisplay → OFF. Enable or disable the statistic information when the pass/fail test is enabled, or query the status of the statistic information
+  - `MDISplay` — **SET** `Set_Mask_Mdisplay_ON` · `ON` · †<br>Set_Mask_Mdisplay → ON. Enable or disable the statistic information when the pass/fail test is enabled, or query the status of the statistic information
   - `OPERate` — **SET** `Set_Mask_Operator` · `<value>` · args: `value` · enum: `RUN` | `STOP` · †<br>Run or stop the pass/fail test, or query the status of the pass/fail test
+  - `OPERate` — **SET** `Set_Mask_Operator_RUN` · `RUN` · †<br>Set_Mask_Operator → RUN. Run or stop the pass/fail test, or query the status of the pass/fail test
+  - `OPERate` — **SET** `Set_Mask_Operator_STOP` · `STOP` · †<br>Set_Mask_Operator → STOP. Run or stop the pass/fail test, or query the status of the pass/fail test
   - `OUTPut` — **SET** `Set_Mask_Output` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the sound prompt when failed waveforms are detected, or query the status of the sound prompt
+  - `OUTPut` — **SET** `Set_Mask_Output_OFF` · `OFF` · †<br>Set_Mask_Output → OFF. Enable or disable the sound prompt when failed waveforms are detected, or query the status of the sound prompt
+  - `OUTPut` — **SET** `Set_Mask_Output_ON` · `ON` · †<br>Set_Mask_Output → ON. Enable or disable the sound prompt when failed waveforms are detected, or query the status of the sound prompt
   - `SOOutput` — **SET** `Set_Mask_Sooutput` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn the "Stop on Fail" function on or off, or query the status of the "Stop on Fail" function
+  - `SOOutput` — **SET** `Set_Mask_Sooutput_OFF` · `OFF` · †<br>Set_Mask_Sooutput → OFF. Turn the "Stop on Fail" function on or off, or query the status of the "Stop on Fail" function
+  - `SOOutput` — **SET** `Set_Mask_Sooutput_ON` · `ON` · †<br>Set_Mask_Sooutput → ON. Turn the "Stop on Fail" function on or off, or query the status of the "Stop on Fail" function
   - `SOURce` — **SET** `Set_Mask_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †
+  - `SOURce` — **SET** `Set_Mask_Source_CHAN1` · `CHAN1` · †<br>Set_Mask_Source → CHAN1. Set mask source
+  - `SOURce` — **SET** `Set_Mask_Source_CHAN2` · `CHAN2` · †<br>Set_Mask_Source → CHAN2. Set mask source
+  - `SOURce` — **SET** `Set_Mask_Source_CHAN3` · `CHAN3` · †<br>Set_Mask_Source → CHAN3. Set mask source
+  - `SOURce` — **SET** `Set_Mask_Source_CHAN4` · `CHAN4` · †<br>Set_Mask_Source → CHAN4. Set mask source
   - `ENABle?` — **NAB** `Get_Mask_Enable` · → NR1 · †<br>Enable or disable the pass/fail test or query the status of the past/fail test
   - `FAILed?` — **NAB** `Get_Mask_Failed` · → 1 value · †<br>Query the number of failed frames in the pass/fail test
   - `MDISplay?` — **NAB** `Get_Mask_Mdisplay` · → 1 value · †<br>Enable or disable the statistic information when the pass/fail test is enabled, or query the status of the statistic information
@@ -471,10 +892,31 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `RESet` — **DO** `Do_Mask_Reset` · †<br>Reset the numbers of passed frames and failed frames as well as the total number of frames in the pass/fail test to 0
 - **`MATH`**
   - `DISPlay` — **SET** `Set_Math_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the math operation function or query the math operation status
+  - `DISPlay` — **SET** `Set_Math_Display_OFF` · `OFF` · †<br>Set_Math_Display → OFF. Enable or disable the math operation function or query the math operation status
+  - `DISPlay` — **SET** `Set_Math_Display_ON` · `ON` · †<br>Set_Math_Display → ON. Enable or disable the math operation function or query the math operation status
   - `INVert` — **SET** `Set_Math_Invert` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
+  - `INVert` — **SET** `Set_Math_Invert_OFF` · `OFF` · †<br>Set_Math_Invert → OFF. Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
+  - `INVert` — **SET** `Set_Math_Invert_ON` · `ON` · †<br>Set_Math_Invert → ON. Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
   - `LSOUrce<chan>` — **SET** `Set_Math_Lsou` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · per-instance: `chan` · †<br>Set or query source A of logic operation
   - `OFFSet` — **SET** `Set_Math_Offset` · `<value>` · args: `value` · numeric · †<br>Set or query the vertical offset of the operation result
   - `OPERator` — **SET** `Set_Math_Operator` · `<value>` · args: `value` · enum: `ADD` | `SUBT` | `MULT` | `DIV` | `AND` | `OR` | `XOR` | `NOT` | `FFT` | `INTG` | `DIFF` | `SQRT` | `LOG` | `LN` | `EXP` | `ABS` | `FILT` · †<br>Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_ABS` · `ABS` · †<br>Set_Math_Operator → ABS. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_ADD` · `ADD` · †<br>Set_Math_Operator → ADD. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_AND` · `AND` · †<br>Set_Math_Operator → AND. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_DIFF` · `DIFF` · †<br>Set_Math_Operator → DIFF. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_DIV` · `DIV` · †<br>Set_Math_Operator → DIV. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_EXP` · `EXP` · †<br>Set_Math_Operator → EXP. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_FFT` · `FFT` · †<br>Set_Math_Operator → FFT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_FILT` · `FILT` · †<br>Set_Math_Operator → FILT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_INTG` · `INTG` · †<br>Set_Math_Operator → INTG. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_LN` · `LN` · †<br>Set_Math_Operator → LN. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_LOG` · `LOG` · †<br>Set_Math_Operator → LOG. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_MULT` · `MULT` · †<br>Set_Math_Operator → MULT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_NOT` · `NOT` · †<br>Set_Math_Operator → NOT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_OR` · `OR` · †<br>Set_Math_Operator → OR. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_SQRT` · `SQRT` · †<br>Set_Math_Operator → SQRT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_SUBT` · `SUBT` · †<br>Set_Math_Operator → SUBT. Set or query the operator of the math operation
+  - `OPERator` — **SET** `Set_Math_Operator_XOR` · `XOR` · †<br>Set_Math_Operator → XOR. Set or query the operator of the math operation
   - `SCALe` — **SET** `Set_Math_Scale` · `<value>` · args: `value` · numeric · †<br>Set or query the vertical scale of the operation result
   - `SOURce<chan>` — **SET** `Set_Math_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `FX` · per-instance: `chan` · †<br>Set or query the source or source A of algebraic operation/functional operation/the outer layer operation of compound operation
   - `DISPlay?` — **NAB** `Get_Math_Display` · → BOOL · †<br>Enable or disable the math operation function or query the math operation status
@@ -490,10 +932,26 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `HCENter` — **SET** `Set_Math_Fft_Hcenter` · `<value>` · args: `value` · numeric · †<br>Set or query the center frequency of the FFT operation result, namely the frequency relative to the horizontal center of the screen
     - `HSCale` — **SET** `Set_Math_Fft_Hscale` · `<value>` · args: `value` · numeric · †<br>Set or query the horizontal scale of the FFT operation result
     - `MODE` — **SET** `Set_Math_Fft_Mode` · `<value>` · args: `value` · enum: `TRAC` | `MEM` · †<br>Set or query the FFT mode
+    - `MODE` — **SET** `Set_Math_Fft_Mode_MEM` · `MEM` · †<br>Set_Math_Fft_Mode → MEM. Set or query the FFT mode
+    - `MODE` — **SET** `Set_Math_Fft_Mode_TRAC` · `TRAC` · †<br>Set_Math_Fft_Mode → TRAC. Set or query the FFT mode
     - `SOURce` — **SET** `Set_Math_Fft_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the source of FFT operation/filter
+    - `SOURce` — **SET** `Set_Math_Fft_Source_CHAN1` · `CHAN1` · †<br>Set_Math_Fft_Source → CHAN1. Set or query the source of FFT operation/filter
+    - `SOURce` — **SET** `Set_Math_Fft_Source_CHAN2` · `CHAN2` · †<br>Set_Math_Fft_Source → CHAN2. Set or query the source of FFT operation/filter
+    - `SOURce` — **SET** `Set_Math_Fft_Source_CHAN3` · `CHAN3` · †<br>Set_Math_Fft_Source → CHAN3. Set or query the source of FFT operation/filter
+    - `SOURce` — **SET** `Set_Math_Fft_Source_CHAN4` · `CHAN4` · †<br>Set_Math_Fft_Source → CHAN4. Set or query the source of FFT operation/filter
     - `SPLit` — **SET** `Set_Math_Fft_Split` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the half-screen display mode of the FFT operation, or query the status of the half display mode of the FFT operation
+    - `SPLit` — **SET** `Set_Math_Fft_Split_OFF` · `OFF` · †<br>Set_Math_Fft_Split → OFF. Enable or disable the half-screen display mode of the FFT operation, or query the status of the half display mode of the FFT operation
+    - `SPLit` — **SET** `Set_Math_Fft_Split_ON` · `ON` · †<br>Set_Math_Fft_Split → ON. Enable or disable the half-screen display mode of the FFT operation, or query the status of the half display mode of the FFT operation
     - `UNIT` — **SET** `Set_Math_Fft_Units` · `<value>` · args: `value` · enum: `VRMS` | `DB` · †<br>Set or query the vertical unit of the FFT operation result
+    - `UNIT` — **SET** `Set_Math_Fft_Units_DB` · `DB` · †<br>Set_Math_Fft_Units → DB. Set or query the vertical unit of the FFT operation result
+    - `UNIT` — **SET** `Set_Math_Fft_Units_VRMS` · `VRMS` · †<br>Set_Math_Fft_Units → VRMS. Set or query the vertical unit of the FFT operation result
     - `WINDow` — **SET** `Set_Math_Fft_Windows` · `<value>` · args: `value` · enum: `RECT` | `BLAC` | `HANN` | `HAMM` | `FLAT` | `TRI` · †<br>Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_BLAC` · `BLAC` · †<br>Set_Math_Fft_Windows → BLAC. Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_FLAT` · `FLAT` · †<br>Set_Math_Fft_Windows → FLAT. Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_HAMM` · `HAMM` · †<br>Set_Math_Fft_Windows → HAMM. Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_HANN` · `HANN` · †<br>Set_Math_Fft_Windows → HANN. Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_RECT` · `RECT` · †<br>Set_Math_Fft_Windows → RECT. Set or query the window function of the FFT operation
+    - `WINDow` — **SET** `Set_Math_Fft_Windows_TRI` · `TRI` · †<br>Set_Math_Fft_Windows → TRI. Set or query the window function of the FFT operation
     - `HCENter?` — **NAB** `Get_Math_Fft_Hcenter` · → 1 value · †<br>Set or query the center frequency of the FFT operation result, namely the frequency relative to the horizontal center of the screen
     - `HSCale?` — **NAB** `Get_Math_Fft_Hscale` · → 1 value · †<br>Set or query the horizontal scale of the FFT operation result
     - `MODE?` — **NAB** `Get_Math_Fft_Mode` · → CRD · †<br>Set or query the FFT mode
@@ -503,9 +961,13 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `WINDow?` — **NAB** `Get_Math_Fft_Windows` · → CRD · †<br>Set or query the window function of the FFT operation
   - **`OPTion`**
     - `ASCale` — **SET** `Set_Math_Option_Ascale` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the auto scale setting of the operation result or query the status of the auto scale setting
+    - `ASCale` — **SET** `Set_Math_Option_Ascale_OFF` · `OFF` · †<br>Set_Math_Option_Ascale → OFF. Enable or disable the auto scale setting of the operation result or query the status of the auto scale setting
+    - `ASCale` — **SET** `Set_Math_Option_Ascale_ON` · `ON` · †<br>Set_Math_Option_Ascale → ON. Enable or disable the auto scale setting of the operation result or query the status of the auto scale setting
     - `DIStance` — **SET** `Set_Math_Option_Distance` · `<value>` · args: `value` · integer · †<br>Set or query the smoothing window width of differential operation (diff)
     - `END` — **SET** `Set_Math_Option_Endian` · `<value>` · args: `value` · †
     - `INVert` — **SET** `Set_Math_Option_Invert` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
+    - `INVert` — **SET** `Set_Math_Option_Invert_OFF` · `OFF` · †<br>Set_Math_Option_Invert → OFF. Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
+    - `INVert` — **SET** `Set_Math_Option_Invert_ON` · `ON` · †<br>Set_Math_Option_Invert → ON. Enable or disable the inverted display mode of the operation result, or query the inverted display mode status of the operation result
     - `SENSitivity` — **SET** `Set_Math_Option_Sensitivity` · `<value>` · args: `value` · numeric · †<br>Set or query the sensitivity of the logic operation
     - `STARt` — **SET** `Set_Math_Option_Start` · `<value>` · args: `value` · integer · †<br>Set or query the start point of the waveform math operation
     - `THReshold<chan>` — **SET** `Set_Math_Option_Threshold` · `<value>` · args: `value` · numeric · per-instance: `chan` · †<br>Set or query the threshold level of source A in logic operations
@@ -518,13 +980,45 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `THReshold<chan>?` — **NAB** `Get_Math_Option_Threshold` · per-instance: `chan` · → NR3 · †<br>Set or query the threshold level of source A in logic operations
     - **`FX`**
       - `OPERator` — **SET** `Set_Math_Option_Fx_Operator` · `<value>` · args: `value` · enum: `ADD` | `SUBT` | `MULT` | `DIV` · †<br>Set or query the operator of the inner layer operation of compound operation
+      - `OPERator` — **SET** `Set_Math_Option_Fx_Operator_ADD` · `ADD` · †<br>Set_Math_Option_Fx_Operator → ADD. Set or query the operator of the inner layer operation of compound operation
+      - `OPERator` — **SET** `Set_Math_Option_Fx_Operator_DIV` · `DIV` · †<br>Set_Math_Option_Fx_Operator → DIV. Set or query the operator of the inner layer operation of compound operation
+      - `OPERator` — **SET** `Set_Math_Option_Fx_Operator_MULT` · `MULT` · †<br>Set_Math_Option_Fx_Operator → MULT. Set or query the operator of the inner layer operation of compound operation
+      - `OPERator` — **SET** `Set_Math_Option_Fx_Operator_SUBT` · `SUBT` · †<br>Set_Math_Option_Fx_Operator → SUBT. Set or query the operator of the inner layer operation of compound operation
       - `SOURce<chan>` — **SET** `Set_Math_Option_Fx_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · per-instance: `chan` · †<br>Set or query source A of the inner layer operation of compound operation
       - `OPERator?` — **NAB** `Get_Math_Option_Fx_Operator` · → CRD · †<br>Set or query the operator of the inner layer operation of compound operation
       - `SOURce<chan>?` — **NAB** `Get_Math_Option_Fx_Source` · per-instance: `chan` · → CRD · †<br>Set or query source A of the inner layer operation of compound operation
 - **`MEASure`**
   - `ADISplay` — **SET** `Set_Measure_Adisplay` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the all measurement function, or query the status of the all measurement function
+  - `ADISplay` — **SET** `Set_Measure_Adisplay_OFF` · `OFF` · †<br>Set_Measure_Adisplay → OFF. Enable or disable the all measurement function, or query the status of the all measurement function
+  - `ADISplay` — **SET** `Set_Measure_Adisplay_ON` · `ON` · †<br>Set_Measure_Adisplay → ON. Enable or disable the all measurement function, or query the status of the all measurement function
   - `AMSource` — **SET** `Set_Measure_Amsource` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `MATH` · †<br>Set or query the source(s) of the all measurement function
+  - `AMSource` — **SET** `Set_Measure_Amsource_CHAN1` · `CHAN1` · †<br>Set_Measure_Amsource → CHAN1. Set or query the source(s) of the all measurement function
+  - `AMSource` — **SET** `Set_Measure_Amsource_CHAN2` · `CHAN2` · †<br>Set_Measure_Amsource → CHAN2. Set or query the source(s) of the all measurement function
+  - `AMSource` — **SET** `Set_Measure_Amsource_CHAN3` · `CHAN3` · †<br>Set_Measure_Amsource → CHAN3. Set or query the source(s) of the all measurement function
+  - `AMSource` — **SET** `Set_Measure_Amsource_CHAN4` · `CHAN4` · †<br>Set_Measure_Amsource → CHAN4. Set or query the source(s) of the all measurement function
+  - `AMSource` — **SET** `Set_Measure_Amsource_MATH` · `MATH` · †<br>Set_Measure_Amsource → MATH. Set or query the source(s) of the all measurement function
   - `SOURce` — **SET** `Set_Measure_Source` · `<source>` · args: `source` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `MATH`
+  - `SOURce` — **SET** `Set_Measure_Source_CHAN1` · `CHAN1` · †<br>Set_Measure_Source → CHAN1. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_CHAN2` · `CHAN2` · †<br>Set_Measure_Source → CHAN2. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_CHAN3` · `CHAN3` · †<br>Set_Measure_Source → CHAN3. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_CHAN4` · `CHAN4` · †<br>Set_Measure_Source → CHAN4. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D0` · `D0` · †<br>Set_Measure_Source → D0. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D1` · `D1` · †<br>Set_Measure_Source → D1. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D10` · `D10` · †<br>Set_Measure_Source → D10. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D11` · `D11` · †<br>Set_Measure_Source → D11. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D12` · `D12` · †<br>Set_Measure_Source → D12. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D13` · `D13` · †<br>Set_Measure_Source → D13. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D14` · `D14` · †<br>Set_Measure_Source → D14. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D15` · `D15` · †<br>Set_Measure_Source → D15. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D2` · `D2` · †<br>Set_Measure_Source → D2. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D3` · `D3` · †<br>Set_Measure_Source → D3. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D4` · `D4` · †<br>Set_Measure_Source → D4. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D5` · `D5` · †<br>Set_Measure_Source → D5. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D6` · `D6` · †<br>Set_Measure_Source → D6. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D7` · `D7` · †<br>Set_Measure_Source → D7. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D8` · `D8` · †<br>Set_Measure_Source → D8. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_D9` · `D9` · †<br>Set_Measure_Source → D9. Set Measure Source
+  - `SOURce` — **SET** `Set_Measure_Source_MATH` · `MATH` · †<br>Set_Measure_Source → MATH. Set Measure Source
   - `ADISplay?` — **NAB** `Get_Measure_Adisplay` · → 1 value · †<br>Enable or disable the all measurement function, or query the status of the all measurement function
   - `AMSource?` — **NAB** `Get_Measure_Amsource` · → 1 value · †<br>Set or query the source(s) of the all measurement function
   - `SOURce?` — **NAB** `Get_Measure_Source` · → CRD · †<br>Set or query the source of the current measurement parameter
@@ -534,12 +1028,74 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CLEar` — **DO** `Execute Command`<br>Execute Command
   - **`COUNter`**
     - `SOURce` — **SET** `Set_Measure_Counter_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `OFF` · †<br>Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_CHAN1` · `CHAN1` · †<br>Set_Measure_Counter_Source → CHAN1. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_CHAN2` · `CHAN2` · †<br>Set_Measure_Counter_Source → CHAN2. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_CHAN3` · `CHAN3` · †<br>Set_Measure_Counter_Source → CHAN3. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_CHAN4` · `CHAN4` · †<br>Set_Measure_Counter_Source → CHAN4. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D0` · `D0` · †<br>Set_Measure_Counter_Source → D0. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D1` · `D1` · †<br>Set_Measure_Counter_Source → D1. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D10` · `D10` · †<br>Set_Measure_Counter_Source → D10. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D11` · `D11` · †<br>Set_Measure_Counter_Source → D11. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D12` · `D12` · †<br>Set_Measure_Counter_Source → D12. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D13` · `D13` · †<br>Set_Measure_Counter_Source → D13. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D14` · `D14` · †<br>Set_Measure_Counter_Source → D14. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D15` · `D15` · †<br>Set_Measure_Counter_Source → D15. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D2` · `D2` · †<br>Set_Measure_Counter_Source → D2. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D3` · `D3` · †<br>Set_Measure_Counter_Source → D3. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D4` · `D4` · †<br>Set_Measure_Counter_Source → D4. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D5` · `D5` · †<br>Set_Measure_Counter_Source → D5. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D6` · `D6` · †<br>Set_Measure_Counter_Source → D6. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D7` · `D7` · †<br>Set_Measure_Counter_Source → D7. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D8` · `D8` · †<br>Set_Measure_Counter_Source → D8. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_D9` · `D9` · †<br>Set_Measure_Counter_Source → D9. Set or query the source of the frequency counter, or disable the frequency counter
+    - `SOURce` — **SET** `Set_Measure_Counter_Source_OFF` · `OFF` · †<br>Set_Measure_Counter_Source → OFF. Set or query the source of the frequency counter, or disable the frequency counter
     - `SOURce?` — **NAB** `Get_Measure_Counter_Source` · → CRD · †<br>Set or query the source of the frequency counter, or disable the frequency counter
     - `VALue?` — **NAB** `Get_Measure_Counter_Value` · → NR3 · †<br>Query the measurement result of the frequency counter
   - **`STATistic`**
     - `ITEM` — **SET** `Set_Measure_Statistic_Item` · `<value>` · args: `value` · enum: `VMAX` | `VMIN` | `VPP` | `VTOP` | `VBAS` | `VAMP` | `VAVG` | `VRMS` | `OVER` | `PRES` | `MAR` | `MPAR` | `PER` | `FREQ` | `RTIM` | `FTIM` | `PWID` | `NWID` | `PDUT` | `NDUT` | `RDEL` | `FDEL` | `RPH` | `FPH` | `TVMAX` | `TVMIN` | `PSLEW` | `NSLEW` | `VUP` | `VMID` | `VLOW` | `VARI` | `PVRMS` | `PPUL` | `NPUL` | `PEDG` | `NEDG` · †<br>Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_FDEL` · `FDEL` · †<br>Set_Measure_Statistic_Item → FDEL. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_FPH` · `FPH` · †<br>Set_Measure_Statistic_Item → FPH. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_FREQ` · `FREQ` · †<br>Set_Measure_Statistic_Item → FREQ. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_FTIM` · `FTIM` · †<br>Set_Measure_Statistic_Item → FTIM. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_MAR` · `MAR` · †<br>Set_Measure_Statistic_Item → MAR. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_MPAR` · `MPAR` · †<br>Set_Measure_Statistic_Item → MPAR. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_NDUT` · `NDUT` · †<br>Set_Measure_Statistic_Item → NDUT. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_NEDG` · `NEDG` · †<br>Set_Measure_Statistic_Item → NEDG. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_NPUL` · `NPUL` · †<br>Set_Measure_Statistic_Item → NPUL. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_NSLEW` · `NSLEW` · †<br>Set_Measure_Statistic_Item → NSLEW. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_NWID` · `NWID` · †<br>Set_Measure_Statistic_Item → NWID. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_OVER` · `OVER` · †<br>Set_Measure_Statistic_Item → OVER. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PDUT` · `PDUT` · †<br>Set_Measure_Statistic_Item → PDUT. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PEDG` · `PEDG` · †<br>Set_Measure_Statistic_Item → PEDG. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PER` · `PER` · †<br>Set_Measure_Statistic_Item → PER. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PPUL` · `PPUL` · †<br>Set_Measure_Statistic_Item → PPUL. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PRES` · `PRES` · †<br>Set_Measure_Statistic_Item → PRES. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PSLEW` · `PSLEW` · †<br>Set_Measure_Statistic_Item → PSLEW. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PVRMS` · `PVRMS` · †<br>Set_Measure_Statistic_Item → PVRMS. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_PWID` · `PWID` · †<br>Set_Measure_Statistic_Item → PWID. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_RDEL` · `RDEL` · †<br>Set_Measure_Statistic_Item → RDEL. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_RPH` · `RPH` · †<br>Set_Measure_Statistic_Item → RPH. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_RTIM` · `RTIM` · †<br>Set_Measure_Statistic_Item → RTIM. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_TVMAX` · `TVMAX` · †<br>Set_Measure_Statistic_Item → TVMAX. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_TVMIN` · `TVMIN` · †<br>Set_Measure_Statistic_Item → TVMIN. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VAMP` · `VAMP` · †<br>Set_Measure_Statistic_Item → VAMP. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VARI` · `VARI` · †<br>Set_Measure_Statistic_Item → VARI. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VAVG` · `VAVG` · †<br>Set_Measure_Statistic_Item → VAVG. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VBAS` · `VBAS` · †<br>Set_Measure_Statistic_Item → VBAS. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VLOW` · `VLOW` · †<br>Set_Measure_Statistic_Item → VLOW. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VMAX` · `VMAX` · †<br>Set_Measure_Statistic_Item → VMAX. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VMID` · `VMID` · †<br>Set_Measure_Statistic_Item → VMID. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VMIN` · `VMIN` · †<br>Set_Measure_Statistic_Item → VMIN. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VPP` · `VPP` · †<br>Set_Measure_Statistic_Item → VPP. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VRMS` · `VRMS` · †<br>Set_Measure_Statistic_Item → VRMS. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VTOP` · `VTOP` · †<br>Set_Measure_Statistic_Item → VTOP. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
+    - `ITEM` — **SET** `Set_Measure_Statistic_Item_VUP` · `VUP` · †<br>Set_Measure_Statistic_Item → VUP. Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
     - `MODE` — **SET** `Set_Measure_Statistic_Mode` · `<value>` · args: `value` · enum: `DIFF` | `EXTR` · †<br>Set or query the statistic mode
+    - `MODE` — **SET** `Set_Measure_Statistic_Mode_DIFF` · `DIFF` · †<br>Set_Measure_Statistic_Mode → DIFF. Set or query the statistic mode
+    - `MODE` — **SET** `Set_Measure_Statistic_Mode_EXTR` · `EXTR` · †<br>Set_Measure_Statistic_Mode → EXTR. Set or query the statistic mode
     - `DISPlay` — **SET** `Show_Statistics` · `<state>` · args: `state` · bool: `OFF` | `ON`
+    - `DISPlay` — **SET** `Show_Statistics_OFF` · `OFF` · †<br>Show_Statistics → OFF. Show Statistics
+    - `DISPlay` — **SET** `Show_Statistics_ON` · `ON` · †<br>Show_Statistics → ON. Show Statistics
     - `DISPlay?` — **NAB** `Get_Measure_Statistic_Display` · → BOOL · †<br>Enable or disable the statistic function, or query the status of the statistic function
     - `ITEM?` — **NAB** `Get_Measure_Statistic_Item` · → 1 value · †<br>Enable the statistic function of any waveform parameter of the specified source, or query the statistic result of any waveform parameter of the specified source
     - `MODE?` — **NAB** `Get_Measure_Statistic_Mode` · → CRD · †<br>Set or query the statistic mode
@@ -548,7 +1104,11 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `AM` — **SET** `Set_Mod_Am` · `<value>` · args: `value` · †
   - `FM` — **SET** `Set_Mod_Fm` · `<value>` · args: `value` · †
   - `STATe` — **SET** `Set_Mod_Statistic` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the modulation of the specified source channel, or query the status of the modulation of the specified source channel
+  - `STATe` — **SET** `Set_Mod_Statistic_OFF` · `OFF` · †<br>Set_Mod_Statistic → OFF. Enable or disable the modulation of the specified source channel, or query the status of the modulation of the specified source channel
+  - `STATe` — **SET** `Set_Mod_Statistic_ON` · `ON` · †<br>Set_Mod_Statistic → ON. Enable or disable the modulation of the specified source channel, or query the status of the modulation of the specified source channel
   - `TYPe` — **SET** `Set_Mod_Type` · `<value>` · args: `value` · enum: `AM` | `FM` · †<br>Set or query the modulation type of the specified source channel
+  - `TYPe` — **SET** `Set_Mod_Type_AM` · `AM` · †<br>Set_Mod_Type → AM. Set or query the modulation type of the specified source channel
+  - `TYPe` — **SET** `Set_Mod_Type_FM` · `FM` · †<br>Set_Mod_Type → FM. Set or query the modulation type of the specified source channel
   - `AM?` — **NAB** `Get_Mod_Am` · → 1 value · †
   - `FM?` — **NAB** `Get_Mod_Fm` · → 1 value · †
   - `STATe?` — **NAB** `Get_Mod_Statistic` · → BOOL · †<br>Enable or disable the modulation of the specified source channel, or query the status of the modulation of the specified source channel
@@ -559,6 +1119,10 @@ Several statements in one message, so they hang off no single branch. Every stat
     - **`INTernal`**
       - `FREQuency` — **SET** `Set_Mod_Am_Internal_Frequency` · `<value>` · args: `value` · †<br>Set or query the modulating waveform frequency of AM or FM of the specified source channel
       - `FUNCtion` — **SET** `Set_Mod_Am_Internal_Function` · `<value>` · args: `value` · enum: `SIN` | `SQU` | `RAMP` | `NOIS` · †<br>Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Am_Internal_Function_NOIS` · `NOIS` · †<br>Set_Mod_Am_Internal_Function → NOIS. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Am_Internal_Function_RAMP` · `RAMP` · †<br>Set_Mod_Am_Internal_Function → RAMP. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Am_Internal_Function_SIN` · `SIN` · †<br>Set_Mod_Am_Internal_Function → SIN. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Am_Internal_Function_SQU` · `SQU` · †<br>Set_Mod_Am_Internal_Function → SQU. Set or query the modulating waveform of AM or FM of the specified source channel
       - `FREQuency?` — **NAB** `Get_Mod_Am_Internal_Frequency` · → 1 value · †<br>Set or query the modulating waveform frequency of AM or FM of the specified source channel
       - `FUNCtion?` — **NAB** `Get_Mod_Am_Internal_Function` · → CRD · †<br>Set or query the modulating waveform of AM or FM of the specified source channel
   - **`FM`**
@@ -567,10 +1131,16 @@ Several statements in one message, so they hang off no single branch. Every stat
     - **`INTernal`**
       - `FREQuency` — **SET** `Set_Mod_Fm_Internal_Frequency` · `<value>` · args: `value` · †<br>Set or query the modulating waveform frequency of AM or FM of the specified source channel
       - `FUNCtion` — **SET** `Set_Mod_Fm_Internal_Function` · `<value>` · args: `value` · enum: `SIN` | `SQU` | `RAMP` | `NOIS` · †<br>Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Fm_Internal_Function_NOIS` · `NOIS` · †<br>Set_Mod_Fm_Internal_Function → NOIS. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Fm_Internal_Function_RAMP` · `RAMP` · †<br>Set_Mod_Fm_Internal_Function → RAMP. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Fm_Internal_Function_SIN` · `SIN` · †<br>Set_Mod_Fm_Internal_Function → SIN. Set or query the modulating waveform of AM or FM of the specified source channel
+      - `FUNCtion` — **SET** `Set_Mod_Fm_Internal_Function_SQU` · `SQU` · †<br>Set_Mod_Fm_Internal_Function → SQU. Set or query the modulating waveform of AM or FM of the specified source channel
       - `FREQuency?` — **NAB** `Get_Mod_Fm_Internal_Frequency` · → 1 value · †<br>Set or query the modulating waveform frequency of AM or FM of the specified source channel
       - `FUNCtion?` — **NAB** `Get_Mod_Fm_Internal_Function` · → CRD · †<br>Set or query the modulating waveform of AM or FM of the specified source channel
 - **`OUTPut`**
   - `IMPedance` — **SET** `Set_Output_Impedance` · `<value>` · args: `value` · enum: `OMEG` | `FIFT` · †
+  - `IMPedance` — **SET** `Set_Output_Impedance_FIFT` · `FIFT` · †<br>Set_Output_Impedance → FIFT. Set output impedance
+  - `IMPedance` — **SET** `Set_Output_Impedance_OMEG` · `OMEG` · †<br>Set_Output_Impedance → OMEG. Set output impedance
   - `IMPedance?` — **NAB** `Get_Output_Impedance` · → CRD · †
 - **`PHASe`**
   - `ADJust` — **SET** `Set_Phase_Adjust` · `<value>` · args: `value` · †<br>Set or query the start phase of the specified source channel
@@ -581,11 +1151,41 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DCYCle?` — **NAB** `Get_Pulse_Dcycle` · → NR3 % · †<br>Set or query the pulse duty cycle (the percentage that the high level takes up in the whole period) of the specified source channel
 - **`REFerence`**
   - `DISPlay` — **SET** `Set_Reference_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the REF function, or query the status of the REF function
+  - `DISPlay` — **SET** `Set_Reference_Display_OFF` · `OFF` · †<br>Set_Reference_Display → OFF. Enable or disable the REF function, or query the status of the REF function
+  - `DISPlay` — **SET** `Set_Reference_Display_ON` · `ON` · †<br>Set_Reference_Display → ON. Enable or disable the REF function, or query the status of the REF function
   - `DISPlay?` — **NAB** `Get_Reference_Display` · → BOOL · †<br>Enable or disable the REF function, or query the status of the REF function
 - **`REFerence1`**
   - `COLor` — **SET** `Set_Reference_Color` · `<value>` · args: `value` · enum: `GRAY` | `GREE` | `LBL` | `MAG` | `ORAN` · †
+  - `COLor` — **SET** `Set_Reference_Color_GRAY` · `GRAY` · †<br>Set_Reference_Color → GRAY. Set reference color
+  - `COLor` — **SET** `Set_Reference_Color_GREE` · `GREE` · †<br>Set_Reference_Color → GREE. Set reference color
+  - `COLor` — **SET** `Set_Reference_Color_LBL` · `LBL` · †<br>Set_Reference_Color → LBL. Set reference color
+  - `COLor` — **SET** `Set_Reference_Color_MAG` · `MAG` · †<br>Set_Reference_Color → MAG. Set reference color
+  - `COLor` — **SET** `Set_Reference_Color_ORAN` · `ORAN` · †<br>Set_Reference_Color → ORAN. Set reference color
   - `ENABle` — **SET** `Set_Reference_Enable` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `ENABle` — **SET** `Set_Reference_Enable_OFF` · `OFF` · †<br>Set_Reference_Enable → OFF. Set reference enable
+  - `ENABle` — **SET** `Set_Reference_Enable_ON` · `ON` · †<br>Set_Reference_Enable → ON. Set reference enable
   - `SOURce` — **SET** `Set_Reference_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `MATH` · †
+  - `SOURce` — **SET** `Set_Reference_Source_CHAN1` · `CHAN1` · †<br>Set_Reference_Source → CHAN1. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_CHAN2` · `CHAN2` · †<br>Set_Reference_Source → CHAN2. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_CHAN3` · `CHAN3` · †<br>Set_Reference_Source → CHAN3. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_CHAN4` · `CHAN4` · †<br>Set_Reference_Source → CHAN4. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D0` · `D0` · †<br>Set_Reference_Source → D0. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D1` · `D1` · †<br>Set_Reference_Source → D1. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D10` · `D10` · †<br>Set_Reference_Source → D10. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D11` · `D11` · †<br>Set_Reference_Source → D11. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D12` · `D12` · †<br>Set_Reference_Source → D12. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D13` · `D13` · †<br>Set_Reference_Source → D13. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D14` · `D14` · †<br>Set_Reference_Source → D14. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D15` · `D15` · †<br>Set_Reference_Source → D15. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D2` · `D2` · †<br>Set_Reference_Source → D2. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D3` · `D3` · †<br>Set_Reference_Source → D3. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D4` · `D4` · †<br>Set_Reference_Source → D4. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D5` · `D5` · †<br>Set_Reference_Source → D5. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D6` · `D6` · †<br>Set_Reference_Source → D6. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D7` · `D7` · †<br>Set_Reference_Source → D7. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D8` · `D8` · †<br>Set_Reference_Source → D8. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_D9` · `D9` · †<br>Set_Reference_Source → D9. Set reference source
+  - `SOURce` — **SET** `Set_Reference_Source_MATH` · `MATH` · †<br>Set_Reference_Source → MATH. Set reference source
   - `VOFFset` — **SET** `Set_Reference_Voffset` · `<value>` · args: `value` · numeric · †<br>Commands
   - `VSCale` — **SET** `Set_Reference_Vscale` · `<value>` · args: `value` · numeric (V) · †
   - `COLor?` — **NAB** `Get_Reference_Color` · → CRD · †
@@ -596,15 +1196,37 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`STORage`**
   - **`IMAGe`**
     - `COLor` — **SET** `Set_Storage_Image_Color` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Set the image color when storing images to color (ON) or intensity graded color (OFF)
+    - `COLor` — **SET** `Set_Storage_Image_Color_OFF` · `OFF` · †<br>Set_Storage_Image_Color → OFF. Set the image color when storing images to color (ON) or intensity graded color (OFF)
+    - `COLor` — **SET** `Set_Storage_Image_Color_ON` · `ON` · †<br>Set_Storage_Image_Color → ON. Set the image color when storing images to color (ON) or intensity graded color (OFF)
     - `INVERT` — **SET** `Set_Storage_Image_Invert` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the invert function when storing images
+    - `INVERT` — **SET** `Set_Storage_Image_Invert_OFF` · `OFF` · †<br>Set_Storage_Image_Invert → OFF. Turn on or off the invert function when storing images
+    - `INVERT` — **SET** `Set_Storage_Image_Invert_ON` · `ON` · †<br>Set_Storage_Image_Invert → ON. Turn on or off the invert function when storing images
     - `COLor?` — **NAB** `Get_Storage_Image_Color` · → CRD · †<br>Set the image color when storing images to color (ON) or intensity graded color (OFF)
     - `INVERT?` — **NAB** `Get_Storage_Image_Invert` · → BOOL · †<br>Turn on or off the invert function when storing images
 - **`SYSTem`**
   - `AUToscale` — **SET** `Set_System_Autoscale` · `<value>` · args: `value` · bool: `OFF` | `ON` · †
+  - `AUToscale` — **SET** `Set_System_Autoscale_OFF` · `OFF` · †<br>Set_System_Autoscale → OFF. Set system autoscale
+  - `AUToscale` — **SET** `Set_System_Autoscale_ON` · `ON` · †<br>Set_System_Autoscale → ON. Set system autoscale
   - `BEEPer` — **SET** `Set_System_Beeper` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the beeper, or query the status of the beeper
+  - `BEEPer` — **SET** `Set_System_Beeper_OFF` · `OFF` · †<br>Set_System_Beeper → OFF. Enable or disable the beeper, or query the status of the beeper
+  - `BEEPer` — **SET** `Set_System_Beeper_ON` · `ON` · †<br>Set_System_Beeper → ON. Enable or disable the beeper, or query the status of the beeper
   - `LANGuage` — **SET** `Set_System_Language` · `<value>` · args: `value` · enum: `SCH` | `TCH` | `ENGL` | `PORT` | `GERM` | `POL` | `KOR` | `JAPA` | `FREN` | `RUSS` · †<br>Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_ENGL` · `ENGL` · †<br>Set_System_Language → ENGL. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_FREN` · `FREN` · †<br>Set_System_Language → FREN. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_GERM` · `GERM` · †<br>Set_System_Language → GERM. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_JAPA` · `JAPA` · †<br>Set_System_Language → JAPA. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_KOR` · `KOR` · †<br>Set_System_Language → KOR. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_POL` · `POL` · †<br>Set_System_Language → POL. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_PORT` · `PORT` · †<br>Set_System_Language → PORT. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_RUSS` · `RUSS` · †<br>Set_System_Language → RUSS. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_SCH` · `SCH` · †<br>Set_System_Language → SCH. Set or query the system language
+  - `LANGuage` — **SET** `Set_System_Language_TCH` · `TCH` · †<br>Set_System_Language → TCH. Set or query the system language
   - `LOCKed` — **SET** `Set_System_Locked` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the keyboard lock function, or query the status of the keyboard lock function
+  - `LOCKed` — **SET** `Set_System_Locked_OFF` · `OFF` · †<br>Set_System_Locked → OFF. Enable or disable the keyboard lock function, or query the status of the keyboard lock function
+  - `LOCKed` — **SET** `Set_System_Locked_ON` · `ON` · †<br>Set_System_Locked → ON. Enable or disable the keyboard lock function, or query the status of the keyboard lock function
   - `PON` — **SET** `Set_System_Pon` · `<value>` · args: `value` · enum: `LAT` | `DEF` · †<br>Set or query the system configuration to be recalled when the oscilloscope is powered on again after power-off
+  - `PON` — **SET** `Set_System_Pon_DEF` · `DEF` · †<br>Set_System_Pon → DEF. Set or query the system configuration to be recalled when the oscilloscope is powered on again after power-off
+  - `PON` — **SET** `Set_System_Pon_LAT` · `LAT` · †<br>Set_System_Pon → LAT. Set or query the system configuration to be recalled when the oscilloscope is powered on again after power-off
   - `AUToscale?` — **NAB** `Get_System_Autoscale` · → BOOL · †
   - `BEEPer?` — **NAB** `Get_System_Beeper` · → 1 value · †<br>Enable or disable the beeper, or query the status of the beeper
   - `GAM?` — **NAB** `Get_System_Gam` · → 1 value · †<br>Query the number of grids in the horizontal direction of the instrument screen
@@ -619,11 +1241,16 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `UNINSTall` — **DO** `Do_System_Option_Uninstall` · †<br>Uninstall the options installed
 - **`TIMebase`**
   - `MODE` — **SET** `Set_Timebase_Mode` · `<mode>` · args: `mode` · enum: `MAIN` | `XY` | `ROLL`
+  - `MODE` — **SET** `Set_Timebase_Mode_MAIN` · `MAIN` · †<br>Set_Timebase_Mode → MAIN. Set Timebase Mode
+  - `MODE` — **SET** `Set_Timebase_Mode_ROLL` · `ROLL` · †<br>Set_Timebase_Mode → ROLL. Set Timebase Mode
+  - `MODE` — **SET** `Set_Timebase_Mode_XY` · `XY` · †<br>Set_Timebase_Mode → XY. Set Timebase Mode
   - `OFFSet` — **SET** `Set_Timebase_Offset` · `<offset>` · args: `offset` · numeric (s)
   - `SCALe` — **SET** `Set_Timebase_Scale` · `<scale>` · args: `scale` · numeric (s)
   - `MODE?` — **NAB** `Get_Timebase_Mode` · → CRD s · †<br>Set or query the mode of the horizontal timebase
   - **`DELay`**
     - `ENABle` — **SET** `Set_Timebase_Delay_Enable` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable the delayed sweep, or query the status of the delayed sweep
+    - `ENABle` — **SET** `Set_Timebase_Delay_Enable_OFF` · `OFF` · †<br>Set_Timebase_Delay_Enable → OFF. Enable or disable the delayed sweep, or query the status of the delayed sweep
+    - `ENABle` — **SET** `Set_Timebase_Delay_Enable_ON` · `ON` · †<br>Set_Timebase_Delay_Enable → ON. Enable or disable the delayed sweep, or query the status of the delayed sweep
     - `OFFSet` — **SET** `Set_Timebase_Delay_Offset` · `<value>` · args: `value` · numeric · †<br>Set or query the delayed timebase offset
     - `SCALe` — **SET** `Set_Timebase_Delay_Scale` · `<value>` · args: `value` · numeric · †<br>Set or query the delayed timebase scale
     - `ENABle?` — **NAB** `Get_Timebase_Delay_Enable` · → NR1 s · †<br>Enable or disable the delayed sweep, or query the status of the delayed sweep
@@ -637,11 +1264,38 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `SCALe?` — **NAB** `Get_Timebase_Main_Scale` · → NR3 s · †<br>Commands
 - **`TRIGger`**
   - `SWEep` — **SET** `Set_Sweep` · `<sweep>` · args: `sweep` · enum: `AUTO` | `NORM` | `SING`
+  - `SWEep` — **SET** `Set_Sweep_AUTO` · `AUTO` · †<br>Set_Sweep → AUTO. Set Sweep
+  - `SWEep` — **SET** `Set_Sweep_NORM` · `NORM` · †<br>Set_Sweep → NORM. Set Sweep
+  - `SWEep` — **SET** `Set_Sweep_SING` · `SING` · †<br>Set_Sweep → SING. Set Sweep
   - `COUPling` — **SET** `Set_Trigger_Coupling` · `<value>` · args: `value` · enum: `AC` | `DC` | `LFR` | `HFR` · †<br>Select or query the trigger coupling type
+  - `COUPling` — **SET** `Set_Trigger_Coupling_AC` · `AC` · †<br>Set_Trigger_Coupling → AC. Select or query the trigger coupling type
+  - `COUPling` — **SET** `Set_Trigger_Coupling_DC` · `DC` · †<br>Set_Trigger_Coupling → DC. Select or query the trigger coupling type
+  - `COUPling` — **SET** `Set_Trigger_Coupling_HFR` · `HFR` · †<br>Set_Trigger_Coupling → HFR. Select or query the trigger coupling type
+  - `COUPling` — **SET** `Set_Trigger_Coupling_LFR` · `LFR` · †<br>Set_Trigger_Coupling → LFR. Select or query the trigger coupling type
   - `HOLDoff` — **SET** `Set_Trigger_Holdoff` · `<value>` · args: `value` · numeric (s) · †
   - `MODE` — **SET** `Set_Trigger_Mode` · `<mode>` · args: `mode` · enum: `EDGE` | `PULS` | `RUNT` | `WIND` | `NEDG` | `SLOP` | `VID` | `PATT` | `DEL` | `TIM` | `DUR` | `SHOL` | `RS232` | `IIC` | `SPI`
+  - `MODE` — **SET** `Set_Trigger_Mode_DEL` · `DEL` · †<br>Set_Trigger_Mode → DEL. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_DUR` · `DUR` · †<br>Set_Trigger_Mode → DUR. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_EDGE` · `EDGE` · †<br>Set_Trigger_Mode → EDGE. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_IIC` · `IIC` · †<br>Set_Trigger_Mode → IIC. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_NEDG` · `NEDG` · †<br>Set_Trigger_Mode → NEDG. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_PATT` · `PATT` · †<br>Set_Trigger_Mode → PATT. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_PULS` · `PULS` · †<br>Set_Trigger_Mode → PULS. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_RS232` · `RS232` · †<br>Set_Trigger_Mode → RS232. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_RUNT` · `RUNT` · †<br>Set_Trigger_Mode → RUNT. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_SHOL` · `SHOL` · †<br>Set_Trigger_Mode → SHOL. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_SLOP` · `SLOP` · †<br>Set_Trigger_Mode → SLOP. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_SPI` · `SPI` · †<br>Set_Trigger_Mode → SPI. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_TIM` · `TIM` · †<br>Set_Trigger_Mode → TIM. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_VID` · `VID` · †<br>Set_Trigger_Mode → VID. Set Trigger Mode
+  - `MODE` — **SET** `Set_Trigger_Mode_WIND` · `WIND` · †<br>Set_Trigger_Mode → WIND. Set Trigger Mode
   - `NREJect` — **SET** `Set_Trigger_Nreject` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Enable or disable noise rejection, or query the status of noise rejection
+  - `NREJect` — **SET** `Set_Trigger_Nreject_OFF` · `OFF` · †<br>Set_Trigger_Nreject → OFF. Enable or disable noise rejection, or query the status of noise rejection
+  - `NREJect` — **SET** `Set_Trigger_Nreject_ON` · `ON` · †<br>Set_Trigger_Nreject → ON. Enable or disable noise rejection, or query the status of noise rejection
   - `SWEep` — **SET** `Trigger_Sweep` · `<sweep>` · args: `sweep` · enum: `AUTO` | `NORM` | `SING`
+  - `SWEep` — **SET** `Trigger_Sweep_AUTO` · `AUTO` · †<br>Trigger_Sweep → AUTO. Trigger Sweep
+  - `SWEep` — **SET** `Trigger_Sweep_NORM` · `NORM` · †<br>Trigger_Sweep → NORM. Trigger Sweep
+  - `SWEep` — **SET** `Trigger_Sweep_SING` · `SING` · †<br>Trigger_Sweep → SING. Trigger Sweep
   - `STATus?` — **NAB** `Get_Status` · → BOOL
   - `COUPling?` — **NAB** `Get_Trigger_Coupling` · → CRD · †<br>Select or query the trigger coupling type
   - `HOLDoff?` — **NAB** `Get_Trigger_Holdoff` · → NR3 · †
@@ -666,12 +1320,28 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `WINDows` — **DO** `Do_Trigger_Windows` · †<br>Set or query the trigger source in windows trigger
   - **`DELay`**
     - `SA` — **SET** `Set_Trigger_Delay_Sa` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source A in delay trigger
+    - `SA` — **SET** `Set_Trigger_Delay_Sa_CHAN1` · `CHAN1` · †<br>Set_Trigger_Delay_Sa → CHAN1. Set or query the trigger source A in delay trigger
+    - `SA` — **SET** `Set_Trigger_Delay_Sa_CHAN2` · `CHAN2` · †<br>Set_Trigger_Delay_Sa → CHAN2. Set or query the trigger source A in delay trigger
+    - `SA` — **SET** `Set_Trigger_Delay_Sa_CHAN3` · `CHAN3` · †<br>Set_Trigger_Delay_Sa → CHAN3. Set or query the trigger source A in delay trigger
+    - `SA` — **SET** `Set_Trigger_Delay_Sa_CHAN4` · `CHAN4` · †<br>Set_Trigger_Delay_Sa → CHAN4. Set or query the trigger source A in delay trigger
     - `SB` — **SET** `Set_Trigger_Delay_Sb` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source A in delay trigger
+    - `SB` — **SET** `Set_Trigger_Delay_Sb_CHAN1` · `CHAN1` · †<br>Set_Trigger_Delay_Sb → CHAN1. Set or query the trigger source A in delay trigger
+    - `SB` — **SET** `Set_Trigger_Delay_Sb_CHAN2` · `CHAN2` · †<br>Set_Trigger_Delay_Sb → CHAN2. Set or query the trigger source A in delay trigger
+    - `SB` — **SET** `Set_Trigger_Delay_Sb_CHAN3` · `CHAN3` · †<br>Set_Trigger_Delay_Sb → CHAN3. Set or query the trigger source A in delay trigger
+    - `SB` — **SET** `Set_Trigger_Delay_Sb_CHAN4` · `CHAN4` · †<br>Set_Trigger_Delay_Sb → CHAN4. Set or query the trigger source A in delay trigger
     - `SLOPA` — **SET** `Set_Trigger_Delay_Slopa` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the trigger source A in delay trigger
+    - `SLOPA` — **SET** `Set_Trigger_Delay_Slopa_NEG` · `NEG` · †<br>Set_Trigger_Delay_Slopa → NEG. Set or query the trigger source A in delay trigger
+    - `SLOPA` — **SET** `Set_Trigger_Delay_Slopa_POS` · `POS` · †<br>Set_Trigger_Delay_Slopa → POS. Set or query the trigger source A in delay trigger
     - `SLOPB` — **SET** `Set_Trigger_Delay_Slopb` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the trigger source A in delay trigger
+    - `SLOPB` — **SET** `Set_Trigger_Delay_Slopb_NEG` · `NEG` · †<br>Set_Trigger_Delay_Slopb → NEG. Set or query the trigger source A in delay trigger
+    - `SLOPB` — **SET** `Set_Trigger_Delay_Slopb_POS` · `POS` · †<br>Set_Trigger_Delay_Slopb → POS. Set or query the trigger source A in delay trigger
     - `TLOWer` — **SET** `Set_Trigger_Delay_Tlower` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source A in delay trigger
     - `TUPPer` — **SET** `Set_Trigger_Delay_Tupper` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source A in delay trigger
     - `TYPe` — **SET** `Set_Trigger_Delay_Type` · `<value>` · args: `value` · enum: `GRE` | `LESS` | `GLES` | `GOUT` · †<br>Set or query the delay type in delay trigger
+    - `TYPe` — **SET** `Set_Trigger_Delay_Type_GLES` · `GLES` · †<br>Set_Trigger_Delay_Type → GLES. Set or query the delay type in delay trigger
+    - `TYPe` — **SET** `Set_Trigger_Delay_Type_GOUT` · `GOUT` · †<br>Set_Trigger_Delay_Type → GOUT. Set or query the delay type in delay trigger
+    - `TYPe` — **SET** `Set_Trigger_Delay_Type_GRE` · `GRE` · †<br>Set_Trigger_Delay_Type → GRE. Set or query the delay type in delay trigger
+    - `TYPe` — **SET** `Set_Trigger_Delay_Type_LESS` · `LESS` · †<br>Set_Trigger_Delay_Type → LESS. Set or query the delay type in delay trigger
     - `SA?` — **NAB** `Get_Trigger_Delay_Sa` · → NR3 s · †<br>Set or query the trigger source A in delay trigger
     - `SB?` — **NAB** `Get_Trigger_Delay_Sb` · → NR3 s · †<br>Set or query the trigger source A in delay trigger
     - `SLOPA?` — **NAB** `Get_Trigger_Delay_Slopa` · → CRD s · †<br>Set or query the trigger source A in delay trigger
@@ -681,10 +1351,36 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `TYPe?` — **NAB** `Get_Trigger_Delay_Type` · → CRD s · †<br>Set or query the trigger source A in delay trigger
   - **`DURATion`**
     - `SOURce` — **SET** `Set_Trigger_Duration_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Duration_Source → CHAN1. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Duration_Source → CHAN2. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Duration_Source → CHAN3. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Duration_Source → CHAN4. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D0` · `D0` · †<br>Set_Trigger_Duration_Source → D0. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D1` · `D1` · †<br>Set_Trigger_Duration_Source → D1. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D10` · `D10` · †<br>Set_Trigger_Duration_Source → D10. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D11` · `D11` · †<br>Set_Trigger_Duration_Source → D11. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D12` · `D12` · †<br>Set_Trigger_Duration_Source → D12. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D13` · `D13` · †<br>Set_Trigger_Duration_Source → D13. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D14` · `D14` · †<br>Set_Trigger_Duration_Source → D14. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D15` · `D15` · †<br>Set_Trigger_Duration_Source → D15. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D2` · `D2` · †<br>Set_Trigger_Duration_Source → D2. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D3` · `D3` · †<br>Set_Trigger_Duration_Source → D3. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D4` · `D4` · †<br>Set_Trigger_Duration_Source → D4. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D5` · `D5` · †<br>Set_Trigger_Duration_Source → D5. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D6` · `D6` · †<br>Set_Trigger_Duration_Source → D6. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D7` · `D7` · †<br>Set_Trigger_Duration_Source → D7. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D8` · `D8` · †<br>Set_Trigger_Duration_Source → D8. Set or query the pattern of each channel in duration trigger
+    - `SOURce` — **SET** `Set_Trigger_Duration_Source_D9` · `D9` · †<br>Set_Trigger_Duration_Source → D9. Set or query the pattern of each channel in duration trigger
     - `TLOWer` — **SET** `Set_Trigger_Duration_Tlower` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the pattern of each channel in duration trigger
     - `TUPPer` — **SET** `Set_Trigger_Duration_Tupper` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the pattern of each channel in duration trigger
     - `TYPe` — **SET** `Set_Trigger_Duration_Type` · `<value>` · args: `value` · enum: `H` | `L` | `X` · †<br>Set or query the pattern of each channel in duration trigger
+    - `TYPe` — **SET** `Set_Trigger_Duration_Type_H` · `H` · †<br>Set_Trigger_Duration_Type → H. Set or query the pattern of each channel in duration trigger
+    - `TYPe` — **SET** `Set_Trigger_Duration_Type_L` · `L` · †<br>Set_Trigger_Duration_Type → L. Set or query the pattern of each channel in duration trigger
+    - `TYPe` — **SET** `Set_Trigger_Duration_Type_X` · `X` · †<br>Set_Trigger_Duration_Type → X. Set or query the pattern of each channel in duration trigger
     - `WHEN` — **SET** `Set_Trigger_Duration_When` · `<value>` · args: `value` · enum: `GRE` | `LESS` | `GLES` · †<br>Set or query the pattern of each channel in duration trigger
+    - `WHEN` — **SET** `Set_Trigger_Duration_When_GLES` · `GLES` · †<br>Set_Trigger_Duration_When → GLES. Set or query the pattern of each channel in duration trigger
+    - `WHEN` — **SET** `Set_Trigger_Duration_When_GRE` · `GRE` · †<br>Set_Trigger_Duration_When → GRE. Set or query the pattern of each channel in duration trigger
+    - `WHEN` — **SET** `Set_Trigger_Duration_When_LESS` · `LESS` · †<br>Set_Trigger_Duration_When → LESS. Set or query the pattern of each channel in duration trigger
     - `SOURce?` — **NAB** `Get_Trigger_Duration_Source` · → CRD · †<br>Set or query the pattern of each channel in duration trigger
     - `TLOWer?` — **NAB** `Get_Trigger_Duration_Tlower` · → 1 value · †<br>Set or query the pattern of each channel in duration trigger
     - `TUPPer?` — **NAB** `Get_Trigger_Duration_Tupper` · → 1 value · †<br>Set or query the pattern of each channel in duration trigger
@@ -693,23 +1389,121 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`EDGe`**
     - `LEVel` — **SET** `Set_Edge_Level` · `<level>` · args: `level` · numeric
     - `SLOPe` — **SET** `Set_Edge_Slope` · `<slope>` · args: `slope` · enum: `POS` | `NEG` | `RFAL`
+    - `SLOPe` — **SET** `Set_Edge_Slope_NEG` · `NEG` · †<br>Set_Edge_Slope → NEG. Set Edge Slope
+    - `SLOPe` — **SET** `Set_Edge_Slope_POS` · `POS` · †<br>Set_Edge_Slope → POS. Set Edge Slope
+    - `SLOPe` — **SET** `Set_Edge_Slope_RFAL` · `RFAL` · †<br>Set_Edge_Slope → RFAL. Set Edge Slope
     - `SOURce` — **SET** `Set_Edge_Source` · `<source>` · args: `source` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `AC`
+    - `SOURce` — **SET** `Set_Edge_Source_AC` · `AC` · †<br>Set_Edge_Source → AC. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_CHAN1` · `CHAN1` · †<br>Set_Edge_Source → CHAN1. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_CHAN2` · `CHAN2` · †<br>Set_Edge_Source → CHAN2. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_CHAN3` · `CHAN3` · †<br>Set_Edge_Source → CHAN3. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_CHAN4` · `CHAN4` · †<br>Set_Edge_Source → CHAN4. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D0` · `D0` · †<br>Set_Edge_Source → D0. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D1` · `D1` · †<br>Set_Edge_Source → D1. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D10` · `D10` · †<br>Set_Edge_Source → D10. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D11` · `D11` · †<br>Set_Edge_Source → D11. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D12` · `D12` · †<br>Set_Edge_Source → D12. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D13` · `D13` · †<br>Set_Edge_Source → D13. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D14` · `D14` · †<br>Set_Edge_Source → D14. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D15` · `D15` · †<br>Set_Edge_Source → D15. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D2` · `D2` · †<br>Set_Edge_Source → D2. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D3` · `D3` · †<br>Set_Edge_Source → D3. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D4` · `D4` · †<br>Set_Edge_Source → D4. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D5` · `D5` · †<br>Set_Edge_Source → D5. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D6` · `D6` · †<br>Set_Edge_Source → D6. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D7` · `D7` · †<br>Set_Edge_Source → D7. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D8` · `D8` · †<br>Set_Edge_Source → D8. Set Edge Source
+    - `SOURce` — **SET** `Set_Edge_Source_D9` · `D9` · †<br>Set_Edge_Source → D9. Set Edge Source
     - `LEVel` — **SET** `Set_Trigger_Level` · `<level>` · args: `level` · numeric (V) · †<br>Edge trigger threshold.
     - `LEVel` — **SET** `Trigger_Level` · `<level>` · args: `level` · numeric
     - `SOURce` — **SET** `Trigger_Source` · `<source>` · args: `source` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `AC`
+    - `SOURce` — **SET** `Trigger_Source_AC` · `AC` · †<br>Trigger_Source → AC. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_CHAN1` · `CHAN1` · †<br>Trigger_Source → CHAN1. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_CHAN2` · `CHAN2` · †<br>Trigger_Source → CHAN2. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_CHAN3` · `CHAN3` · †<br>Trigger_Source → CHAN3. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_CHAN4` · `CHAN4` · †<br>Trigger_Source → CHAN4. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D0` · `D0` · †<br>Trigger_Source → D0. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D1` · `D1` · †<br>Trigger_Source → D1. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D10` · `D10` · †<br>Trigger_Source → D10. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D11` · `D11` · †<br>Trigger_Source → D11. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D12` · `D12` · †<br>Trigger_Source → D12. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D13` · `D13` · †<br>Trigger_Source → D13. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D14` · `D14` · †<br>Trigger_Source → D14. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D15` · `D15` · †<br>Trigger_Source → D15. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D2` · `D2` · †<br>Trigger_Source → D2. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D3` · `D3` · †<br>Trigger_Source → D3. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D4` · `D4` · †<br>Trigger_Source → D4. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D5` · `D5` · †<br>Trigger_Source → D5. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D6` · `D6` · †<br>Trigger_Source → D6. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D7` · `D7` · †<br>Trigger_Source → D7. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D8` · `D8` · †<br>Trigger_Source → D8. Trigger Source
+    - `SOURce` — **SET** `Trigger_Source_D9` · `D9` · †<br>Trigger_Source → D9. Trigger Source
     - `LEVel?` — **NAB** `Get_Trigger_Edge_Level` · → NR3 · †<br>Set or query the trigger source in edge trigger
     - `SLOPe?` — **NAB** `Get_Trigger_Edge_Slope` · → CRD · †<br>Set or query the trigger source in edge trigger
     - `SOURce?` — **NAB** `Get_Trigger_Edge_Source` · → CRD · †<br>Set or query the trigger source in edge trigger
   - **`IIC`**
     - `ADDRess` — **SET** `Set_Trigger_Iic_Address` · `<value>` · args: `value` · integer · †<br>Set or query the channel source of SCL in I2C trigger
     - `AWIDth` — **SET** `Set_Trigger_Iic_Awidth` · `<value>` · args: `value` · enum: `7` | `8` | `10` · †<br>Set or query the channel source of SCL in I2C trigger
+    - `AWIDth` — **SET** `Set_Trigger_Iic_Awidth_10` · `10` · †<br>Set_Trigger_Iic_Awidth → 10. Set or query the channel source of SCL in I2C trigger
+    - `AWIDth` — **SET** `Set_Trigger_Iic_Awidth_7` · `7` · †<br>Set_Trigger_Iic_Awidth → 7. Set or query the channel source of SCL in I2C trigger
+    - `AWIDth` — **SET** `Set_Trigger_Iic_Awidth_8` · `8` · †<br>Set_Trigger_Iic_Awidth → 8. Set or query the channel source of SCL in I2C trigger
     - `CLEVel` — **SET** `Set_Trigger_Iic_Clevel` · `<value>` · args: `value` · numeric · †<br>Set or query the channel source of SCL in I2C trigger
     - `DATA` — **SET** `Set_Trigger_Iic_Data` · `<value>` · args: `value` · integer · †<br>Set or query the channel source of SCL in I2C trigger
     - `DIRection` — **SET** `Set_Trigger_Iic_Direction` · `<value>` · args: `value` · enum: `READ` | `WRIT` | `RWR` · †<br>Set or query the channel source of SCL in I2C trigger
+    - `DIRection` — **SET** `Set_Trigger_Iic_Direction_READ` · `READ` · †<br>Set_Trigger_Iic_Direction → READ. Set or query the channel source of SCL in I2C trigger
+    - `DIRection` — **SET** `Set_Trigger_Iic_Direction_RWR` · `RWR` · †<br>Set_Trigger_Iic_Direction → RWR. Set or query the channel source of SCL in I2C trigger
+    - `DIRection` — **SET** `Set_Trigger_Iic_Direction_WRIT` · `WRIT` · †<br>Set_Trigger_Iic_Direction → WRIT. Set or query the channel source of SCL in I2C trigger
     - `DLEVel` — **SET** `Set_Trigger_Iic_Dlevel` · `<value>` · args: `value` · numeric · †<br>Set or query the channel source of SCL in I2C trigger
     - `SCL` — **SET** `Set_Trigger_Iic_Scl` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_CHAN1` · `CHAN1` · †<br>Set_Trigger_Iic_Scl → CHAN1. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_CHAN2` · `CHAN2` · †<br>Set_Trigger_Iic_Scl → CHAN2. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_CHAN3` · `CHAN3` · †<br>Set_Trigger_Iic_Scl → CHAN3. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_CHAN4` · `CHAN4` · †<br>Set_Trigger_Iic_Scl → CHAN4. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D0` · `D0` · †<br>Set_Trigger_Iic_Scl → D0. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D1` · `D1` · †<br>Set_Trigger_Iic_Scl → D1. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D10` · `D10` · †<br>Set_Trigger_Iic_Scl → D10. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D11` · `D11` · †<br>Set_Trigger_Iic_Scl → D11. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D12` · `D12` · †<br>Set_Trigger_Iic_Scl → D12. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D13` · `D13` · †<br>Set_Trigger_Iic_Scl → D13. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D14` · `D14` · †<br>Set_Trigger_Iic_Scl → D14. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D15` · `D15` · †<br>Set_Trigger_Iic_Scl → D15. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D2` · `D2` · †<br>Set_Trigger_Iic_Scl → D2. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D3` · `D3` · †<br>Set_Trigger_Iic_Scl → D3. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D4` · `D4` · †<br>Set_Trigger_Iic_Scl → D4. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D5` · `D5` · †<br>Set_Trigger_Iic_Scl → D5. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D6` · `D6` · †<br>Set_Trigger_Iic_Scl → D6. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D7` · `D7` · †<br>Set_Trigger_Iic_Scl → D7. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D8` · `D8` · †<br>Set_Trigger_Iic_Scl → D8. Set or query the channel source of SCL in I2C trigger
+    - `SCL` — **SET** `Set_Trigger_Iic_Scl_D9` · `D9` · †<br>Set_Trigger_Iic_Scl → D9. Set or query the channel source of SCL in I2C trigger
     - `SDA` — **SET** `Set_Trigger_Iic_Sda` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_CHAN1` · `CHAN1` · †<br>Set_Trigger_Iic_Sda → CHAN1. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_CHAN2` · `CHAN2` · †<br>Set_Trigger_Iic_Sda → CHAN2. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_CHAN3` · `CHAN3` · †<br>Set_Trigger_Iic_Sda → CHAN3. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_CHAN4` · `CHAN4` · †<br>Set_Trigger_Iic_Sda → CHAN4. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D0` · `D0` · †<br>Set_Trigger_Iic_Sda → D0. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D1` · `D1` · †<br>Set_Trigger_Iic_Sda → D1. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D10` · `D10` · †<br>Set_Trigger_Iic_Sda → D10. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D11` · `D11` · †<br>Set_Trigger_Iic_Sda → D11. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D12` · `D12` · †<br>Set_Trigger_Iic_Sda → D12. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D13` · `D13` · †<br>Set_Trigger_Iic_Sda → D13. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D14` · `D14` · †<br>Set_Trigger_Iic_Sda → D14. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D15` · `D15` · †<br>Set_Trigger_Iic_Sda → D15. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D2` · `D2` · †<br>Set_Trigger_Iic_Sda → D2. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D3` · `D3` · †<br>Set_Trigger_Iic_Sda → D3. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D4` · `D4` · †<br>Set_Trigger_Iic_Sda → D4. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D5` · `D5` · †<br>Set_Trigger_Iic_Sda → D5. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D6` · `D6` · †<br>Set_Trigger_Iic_Sda → D6. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D7` · `D7` · †<br>Set_Trigger_Iic_Sda → D7. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D8` · `D8` · †<br>Set_Trigger_Iic_Sda → D8. Set or query the channel source of SCL in I2C trigger
+    - `SDA` — **SET** `Set_Trigger_Iic_Sda_D9` · `D9` · †<br>Set_Trigger_Iic_Sda → D9. Set or query the channel source of SCL in I2C trigger
     - `WHEN` — **SET** `Set_Trigger_Iic_When` · `<value>` · args: `value` · enum: `STAR` | `REST` | `STOP` | `NACK` | `ADDR` | `DATA` | `ADAT` · †<br>Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_ADAT` · `ADAT` · †<br>Set_Trigger_Iic_When → ADAT. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_ADDR` · `ADDR` · †<br>Set_Trigger_Iic_When → ADDR. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_DATA` · `DATA` · †<br>Set_Trigger_Iic_When → DATA. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_NACK` · `NACK` · †<br>Set_Trigger_Iic_When → NACK. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_REST` · `REST` · †<br>Set_Trigger_Iic_When → REST. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_STAR` · `STAR` · †<br>Set_Trigger_Iic_When → STAR. Set or query the channel source of SCL in I2C trigger
+    - `WHEN` — **SET** `Set_Trigger_Iic_When_STOP` · `STOP` · †<br>Set_Trigger_Iic_When → STOP. Set or query the channel source of SCL in I2C trigger
     - `ADDRess?` — **NAB** `Get_Trigger_Iic_Address` · → NR1 · †<br>Set or query the channel source of SCL in I2C trigger
     - `AWIDth?` — **NAB** `Get_Trigger_Iic_Awidth` · → 1 value · †<br>Set or query the channel source of SCL in I2C trigger
     - `CLEVel?` — **NAB** `Get_Trigger_Iic_Clevel` · → 1 value · †<br>Set or query the channel source of SCL in I2C trigger
@@ -724,7 +1518,29 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `IDLE` — **SET** `Set_Trigger_Nedge_Idle` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in Nth edge trigger
     - `LEVel` — **SET** `Set_Trigger_Nedge_Level` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in Nth edge trigger
     - `SLOPe` — **SET** `Set_Trigger_Nedge_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the trigger source in Nth edge trigger
+    - `SLOPe` — **SET** `Set_Trigger_Nedge_Slope_NEG` · `NEG` · †<br>Set_Trigger_Nedge_Slope → NEG. Set or query the trigger source in Nth edge trigger
+    - `SLOPe` — **SET** `Set_Trigger_Nedge_Slope_POS` · `POS` · †<br>Set_Trigger_Nedge_Slope → POS. Set or query the trigger source in Nth edge trigger
     - `SOURce` — **SET** `Set_Trigger_Nedge_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Nedge_Source → CHAN1. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Nedge_Source → CHAN2. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Nedge_Source → CHAN3. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Nedge_Source → CHAN4. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D0` · `D0` · †<br>Set_Trigger_Nedge_Source → D0. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D1` · `D1` · †<br>Set_Trigger_Nedge_Source → D1. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D10` · `D10` · †<br>Set_Trigger_Nedge_Source → D10. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D11` · `D11` · †<br>Set_Trigger_Nedge_Source → D11. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D12` · `D12` · †<br>Set_Trigger_Nedge_Source → D12. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D13` · `D13` · †<br>Set_Trigger_Nedge_Source → D13. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D14` · `D14` · †<br>Set_Trigger_Nedge_Source → D14. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D15` · `D15` · †<br>Set_Trigger_Nedge_Source → D15. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D2` · `D2` · †<br>Set_Trigger_Nedge_Source → D2. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D3` · `D3` · †<br>Set_Trigger_Nedge_Source → D3. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D4` · `D4` · †<br>Set_Trigger_Nedge_Source → D4. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D5` · `D5` · †<br>Set_Trigger_Nedge_Source → D5. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D6` · `D6` · †<br>Set_Trigger_Nedge_Source → D6. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D7` · `D7` · †<br>Set_Trigger_Nedge_Source → D7. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D8` · `D8` · †<br>Set_Trigger_Nedge_Source → D8. Set or query the trigger source in Nth edge trigger
+    - `SOURce` — **SET** `Set_Trigger_Nedge_Source_D9` · `D9` · †<br>Set_Trigger_Nedge_Source → D9. Set or query the trigger source in Nth edge trigger
     - `EDGE?` — **NAB** `Get_Trigger_Nedge_Edge` · → 1 value · †<br>Set or query the trigger source in Nth edge trigger
     - `IDLE?` — **NAB** `Get_Trigger_Nedge_Idle` · → 1 value · †<br>Set or query the trigger source in Nth edge trigger
     - `LEVel?` — **NAB** `Get_Trigger_Nedge_Level` · → NR3 · †<br>Set or query the trigger source in Nth edge trigger
@@ -733,14 +1549,45 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`PATTern`**
     - `LEVel` — **SET** `Set_Trigger_Pattern_Level` · `<value>` · args: `value` · numeric · †<br>Set or query the pattern of each channel in pattern trigger
     - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern` · `<value>` · args: `value` · enum: `H` | `L` | `X` | `R` | `F` · †<br>Set or query the pattern of each channel in pattern trigger
+    - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern_F` · `F` · †<br>Set_Trigger_Pattern_Pattern → F. Set or query the pattern of each channel in pattern trigger
+    - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern_H` · `H` · †<br>Set_Trigger_Pattern_Pattern → H. Set or query the pattern of each channel in pattern trigger
+    - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern_L` · `L` · †<br>Set_Trigger_Pattern_Pattern → L. Set or query the pattern of each channel in pattern trigger
+    - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern_R` · `R` · †<br>Set_Trigger_Pattern_Pattern → R. Set or query the pattern of each channel in pattern trigger
+    - `PATTern` — **SET** `Set_Trigger_Pattern_Pattern_X` · `X` · †<br>Set_Trigger_Pattern_Pattern → X. Set or query the pattern of each channel in pattern trigger
     - `LEVel?` — **NAB** `Get_Trigger_Pattern_Level` · → NR3 · †<br>Set or query the pattern of each channel in pattern trigger
     - `PATTern?` — **NAB** `Get_Trigger_Pattern_Pattern` · → 1 value · †<br>Set or query the pattern of each channel in pattern trigger
   - **`PULSe`**
     - `LEVel` — **SET** `Set_Trigger_Pulse_Level` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in pulse width trigger
     - `LWIDth` — **SET** `Set_Trigger_Pulse_Lwidth` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in pulse width trigger
     - `SOURce` — **SET** `Set_Trigger_Pulse_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Pulse_Source → CHAN1. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Pulse_Source → CHAN2. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Pulse_Source → CHAN3. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Pulse_Source → CHAN4. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D0` · `D0` · †<br>Set_Trigger_Pulse_Source → D0. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D1` · `D1` · †<br>Set_Trigger_Pulse_Source → D1. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D10` · `D10` · †<br>Set_Trigger_Pulse_Source → D10. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D11` · `D11` · †<br>Set_Trigger_Pulse_Source → D11. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D12` · `D12` · †<br>Set_Trigger_Pulse_Source → D12. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D13` · `D13` · †<br>Set_Trigger_Pulse_Source → D13. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D14` · `D14` · †<br>Set_Trigger_Pulse_Source → D14. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D15` · `D15` · †<br>Set_Trigger_Pulse_Source → D15. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D2` · `D2` · †<br>Set_Trigger_Pulse_Source → D2. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D3` · `D3` · †<br>Set_Trigger_Pulse_Source → D3. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D4` · `D4` · †<br>Set_Trigger_Pulse_Source → D4. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D5` · `D5` · †<br>Set_Trigger_Pulse_Source → D5. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D6` · `D6` · †<br>Set_Trigger_Pulse_Source → D6. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D7` · `D7` · †<br>Set_Trigger_Pulse_Source → D7. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D8` · `D8` · †<br>Set_Trigger_Pulse_Source → D8. Set or query the trigger source in pulse width trigger
+    - `SOURce` — **SET** `Set_Trigger_Pulse_Source_D9` · `D9` · †<br>Set_Trigger_Pulse_Source → D9. Set or query the trigger source in pulse width trigger
     - `UWIDth` — **SET** `Set_Trigger_Pulse_Uwidth` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in pulse width trigger
     - `WHEN` — **SET** `Set_Trigger_Pulse_When` · `<value>` · args: `value` · enum: `PGR` | `PLES` | `NGR` | `NLES` | `PGL` | `NGL` · †<br>Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_NGL` · `NGL` · †<br>Set_Trigger_Pulse_When → NGL. Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_NGR` · `NGR` · †<br>Set_Trigger_Pulse_When → NGR. Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_NLES` · `NLES` · †<br>Set_Trigger_Pulse_When → NLES. Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_PGL` · `PGL` · †<br>Set_Trigger_Pulse_When → PGL. Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_PGR` · `PGR` · †<br>Set_Trigger_Pulse_When → PGR. Set or query the trigger source in pulse width trigger
+    - `WHEN` — **SET** `Set_Trigger_Pulse_When_PLES` · `PLES` · †<br>Set_Trigger_Pulse_When → PLES. Set or query the trigger source in pulse width trigger
     - `WIDTh` — **SET** `Set_Trigger_Pulse_Width` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in pulse width trigger
     - `LEVel?` — **NAB** `Get_Trigger_Pulse_Level` · → NR3 · †<br>Set or query the trigger source in pulse width trigger
     - `LWIDth?` — **NAB** `Get_Trigger_Pulse_Lwidth` · → 1 value · †<br>Set or query the trigger source in pulse width trigger
@@ -752,8 +1599,18 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `ALEVel` — **SET** `Set_Trigger_Runt_Alevel` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in runt trigger
     - `BLEVel` — **SET** `Set_Trigger_Runt_Blevel` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in runt trigger
     - `POLarity` — **SET** `Set_Trigger_Runt_Polarity` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the trigger source in runt trigger
+    - `POLarity` — **SET** `Set_Trigger_Runt_Polarity_NEG` · `NEG` · †<br>Set_Trigger_Runt_Polarity → NEG. Set or query the trigger source in runt trigger
+    - `POLarity` — **SET** `Set_Trigger_Runt_Polarity_POS` · `POS` · †<br>Set_Trigger_Runt_Polarity → POS. Set or query the trigger source in runt trigger
     - `SOURce` — **SET** `Set_Trigger_Runt_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source in runt trigger
+    - `SOURce` — **SET** `Set_Trigger_Runt_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Runt_Source → CHAN1. Set or query the trigger source in runt trigger
+    - `SOURce` — **SET** `Set_Trigger_Runt_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Runt_Source → CHAN2. Set or query the trigger source in runt trigger
+    - `SOURce` — **SET** `Set_Trigger_Runt_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Runt_Source → CHAN3. Set or query the trigger source in runt trigger
+    - `SOURce` — **SET** `Set_Trigger_Runt_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Runt_Source → CHAN4. Set or query the trigger source in runt trigger
     - `WHEN` — **SET** `Set_Trigger_Runt_When` · `<value>` · args: `value` · enum: `NONE` | `GRE` | `LESS` | `GLES` · †<br>Set or query the trigger source in runt trigger
+    - `WHEN` — **SET** `Set_Trigger_Runt_When_GLES` · `GLES` · †<br>Set_Trigger_Runt_When → GLES. Set or query the trigger source in runt trigger
+    - `WHEN` — **SET** `Set_Trigger_Runt_When_GRE` · `GRE` · †<br>Set_Trigger_Runt_When → GRE. Set or query the trigger source in runt trigger
+    - `WHEN` — **SET** `Set_Trigger_Runt_When_LESS` · `LESS` · †<br>Set_Trigger_Runt_When → LESS. Set or query the trigger source in runt trigger
+    - `WHEN` — **SET** `Set_Trigger_Runt_When_NONE` · `NONE` · †<br>Set_Trigger_Runt_When → NONE. Set or query the trigger source in runt trigger
     - `WLOWer` — **SET** `Set_Trigger_Runt_Wlower` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in runt trigger
     - `WUPPer` — **SET** `Set_Trigger_Runt_Wupper` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in runt trigger
     - `ALEVel?` — **NAB** `Get_Trigger_Runt_Alevel` · → 1 value · †<br>Set or query the trigger source in runt trigger
@@ -765,12 +1622,25 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `WUPPer?` — **NAB** `Get_Trigger_Runt_Wupper` · → 1 value · †<br>Set or query the trigger source in runt trigger
   - **`SHOLd`**
     - `CSrc` — **SET** `Set_Trigger_Shold_Csrc` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the data source in setup/hold trigger
+    - `CSrc` — **SET** `Set_Trigger_Shold_Csrc_CHAN1` · `CHAN1` · †<br>Set_Trigger_Shold_Csrc → CHAN1. Set or query the data source in setup/hold trigger
+    - `CSrc` — **SET** `Set_Trigger_Shold_Csrc_CHAN2` · `CHAN2` · †<br>Set_Trigger_Shold_Csrc → CHAN2. Set or query the data source in setup/hold trigger
+    - `CSrc` — **SET** `Set_Trigger_Shold_Csrc_CHAN3` · `CHAN3` · †<br>Set_Trigger_Shold_Csrc → CHAN3. Set or query the data source in setup/hold trigger
+    - `CSrc` — **SET** `Set_Trigger_Shold_Csrc_CHAN4` · `CHAN4` · †<br>Set_Trigger_Shold_Csrc → CHAN4. Set or query the data source in setup/hold trigger
     - `DSrc` — **SET** `Set_Trigger_Shold_Dsrc` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the data source in setup/hold trigger
+    - `DSrc` — **SET** `Set_Trigger_Shold_Dsrc_CHAN1` · `CHAN1` · †<br>Set_Trigger_Shold_Dsrc → CHAN1. Set or query the data source in setup/hold trigger
+    - `DSrc` — **SET** `Set_Trigger_Shold_Dsrc_CHAN2` · `CHAN2` · †<br>Set_Trigger_Shold_Dsrc → CHAN2. Set or query the data source in setup/hold trigger
+    - `DSrc` — **SET** `Set_Trigger_Shold_Dsrc_CHAN3` · `CHAN3` · †<br>Set_Trigger_Shold_Dsrc → CHAN3. Set or query the data source in setup/hold trigger
+    - `DSrc` — **SET** `Set_Trigger_Shold_Dsrc_CHAN4` · `CHAN4` · †<br>Set_Trigger_Shold_Dsrc → CHAN4. Set or query the data source in setup/hold trigger
     - `HTIMe` — **SET** `Set_Trigger_Shold_Htime` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the data source in setup/hold trigger
     - `PATTern` — **SET** `Set_Trigger_Shold_Pattern` · `<value>` · args: `value` · †<br>Set or query the data source in setup/hold trigger
     - `SLOPe` — **SET** `Set_Trigger_Shold_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the data source in setup/hold trigger
+    - `SLOPe` — **SET** `Set_Trigger_Shold_Slope_NEG` · `NEG` · †<br>Set_Trigger_Shold_Slope → NEG. Set or query the data source in setup/hold trigger
+    - `SLOPe` — **SET** `Set_Trigger_Shold_Slope_POS` · `POS` · †<br>Set_Trigger_Shold_Slope → POS. Set or query the data source in setup/hold trigger
     - `STIMe` — **SET** `Set_Trigger_Shold_Stime` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the data source in setup/hold trigger
     - `TYPe` — **SET** `Set_Trigger_Shold_Type` · `<value>` · args: `value` · enum: `SET` | `HOL` | `SETHOL` · †<br>Set or query the data source in setup/hold trigger
+    - `TYPe` — **SET** `Set_Trigger_Shold_Type_HOL` · `HOL` · †<br>Set_Trigger_Shold_Type → HOL. Set or query the data source in setup/hold trigger
+    - `TYPe` — **SET** `Set_Trigger_Shold_Type_SET` · `SET` · †<br>Set_Trigger_Shold_Type → SET. Set or query the data source in setup/hold trigger
+    - `TYPe` — **SET** `Set_Trigger_Shold_Type_SETHOL` · `SETHOL` · †<br>Set_Trigger_Shold_Type → SETHOL. Set or query the data source in setup/hold trigger
     - `CSrc?` — **NAB** `Get_Trigger_Shold_Csrc` · → 1 value · †<br>Set or query the data source in setup/hold trigger
     - `DSrc?` — **NAB** `Get_Trigger_Shold_Dsrc` · → 1 value · †<br>Set or query the data source in setup/hold trigger
     - `HTIMe?` — **NAB** `Get_Trigger_Shold_Htime` · → NR3 s · †<br>Set or query the data source in setup/hold trigger
@@ -782,11 +1652,24 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `ALEVel` — **SET** `Set_Trigger_Slope_Alevel` · `<value>` · args: `value` · numeric · †<br>Set or query the time value in slope trigger
     - `BLEVel` — **SET** `Set_Trigger_Slope_Blevel` · `<value>` · args: `value` · numeric · †<br>Set or query the time value in slope trigger
     - `SOURce` — **SET** `Set_Trigger_Slope_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the time value in slope trigger
+    - `SOURce` — **SET** `Set_Trigger_Slope_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Slope_Source → CHAN1. Set or query the time value in slope trigger
+    - `SOURce` — **SET** `Set_Trigger_Slope_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Slope_Source → CHAN2. Set or query the time value in slope trigger
+    - `SOURce` — **SET** `Set_Trigger_Slope_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Slope_Source → CHAN3. Set or query the time value in slope trigger
+    - `SOURce` — **SET** `Set_Trigger_Slope_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Slope_Source → CHAN4. Set or query the time value in slope trigger
     - `TIME` — **SET** `Set_Trigger_Slope_Time` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the time value in slope trigger
     - `TLOWer` — **SET** `Set_Trigger_Slope_Tlower` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the time value in slope trigger
     - `TUPPer` — **SET** `Set_Trigger_Slope_Tupper` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the time value in slope trigger
     - `WHEN` — **SET** `Set_Trigger_Slope_When` · `<value>` · args: `value` · enum: `PGR` | `PLES` | `NGR` | `NLES` | `PGL` | `NGL` · †<br>Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_NGL` · `NGL` · †<br>Set_Trigger_Slope_When → NGL. Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_NGR` · `NGR` · †<br>Set_Trigger_Slope_When → NGR. Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_NLES` · `NLES` · †<br>Set_Trigger_Slope_When → NLES. Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_PGL` · `PGL` · †<br>Set_Trigger_Slope_When → PGL. Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_PGR` · `PGR` · †<br>Set_Trigger_Slope_When → PGR. Set or query the time value in slope trigger
+    - `WHEN` — **SET** `Set_Trigger_Slope_When_PLES` · `PLES` · †<br>Set_Trigger_Slope_When → PLES. Set or query the time value in slope trigger
     - `WINDow` — **SET** `Set_Trigger_Slope_Windows` · `<value>` · args: `value` · enum: `TA` | `TB` | `TAB` · †<br>Set or query the time value in slope trigger
+    - `WINDow` — **SET** `Set_Trigger_Slope_Windows_TA` · `TA` · †<br>Set_Trigger_Slope_Windows → TA. Set or query the time value in slope trigger
+    - `WINDow` — **SET** `Set_Trigger_Slope_Windows_TAB` · `TAB` · †<br>Set_Trigger_Slope_Windows → TAB. Set or query the time value in slope trigger
+    - `WINDow` — **SET** `Set_Trigger_Slope_Windows_TB` · `TB` · †<br>Set_Trigger_Slope_Windows → TB. Set or query the time value in slope trigger
     - `ALEVel?` — **NAB** `Get_Trigger_Slope_Alevel` · → 1 value · †<br>Set or query the time value in slope trigger
     - `BLEVel?` — **NAB** `Get_Trigger_Slope_Blevel` · → 1 value · †<br>Set or query the time value in slope trigger
     - `SOURce?` — **NAB** `Get_Trigger_Slope_Source` · → CRD · †<br>Set or query the time value in slope trigger
@@ -798,15 +1681,81 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`SPI`**
     - `CLEVel` — **SET** `Set_Trigger_Spi_Clevel` · `<value>` · args: `value` · numeric · †<br>Set or query the channel source of SCL in SPI trigger
     - `CS` — **SET** `Set_Trigger_Spi_Csrc` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_CHAN1` · `CHAN1` · †<br>Set_Trigger_Spi_Csrc → CHAN1. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_CHAN2` · `CHAN2` · †<br>Set_Trigger_Spi_Csrc → CHAN2. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_CHAN3` · `CHAN3` · †<br>Set_Trigger_Spi_Csrc → CHAN3. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_CHAN4` · `CHAN4` · †<br>Set_Trigger_Spi_Csrc → CHAN4. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D0` · `D0` · †<br>Set_Trigger_Spi_Csrc → D0. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D1` · `D1` · †<br>Set_Trigger_Spi_Csrc → D1. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D10` · `D10` · †<br>Set_Trigger_Spi_Csrc → D10. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D11` · `D11` · †<br>Set_Trigger_Spi_Csrc → D11. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D12` · `D12` · †<br>Set_Trigger_Spi_Csrc → D12. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D13` · `D13` · †<br>Set_Trigger_Spi_Csrc → D13. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D14` · `D14` · †<br>Set_Trigger_Spi_Csrc → D14. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D15` · `D15` · †<br>Set_Trigger_Spi_Csrc → D15. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D2` · `D2` · †<br>Set_Trigger_Spi_Csrc → D2. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D3` · `D3` · †<br>Set_Trigger_Spi_Csrc → D3. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D4` · `D4` · †<br>Set_Trigger_Spi_Csrc → D4. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D5` · `D5` · †<br>Set_Trigger_Spi_Csrc → D5. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D6` · `D6` · †<br>Set_Trigger_Spi_Csrc → D6. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D7` · `D7` · †<br>Set_Trigger_Spi_Csrc → D7. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D8` · `D8` · †<br>Set_Trigger_Spi_Csrc → D8. Set or query the channel source of SCL in SPI trigger
+    - `CS` — **SET** `Set_Trigger_Spi_Csrc_D9` · `D9` · †<br>Set_Trigger_Spi_Csrc → D9. Set or query the channel source of SCL in SPI trigger
     - `DATA` — **SET** `Set_Trigger_Spi_Data` · `<value>` · args: `value` · integer · †<br>Set or query the channel source of SCL in SPI trigger
     - `DLEVel` — **SET** `Set_Trigger_Spi_Dlevel` · `<value>` · args: `value` · numeric · †<br>Set or query the channel source of SCL in SPI trigger
     - `MODE` — **SET** `Set_Trigger_Spi_Mode` · `<value>` · args: `value` · enum: `HIGH` | `LOW` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `MODE` — **SET** `Set_Trigger_Spi_Mode_HIGH` · `HIGH` · †<br>Set_Trigger_Spi_Mode → HIGH. Set or query the channel source of SCL in SPI trigger
+    - `MODE` — **SET** `Set_Trigger_Spi_Mode_LOW` · `LOW` · †<br>Set_Trigger_Spi_Mode → LOW. Set or query the channel source of SCL in SPI trigger
     - `SCL` — **SET** `Set_Trigger_Spi_Scl` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_CHAN1` · `CHAN1` · †<br>Set_Trigger_Spi_Scl → CHAN1. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_CHAN2` · `CHAN2` · †<br>Set_Trigger_Spi_Scl → CHAN2. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_CHAN3` · `CHAN3` · †<br>Set_Trigger_Spi_Scl → CHAN3. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_CHAN4` · `CHAN4` · †<br>Set_Trigger_Spi_Scl → CHAN4. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D0` · `D0` · †<br>Set_Trigger_Spi_Scl → D0. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D1` · `D1` · †<br>Set_Trigger_Spi_Scl → D1. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D10` · `D10` · †<br>Set_Trigger_Spi_Scl → D10. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D11` · `D11` · †<br>Set_Trigger_Spi_Scl → D11. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D12` · `D12` · †<br>Set_Trigger_Spi_Scl → D12. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D13` · `D13` · †<br>Set_Trigger_Spi_Scl → D13. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D14` · `D14` · †<br>Set_Trigger_Spi_Scl → D14. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D15` · `D15` · †<br>Set_Trigger_Spi_Scl → D15. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D2` · `D2` · †<br>Set_Trigger_Spi_Scl → D2. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D3` · `D3` · †<br>Set_Trigger_Spi_Scl → D3. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D4` · `D4` · †<br>Set_Trigger_Spi_Scl → D4. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D5` · `D5` · †<br>Set_Trigger_Spi_Scl → D5. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D6` · `D6` · †<br>Set_Trigger_Spi_Scl → D6. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D7` · `D7` · †<br>Set_Trigger_Spi_Scl → D7. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D8` · `D8` · †<br>Set_Trigger_Spi_Scl → D8. Set or query the channel source of SCL in SPI trigger
+    - `SCL` — **SET** `Set_Trigger_Spi_Scl_D9` · `D9` · †<br>Set_Trigger_Spi_Scl → D9. Set or query the channel source of SCL in SPI trigger
     - `SDA` — **SET** `Set_Trigger_Spi_Sda` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_CHAN1` · `CHAN1` · †<br>Set_Trigger_Spi_Sda → CHAN1. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_CHAN2` · `CHAN2` · †<br>Set_Trigger_Spi_Sda → CHAN2. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_CHAN3` · `CHAN3` · †<br>Set_Trigger_Spi_Sda → CHAN3. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_CHAN4` · `CHAN4` · †<br>Set_Trigger_Spi_Sda → CHAN4. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D0` · `D0` · †<br>Set_Trigger_Spi_Sda → D0. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D1` · `D1` · †<br>Set_Trigger_Spi_Sda → D1. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D10` · `D10` · †<br>Set_Trigger_Spi_Sda → D10. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D11` · `D11` · †<br>Set_Trigger_Spi_Sda → D11. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D12` · `D12` · †<br>Set_Trigger_Spi_Sda → D12. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D13` · `D13` · †<br>Set_Trigger_Spi_Sda → D13. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D14` · `D14` · †<br>Set_Trigger_Spi_Sda → D14. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D15` · `D15` · †<br>Set_Trigger_Spi_Sda → D15. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D2` · `D2` · †<br>Set_Trigger_Spi_Sda → D2. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D3` · `D3` · †<br>Set_Trigger_Spi_Sda → D3. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D4` · `D4` · †<br>Set_Trigger_Spi_Sda → D4. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D5` · `D5` · †<br>Set_Trigger_Spi_Sda → D5. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D6` · `D6` · †<br>Set_Trigger_Spi_Sda → D6. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D7` · `D7` · †<br>Set_Trigger_Spi_Sda → D7. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D8` · `D8` · †<br>Set_Trigger_Spi_Sda → D8. Set or query the channel source of SCL in SPI trigger
+    - `SDA` — **SET** `Set_Trigger_Spi_Sda_D9` · `D9` · †<br>Set_Trigger_Spi_Sda → D9. Set or query the channel source of SCL in SPI trigger
     - `SLEVel` — **SET** `Set_Trigger_Spi_Slevel` · `<value>` · args: `value` · numeric · †<br>Set or query the channel source of SCL in SPI trigger
     - `SLOPe` — **SET** `Set_Trigger_Spi_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `SLOPe` — **SET** `Set_Trigger_Spi_Slope_NEG` · `NEG` · †<br>Set_Trigger_Spi_Slope → NEG. Set or query the channel source of SCL in SPI trigger
+    - `SLOPe` — **SET** `Set_Trigger_Spi_Slope_POS` · `POS` · †<br>Set_Trigger_Spi_Slope → POS. Set or query the channel source of SCL in SPI trigger
     - `TIMeout` — **SET** `Set_Trigger_Spi_Timebase` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the channel source of SCL in SPI trigger
     - `WHEN` — **SET** `Set_Trigger_Spi_When` · `<value>` · args: `value` · enum: `CS` | `TIM` · †<br>Set or query the channel source of SCL in SPI trigger
+    - `WHEN` — **SET** `Set_Trigger_Spi_When_CS` · `CS` · †<br>Set_Trigger_Spi_When → CS. Set or query the channel source of SCL in SPI trigger
+    - `WHEN` — **SET** `Set_Trigger_Spi_When_TIM` · `TIM` · †<br>Set_Trigger_Spi_When → TIM. Set or query the channel source of SCL in SPI trigger
     - `WIDTh` — **SET** `Set_Trigger_Spi_Width` · `<value>` · args: `value` · integer · †<br>Set or query the channel source of SCL in SPI trigger
     - `CLEVel?` — **NAB** `Get_Trigger_Spi_Clevel` · → 1 value · †<br>Set or query the channel source of SCL in SPI trigger
     - `CS?` — **NAB** `Get_Trigger_Spi_Csrc` · → 1 value · †<br>Set or query the channel source of SCL in SPI trigger
@@ -822,7 +1771,30 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `WIDTh?` — **NAB** `Get_Trigger_Spi_Width` · → NR3 · †<br>Set or query the channel source of SCL in SPI trigger
   - **`TIMeout`**
     - `SLOPe` — **SET** `Set_Trigger_Timebase_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` | `RFAL` · †<br>Set or query the trigger source in timeout trigger
+    - `SLOPe` — **SET** `Set_Trigger_Timebase_Slope_NEG` · `NEG` · †<br>Set_Trigger_Timebase_Slope → NEG. Set or query the trigger source in timeout trigger
+    - `SLOPe` — **SET** `Set_Trigger_Timebase_Slope_POS` · `POS` · †<br>Set_Trigger_Timebase_Slope → POS. Set or query the trigger source in timeout trigger
+    - `SLOPe` — **SET** `Set_Trigger_Timebase_Slope_RFAL` · `RFAL` · †<br>Set_Trigger_Timebase_Slope → RFAL. Set or query the trigger source in timeout trigger
     - `SOURce` — **SET** `Set_Trigger_Timebase_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Timebase_Source → CHAN1. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Timebase_Source → CHAN2. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Timebase_Source → CHAN3. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Timebase_Source → CHAN4. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D0` · `D0` · †<br>Set_Trigger_Timebase_Source → D0. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D1` · `D1` · †<br>Set_Trigger_Timebase_Source → D1. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D10` · `D10` · †<br>Set_Trigger_Timebase_Source → D10. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D11` · `D11` · †<br>Set_Trigger_Timebase_Source → D11. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D12` · `D12` · †<br>Set_Trigger_Timebase_Source → D12. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D13` · `D13` · †<br>Set_Trigger_Timebase_Source → D13. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D14` · `D14` · †<br>Set_Trigger_Timebase_Source → D14. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D15` · `D15` · †<br>Set_Trigger_Timebase_Source → D15. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D2` · `D2` · †<br>Set_Trigger_Timebase_Source → D2. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D3` · `D3` · †<br>Set_Trigger_Timebase_Source → D3. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D4` · `D4` · †<br>Set_Trigger_Timebase_Source → D4. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D5` · `D5` · †<br>Set_Trigger_Timebase_Source → D5. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D6` · `D6` · †<br>Set_Trigger_Timebase_Source → D6. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D7` · `D7` · †<br>Set_Trigger_Timebase_Source → D7. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D8` · `D8` · †<br>Set_Trigger_Timebase_Source → D8. Set or query the trigger source in timeout trigger
+    - `SOURce` — **SET** `Set_Trigger_Timebase_Source_D9` · `D9` · †<br>Set_Trigger_Timebase_Source → D9. Set or query the trigger source in timeout trigger
     - `TIMe` — **SET** `Set_Trigger_Timebase_Timebase` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in timeout trigger
     - `SLOPe?` — **NAB** `Get_Trigger_Timebase_Slope` · → CRD s · †<br>Set or query the trigger source in timeout trigger
     - `SOURce?` — **NAB** `Get_Trigger_Timebase_Source` · → CRD s · †<br>Set or query the trigger source in timeout trigger
@@ -831,9 +1803,23 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `LEVel` — **SET** `Set_Trigger_Video_Level` · `<value>` · args: `value` · numeric · †<br>Select or query the trigger source in video trigger
     - `LINE` — **SET** `Set_Trigger_Video_Line` · `<value>` · args: `value` · integer · †<br>Select or query the trigger source in video trigger
     - `MODE` — **SET** `Set_Trigger_Video_Mode` · `<value>` · args: `value` · enum: `ODDF` | `EVEN` | `LINE` | `ALIN` · †<br>Select or query the trigger source in video trigger
+    - `MODE` — **SET** `Set_Trigger_Video_Mode_ALIN` · `ALIN` · †<br>Set_Trigger_Video_Mode → ALIN. Select or query the trigger source in video trigger
+    - `MODE` — **SET** `Set_Trigger_Video_Mode_EVEN` · `EVEN` · †<br>Set_Trigger_Video_Mode → EVEN. Select or query the trigger source in video trigger
+    - `MODE` — **SET** `Set_Trigger_Video_Mode_LINE` · `LINE` · †<br>Set_Trigger_Video_Mode → LINE. Select or query the trigger source in video trigger
+    - `MODE` — **SET** `Set_Trigger_Video_Mode_ODDF` · `ODDF` · †<br>Set_Trigger_Video_Mode → ODDF. Select or query the trigger source in video trigger
     - `POLarity` — **SET** `Set_Trigger_Video_Polarity` · `<value>` · args: `value` · enum: `POS` | `NEG` · †<br>Select or query the trigger source in video trigger
+    - `POLarity` — **SET** `Set_Trigger_Video_Polarity_NEG` · `NEG` · †<br>Set_Trigger_Video_Polarity → NEG. Select or query the trigger source in video trigger
+    - `POLarity` — **SET** `Set_Trigger_Video_Polarity_POS` · `POS` · †<br>Set_Trigger_Video_Polarity → POS. Select or query the trigger source in video trigger
     - `SOURce` — **SET** `Set_Trigger_Video_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Select or query the trigger source in video trigger
+    - `SOURce` — **SET** `Set_Trigger_Video_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Video_Source → CHAN1. Select or query the trigger source in video trigger
+    - `SOURce` — **SET** `Set_Trigger_Video_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Video_Source → CHAN2. Select or query the trigger source in video trigger
+    - `SOURce` — **SET** `Set_Trigger_Video_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Video_Source → CHAN3. Select or query the trigger source in video trigger
+    - `SOURce` — **SET** `Set_Trigger_Video_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Video_Source → CHAN4. Select or query the trigger source in video trigger
     - `STANdard` — **SET** `Set_Trigger_Video_Standard` · `<value>` · args: `value` · enum: `PALS` | `NTSC` | `480P` | `576P` · †<br>Select or query the trigger source in video trigger
+    - `STANdard` — **SET** `Set_Trigger_Video_Standard_480P` · `480P` · †<br>Set_Trigger_Video_Standard → 480P. Select or query the trigger source in video trigger
+    - `STANdard` — **SET** `Set_Trigger_Video_Standard_576P` · `576P` · †<br>Set_Trigger_Video_Standard → 576P. Select or query the trigger source in video trigger
+    - `STANdard` — **SET** `Set_Trigger_Video_Standard_NTSC` · `NTSC` · †<br>Set_Trigger_Video_Standard → NTSC. Select or query the trigger source in video trigger
+    - `STANdard` — **SET** `Set_Trigger_Video_Standard_PALS` · `PALS` · †<br>Set_Trigger_Video_Standard → PALS. Select or query the trigger source in video trigger
     - `LEVel?` — **NAB** `Get_Trigger_Video_Level` · → NR3 · †<br>Select or query the trigger source in video trigger
     - `LINE?` — **NAB** `Get_Trigger_Video_Line` · → 1 value · †<br>Select or query the trigger source in video trigger
     - `MODE?` — **NAB** `Get_Trigger_Video_Mode` · → CRD · †<br>Select or query the trigger source in video trigger
@@ -844,8 +1830,18 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `ALEVel` — **SET** `Set_Trigger_Windows_Alevel` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in windows trigger
     - `BLEVel` — **SET** `Set_Trigger_Windows_Blevel` · `<value>` · args: `value` · numeric · †<br>Set or query the trigger source in windows trigger
     - `POSition` — **SET** `Set_Trigger_Windows_Positive` · `<value>` · args: `value` · enum: `EXIT` | `ENTER` | `TIM` · †<br>Set or query the trigger source in windows trigger
+    - `POSition` — **SET** `Set_Trigger_Windows_Positive_ENTER` · `ENTER` · †<br>Set_Trigger_Windows_Positive → ENTER. Set or query the trigger source in windows trigger
+    - `POSition` — **SET** `Set_Trigger_Windows_Positive_EXIT` · `EXIT` · †<br>Set_Trigger_Windows_Positive → EXIT. Set or query the trigger source in windows trigger
+    - `POSition` — **SET** `Set_Trigger_Windows_Positive_TIM` · `TIM` · †<br>Set_Trigger_Windows_Positive → TIM. Set or query the trigger source in windows trigger
     - `SLOPe` — **SET** `Set_Trigger_Windows_Slope` · `<value>` · args: `value` · enum: `POS` | `NEG` | `RFAL` · †<br>Set or query the trigger source in windows trigger
+    - `SLOPe` — **SET** `Set_Trigger_Windows_Slope_NEG` · `NEG` · †<br>Set_Trigger_Windows_Slope → NEG. Set or query the trigger source in windows trigger
+    - `SLOPe` — **SET** `Set_Trigger_Windows_Slope_POS` · `POS` · †<br>Set_Trigger_Windows_Slope → POS. Set or query the trigger source in windows trigger
+    - `SLOPe` — **SET** `Set_Trigger_Windows_Slope_RFAL` · `RFAL` · †<br>Set_Trigger_Windows_Slope → RFAL. Set or query the trigger source in windows trigger
     - `SOURce` — **SET** `Set_Trigger_Windows_Source` · `<value>` · args: `value` · enum: `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the trigger source in windows trigger
+    - `SOURce` — **SET** `Set_Trigger_Windows_Source_CHAN1` · `CHAN1` · †<br>Set_Trigger_Windows_Source → CHAN1. Set or query the trigger source in windows trigger
+    - `SOURce` — **SET** `Set_Trigger_Windows_Source_CHAN2` · `CHAN2` · †<br>Set_Trigger_Windows_Source → CHAN2. Set or query the trigger source in windows trigger
+    - `SOURce` — **SET** `Set_Trigger_Windows_Source_CHAN3` · `CHAN3` · †<br>Set_Trigger_Windows_Source → CHAN3. Set or query the trigger source in windows trigger
+    - `SOURce` — **SET** `Set_Trigger_Windows_Source_CHAN4` · `CHAN4` · †<br>Set_Trigger_Windows_Source → CHAN4. Set or query the trigger source in windows trigger
     - `TIMe` — **SET** `Set_Trigger_Windows_Timebase` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the trigger source in windows trigger
     - `ALEVel?` — **NAB** `Get_Trigger_Windows_Alevel` · → 1 value · †<br>Set or query the trigger source in windows trigger
     - `BLEVel?` — **NAB** `Get_Trigger_Windows_Blevel` · → 1 value · †<br>Set or query the trigger source in windows trigger
@@ -866,8 +1862,35 @@ Several statements in one message, so they hang off no single branch. Every stat
       - `OFFSet` — **DO** `Do_Voltage_Level_Immediate_Offset` · †
 - **`WAVeform`**
   - `FORMat` — **SET** `Set_Waveform_Format` · `<format>` · args: `format` · enum: `WORD` | `BYTE` | `ASC`
+  - `FORMat` — **SET** `Set_Waveform_Format_ASC` · `ASC` · †<br>Set_Waveform_Format → ASC. Set Waveform Format
+  - `FORMat` — **SET** `Set_Waveform_Format_BYTE` · `BYTE` · †<br>Set_Waveform_Format → BYTE. Set Waveform Format
+  - `FORMat` — **SET** `Set_Waveform_Format_WORD` · `WORD` · †<br>Set_Waveform_Format → WORD. Set Waveform Format
   - `MODE` — **SET** `Set_Waveform_Mode` · `<mode>` · args: `mode` · enum: `NORM` | `MAX` | `RAW`
+  - `MODE` — **SET** `Set_Waveform_Mode_MAX` · `MAX` · †<br>Set_Waveform_Mode → MAX. Set Waveform Mode
+  - `MODE` — **SET** `Set_Waveform_Mode_NORM` · `NORM` · †<br>Set_Waveform_Mode → NORM. Set Waveform Mode
+  - `MODE` — **SET** `Set_Waveform_Mode_RAW` · `RAW` · †<br>Set_Waveform_Mode → RAW. Set Waveform Mode
   - `SOURce` — **SET** `Set_Waveform_Source` · `<source>` · args: `source` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` | `MATH`
+  - `SOURce` — **SET** `Set_Waveform_Source_CHAN1` · `CHAN1` · †<br>Set_Waveform_Source → CHAN1. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_CHAN2` · `CHAN2` · †<br>Set_Waveform_Source → CHAN2. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_CHAN3` · `CHAN3` · †<br>Set_Waveform_Source → CHAN3. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_CHAN4` · `CHAN4` · †<br>Set_Waveform_Source → CHAN4. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D0` · `D0` · †<br>Set_Waveform_Source → D0. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D1` · `D1` · †<br>Set_Waveform_Source → D1. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D10` · `D10` · †<br>Set_Waveform_Source → D10. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D11` · `D11` · †<br>Set_Waveform_Source → D11. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D12` · `D12` · †<br>Set_Waveform_Source → D12. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D13` · `D13` · †<br>Set_Waveform_Source → D13. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D14` · `D14` · †<br>Set_Waveform_Source → D14. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D15` · `D15` · †<br>Set_Waveform_Source → D15. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D2` · `D2` · †<br>Set_Waveform_Source → D2. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D3` · `D3` · †<br>Set_Waveform_Source → D3. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D4` · `D4` · †<br>Set_Waveform_Source → D4. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D5` · `D5` · †<br>Set_Waveform_Source → D5. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D6` · `D6` · †<br>Set_Waveform_Source → D6. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D7` · `D7` · †<br>Set_Waveform_Source → D7. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D8` · `D8` · †<br>Set_Waveform_Source → D8. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_D9` · `D9` · †<br>Set_Waveform_Source → D9. Set Waveform Source
+  - `SOURce` — **SET** `Set_Waveform_Source_MATH` · `MATH` · †<br>Set_Waveform_Source → MATH. Set Waveform Source
   - `STARt` — **SET** `Set_Waveform_Start` · `<value>` · args: `value` · integer · †<br>Set or query the start point of waveform data reading
   - `STOP` — **SET** `Set_Waveform_Stop` · `<value>` · args: `value` · integer · †<br>Set or query the stop point of waveform data reading
   - `DATA?` — **NAB** `Get_Waveform_Data` · → BLOCK
