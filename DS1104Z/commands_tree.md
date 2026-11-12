@@ -4,7 +4,7 @@
 
 Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the table, not this file.
 
-**777 commands** — SET 341 · RIG 0 · NAB 373 · DO 63 · 704 unverified (90%)
+**776 commands** — SET 341 · RIG 0 · NAB 373 · DO 62 · 703 unverified (90%)
 
 `SET` one argument · `RIG` several applied together · `NAB` a query · `DO` a parameterless action. **†** marks a command swept out of a manual and never sent to the instrument.
 
@@ -13,13 +13,13 @@ Generated from the `.komand` table by `apkaudio-komand build-trees`. Edit the ta
 Several statements in one message, so they hang off no single branch. Every statement after the first carries a leading colon — without it the parser reads it relative to the previous header's path and the instrument answers `-113`.
 
 - **NAB** `Get_Stats_CH1` · → vpp_1, vrms_1, frequency_1, pduty_1
-  - `:MEASure:VPP? CHANnel1;:MEASure:VRMS? CHANnel1;:MEASure:FREQuency? CHANnel1;:MEASure:PDUTy? CHANnel1`
+  - `:MEASure:ITEM? VPP,CHANnel1;:MEASure:ITEM? VRMS,CHANnel1;:MEASure:ITEM? FREQuency,CHANnel1;:MEASure:ITEM? PDUTy,CHANnel1`
 - **NAB** `Get_Stats_CH2` · → vpp_2, vrms_2, frequency_2, pduty_2
-  - `:MEASure:VPP? CHANnel2;:MEASure:VRMS? CHANnel2;:MEASure:FREQuency? CHANnel2;:MEASure:PDUTy? CHANnel2`
+  - `:MEASure:ITEM? VPP,CHANnel2;:MEASure:ITEM? VRMS,CHANnel2;:MEASure:ITEM? FREQuency,CHANnel2;:MEASure:ITEM? PDUTy,CHANnel2`
 - **NAB** `Get_Stats_CH3` · → vpp_3, vrms_3, frequency_3, pduty_3
-  - `:MEASure:VPP? CHANnel3;:MEASure:VRMS? CHANnel3;:MEASure:FREQuency? CHANnel3;:MEASure:PDUTy? CHANnel3`
+  - `:MEASure:ITEM? VPP,CHANnel3;:MEASure:ITEM? VRMS,CHANnel3;:MEASure:ITEM? FREQuency,CHANnel3;:MEASure:ITEM? PDUTy,CHANnel3`
 - **NAB** `Get_Stats_CH4` · → vpp_4, vrms_4, frequency_4, pduty_4
-  - `:MEASure:VPP? CHANnel4;:MEASure:VRMS? CHANnel4;:MEASure:FREQuency? CHANnel4;:MEASure:PDUTy? CHANnel4`
+  - `:MEASure:ITEM? VPP,CHANnel4;:MEASure:ITEM? VRMS,CHANnel4;:MEASure:ITEM? FREQuency,CHANnel4;:MEASure:ITEM? PDUTy,CHANnel4`
 - **NAB** `channel_settings_1` · → state, scale, offset · †<br>Channel 1: on/off, volts per division and offset in one round trip.
   - `:CHANnel1:DISPlay?;:CHANnel1:SCALe?;:CHANnel1:OFFSet?`
 - **NAB** `channel_settings_2` · → state, scale, offset · †<br>Channel 2: on/off, volts per division and offset in one round trip.
@@ -53,7 +53,7 @@ Several statements in one message, so they hang off no single branch. Every stat
 
 ## Tree
 
-- `AUTO` — **DO** `Auto`
+- `AUToscale` — **DO** `Auto`
 - `AUToscale` — **DO** `Auto_Scale`
 - `CLEar` — **DO** `Clear`
 - `TFORce` — **DO** `Force_Trigger`
@@ -132,18 +132,6 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DISPlay` — **SET** `Set_Display` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
   - `PROBe` — **SET** `Set_Probe` · `<atten>` · args: `atten` · enum: `1` | `2` | `5` | `10` | `20` | `50` | `100` | `200` | `500` | `1000` · per-instance: `n`
   - `UNITs` — **SET** `Set_Units` · `<unit>` · args: `unit` · enum: `VOLT` | `WATT` | `AMP` | `UNKN` · per-instance: `n`
-- **`CONFig`**
-  - `ENDian` — **SET** `Set_Config_Endian` · `<value>` · args: `value` · †<br>Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding
-  - `FORMat` — **SET** `Set_Config_Format` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the format display function, or query the status of the format display function
-  - `LABel` — **SET** `Set_Config_Label` · `<value>` · args: `value` · †<br>Turn on or off the label display function, or query the status of the label display function
-  - `LINE` — **SET** `Set_Config_Line` · `<value>` · args: `value` · †
-  - `WIDth` — **SET** `Set_Config_Width` · `<value>` · args: `value` · numeric · †<br>Turn on or off the width display function, or query the status of the width display function
-  - `ENDian?` — **NAB** `Get_Config_Endian` · → 1 value · †<br>Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding
-  - `FORMat?` — **NAB** `Get_Config_Format` · → CRD · †<br>Turn on or off the format display function, or query the status of the format display function
-  - `LABel?` — **NAB** `Get_Config_Label` · → 1 value · †<br>Turn on or off the label display function, or query the status of the label display function
-  - `LINE?` — **NAB** `Get_Config_Line` · → 1 value · †
-  - `SRATe?` — **NAB** `Get_Config_Srate` · → 1 value · †<br>Query the current digital sample rate
-  - `WIDth?` — **NAB** `Get_Config_Width` · → NR3 · †<br>Turn on or off the width display function, or query the status of the width display function
 - **`CURSor`**
   - `MODE` — **SET** `Set_Cursor_Mode` · `<value>` · args: `value` · enum: `OFF` | `MAN` | `TRAC` | `AUTO` | `XY` · †<br>Set or query the cursor measurement mode
   - `MODE?` — **NAB** `Get_Cursor_Mode` · → CRD · †<br>Set or query the cursor measurement mode
@@ -291,6 +279,90 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `STOP?` — **NAB** `Get_Decoder_Uart_Stop` · → NR3 · †
     - `TX?` — **NAB** `Get_Decoder_Uart_Tx` · → 1 value · †
     - `WIDTh?` — **NAB** `Get_Decoder_Uart_Width` · → NR3 · †
+- **`DECoder<n>`**
+  - **`CONFig`**
+    - `ENDian` — **SET** `Set_Config_Endian` · `<value>` · args: `value` · per-instance: `n` · †<br>Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding
+    - `FORMat` — **SET** `Set_Config_Format` · `<value>` · args: `value` · bool: `OFF` | `ON` · per-instance: `n` · †<br>Turn on or off the format display function, or query the status of the format display function
+    - `LABel` — **SET** `Set_Config_Label` · `<value>` · args: `value` · per-instance: `n` · †<br>Turn on or off the label display function, or query the status of the label display function
+    - `LINE` — **SET** `Set_Config_Line` · `<value>` · args: `value` · per-instance: `n` · †
+    - `WIDth` — **SET** `Set_Config_Width` · `<value>` · args: `value` · numeric · per-instance: `n` · †<br>Turn on or off the width display function, or query the status of the width display function
+    - `ENDian?` — **NAB** `Get_Config_Endian` · per-instance: `n` · → 1 value · †<br>Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding
+    - `FORMat?` — **NAB** `Get_Config_Format` · per-instance: `n` · → CRD · †<br>Turn on or off the format display function, or query the status of the format display function
+    - `LABel?` — **NAB** `Get_Config_Label` · per-instance: `n` · → 1 value · †<br>Turn on or off the label display function, or query the status of the label display function
+    - `LINE?` — **NAB** `Get_Config_Line` · per-instance: `n` · → 1 value · †
+    - `SRATe?` — **NAB** `Get_Config_Srate` · per-instance: `n` · → 1 value · †<br>Query the current digital sample rate
+    - `WIDth?` — **NAB** `Get_Config_Width` · per-instance: `n` · → NR3 · †<br>Turn on or off the width display function, or query the status of the width display function
+  - **`IIC`**
+    - `ADDRess` — **SET** `Set_Iic_Address` · `<value>` · args: `value` · integer · per-instance: `n` · †<br>Set or query the signal source of the clock channel in I2C decoding
+    - `CLK` — **SET** `Set_Iic_Clk` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in I2C decoding
+    - `DATA` — **SET** `Set_Iic_Data` · `<value>` · args: `value` · block · per-instance: `n` · †<br>Set or query the signal source of the clock channel in I2C decoding
+    - `ADDRess?` — **NAB** `Get_Iic_Address` · per-instance: `n` · → NR1 · †<br>Set or query the signal source of the clock channel in I2C decoding
+    - `CLK?` — **NAB** `Get_Iic_Clk` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in I2C decoding
+    - `DATA?` — **NAB** `Get_Iic_Data` · per-instance: `n` · → BLOCK · †<br>Set or query the signal source of the clock channel in I2C decoding
+  - **`PARallel`**
+    - `BITX` — **SET** `Set_Parallel_Bitx` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `CCOMpensation` — **SET** `Set_Parallel_Ccompensation` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `CLK` — **SET** `Set_Parallel_Clk` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `EDGE` — **SET** `Set_Parallel_Edge` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `NREJect` — **SET** `Set_Parallel_Nreject` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `NRTime` — **SET** `Set_Parallel_Nrtime` · `<value>` · args: `value` · numeric (s) · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `PLOT` — **SET** `Set_Parallel_Plot` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `POLarity` — **SET** `Set_Parallel_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · per-instance: `n` · †<br>Set or query the data polarity of parallel decoding
+    - `SOURce` — **SET** `Set_Parallel_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · per-instance: `n` · †<br>Set or query the channel source of the data bit currently selected (parallel decoding)
+    - `WIDTh` — **SET** `Set_Parallel_Width` · `<value>` · args: `value` · numeric · per-instance: `n` · †<br>Set or query the CLK channel source of parallel decoding
+    - `BITX?` — **NAB** `Get_Parallel_Bitx` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `CCOMpensation?` — **NAB** `Get_Parallel_Ccompensation` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `CLK?` — **NAB** `Get_Parallel_Clk` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `EDGE?` — **NAB** `Get_Parallel_Edge` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `NREJect?` — **NAB** `Get_Parallel_Nreject` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `NRTime?` — **NAB** `Get_Parallel_Nrtime` · per-instance: `n` · → NR3 s · †<br>Set or query the CLK channel source of parallel decoding
+    - `PLOT?` — **NAB** `Get_Parallel_Plot` · per-instance: `n` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
+    - `POLarity?` — **NAB** `Get_Parallel_Polarity` · per-instance: `n` · → CRD · †<br>Set or query the CLK channel source of parallel decoding
+    - `SOURce?` — **NAB** `Get_Parallel_Source` · per-instance: `n` · → CRD · †<br>Set or query the CLK channel source of parallel decoding
+    - `WIDTh?` — **NAB** `Get_Parallel_Width` · per-instance: `n` · → NR3 · †<br>Set or query the CLK channel source of parallel decoding
+  - **`SPI`**
+    - `CLK` — **SET** `Set_Spi_Clk` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `CS` — **SET** `Set_Spi_Csrc` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `EDGE` — **SET** `Set_Spi_Edge` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `ENDian` — **SET** `Set_Spi_Endian` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `MISO` — **SET** `Set_Spi_Miso` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `MODE` — **SET** `Set_Spi_Mode` · `<value>` · args: `value` · enum: `CS` | `TIM` · per-instance: `n` · †<br>Set or query the frame synchronization mode of SPI decoding
+    - `MOSI` — **SET** `Set_Spi_Mosi` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `POLarity` — **SET** `Set_Spi_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · per-instance: `n` · †<br>Set or query the polarity of the SDA data line in SPI decoding
+    - `SELect` — **SET** `Set_Spi_Select` · `<value>` · args: `value` · enum: `NCS` | `CS` · per-instance: `n` · †<br>Set or query the CS polarity in SPI decoding
+    - `TIMeout` — **SET** `Set_Spi_Timebase` · `<value>` · args: `value` · numeric (s) · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `WIDTh` — **SET** `Set_Spi_Width` · `<value>` · args: `value` · numeric · per-instance: `n` · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `CLK?` — **NAB** `Get_Spi_Clk` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `CS?` — **NAB** `Get_Spi_Csrc` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `EDGE?` — **NAB** `Get_Spi_Edge` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `ENDian?` — **NAB** `Get_Spi_Endian` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `MISO?` — **NAB** `Get_Spi_Miso` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `MODE?` — **NAB** `Get_Spi_Mode` · per-instance: `n` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `MOSI?` — **NAB** `Get_Spi_Mosi` · per-instance: `n` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `POLarity?` — **NAB** `Get_Spi_Polarity` · per-instance: `n` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `SELect?` — **NAB** `Get_Spi_Select` · per-instance: `n` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `TIMeout?` — **NAB** `Get_Spi_Timebase` · per-instance: `n` · → NR3 s · †<br>Set or query the signal source of the clock channel in SPI decoding
+    - `WIDTh?` — **NAB** `Get_Spi_Width` · per-instance: `n` · → NR3 · †<br>Set or query the signal source of the clock channel in SPI decoding
+  - **`THREshold`**
+    - `CHANnel<chan>` — **SET** `Set_Threshold_Channel` · `<value>` · args: `value` · numeric (V) · per-instance: `n`, `chan` · †<br>Set or query the threshold level of the specified analog channel
+    - `CHANnel<chan>?` — **NAB** `Get_Threshold_Channel` · per-instance: `n`, `chan` · → CRD · †<br>Set or query the threshold level of the specified analog channel
+  - **`UART`**
+    - `BAUD` — **SET** `Set_Uart_Baud` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `ENDian` — **SET** `Set_Uart_Endian` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `PARity` — **SET** `Set_Uart_Parallel` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `POLarity` — **SET** `Set_Uart_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · per-instance: `n` · †<br>Set or query the polarity of RS232 decoding
+    - `RX` — **SET** `Set_Uart_Rx` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `STOP` — **SET** `Set_Uart_Stop` · `<value>` · args: `value` · numeric · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `TX` — **SET** `Set_Uart_Tx` · `<value>` · args: `value` · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `WIDTh` — **SET** `Set_Uart_Width` · `<value>` · args: `value` · numeric · per-instance: `n` · †<br>Set or query the TX channel source of RS232 decoding
+    - `BAUD?` — **NAB** `Get_Uart_Baud` · per-instance: `n` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
+    - `ENDian?` — **NAB** `Get_Uart_Endian` · per-instance: `n` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
+    - `PARity?` — **NAB** `Get_Uart_Parallel` · per-instance: `n` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
+    - `POLarity?` — **NAB** `Get_Uart_Polarity` · per-instance: `n` · → CRD · †<br>Set or query the TX channel source of RS232 decoding
+    - `RX?` — **NAB** `Get_Uart_Rx` · per-instance: `n` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
+    - `STOP?` — **NAB** `Get_Uart_Stop` · per-instance: `n` · → NR3 · †<br>Set or query the TX channel source of RS232 decoding
+    - `TX?` — **NAB** `Get_Uart_Tx` · per-instance: `n` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
+    - `WIDTh?` — **NAB** `Get_Uart_Width` · per-instance: `n` · → NR3 · †<br>Set or query the TX channel source of RS232 decoding
 - **`DISPlay`**
   - `GBRightness` — **SET** `Set_Display_Gbrightness` · `<value>` · args: `value` · integer · †<br>Set or query the brightness of the screen grid
   - `GRID` — **SET** `Set_Display_Grid` · `<value>` · args: `value` · enum: `FULL` | `HALF` | `NONE` · †
@@ -354,16 +426,6 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `FSTart?` — **NAB** `Get_Function_Wreplay_Fstart` · → 1 value · †<br>Set or query the start frame of waveform playback
     - `MODE?` — **NAB** `Get_Function_Wreplay_Mode` · → CRD · †<br>Set or query the waveform playback mode
     - `OPERate?` — **NAB** `Get_Function_Wreplay_Operator` · → CRD · †<br>Start, pause, or stop the waveform playback, or query the status of the waveform playback
-- **`IIC`**
-  - `ADDRess` — **SET** `Set_Iic_Address` · `<value>` · args: `value` · integer · †<br>Set or query the signal source of the clock channel in I2C decoding
-  - `CLK` — **SET** `Set_Iic_Clk` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in I2C decoding
-  - `DATA` — **SET** `Set_Iic_Data` · `<value>` · args: `value` · block · †<br>Set or query the signal source of the clock channel in I2C decoding
-  - `ADDRess?` — **NAB** `Get_Iic_Address` · → NR1 · †<br>Set or query the signal source of the clock channel in I2C decoding
-  - `CLK?` — **NAB** `Get_Iic_Clk` · → 1 value · †<br>Set or query the signal source of the clock channel in I2C decoding
-  - `DATA?` — **NAB** `Get_Iic_Data` · → BLOCK · †<br>Set or query the signal source of the clock channel in I2C decoding
-- **`IMMediate`**
-  - `OFFSet` — **SET** `Set_Immediate_Offset` · `<value>` · args: `value` · numeric · †
-  - `OFFSet?` — **NAB** `Get_Immediate_Offset` · → NR3 · †
 - **`LA`**
   - `ACTive` — **SET** `Set_La_Active` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` · †<br>Set or query the current active channel or channel group
   - `DISPlay` — **SET** `Set_La_Display` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Turn on or off the specified digital channel, user-defined channel group or default channel group, or query the status of the specified digital channel, user-defined channel group or default channel group
@@ -510,27 +572,6 @@ Several statements in one message, so they hang off no single branch. Every stat
 - **`OUTPut`**
   - `IMPedance` — **SET** `Set_Output_Impedance` · `<value>` · args: `value` · enum: `OMEG` | `FIFT` · †
   - `IMPedance?` — **NAB** `Get_Output_Impedance` · → CRD · †
-- **`PARallel`**
-  - `BITX` — **SET** `Set_Parallel_Bitx` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `CCOMpensation` — **SET** `Set_Parallel_Ccompensation` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `CLK` — **SET** `Set_Parallel_Clk` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `EDGE` — **SET** `Set_Parallel_Edge` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `NREJect` — **SET** `Set_Parallel_Nreject` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `NRTime` — **SET** `Set_Parallel_Nrtime` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the CLK channel source of parallel decoding
-  - `PLOT` — **SET** `Set_Parallel_Plot` · `<value>` · args: `value` · †<br>Set or query the CLK channel source of parallel decoding
-  - `POLarity` — **SET** `Set_Parallel_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †<br>Set or query the data polarity of parallel decoding
-  - `SOURce` — **SET** `Set_Parallel_Source` · `<value>` · args: `value` · enum: `D0` | `D1` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9` | `D10` | `D11` | `D12` | `D13` | `D14` | `D15` | `CHAN1` | `CHAN2` | `CHAN3` | `CHAN4` · †<br>Set or query the channel source of the data bit currently selected (parallel decoding)
-  - `WIDTh` — **SET** `Set_Parallel_Width` · `<value>` · args: `value` · numeric · †<br>Set or query the CLK channel source of parallel decoding
-  - `BITX?` — **NAB** `Get_Parallel_Bitx` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `CCOMpensation?` — **NAB** `Get_Parallel_Ccompensation` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `CLK?` — **NAB** `Get_Parallel_Clk` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `EDGE?` — **NAB** `Get_Parallel_Edge` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `NREJect?` — **NAB** `Get_Parallel_Nreject` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `NRTime?` — **NAB** `Get_Parallel_Nrtime` · → NR3 s · †<br>Set or query the CLK channel source of parallel decoding
-  - `PLOT?` — **NAB** `Get_Parallel_Plot` · → 1 value · †<br>Set or query the CLK channel source of parallel decoding
-  - `POLarity?` — **NAB** `Get_Parallel_Polarity` · → CRD · †<br>Set or query the CLK channel source of parallel decoding
-  - `SOURce?` — **NAB** `Get_Parallel_Source` · → CRD · †<br>Set or query the CLK channel source of parallel decoding
-  - `WIDTh?` — **NAB** `Get_Parallel_Width` · → NR3 · †<br>Set or query the CLK channel source of parallel decoding
 - **`PHASe`**
   - `ADJust` — **SET** `Set_Phase_Adjust` · `<value>` · args: `value` · †<br>Set or query the start phase of the specified source channel
   - `ADJust?` — **NAB** `Get_Phase_Adjust` · → 1 value · †<br>Set or query the start phase of the specified source channel
@@ -552,29 +593,6 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `SOURce?` — **NAB** `Get_Reference_Source` · → CRD · †
   - `VOFFset?` — **NAB** `Get_Reference_Voffset` · → 1 value · †<br>Commands
   - `VSCale?` — **NAB** `Get_Reference_Vscale` · → 1 value · †
-- **`SPI`**
-  - `CLK` — **SET** `Set_Spi_Clk` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `CS` — **SET** `Set_Spi_Csrc` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `EDGE` — **SET** `Set_Spi_Edge` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `ENDian` — **SET** `Set_Spi_Endian` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `MISO` — **SET** `Set_Spi_Miso` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `MODE` — **SET** `Set_Spi_Mode` · `<value>` · args: `value` · enum: `CS` | `TIM` · †<br>Set or query the frame synchronization mode of SPI decoding
-  - `MOSI` — **SET** `Set_Spi_Mosi` · `<value>` · args: `value` · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `POLarity` — **SET** `Set_Spi_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †<br>Set or query the polarity of the SDA data line in SPI decoding
-  - `SELect` — **SET** `Set_Spi_Select` · `<value>` · args: `value` · enum: `NCS` | `CS` · †<br>Set or query the CS polarity in SPI decoding
-  - `TIMeout` — **SET** `Set_Spi_Timebase` · `<value>` · args: `value` · numeric (s) · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `WIDTh` — **SET** `Set_Spi_Width` · `<value>` · args: `value` · numeric · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `CLK?` — **NAB** `Get_Spi_Clk` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `CS?` — **NAB** `Get_Spi_Csrc` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `EDGE?` — **NAB** `Get_Spi_Edge` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `ENDian?` — **NAB** `Get_Spi_Endian` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `MISO?` — **NAB** `Get_Spi_Miso` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `MODE?` — **NAB** `Get_Spi_Mode` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `MOSI?` — **NAB** `Get_Spi_Mosi` · → 1 value · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `POLarity?` — **NAB** `Get_Spi_Polarity` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `SELect?` — **NAB** `Get_Spi_Select` · → CRD · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `TIMeout?` — **NAB** `Get_Spi_Timebase` · → NR3 s · †<br>Set or query the signal source of the clock channel in SPI decoding
-  - `WIDTh?` — **NAB** `Get_Spi_Width` · → NR3 · †<br>Set or query the signal source of the clock channel in SPI decoding
 - **`STORage`**
   - **`IMAGe`**
     - `COLor` — **SET** `Set_Storage_Image_Color` · `<value>` · args: `value` · bool: `OFF` | `ON` · †<br>Set the image color when storing images to color (ON) or intensity graded color (OFF)
@@ -599,9 +617,6 @@ Several statements in one message, so they hang off no single branch. Every stat
   - **`OPTion`**
     - `INSTall` — **DO** `Do_System_Option_Install` · †<br>Install a option. |Name|Type|Range|Default| |---|---|---|---| |<license>|ASCII String|Refer to
     - `UNINSTall` — **DO** `Do_System_Option_Uninstall` · †<br>Uninstall the options installed
-- **`THREshold`**
-  - `CHANnel<chan>` — **SET** `Set_Threshold_Channel` · `<value>` · args: `value` · numeric (V) · per-instance: `chan` · †<br>Set or query the threshold level of the specified analog channel
-  - `CHANnel<chan>?` — **NAB** `Get_Threshold_Channel` · per-instance: `chan` · → CRD · †<br>Set or query the threshold level of the specified analog channel
 - **`TIMebase`**
   - `MODE` — **SET** `Set_Timebase_Mode` · `<mode>` · args: `mode` · enum: `MAIN` | `XY` | `ROLL`
   - `OFFSet` — **SET** `Set_Timebase_Offset` · `<offset>` · args: `offset` · numeric (s)
@@ -838,34 +853,17 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `SLOPe?` — **NAB** `Get_Trigger_Windows_Slope` · → CRD · †<br>Set or query the trigger source in windows trigger
     - `SOURce?` — **NAB** `Get_Trigger_Windows_Source` · → CRD · †<br>Set or query the trigger source in windows trigger
     - `TIMe?` — **NAB** `Get_Trigger_Windows_Timebase` · → NR3 s · †<br>Set or query the trigger source in windows trigger
-- **`UART`**
-  - `BAUD` — **SET** `Set_Uart_Baud` · `<value>` · args: `value` · †<br>Set or query the TX channel source of RS232 decoding
-  - `ENDian` — **SET** `Set_Uart_Endian` · `<value>` · args: `value` · †<br>Set or query the TX channel source of RS232 decoding
-  - `PARity` — **SET** `Set_Uart_Parallel` · `<value>` · args: `value` · †<br>Set or query the TX channel source of RS232 decoding
-  - `POLarity` — **SET** `Set_Uart_Polarity` · `<value>` · args: `value` · enum: `NEG` | `POS` · †<br>Set or query the polarity of RS232 decoding
-  - `RX` — **SET** `Set_Uart_Rx` · `<value>` · args: `value` · †<br>Set or query the TX channel source of RS232 decoding
-  - `STOP` — **SET** `Set_Uart_Stop` · `<value>` · args: `value` · numeric · †<br>Set or query the TX channel source of RS232 decoding
-  - `TX` — **SET** `Set_Uart_Tx` · `<value>` · args: `value` · †<br>Set or query the TX channel source of RS232 decoding
-  - `WIDTh` — **SET** `Set_Uart_Width` · `<value>` · args: `value` · numeric · †<br>Set or query the TX channel source of RS232 decoding
-  - `BAUD?` — **NAB** `Get_Uart_Baud` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
-  - `ENDian?` — **NAB** `Get_Uart_Endian` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
-  - `PARity?` — **NAB** `Get_Uart_Parallel` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
-  - `POLarity?` — **NAB** `Get_Uart_Polarity` · → CRD · †<br>Set or query the TX channel source of RS232 decoding
-  - `RX?` — **NAB** `Get_Uart_Rx` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
-  - `STOP?` — **NAB** `Get_Uart_Stop` · → NR3 · †<br>Set or query the TX channel source of RS232 decoding
-  - `TX?` — **NAB** `Get_Uart_Tx` · → 1 value · †<br>Set or query the TX channel source of RS232 decoding
-  - `WIDTh?` — **NAB** `Get_Uart_Width` · → NR3 · †<br>Set or query the TX channel source of RS232 decoding
 - **`VOLTage`**
   - `OFFSet` — **SET** `Set_Voltage_Offset` · `<value>` · args: `value` · numeric (V) · †
   - `OFFSet?` — **NAB** `Get_Voltage_Offset` · → NR3 V · †
   - `LEVel` — **DO** `Do_Voltage_Level` · †
   - **`LEVel`**
     - **`IMMediate`**
+      - `OFFSet` — **SET** `Set_Immediate_Offset` · `<value>` · args: `value` · numeric · †
       - `AMPLitude` — **SET** `Set_Voltage_Level_Immediate_Amplitude` · `<value>` · args: `value` · numeric (V) · †<br>Set or query the output amplitude of the specified source channel
+      - `OFFSet?` — **NAB** `Get_Immediate_Offset` · → NR3 · †
       - `AMPLitude?` — **NAB** `Get_Voltage_Level_Immediate_Amplitude` · → NR3 V · †<br>Set or query the output amplitude of the specified source channel
       - `OFFSet` — **DO** `Do_Voltage_Level_Immediate_Offset` · †
-- **`WAV`**
-  - `SOR` — **DO** `Do_Waveform_Sor` · †<br>LabVIEW Programming Demo
 - **`WAVeform`**
   - `FORMat` — **SET** `Set_Waveform_Format` · `<format>` · args: `format` · enum: `WORD` | `BYTE` | `ASC`
   - `MODE` — **SET** `Set_Waveform_Mode` · `<mode>` · args: `mode` · enum: `NORM` | `MAX` | `RAW`

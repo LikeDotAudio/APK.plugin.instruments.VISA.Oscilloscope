@@ -616,6 +616,33 @@
         },
         "unverified": true
       },
+      "Get_Probe_Skew": {
+        "command": "Get_Probe_Skew",
+        "verb": "get",
+        "description": "Get probe skew",
+        "scpi": ":CHANnel<n>:PROBe:SKEW?",
+        "scpi_fast": ":CHAN<n>:PROB:SKEW?",
+        "subsystem": "PROB",
+        "group": "PROB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1,
+          "type": "NR3"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Probe_Skew",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Probe_Skew"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Probe_Skew",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
       "Get_Display_Data": {
         "command": "Get_Display_Data",
         "verb": "get",
@@ -1290,8 +1317,8 @@
         "command": "Get_Marker_Xdelta",
         "verb": "get",
         "description": "Get marker xdelta",
-        "scpi": ":MARker:XDELta?",
-        "scpi_fast": ":MAR:XDEL?",
+        "scpi": ":MARKer:XDELta?",
+        "scpi_fast": ":MARK:XDEL?",
         "subsystem": "MAR",
         "group": "MAR",
         "args": [],
@@ -1873,33 +1900,6 @@
             "command": "Get_Measure_Xmin"
           },
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Measure_Xmin",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Probe_Skew": {
-        "command": "Get_Probe_Skew",
-        "verb": "get",
-        "description": "Get probe skew",
-        "scpi": "PROBe:SKEW?",
-        "scpi_fast": "PROB:SKEW?",
-        "subsystem": "PROB",
-        "group": "PROB",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1,
-          "type": "NR3"
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Probe_Skew",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Probe_Skew"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Probe_Skew",
           "reading_direction": "out"
         },
         "unverified": true
@@ -5299,6 +5299,32 @@
         },
         "unverified": false
       },
+      "Set_Probe_Skew": {
+        "command": "Set_Probe_Skew",
+        "verb": "set",
+        "description": "Set probe skew",
+        "scpi": ":CHANnel<n>:PROBe:SKEW <value>",
+        "scpi_fast": ":CHAN<n>:PROB:SKEW <value>",
+        "subsystem": "PROB",
+        "group": "PROB",
+        "args": [
+          "value"
+        ],
+        "arg": {
+          "kind": "numeric"
+        },
+        "returns": null,
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Probe_Skew",
+          "direction": "in",
+          "payload_format": {
+            "command": "Set_Probe_Skew",
+            "value": "<value>",
+            "input_name": "value"
+          }
+        },
+        "unverified": true
+      },
       "Set_Channel_Scale": {
         "command": "Set_Channel_Scale",
         "verb": "set",
@@ -6832,32 +6858,6 @@
           }
         },
         "unverified": false
-      },
-      "Set_Probe_Skew": {
-        "command": "Set_Probe_Skew",
-        "verb": "set",
-        "description": "Set probe skew",
-        "scpi": ":PROBe:SKEW <value>",
-        "scpi_fast": ":PROB:SKEW <value>",
-        "subsystem": "PROB",
-        "group": "PROB",
-        "args": [
-          "value"
-        ],
-        "arg": {
-          "kind": "numeric"
-        },
-        "returns": null,
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Set_Probe_Skew",
-          "direction": "in",
-          "payload_format": {
-            "command": "Set_Probe_Skew",
-            "value": "<value>",
-            "input_name": "value"
-          }
-        },
-        "unverified": true
       },
       "Set_System_Date": {
         "command": "Set_System_Date",
@@ -9502,6 +9502,33 @@
         },
         "unverified": true
       },
+      "Get_Probe_Skew": {
+        "command": "Get_Probe_Skew",
+        "verb": "nab",
+        "description": "Get probe skew",
+        "scpi": ":CHANnel<n>:PROBe:SKEW?",
+        "scpi_fast": ":CHAN<n>:PROB:SKEW?",
+        "subsystem": "PROB",
+        "group": "PROB",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 1,
+          "type": "NR3"
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Probe_Skew",
+          "direction": "in",
+          "payload_format": {
+            "command": "Get_Probe_Skew"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Probe_Skew",
+          "reading_direction": "out"
+        },
+        "unverified": true
+      },
       "Get_Display_Data": {
         "command": "Get_Display_Data",
         "verb": "nab",
@@ -10223,8 +10250,8 @@
         "command": "Get_Marker_Xdelta",
         "verb": "nab",
         "description": "Get marker xdelta",
-        "scpi": ":MARker:XDELta?",
-        "scpi_fast": ":MAR:XDEL?",
+        "scpi": ":MARKer:XDELta?",
+        "scpi_fast": ":MARK:XDEL?",
         "subsystem": "MAR",
         "group": "MAR",
         "args": [],
@@ -11239,33 +11266,6 @@
             "command": "Get_Measure_Xmin"
           },
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Measure_Xmin",
-          "reading_direction": "out"
-        },
-        "unverified": true
-      },
-      "Get_Probe_Skew": {
-        "command": "Get_Probe_Skew",
-        "verb": "nab",
-        "description": "Get probe skew",
-        "scpi": "PROBe:SKEW?",
-        "scpi_fast": "PROB:SKEW?",
-        "subsystem": "PROB",
-        "group": "PROB",
-        "args": [],
-        "arg": {
-          "kind": "none"
-        },
-        "returns": {
-          "count": 1,
-          "type": "NR3"
-        },
-        "mqtt": {
-          "topic": "APK.audio/Gui/Komands/Oscilloscope/Get_Probe_Skew",
-          "direction": "in",
-          "payload_format": {
-            "command": "Get_Probe_Skew"
-          },
-          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/Get_Probe_Skew",
           "reading_direction": "out"
         },
         "unverified": true
@@ -14973,8 +14973,8 @@
         "command": "Do_Display_Line",
         "verb": "do",
         "description": "Do display line",
-        "scpi": "DISPLay:LINE",
-        "scpi_fast": "DISPL:LINE",
+        "scpi": ":DISPlay:LINE",
+        "scpi_fast": ":DISP:LINE",
         "subsystem": "DISPL",
         "group": "DISPL",
         "args": [],
@@ -15479,8 +15479,8 @@
         "command": "Do_Measure_Risetime",
         "verb": "do",
         "description": "Do measure risetime",
-        "scpi": ":MEASure:RISEtime",
-        "scpi_fast": ":MEAS:RISE",
+        "scpi": ":MEASure:RISetime",
+        "scpi_fast": ":MEAS:RIS",
         "subsystem": "MEAS",
         "group": "MEAS",
         "args": [],

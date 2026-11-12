@@ -61,3 +61,16 @@ SCPI-99 Vol 1 §6.2.1 abbreviation rule; the keyword as written in the Agilent I
 - `set/Set_Waveform_Format` — searched: as above (54641D manual not obtainable)
 - `set/Set_Waveform_Source` — searched: as above (54641D manual not obtainable)
 - `rig/Setup_Trigger_Edge` — searched: as above (54641D manual not obtainable)
+
+## SCPI paths — every header against the model's own tree (scpi_paths.py, 2026-11-11)
+
+The tree: `54641D.scpi.json`, read off Agilent 54620/54640 Series Programmer's Guide; the 6000 Series Programmer's Guide (SOURCES.md) for the shared InfiniiVision tree. Each entry's `notes` / `retired_because` carries the full reason and page; the 33220A's Certify of 2026-11-11 (199 tries) and the GUI-certificate book are the bench evidence. Nothing was sent to verify.
+
+| Command | Change | Was |
+|---|---|---|
+| `do/Do_Measure_Risetime` | scpi → `:MEASure:RISetime` | was `:MEASure:RISEtime` |
+| `nab/Get_Marker_Xdelta` | scpi → `:MARKer:XDELta?` | was `:MARker:XDELta?` |
+| `set/Set_Probe_Skew` | scpi → `:CHANnel<n>:PROBe:SKEW <value>` | was `:PROBe:SKEW <value>` |
+| `nab/Get_Probe_Skew` | scpi → `:CHANnel<n>:PROBe:SKEW?` | was `PROBe:SKEW?` |
+| `do/Do_Display_Line` | scpi → `:DISPlay:LINE` | was `DISPLay:LINE` |
+| `do/Do_Protection_Clear` | left as is, unverified — unresolved |  |

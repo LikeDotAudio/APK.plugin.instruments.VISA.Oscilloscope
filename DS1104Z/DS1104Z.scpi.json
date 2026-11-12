@@ -1,0 +1,51 @@
+{
+  "model": "DS1104Z",
+  "manual": "Rigol MSO1000Z/DS1000Z Programming Guide (2015), Chapter 2 Command System; [:SOURce[<n>]] is the default node of the source commands",
+  "roots": [
+    "AUToscale",
+    "CLEar",
+    "RUN",
+    "STOP",
+    "SINGle",
+    "TFORce",
+    "ACQuire",
+    "CALibrate",
+    "CHANnel",
+    "CURSor",
+    "DECoder",
+    "DISPlay",
+    "ETABle",
+    "FUNCtion",
+    "IEEE488",
+    "LA",
+    "LAN",
+    "MASK",
+    "MATH",
+    "MEASure",
+    "REFerence",
+    "SOURce",
+    "STORage",
+    "SYSTem",
+    "TIMebase",
+    "TRIGger",
+    "WAVeform",
+    "OUTPut",
+    "FREQuency",
+    "PHASe",
+    "VOLTage",
+    "PULSe",
+    "MOD",
+    "APPLy",
+    "TRACe",
+    "DATA"
+  ],
+  "optional": [
+    "SOURce",
+    "TRACe"
+  ],
+  "unresolved": {},
+  "spellings": {
+    "THRESHOLD": "the manual writes both: :LA:POD<n>:THReshold (p. 2-82) and :DECoder<n>:THREshold:CHANnel<n> (p. 2-40)",
+    "WIDTH": "the manual writes both: :DECoder<n>:CONFig:WIDth (p. 2-43) and :DECoder<n>:SPI:WIDTh, :TRIGger:PULSe:WIDTh"
+  }
+}

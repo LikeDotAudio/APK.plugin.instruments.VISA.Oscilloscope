@@ -531,6 +531,20 @@
       ],
       "subsystem": "CHANnel"
     },
+    "Set_Probe_Skew": {
+      "scpi": ":CHANnel<n>:PROBe:SKEW <value>",
+      "scpiFast": ":CHAN<n>:PROB:SKEW <value>",
+      "description": "Set probe skew",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PROB",
+      "unverified": true,
+      "notes": "Was `:PROBe:SKEW <value>`: the table generator cut the `:CHANnel<n>` parent off, so the unit heard a root `PROBe` it does not have (-113 \"Undefined header\"). Full path from the InfiniiVision 6000 Series Programmer's Guide (SOURCES.md), which shares the 54640 tree, p. 242 (scpi_paths.py, 2026-11-11)."
+    },
     "Set_Channel_Scale": {
       "scpi": ":CHANnel<n>:SCALe <scale>",
       "scpiFast": ":CHAN<n>:SCAL <scale>",
@@ -1323,19 +1337,6 @@
         "thresh"
       ],
       "subsystem": "DIGital"
-    },
-    "Set_Probe_Skew": {
-      "scpi": ":PROBe:SKEW <value>",
-      "scpiFast": ":PROB:SKEW <value>",
-      "description": "Set probe skew",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PROB",
-      "unverified": true
     },
     "Set_System_Date": {
       "scpi": ":SYSTem:DATE <value>",
@@ -2547,11 +2548,12 @@
       "unverified": true
     },
     "Do_Display_Line": {
-      "scpi": "DISPLay:LINE",
-      "scpiFast": "DISPL:LINE",
+      "scpi": ":DISPlay:LINE",
+      "scpiFast": ":DISP:LINE",
       "description": "Do display line",
       "subsystem": "DISPL",
-      "unverified": true
+      "unverified": true,
+      "notes": "Was `DISPLay:LINE`: the keyword is DISPlay (short DISP), not DISPLay. :DISPlay:LINE takes a quoted string, so a bare `do` still sends nothing useful (parameter note)."
     },
     "Do_Display_Order": {
       "scpi": "DISPlay:ORDer",
@@ -2708,11 +2710,12 @@
       "unverified": true
     },
     "Do_Measure_Risetime": {
-      "scpi": ":MEASure:RISEtime",
-      "scpiFast": ":MEAS:RISE",
+      "scpi": ":MEASure:RISetime",
+      "scpiFast": ":MEAS:RIS",
       "description": "Do measure risetime",
       "subsystem": "MEAS",
-      "unverified": true
+      "unverified": true,
+      "notes": "Was `:MEASure:RISEtime`: the short form is RIS — `:MEASure:RISetime` (the InfiniiVision 6000 Series Programmer's Guide (SOURCES.md), which shares the 54640 tree); `:MEAS:RISE` is no form of it."
     },
     "Do_Measure_Scratch": {
       "scpi": "MEASure:SCRatch",
@@ -2803,7 +2806,8 @@
       "scpiFast": ":PROT:CLE",
       "description": "Do protection clear",
       "subsystem": "PROT",
-      "unverified": true
+      "unverified": true,
+      "notes": "Unresolved (scpi_paths.py, 2026-11-11): `:PROTection:CLEAR` lost its parent, and the manual has two — `:CHANnel<n>:PROTection:CLEar` and `:EXTernal:PROTection:CLEar`; which input this meant is not recorded. Never to be sent until a person picks one."
     },
     "Do_Run": {
       "scpi": ":RUN",
@@ -3396,6 +3400,18 @@
       "notes": "The channel index is IN THE COMMAND, not a parameter, so the reply lands on `Reading/channel_settings_2/scale` and a four-strip panel can tell its channels apart. A parameterised verb answers under one name whichever channel it read, which no per-channel display can bind to. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
     },
+    "Get_Probe_Skew": {
+      "scpi": ":CHANnel<n>:PROBe:SKEW?",
+      "scpiFast": ":CHAN<n>:PROB:SKEW?",
+      "description": "Get probe skew",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "PROB",
+      "unverified": true,
+      "notes": "Was `PROBe:SKEW?`: the table generator cut the `:CHANnel<n>` parent off, so the unit heard a root `PROBe` it does not have (-113 \"Undefined header\"). Full path from the InfiniiVision 6000 Series Programmer's Guide (SOURCES.md), which shares the 54640 tree, p. 242 (scpi_paths.py, 2026-11-11)."
+    },
     "Get_Display_Data": {
       "scpi": ":DISPlay:DATA?",
       "scpiFast": ":DISP:DATA?",
@@ -3699,8 +3715,8 @@
       "unverified": true
     },
     "Get_Marker_Xdelta": {
-      "scpi": ":MARker:XDELta?",
-      "scpiFast": ":MAR:XDEL?",
+      "scpi": ":MARKer:XDELta?",
+      "scpiFast": ":MARK:XDEL?",
       "description": "Get marker xdelta",
       "returns": {
         "count": 1,
@@ -3708,7 +3724,8 @@
         "unit": "s"
       },
       "subsystem": "MAR",
-      "unverified": true
+      "unverified": true,
+      "notes": "Was `:MARker:XDELta?`: the keyword is MARKer (short MARK), not MARker — `:MARKer:XDELta?` (the InfiniiVision 6000 Series Programmer's Guide (SOURCES.md), which shares the 54640 tree, p. 314)."
     },
     "Get_X_Delta": {
       "scpi": "MARKer:XDELta?",
@@ -4277,17 +4294,6 @@
         "type": "NR3"
       },
       "subsystem": "MEAS",
-      "unverified": true
-    },
-    "Get_Probe_Skew": {
-      "scpi": "PROBe:SKEW?",
-      "scpiFast": "PROB:SKEW?",
-      "description": "Get probe skew",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "PROB",
       "unverified": true
     },
     "Get_System_Date": {

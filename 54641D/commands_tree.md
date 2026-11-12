@@ -119,12 +119,13 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `IMPedance` — **SET** `Set_Impedance` · `<imp>` · args: `imp` · enum · per-instance: `n`
   - `INVert` — **SET** `Set_Invert` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
   - `PROBe` — **SET** `Set_Probe` · `<atten>` · args: `atten` · numeric · per-instance: `n`
+  - **`PROBe`**
+    - `SKEW` — **SET** `Set_Probe_Skew` · `<value>` · args: `value` · numeric · per-instance: `n` · †
+    - `SKEW?` — **NAB** `Get_Probe_Skew` · per-instance: `n` · → NR3 · †
 - **`DIGital<n>`**
   - `DISPlay` — **SET** `Set_Digital_Display` · `<state>` · args: `state` · bool: `OFF` | `ON` · per-instance: `n`
   - `LABel` — **SET** `Set_Digital_Label` · `<label>` · args: `label` · per-instance: `n`
   - `POSition` — **SET** `Set_Digital_Position` · `<pos>` · args: `pos` · numeric · per-instance: `n`
-- **`DISPLay`**
-  - `LINE` — **DO** `Do_Display_Line` · †
 - **`DISPlay`**
   - `DATA` — **SET** `Set_Display_Data` · `<value>` · args: `value` · block · †
   - `LABel` — **SET** `Set_Display_Label` · `<value>` · args: `value` · †
@@ -141,6 +142,7 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `CONNect` — **DO** `Do_Display_Connect` · †
   - `GRID` — **DO** `Do_Display_Grid` · †
   - `INVerse` — **DO** `Do_Display_Invert` · †
+  - `LINE` — **DO** `Do_Display_Line` · †
   - `ORDer` — **DO** `Do_Display_Order` · †
   - `PIXel` — **DO** `Do_Display_Pixel` · †
   - `POSition` — **DO** `Do_Display_Position` · †
@@ -214,12 +216,11 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `Y1Position` — **SET** `Set_Y1` · `<lev>` · args: `lev` · numeric
   - `Y2Position` — **SET** `Set_Y2` · `<lev>` · args: `lev` · numeric
   - `MODE?` — **NAB** `Get_Marker_Mode` · → CRD · †
+  - `XDELta?` — **NAB** `Get_Marker_Xdelta` · → NR3 s · †
   - `XDELta?` — **NAB** `Get_X_Delta` · → NR3 s
   - `YDELta?` — **NAB** `Get_Y_Delta` · → NR3 s
   - `TDELta` — **DO** `Do_Marker_Tdelta` · †<br>Obsolete and Discontinued Commands
   - `VDELta` — **DO** `Do_Marker_Vdelta` · †
-- **`MARker`**
-  - `XDELta?` — **NAB** `Get_Marker_Xdelta` · → NR3 s · †
 - **`MEASURE`**
   - `RISETIME?` — **NAB** `Get_Measure_Risetime` · → NR3 s · †<br>Query Command
 - **`MEASure`**
@@ -260,7 +261,7 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `XMIN?` — **NAB** `Get_Measure_Xmin` · → NR3 · †<br>Obsolete and Discontinued Commands
   - `CLEar` — **DO** `Do_Measure_Clear` · †<br>Obsolete and Discontinued Commands
   - `LOWer` — **DO** `Do_Measure_Lower` · †<br>Obsolete and Discontinued Commands
-  - `RISEtime` — **DO** `Do_Measure_Risetime` · †
+  - `RISetime` — **DO** `Do_Measure_Risetime` · †
   - `SCRatch` — **DO** `Do_Measure_Scratch` · †<br>Obsolete and Discontinued Commands
   - `TDELta` — **DO** `Do_Measure_Tdelta` · †<br>Obsolete and Discontinued Commands
   - `THResholds` — **DO** `Do_Measure_Threshold` · †<br>Obsolete and Discontinued Commands
@@ -277,9 +278,6 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `THResholds` — **SET** `Set_Measure_Thresholds` · `<mode>` · args: `mode` · numeric
 - **`POD<n>`**
   - `THReshold` — **SET** `Set_Pod_Threshold` · `<thresh>` · args: `thresh` · numeric · per-instance: `n`
-- **`PROBe`**
-  - `SKEW` — **SET** `Set_Probe_Skew` · `<value>` · args: `value` · numeric · †
-  - `SKEW?` — **NAB** `Get_Probe_Skew` · → NR3 · †
 - **`PROTection`**
   - `CLEAR` — **DO** `Do_Protection_Clear` · †
 - **`SYSTem`**
@@ -287,12 +285,12 @@ Several statements in one message, so they hang off no single branch. Every stat
   - `DATE` — **SET** `Set_System_Date` · `<value>` · args: `value` · †
   - `DSP` — **SET** `Set_System_Dsp` · `<string>` · args: `string` · string · †<br>Set display message
   - `TIME` — **SET** `Set_System_Time` · `<value>` · args: `value` · numeric (s) · †
-  - `ERRor?` — **NAB** `Get_Error` · → NR2
+  - `ERRor?` — **NAB** `Get_Error` · → ERROR
   - `SETup?` — **NAB** `Get_Setup` · → BLOCK
   - `DATE?` — **NAB** `Get_System_Date` · → 1 value · †
   - `LOCK?` — **NAB** `Get_System_Lock` · → 1 value · †
   - `TIME?` — **NAB** `Get_System_Time` · → NR3 s · †
-  - `ERRor?` — **NAB** `Read_Error` · → NR2
+  - `ERRor?` — **NAB** `Read_Error` · → ERROR
   - `KEY` — **DO** `Do_System_Key` · †
 - **`TIM`**
   - `DEL` — **DO** `Do_Timebase_Delay` · †<br>Program Header Options
@@ -371,7 +369,7 @@ Several statements in one message, so they hang off no single branch. Every stat
     - `ACKNowledge?` — **NAB** `Get_Trigger_Can_Acknowledge` · → 1 value · †
     - `SAMPlepoint?` — **NAB** `Get_Trigger_Can_Samplepoint` · → 1 value · †
     - `SOURce?` — **NAB** `Get_Trigger_Can_Source` · → CRD · †
-    - `TRIGer?` — **NAB** `Get_Trigger_Can_Trigger` · → 1 value · †
+    - `TRIGger?` — **NAB** `Get_Trigger_Can_Trigger` · → 1 value · †
     - `PATTern` — **DO** `Do_Trigger_Can_Pattern` · †<br>Table 5-1
     - `SIGNal` — **DO** `Do_Trigger_Can_Signal` · †<br>Table 5-1
     - **`PATTern`**

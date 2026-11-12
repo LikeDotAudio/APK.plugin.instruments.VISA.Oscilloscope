@@ -19,7 +19,7 @@ Every Oscilloscope model this library drives, and how to drive it. Each model an
 | [DHO804](SDK/DHO804.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15202 |
 | [DS1054Z](SDK/DS1054Z.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15203 |
 | [DS1074Z](SDK/DS1074Z.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15204 |
-| [DS1104Z](SDK/DS1104Z.md) | Rigol | 354 | 341 | 373 | 0 | 63 | 15205 |
+| [DS1104Z](SDK/DS1104Z.md) | Rigol | 354 | 341 | 373 | 0 | 62 | 15205 |
 | [DS1104Z Plus](SDK/DS1104Z%20Plus.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15206 |
 | [DS7014](SDK/DS7014.md) | Rigol | 157 | 174 | 171 | 1 | 106 | 15207 |
 | [DSO9064A](SDK/DSO9064A.md) | HP / Agilent / Keysight | 157 | 174 | 171 | 1 | 106 | 15208 |

@@ -1,0 +1,39 @@
+{
+  "model": "54641D",
+  "manual": "Agilent 54620/54640 Series Programmer's Guide; the 6000 Series Programmer's Guide (SOURCES.md) for the shared InfiniiVision tree",
+  "roots": [
+    "AUToscale",
+    "BLANk",
+    "DIGitize",
+    "MERGe",
+    "PRINt",
+    "RUN",
+    "SINGle",
+    "STATus",
+    "STOP",
+    "VIEW",
+    "ACQuire",
+    "CALibrate",
+    "CHANnel",
+    "DIGital",
+    "DISPlay",
+    "EXTernal",
+    "FUNCtion",
+    "HARDcopy",
+    "MARKer",
+    "MEASure",
+    "POD",
+    "SYSTem",
+    "TIMebase",
+    "TRIGger",
+    "WAVeform",
+    "SAVE",
+    "RECall",
+    "MTESt",
+    "SBUS"
+  ],
+  "optional": [],
+  "unresolved": {
+    "do/Do_Protection_Clear": "parent cut off and the manual has two: :CHANnel<n>:PROTection:CLEar and :EXTernal:PROTection:CLEar"
+  }
+}

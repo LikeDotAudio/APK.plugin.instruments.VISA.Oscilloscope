@@ -624,75 +624,6 @@
       ],
       "subsystem": "CHANnel"
     },
-    "Set_Config_Endian": {
-      "scpi": ":CONFig:ENDian <value>",
-      "scpiFast": ":CONF:END <value>",
-      "description": "Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Set_Config_Format": {
-      "scpi": ":CONFig:FORMat <value>",
-      "scpiFast": ":CONF:FORM <value>",
-      "description": "Turn on or off the format display function, or query the status of the format display function",
-      "arg": {
-        "kind": "bool",
-        "values": [
-          "OFF",
-          "ON"
-        ]
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Set_Config_Label": {
-      "scpi": ":CONFig:LABel <value>",
-      "scpiFast": ":CONF:LAB <value>",
-      "description": "Turn on or off the label display function, or query the status of the label display function",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Set_Config_Line": {
-      "scpi": ":CONFig:LINE <value>",
-      "scpiFast": ":CONF:LINE <value>",
-      "description": "Set config line",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Set_Config_Width": {
-      "scpi": ":CONFig:WIDth <value>",
-      "scpiFast": ":CONF:WID <value>",
-      "description": "Turn on or off the width display function, or query the status of the width display function",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "CONF",
-      "unverified": true
-    },
     "Set_Cursor_Manual_Ax": {
       "scpi": ":CURSor:MANual:AX <value>",
       "scpiFast": ":CURS:MAN:AX <value>",
@@ -1896,6 +1827,580 @@
       "subsystem": "DEC",
       "unverified": true
     },
+    "Set_Config_Endian": {
+      "scpi": ":DECoder<n>:CONFig:ENDian <value>",
+      "scpiFast": ":DEC<n>:CONF:END <value>",
+      "description": "Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:ENDian <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Config_Format": {
+      "scpi": ":DECoder<n>:CONFig:FORMat <value>",
+      "scpiFast": ":DEC<n>:CONF:FORM <value>",
+      "description": "Turn on or off the format display function, or query the status of the format display function",
+      "arg": {
+        "kind": "bool",
+        "values": [
+          "OFF",
+          "ON"
+        ]
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:FORMat <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Config_Label": {
+      "scpi": ":DECoder<n>:CONFig:LABel <value>",
+      "scpiFast": ":DEC<n>:CONF:LAB <value>",
+      "description": "Turn on or off the label display function, or query the status of the label display function",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:LABel <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Config_Line": {
+      "scpi": ":DECoder<n>:CONFig:LINE <value>",
+      "scpiFast": ":DEC<n>:CONF:LINE <value>",
+      "description": "Set config line",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:LINE <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Config_Width": {
+      "scpi": ":DECoder<n>:CONFig:WIDth <value>",
+      "scpiFast": ":DEC<n>:CONF:WID <value>",
+      "description": "Turn on or off the width display function, or query the status of the width display function",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:WIDth <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Iic_Address": {
+      "scpi": ":DECoder<n>:IIC:ADDRess <value>",
+      "scpiFast": ":DEC<n>:IIC:ADDR <value>",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "arg": {
+        "kind": "integer"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:ADDRess <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Iic_Clk": {
+      "scpi": ":DECoder<n>:IIC:CLK <value>",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:CLK <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Iic_Data": {
+      "scpi": ":DECoder<n>:IIC:DATA <value>",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "arg": {
+        "kind": "block"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:DATA <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Bitx": {
+      "scpi": ":DECoder<n>:PARallel:BITX <value>",
+      "scpiFast": ":DEC<n>:PAR:BITX <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:BITX <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Ccompensation": {
+      "scpi": ":DECoder<n>:PARallel:CCOMpensation <value>",
+      "scpiFast": ":DEC<n>:PAR:CCOM <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:CCOMpensation <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Clk": {
+      "scpi": ":DECoder<n>:PARallel:CLK <value>",
+      "scpiFast": ":DEC<n>:PAR:CLK <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:CLK <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Edge": {
+      "scpi": ":DECoder<n>:PARallel:EDGE <value>",
+      "scpiFast": ":DEC<n>:PAR:EDGE <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:EDGE <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Nreject": {
+      "scpi": ":DECoder<n>:PARallel:NREJect <value>",
+      "scpiFast": ":DEC<n>:PAR:NREJ <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:NREJect <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Nrtime": {
+      "scpi": ":DECoder<n>:PARallel:NRTime <value>",
+      "scpiFast": ":DEC<n>:PAR:NRT <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "numeric",
+        "unit": "s"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:NRTime <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Plot": {
+      "scpi": ":DECoder<n>:PARallel:PLOT <value>",
+      "scpiFast": ":DEC<n>:PAR:PLOT <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:PLOT <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Polarity": {
+      "scpi": ":DECoder<n>:PARallel:POLarity <value>",
+      "scpiFast": ":DEC<n>:PAR:POL <value>",
+      "description": "Set or query the data polarity of parallel decoding",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "NEG",
+          "POS"
+        ],
+        "default": "POS"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:POLarity <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Source": {
+      "scpi": ":DECoder<n>:PARallel:SOURce <value>",
+      "scpiFast": ":DEC<n>:PAR:SOUR <value>",
+      "description": "Set or query the channel source of the data bit currently selected (parallel decoding)",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "D0",
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7",
+          "D8",
+          "D9",
+          "D10",
+          "D11",
+          "D12",
+          "D13",
+          "D14",
+          "D15",
+          "CHAN1",
+          "CHAN2",
+          "CHAN3",
+          "CHAN4"
+        ]
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:SOURce <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Parallel_Width": {
+      "scpi": ":DECoder<n>:PARallel:WIDTh <value>",
+      "scpiFast": ":DEC<n>:PAR:WIDT <value>",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:WIDTh <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Clk": {
+      "scpi": ":DECoder<n>:SPI:CLK <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:CLK <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Csrc": {
+      "scpi": ":DECoder<n>:SPI:CS <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:CS <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Edge": {
+      "scpi": ":DECoder<n>:SPI:EDGE <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:EDGE <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Endian": {
+      "scpi": ":DECoder<n>:SPI:ENDian <value>",
+      "scpiFast": ":DEC<n>:SPI:END <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:ENDian <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Miso": {
+      "scpi": ":DECoder<n>:SPI:MISO <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MISO <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Mode": {
+      "scpi": ":DECoder<n>:SPI:MODE <value>",
+      "description": "Set or query the frame synchronization mode of SPI decoding",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "CS",
+          "TIM"
+        ],
+        "default": "TIM"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MODE <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Mosi": {
+      "scpi": ":DECoder<n>:SPI:MOSI <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MOSI <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Polarity": {
+      "scpi": ":DECoder<n>:SPI:POLarity <value>",
+      "scpiFast": ":DEC<n>:SPI:POL <value>",
+      "description": "Set or query the polarity of the SDA data line in SPI decoding",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "NEG",
+          "POS"
+        ],
+        "default": "POS"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:POLarity <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Select": {
+      "scpi": ":DECoder<n>:SPI:SELect <value>",
+      "scpiFast": ":DEC<n>:SPI:SEL <value>",
+      "description": "Set or query the CS polarity in SPI decoding",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "NCS",
+          "CS"
+        ],
+        "default": "NCS"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:SELect <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Timebase": {
+      "scpi": ":DECoder<n>:SPI:TIMeout <value>",
+      "scpiFast": ":DEC<n>:SPI:TIM <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "numeric",
+        "unit": "s"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:TIMeout <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Spi_Width": {
+      "scpi": ":DECoder<n>:SPI:WIDTh <value>",
+      "scpiFast": ":DEC<n>:SPI:WIDT <value>",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:WIDTh <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Threshold_Channel": {
+      "scpi": ":DECoder<n>:THREshold:CHANnel<chan> <value>",
+      "scpiFast": ":DEC<n>:THRE:CHAN<chan> <value>",
+      "description": "Set or query the threshold level of the specified analog channel",
+      "arg": {
+        "kind": "numeric",
+        "unit": "V"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "THRE",
+      "unverified": true,
+      "notes": "Was `:THREshold:CHANnel<chan> <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `THREshold` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Baud": {
+      "scpi": ":DECoder<n>:UART:BAUD <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:BAUD <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Endian": {
+      "scpi": ":DECoder<n>:UART:ENDian <value>",
+      "scpiFast": ":DEC<n>:UART:END <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:ENDian <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Parallel": {
+      "scpi": ":DECoder<n>:UART:PARity <value>",
+      "scpiFast": ":DEC<n>:UART:PAR <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:PARity <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Polarity": {
+      "scpi": ":DECoder<n>:UART:POLarity <value>",
+      "scpiFast": ":DEC<n>:UART:POL <value>",
+      "description": "Set or query the polarity of RS232 decoding",
+      "arg": {
+        "kind": "enum",
+        "values": [
+          "NEG",
+          "POS"
+        ],
+        "default": "POS"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:POLarity <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Rx": {
+      "scpi": ":DECoder<n>:UART:RX <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:RX <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Stop": {
+      "scpi": ":DECoder<n>:UART:STOP <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:STOP <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Tx": {
+      "scpi": ":DECoder<n>:UART:TX <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "unknown"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:TX <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Set_Uart_Width": {
+      "scpi": ":DECoder<n>:UART:WIDTh <value>",
+      "scpiFast": ":DEC<n>:UART:WIDT <value>",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:WIDTh <value>`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
     "Set_Display_Gbrightness": {
       "scpi": ":DISPlay:GBRightness <value>",
       "scpiFast": ":DISP:GBR <value>",
@@ -2312,56 +2817,6 @@
         "value"
       ],
       "subsystem": "FUNC",
-      "unverified": true
-    },
-    "Set_Iic_Address": {
-      "scpi": ":IIC:ADDRess <value>",
-      "scpiFast": ":IIC:ADDR <value>",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "arg": {
-        "kind": "integer"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Set_Iic_Clk": {
-      "scpi": ":IIC:CLK <value>",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Set_Iic_Data": {
-      "scpi": ":IIC:DATA <value>",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "arg": {
-        "kind": "block"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Set_Immediate_Offset": {
-      "scpi": ":IMMediate:OFFSet <value>",
-      "scpiFast": ":IMM:OFFS <value>",
-      "description": "Set immediate offset",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "IMM",
       "unverified": true
     },
     "Set_La_Active": {
@@ -3421,164 +3876,6 @@
       "subsystem": "OUTP",
       "unverified": true
     },
-    "Set_Parallel_Bitx": {
-      "scpi": ":PARallel:BITX <value>",
-      "scpiFast": ":PAR:BITX <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Ccompensation": {
-      "scpi": ":PARallel:CCOMpensation <value>",
-      "scpiFast": ":PAR:CCOM <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Clk": {
-      "scpi": ":PARallel:CLK <value>",
-      "scpiFast": ":PAR:CLK <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Edge": {
-      "scpi": ":PARallel:EDGE <value>",
-      "scpiFast": ":PAR:EDGE <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Nreject": {
-      "scpi": ":PARallel:NREJect <value>",
-      "scpiFast": ":PAR:NREJ <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Nrtime": {
-      "scpi": ":PARallel:NRTime <value>",
-      "scpiFast": ":PAR:NRT <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "numeric",
-        "unit": "s"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Plot": {
-      "scpi": ":PARallel:PLOT <value>",
-      "scpiFast": ":PAR:PLOT <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Polarity": {
-      "scpi": ":PARallel:POLarity <value>",
-      "scpiFast": ":PAR:POL <value>",
-      "description": "Set or query the data polarity of parallel decoding",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "NEG",
-          "POS"
-        ],
-        "default": "POS"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Source": {
-      "scpi": ":PARallel:SOURce <value>",
-      "scpiFast": ":PAR:SOUR <value>",
-      "description": "Set or query the channel source of the data bit currently selected (parallel decoding)",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "D0",
-          "D1",
-          "D2",
-          "D3",
-          "D4",
-          "D5",
-          "D6",
-          "D7",
-          "D8",
-          "D9",
-          "D10",
-          "D11",
-          "D12",
-          "D13",
-          "D14",
-          "D15",
-          "CHAN1",
-          "CHAN2",
-          "CHAN3",
-          "CHAN4"
-        ]
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Set_Parallel_Width": {
-      "scpi": ":PARallel:WIDTh <value>",
-      "scpiFast": ":PAR:WIDT <value>",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "PAR",
-      "unverified": true
-    },
     "Set_Phase_Adjust": {
       "scpi": ":PHASe:ADJust <value>",
       "scpiFast": ":PHAS:ADJ <value>",
@@ -3729,159 +4026,6 @@
       "subsystem": "REF",
       "unverified": true
     },
-    "Set_Spi_Clk": {
-      "scpi": ":SPI:CLK <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Csrc": {
-      "scpi": ":SPI:CS <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Edge": {
-      "scpi": ":SPI:EDGE <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Endian": {
-      "scpi": ":SPI:ENDian <value>",
-      "scpiFast": ":SPI:END <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Miso": {
-      "scpi": ":SPI:MISO <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Mode": {
-      "scpi": ":SPI:MODE <value>",
-      "description": "Set or query the frame synchronization mode of SPI decoding",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "CS",
-          "TIM"
-        ],
-        "default": "TIM"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Mosi": {
-      "scpi": ":SPI:MOSI <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Polarity": {
-      "scpi": ":SPI:POLarity <value>",
-      "scpiFast": ":SPI:POL <value>",
-      "description": "Set or query the polarity of the SDA data line in SPI decoding",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "NEG",
-          "POS"
-        ],
-        "default": "POS"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Select": {
-      "scpi": ":SPI:SELect <value>",
-      "scpiFast": ":SPI:SEL <value>",
-      "description": "Set or query the CS polarity in SPI decoding",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "NCS",
-          "CS"
-        ],
-        "default": "NCS"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Timebase": {
-      "scpi": ":SPI:TIMeout <value>",
-      "scpiFast": ":SPI:TIM <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "numeric",
-        "unit": "s"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Set_Spi_Width": {
-      "scpi": ":SPI:WIDTh <value>",
-      "scpiFast": ":SPI:WIDT <value>",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "SPI",
-      "unverified": true
-    },
     "Set_Storage_Image_Color": {
       "scpi": ":STORage:IMAGe:COLor <value>",
       "scpiFast": ":STOR:IMAG:COL <value>",
@@ -4011,20 +4155,6 @@
         "value"
       ],
       "subsystem": "SYST",
-      "unverified": true
-    },
-    "Set_Threshold_Channel": {
-      "scpi": ":THREshold:CHANnel<chan> <value>",
-      "scpiFast": ":THRE:CHAN<chan> <value>",
-      "description": "Set or query the threshold level of the specified analog channel",
-      "arg": {
-        "kind": "numeric",
-        "unit": "V"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "THRE",
       "unverified": true
     },
     "Set_Timebase_Delay_Enable": {
@@ -6007,111 +6137,6 @@
       "subsystem": "TRIG",
       "unverified": true
     },
-    "Set_Uart_Baud": {
-      "scpi": ":UART:BAUD <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Endian": {
-      "scpi": ":UART:ENDian <value>",
-      "scpiFast": ":UART:END <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Parallel": {
-      "scpi": ":UART:PARity <value>",
-      "scpiFast": ":UART:PAR <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Polarity": {
-      "scpi": ":UART:POLarity <value>",
-      "scpiFast": ":UART:POL <value>",
-      "description": "Set or query the polarity of RS232 decoding",
-      "arg": {
-        "kind": "enum",
-        "values": [
-          "NEG",
-          "POS"
-        ],
-        "default": "POS"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Rx": {
-      "scpi": ":UART:RX <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Stop": {
-      "scpi": ":UART:STOP <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Tx": {
-      "scpi": ":UART:TX <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "unknown"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Set_Uart_Width": {
-      "scpi": ":UART:WIDTh <value>",
-      "scpiFast": ":UART:WIDT <value>",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "arg": {
-        "kind": "numeric"
-      },
-      "args": [
-        "value"
-      ],
-      "subsystem": "UART",
-      "unverified": true
-    },
     "Set_Voltage_Level_Immediate_Amplitude": {
       "scpi": ":VOLTage:LEVel:IMMediate:AMPLitude <value>",
       "scpiFast": ":VOLT:LEV:IMM:AMPL <value>",
@@ -6125,6 +6150,20 @@
       ],
       "subsystem": "VOLT",
       "unverified": true
+    },
+    "Set_Immediate_Offset": {
+      "scpi": ":VOLTage:LEVel:IMMediate:OFFSet <value>",
+      "scpiFast": ":VOLT:LEV:IMM:OFFS <value>",
+      "description": "Set immediate offset",
+      "arg": {
+        "kind": "numeric"
+      },
+      "args": [
+        "value"
+      ],
+      "subsystem": "IMM",
+      "unverified": true,
+      "notes": "Was `:IMMediate:OFFSet <value>`: the table generator cut the `[:SOURce[<n>]]:VOLTage[:LEVel]` parent off, so the unit heard a root `IMMediate` it does not have (-113 \"Undefined header\"). Full path from the MSO1000Z/DS1000Z Programming Guide p. 2-135 (scpi_paths.py, 2026-11-11)."
     },
     "Set_Voltage_Offset": {
       "scpi": ":VOLTage:OFFSet <value>",
@@ -6314,17 +6353,19 @@
       "unverified": true
     },
     "Auto": {
-      "scpi": ":AUTO",
+      "scpi": ":AUToscale",
       "description": "Auto",
       "group": "Root Action Commands",
-      "subsystem": "Root"
+      "subsystem": "Root",
+      "notes": "Was `:AUTO`: AUTO is neither the short (AUT) nor the long (AUTOSCALE) form of :AUToscale — the guide's rule is \"all the capital letters must be written\" (MSO1000Z/DS1000Z Programming Guide p. 1-6; :AUToscale p. 2-2). Same node as `Auto_Scale`."
     },
     "Auto_Scale": {
       "scpi": ":AUToscale",
       "scpiFast": ":AUT",
       "description": "Auto Scale",
       "group": "Actions and Toggles",
-      "subsystem": "System"
+      "subsystem": "System",
+      "alias_of": "Auto"
     },
     "Do_Calibrate_Quit": {
       "scpi": ":CALibrate:QUIT",
@@ -6676,7 +6717,9 @@
       "scpi": ":WAV:SOR",
       "description": "LabVIEW Programming Demo",
       "subsystem": "WAV",
-      "unverified": true
+      "unverified": true,
+      "retired": true,
+      "retired_because": "Retired: `:WAV:SOR` is not in the MSO1000Z/DS1000Z Programming Guide — SOR is no form of :WAVeform:SOURce (p. 2-217), which takes <source>; the scraper read it out of the \"LabVIEW Programming Demo\" listing."
     }
   },
   "rig": {},
@@ -7011,68 +7054,6 @@
         ]
       },
       "notes": "The channel index is IN THE COMMAND, not a parameter, so the reply lands on `Reading/channel_settings_4/scale` and a four-strip panel can tell its channels apart. A parameterised verb answers under one name whichever channel it read, which no per-channel display can bind to. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
-      "unverified": true
-    },
-    "Get_Config_Endian": {
-      "scpi": ":CONFig:ENDian?",
-      "scpiFast": ":CONF:END?",
-      "description": "Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Get_Config_Format": {
-      "scpi": ":CONFig:FORMat?",
-      "scpiFast": ":CONF:FORM?",
-      "description": "Turn on or off the format display function, or query the status of the format display function",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Get_Config_Label": {
-      "scpi": ":CONFig:LABel?",
-      "scpiFast": ":CONF:LAB?",
-      "description": "Turn on or off the label display function, or query the status of the label display function",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Get_Config_Line": {
-      "scpi": ":CONFig:LINE?",
-      "scpiFast": ":CONF:LINE?",
-      "description": "Get config line",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Get_Config_Srate": {
-      "scpi": ":CONFig:SRATe?",
-      "scpiFast": ":CONF:SRAT?",
-      "description": "Query the current digital sample rate",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "CONF",
-      "unverified": true
-    },
-    "Get_Config_Width": {
-      "scpi": ":CONFig:WIDth?",
-      "scpiFast": ":CONF:WID?",
-      "description": "Turn on or off the width display function, or query the status of the width display function",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "CONF",
       "unverified": true
     },
     "Get_Cursor_Manual_Ax": {
@@ -7814,6 +7795,442 @@
       "subsystem": "DEC",
       "unverified": true
     },
+    "Get_Config_Endian": {
+      "scpi": ":DECoder<n>:CONFig:ENDian?",
+      "scpiFast": ":DEC<n>:CONF:END?",
+      "description": "Turn on or off the endian display function in serial bus decoding, or query the status of the endian display function in serial bus decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:ENDian?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Config_Format": {
+      "scpi": ":DECoder<n>:CONFig:FORMat?",
+      "scpiFast": ":DEC<n>:CONF:FORM?",
+      "description": "Turn on or off the format display function, or query the status of the format display function",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:FORMat?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Config_Label": {
+      "scpi": ":DECoder<n>:CONFig:LABel?",
+      "scpiFast": ":DEC<n>:CONF:LAB?",
+      "description": "Turn on or off the label display function, or query the status of the label display function",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:LABel?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Config_Line": {
+      "scpi": ":DECoder<n>:CONFig:LINE?",
+      "scpiFast": ":DEC<n>:CONF:LINE?",
+      "description": "Get config line",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:LINE?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Config_Srate": {
+      "scpi": ":DECoder<n>:CONFig:SRATe?",
+      "scpiFast": ":DEC<n>:CONF:SRAT?",
+      "description": "Query the current digital sample rate",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:SRATe?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Config_Width": {
+      "scpi": ":DECoder<n>:CONFig:WIDth?",
+      "scpiFast": ":DEC<n>:CONF:WID?",
+      "description": "Turn on or off the width display function, or query the status of the width display function",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "CONF",
+      "unverified": true,
+      "notes": "Was `:CONFig:WIDth?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `CONFig` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Iic_Address": {
+      "scpi": ":DECoder<n>:IIC:ADDRess?",
+      "scpiFast": ":DEC<n>:IIC:ADDR?",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR1"
+      },
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:ADDRess?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Iic_Clk": {
+      "scpi": ":DECoder<n>:IIC:CLK?",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:CLK?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Iic_Data": {
+      "scpi": ":DECoder<n>:IIC:DATA?",
+      "description": "Set or query the signal source of the clock channel in I2C decoding",
+      "returns": {
+        "count": 1,
+        "type": "BLOCK"
+      },
+      "subsystem": "IIC",
+      "unverified": true,
+      "notes": "Was `:IIC:DATA?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `IIC` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Bitx": {
+      "scpi": ":DECoder<n>:PARallel:BITX?",
+      "scpiFast": ":DEC<n>:PAR:BITX?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:BITX?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Ccompensation": {
+      "scpi": ":DECoder<n>:PARallel:CCOMpensation?",
+      "scpiFast": ":DEC<n>:PAR:CCOM?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:CCOMpensation?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Clk": {
+      "scpi": ":DECoder<n>:PARallel:CLK?",
+      "scpiFast": ":DEC<n>:PAR:CLK?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:CLK?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Edge": {
+      "scpi": ":DECoder<n>:PARallel:EDGE?",
+      "scpiFast": ":DEC<n>:PAR:EDGE?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:EDGE?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Nreject": {
+      "scpi": ":DECoder<n>:PARallel:NREJect?",
+      "scpiFast": ":DEC<n>:PAR:NREJ?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:NREJect?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Nrtime": {
+      "scpi": ":DECoder<n>:PARallel:NRTime?",
+      "scpiFast": ":DEC<n>:PAR:NRT?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3",
+        "unit": "s"
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:NRTime?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Plot": {
+      "scpi": ":DECoder<n>:PARallel:PLOT?",
+      "scpiFast": ":DEC<n>:PAR:PLOT?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:PLOT?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Polarity": {
+      "scpi": ":DECoder<n>:PARallel:POLarity?",
+      "scpiFast": ":DEC<n>:PAR:POL?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:POLarity?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Source": {
+      "scpi": ":DECoder<n>:PARallel:SOURce?",
+      "scpiFast": ":DEC<n>:PAR:SOUR?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:SOURce?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Parallel_Width": {
+      "scpi": ":DECoder<n>:PARallel:WIDTh?",
+      "scpiFast": ":DEC<n>:PAR:WIDT?",
+      "description": "Set or query the CLK channel source of parallel decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "PAR",
+      "unverified": true,
+      "notes": "Was `:PARallel:WIDTh?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `PARallel` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Clk": {
+      "scpi": ":DECoder<n>:SPI:CLK?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:CLK?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Csrc": {
+      "scpi": ":DECoder<n>:SPI:CS?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:CS?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Edge": {
+      "scpi": ":DECoder<n>:SPI:EDGE?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:EDGE?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Endian": {
+      "scpi": ":DECoder<n>:SPI:ENDian?",
+      "scpiFast": ":DEC<n>:SPI:END?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:ENDian?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Miso": {
+      "scpi": ":DECoder<n>:SPI:MISO?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MISO?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Mode": {
+      "scpi": ":DECoder<n>:SPI:MODE?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MODE?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Mosi": {
+      "scpi": ":DECoder<n>:SPI:MOSI?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:MOSI?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Polarity": {
+      "scpi": ":DECoder<n>:SPI:POLarity?",
+      "scpiFast": ":DEC<n>:SPI:POL?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:POLarity?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Select": {
+      "scpi": ":DECoder<n>:SPI:SELect?",
+      "scpiFast": ":DEC<n>:SPI:SEL?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:SELect?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Timebase": {
+      "scpi": ":DECoder<n>:SPI:TIMeout?",
+      "scpiFast": ":DEC<n>:SPI:TIM?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3",
+        "unit": "s"
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:TIMeout?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Spi_Width": {
+      "scpi": ":DECoder<n>:SPI:WIDTh?",
+      "scpiFast": ":DEC<n>:SPI:WIDT?",
+      "description": "Set or query the signal source of the clock channel in SPI decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "SPI",
+      "unverified": true,
+      "notes": "Was `:SPI:WIDTh?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `SPI` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Threshold_Channel": {
+      "scpi": ":DECoder<n>:THREshold:CHANnel<chan>?",
+      "scpiFast": ":DEC<n>:THRE:CHAN<chan>?",
+      "description": "Set or query the threshold level of the specified analog channel",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "THRE",
+      "unverified": true,
+      "notes": "Was `:THREshold:CHANnel<chan>?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `THREshold` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Baud": {
+      "scpi": ":DECoder<n>:UART:BAUD?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:BAUD?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Endian": {
+      "scpi": ":DECoder<n>:UART:ENDian?",
+      "scpiFast": ":DEC<n>:UART:END?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:ENDian?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Parallel": {
+      "scpi": ":DECoder<n>:UART:PARity?",
+      "scpiFast": ":DEC<n>:UART:PAR?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:PARity?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Polarity": {
+      "scpi": ":DECoder<n>:UART:POLarity?",
+      "scpiFast": ":DEC<n>:UART:POL?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1,
+        "type": "CRD"
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:POLarity?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Rx": {
+      "scpi": ":DECoder<n>:UART:RX?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:RX?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Stop": {
+      "scpi": ":DECoder<n>:UART:STOP?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:STOP?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Tx": {
+      "scpi": ":DECoder<n>:UART:TX?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:TX?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
+    "Get_Uart_Width": {
+      "scpi": ":DECoder<n>:UART:WIDTh?",
+      "scpiFast": ":DEC<n>:UART:WIDT?",
+      "description": "Set or query the TX channel source of RS232 decoding",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "UART",
+      "unverified": true,
+      "notes": "Was `:UART:WIDTh?`: the table generator cut the `:DECoder<n>` parent off (and with it the decoder number, 1 or 2 — `<n>`), so the unit heard a root `UART` it does not have. Full path from the MSO1000Z/DS1000Z Programming Guide, :DECoder<n> commands pp. 2-34 to 2-57 (scpi_paths.py, 2026-11-11)."
+    },
     "Get_Display_Data": {
       "scpi": ":DISPlay:DATA?",
       "scpiFast": ":DISP:DATA?",
@@ -8118,47 +8535,6 @@
         "type": "CRD"
       },
       "subsystem": "FUNC",
-      "unverified": true
-    },
-    "Get_Iic_Address": {
-      "scpi": ":IIC:ADDRess?",
-      "scpiFast": ":IIC:ADDR?",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR1"
-      },
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Get_Iic_Clk": {
-      "scpi": ":IIC:CLK?",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Get_Iic_Data": {
-      "scpi": ":IIC:DATA?",
-      "description": "Set or query the signal source of the clock channel in I2C decoding",
-      "returns": {
-        "count": 1,
-        "type": "BLOCK"
-      },
-      "subsystem": "IIC",
-      "unverified": true
-    },
-    "Get_Immediate_Offset": {
-      "scpi": ":IMMediate:OFFSet?",
-      "scpiFast": ":IMM:OFFS?",
-      "description": "Get immediate offset",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "IMM",
       "unverified": true
     },
     "Get_La_Active": {
@@ -8717,6 +9093,38 @@
       "notes": "Rigol takes the source as an ARGUMENT to :MEASure:ITEM?, so these three need no :MEASure:SOURce write and cannot be attributed to the wrong channel. No dB item exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
     },
+    "Get_Stats_CH1": {
+      "scpi": ":MEASure:ITEM? VPP,CHANnel1;:MEASure:ITEM? VRMS,CHANnel1;:MEASure:ITEM? FREQuency,CHANnel1;:MEASure:ITEM? PDUTy,CHANnel1",
+      "scpiFast": ":MEAS:ITEM? VPP,CHANnel1;:MEAS:ITEM? VRMS,CHANnel1;:MEAS:ITEM? FREQuency,CHANnel1;:MEAS:ITEM? PDUTy,CHANnel1",
+      "description": "Get Stats CH1",
+      "returns": {
+        "count": 4,
+        "separator": ";",
+        "fields": [
+          {
+            "name": "vpp_1",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "vrms_1",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "frequency_1"
+          },
+          {
+            "name": "pduty_1",
+            "type": "NR3",
+            "unit": "%"
+          }
+        ]
+      },
+      "group": "Channel 1 Stats",
+      "subsystem": "Channel_1",
+      "notes": "Was `:MEASure:VPP? CHANnel1;:MEASure:VRMS? CHANnel1;:MEASure:FREQuency? CHANnel1;:MEASure:PDUTy? CHANnel1`: `:MEASure:VPP?` and its kin are the older DS1000E syntax; the DS1000Z asks every measurement through `:MEASure:ITEM? <item>[,<src>]` (MSO1000Z/DS1000Z Programming Guide p. 2-125, items VPP, VRMS, FREQuency, PDUTy). Same four answers, same order."
+    },
     "measure_2": {
       "scpi": ":MEASure:ITEM? VPP,CHANnel2;:MEASure:ITEM? VRMS,CHANnel2;:MEASure:ITEM? FREQuency,CHANnel2",
       "scpiFast": ":MEAS:ITEM? VPP,CHAN2;:MEAS:ITEM? VRMS,CHAN2;:MEAS:ITEM? FREQ,CHAN2",
@@ -8745,6 +9153,38 @@
       },
       "notes": "Rigol takes the source as an ARGUMENT to :MEASure:ITEM?, so these three need no :MEASure:SOURce write and cannot be attributed to the wrong channel. No dB item exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
+    },
+    "Get_Stats_CH2": {
+      "scpi": ":MEASure:ITEM? VPP,CHANnel2;:MEASure:ITEM? VRMS,CHANnel2;:MEASure:ITEM? FREQuency,CHANnel2;:MEASure:ITEM? PDUTy,CHANnel2",
+      "scpiFast": ":MEAS:ITEM? VPP,CHANnel2;:MEAS:ITEM? VRMS,CHANnel2;:MEAS:ITEM? FREQuency,CHANnel2;:MEAS:ITEM? PDUTy,CHANnel2",
+      "description": "Get Stats CH2",
+      "returns": {
+        "count": 4,
+        "separator": ";",
+        "fields": [
+          {
+            "name": "vpp_2",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "vrms_2",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "frequency_2"
+          },
+          {
+            "name": "pduty_2",
+            "type": "NR3",
+            "unit": "%"
+          }
+        ]
+      },
+      "group": "Channel 2 Stats",
+      "subsystem": "Channel_2",
+      "notes": "Was `:MEASure:VPP? CHANnel2;:MEASure:VRMS? CHANnel2;:MEASure:FREQuency? CHANnel2;:MEASure:PDUTy? CHANnel2`: `:MEASure:VPP?` and its kin are the older DS1000E syntax; the DS1000Z asks every measurement through `:MEASure:ITEM? <item>[,<src>]` (MSO1000Z/DS1000Z Programming Guide p. 2-125, items VPP, VRMS, FREQuency, PDUTy). Same four answers, same order."
     },
     "measure_3": {
       "scpi": ":MEASure:ITEM? VPP,CHANnel3;:MEASure:ITEM? VRMS,CHANnel3;:MEASure:ITEM? FREQuency,CHANnel3",
@@ -8775,6 +9215,38 @@
       "notes": "Rigol takes the source as an ARGUMENT to :MEASure:ITEM?, so these three need no :MEASure:SOURce write and cannot be attributed to the wrong channel. No dB item exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
     },
+    "Get_Stats_CH3": {
+      "scpi": ":MEASure:ITEM? VPP,CHANnel3;:MEASure:ITEM? VRMS,CHANnel3;:MEASure:ITEM? FREQuency,CHANnel3;:MEASure:ITEM? PDUTy,CHANnel3",
+      "scpiFast": ":MEAS:ITEM? VPP,CHANnel3;:MEAS:ITEM? VRMS,CHANnel3;:MEAS:ITEM? FREQuency,CHANnel3;:MEAS:ITEM? PDUTy,CHANnel3",
+      "description": "Get Stats CH3",
+      "returns": {
+        "count": 4,
+        "separator": ";",
+        "fields": [
+          {
+            "name": "vpp_3",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "vrms_3",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "frequency_3"
+          },
+          {
+            "name": "pduty_3",
+            "type": "NR3",
+            "unit": "%"
+          }
+        ]
+      },
+      "group": "Channel 3 Stats",
+      "subsystem": "Channel_3",
+      "notes": "Was `:MEASure:VPP? CHANnel3;:MEASure:VRMS? CHANnel3;:MEASure:FREQuency? CHANnel3;:MEASure:PDUTy? CHANnel3`: `:MEASure:VPP?` and its kin are the older DS1000E syntax; the DS1000Z asks every measurement through `:MEASure:ITEM? <item>[,<src>]` (MSO1000Z/DS1000Z Programming Guide p. 2-125, items VPP, VRMS, FREQuency, PDUTy). Same four answers, same order."
+    },
     "measure_4": {
       "scpi": ":MEASure:ITEM? VPP,CHANnel4;:MEASure:ITEM? VRMS,CHANnel4;:MEASure:ITEM? FREQuency,CHANnel4",
       "scpiFast": ":MEAS:ITEM? VPP,CHAN4;:MEAS:ITEM? VRMS,CHAN4;:MEAS:ITEM? FREQ,CHAN4",
@@ -8803,6 +9275,38 @@
       },
       "notes": "Rigol takes the source as an ARGUMENT to :MEASure:ITEM?, so these three need no :MEASure:SOURce write and cannot be attributed to the wrong channel. No dB item exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
       "unverified": true
+    },
+    "Get_Stats_CH4": {
+      "scpi": ":MEASure:ITEM? VPP,CHANnel4;:MEASure:ITEM? VRMS,CHANnel4;:MEASure:ITEM? FREQuency,CHANnel4;:MEASure:ITEM? PDUTy,CHANnel4",
+      "scpiFast": ":MEAS:ITEM? VPP,CHANnel4;:MEAS:ITEM? VRMS,CHANnel4;:MEAS:ITEM? FREQuency,CHANnel4;:MEAS:ITEM? PDUTy,CHANnel4",
+      "description": "Get Stats CH4",
+      "returns": {
+        "count": 4,
+        "separator": ";",
+        "fields": [
+          {
+            "name": "vpp_4",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "vrms_4",
+            "type": "NR3",
+            "unit": "V"
+          },
+          {
+            "name": "frequency_4"
+          },
+          {
+            "name": "pduty_4",
+            "type": "NR3",
+            "unit": "%"
+          }
+        ]
+      },
+      "group": "Channel 4 Stats",
+      "subsystem": "Channel_4",
+      "notes": "Was `:MEASure:VPP? CHANnel4;:MEASure:VRMS? CHANnel4;:MEASure:FREQuency? CHANnel4;:MEASure:PDUTy? CHANnel4`: `:MEASure:VPP?` and its kin are the older DS1000E syntax; the DS1000Z asks every measurement through `:MEASure:ITEM? <item>[,<src>]` (MSO1000Z/DS1000Z Programming Guide p. 2-125, items VPP, VRMS, FREQuency, PDUTy). Same four answers, same order."
     },
     "Get_Measure_Source": {
       "scpi": ":MEASure:SOURce?",
@@ -8846,130 +9350,6 @@
       },
       "subsystem": "MEAS",
       "unverified": true
-    },
-    "Get_Stats_CH1": {
-      "scpi": ":MEASure:VPP? CHANnel1;:MEASure:VRMS? CHANnel1;:MEASure:FREQuency? CHANnel1;:MEASure:PDUTy? CHANnel1",
-      "scpiFast": ":MEAS:VPP? CHANnel1;:MEAS:VRMS? CHANnel1;:MEAS:FREQ? CHANnel1;:MEAS:PDUT? CHANnel1",
-      "description": "Get Stats CH1",
-      "returns": {
-        "count": 4,
-        "separator": ";",
-        "fields": [
-          {
-            "name": "vpp_1",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "vrms_1",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "frequency_1"
-          },
-          {
-            "name": "pduty_1",
-            "type": "NR3",
-            "unit": "%"
-          }
-        ]
-      },
-      "group": "Channel 1 Stats",
-      "subsystem": "Channel_1"
-    },
-    "Get_Stats_CH2": {
-      "scpi": ":MEASure:VPP? CHANnel2;:MEASure:VRMS? CHANnel2;:MEASure:FREQuency? CHANnel2;:MEASure:PDUTy? CHANnel2",
-      "scpiFast": ":MEAS:VPP? CHANnel2;:MEAS:VRMS? CHANnel2;:MEAS:FREQ? CHANnel2;:MEAS:PDUT? CHANnel2",
-      "description": "Get Stats CH2",
-      "returns": {
-        "count": 4,
-        "separator": ";",
-        "fields": [
-          {
-            "name": "vpp_2",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "vrms_2",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "frequency_2"
-          },
-          {
-            "name": "pduty_2",
-            "type": "NR3",
-            "unit": "%"
-          }
-        ]
-      },
-      "group": "Channel 2 Stats",
-      "subsystem": "Channel_2"
-    },
-    "Get_Stats_CH3": {
-      "scpi": ":MEASure:VPP? CHANnel3;:MEASure:VRMS? CHANnel3;:MEASure:FREQuency? CHANnel3;:MEASure:PDUTy? CHANnel3",
-      "scpiFast": ":MEAS:VPP? CHANnel3;:MEAS:VRMS? CHANnel3;:MEAS:FREQ? CHANnel3;:MEAS:PDUT? CHANnel3",
-      "description": "Get Stats CH3",
-      "returns": {
-        "count": 4,
-        "separator": ";",
-        "fields": [
-          {
-            "name": "vpp_3",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "vrms_3",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "frequency_3"
-          },
-          {
-            "name": "pduty_3",
-            "type": "NR3",
-            "unit": "%"
-          }
-        ]
-      },
-      "group": "Channel 3 Stats",
-      "subsystem": "Channel_3"
-    },
-    "Get_Stats_CH4": {
-      "scpi": ":MEASure:VPP? CHANnel4;:MEASure:VRMS? CHANnel4;:MEASure:FREQuency? CHANnel4;:MEASure:PDUTy? CHANnel4",
-      "scpiFast": ":MEAS:VPP? CHANnel4;:MEAS:VRMS? CHANnel4;:MEAS:FREQ? CHANnel4;:MEAS:PDUT? CHANnel4",
-      "description": "Get Stats CH4",
-      "returns": {
-        "count": 4,
-        "separator": ";",
-        "fields": [
-          {
-            "name": "vpp_4",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "vrms_4",
-            "type": "NR3",
-            "unit": "V"
-          },
-          {
-            "name": "frequency_4"
-          },
-          {
-            "name": "pduty_4",
-            "type": "NR3",
-            "unit": "%"
-          }
-        ]
-      },
-      "group": "Channel 4 Stats",
-      "subsystem": "Channel_4"
     },
     "Get_Mod_Am_Depth": {
       "scpi": ":MOD:AM:DEPTh?",
@@ -9084,111 +9464,6 @@
       "subsystem": "OUTP",
       "unverified": true
     },
-    "Get_Parallel_Bitx": {
-      "scpi": ":PARallel:BITX?",
-      "scpiFast": ":PAR:BITX?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Ccompensation": {
-      "scpi": ":PARallel:CCOMpensation?",
-      "scpiFast": ":PAR:CCOM?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Clk": {
-      "scpi": ":PARallel:CLK?",
-      "scpiFast": ":PAR:CLK?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Edge": {
-      "scpi": ":PARallel:EDGE?",
-      "scpiFast": ":PAR:EDGE?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Nreject": {
-      "scpi": ":PARallel:NREJect?",
-      "scpiFast": ":PAR:NREJ?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Nrtime": {
-      "scpi": ":PARallel:NRTime?",
-      "scpiFast": ":PAR:NRT?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3",
-        "unit": "s"
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Plot": {
-      "scpi": ":PARallel:PLOT?",
-      "scpiFast": ":PAR:PLOT?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Polarity": {
-      "scpi": ":PARallel:POLarity?",
-      "scpiFast": ":PAR:POL?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Source": {
-      "scpi": ":PARallel:SOURce?",
-      "scpiFast": ":PAR:SOUR?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
-    "Get_Parallel_Width": {
-      "scpi": ":PARallel:WIDTh?",
-      "scpiFast": ":PAR:WIDT?",
-      "description": "Set or query the CLK channel source of parallel decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "PAR",
-      "unverified": true
-    },
     "Get_Phase_Adjust": {
       "scpi": ":PHASe:ADJust?",
       "scpiFast": ":PHAS:ADJ?",
@@ -9273,116 +9548,6 @@
         "type": "BOOL"
       },
       "subsystem": "REF",
-      "unverified": true
-    },
-    "Get_Spi_Clk": {
-      "scpi": ":SPI:CLK?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Csrc": {
-      "scpi": ":SPI:CS?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Edge": {
-      "scpi": ":SPI:EDGE?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Endian": {
-      "scpi": ":SPI:ENDian?",
-      "scpiFast": ":SPI:END?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Miso": {
-      "scpi": ":SPI:MISO?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Mode": {
-      "scpi": ":SPI:MODE?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Mosi": {
-      "scpi": ":SPI:MOSI?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Polarity": {
-      "scpi": ":SPI:POLarity?",
-      "scpiFast": ":SPI:POL?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Select": {
-      "scpi": ":SPI:SELect?",
-      "scpiFast": ":SPI:SEL?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Timebase": {
-      "scpi": ":SPI:TIMeout?",
-      "scpiFast": ":SPI:TIM?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3",
-        "unit": "s"
-      },
-      "subsystem": "SPI",
-      "unverified": true
-    },
-    "Get_Spi_Width": {
-      "scpi": ":SPI:WIDTh?",
-      "scpiFast": ":SPI:WIDT?",
-      "description": "Set or query the signal source of the clock channel in SPI decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "SPI",
       "unverified": true
     },
     "Get_Storage_Image_Color": {
@@ -9487,17 +9652,6 @@
         "count": 1
       },
       "subsystem": "SYST",
-      "unverified": true
-    },
-    "Get_Threshold_Channel": {
-      "scpi": ":THREshold:CHANnel<chan>?",
-      "scpiFast": ":THRE:CHAN<chan>?",
-      "description": "Set or query the threshold level of the specified analog channel",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "THRE",
       "unverified": true
     },
     "Get_Timebase_Delay_Enable": {
@@ -10620,85 +10774,6 @@
       "subsystem": "TRIG",
       "unverified": true
     },
-    "Get_Uart_Baud": {
-      "scpi": ":UART:BAUD?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Endian": {
-      "scpi": ":UART:ENDian?",
-      "scpiFast": ":UART:END?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Parallel": {
-      "scpi": ":UART:PARity?",
-      "scpiFast": ":UART:PAR?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Polarity": {
-      "scpi": ":UART:POLarity?",
-      "scpiFast": ":UART:POL?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1,
-        "type": "CRD"
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Rx": {
-      "scpi": ":UART:RX?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Stop": {
-      "scpi": ":UART:STOP?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Tx": {
-      "scpi": ":UART:TX?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
-    "Get_Uart_Width": {
-      "scpi": ":UART:WIDTh?",
-      "scpiFast": ":UART:WIDT?",
-      "description": "Set or query the TX channel source of RS232 decoding",
-      "returns": {
-        "count": 1,
-        "type": "NR3"
-      },
-      "subsystem": "UART",
-      "unverified": true
-    },
     "Get_Voltage_Level_Immediate_Amplitude": {
       "scpi": ":VOLTage:LEVel:IMMediate:AMPLitude?",
       "scpiFast": ":VOLT:LEV:IMM:AMPL?",
@@ -10710,6 +10785,18 @@
       },
       "subsystem": "VOLT",
       "unverified": true
+    },
+    "Get_Immediate_Offset": {
+      "scpi": ":VOLTage:LEVel:IMMediate:OFFSet?",
+      "scpiFast": ":VOLT:LEV:IMM:OFFS?",
+      "description": "Get immediate offset",
+      "returns": {
+        "count": 1,
+        "type": "NR3"
+      },
+      "subsystem": "IMM",
+      "unverified": true,
+      "notes": "Was `:IMMediate:OFFSet?`: the table generator cut the `[:SOURce[<n>]]:VOLTage[:LEVel]` parent off, so the unit heard a root `IMMediate` it does not have (-113 \"Undefined header\"). Full path from the MSO1000Z/DS1000Z Programming Guide p. 2-135 (scpi_paths.py, 2026-11-11)."
     },
     "Get_Voltage_Offset": {
       "scpi": ":VOLTage:OFFSet?",

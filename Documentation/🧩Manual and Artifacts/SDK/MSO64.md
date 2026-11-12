@@ -20,20 +20,20 @@ From the BIM part [`tektronix/mso64`](/api/bim/parts?full=1&id=tektronix/mso64) 
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| FlexChannel 1-4 | TekVPI+ BNC (FlexChannel) | signal | 4 | TekVPI+/TekVPI probes, BNC probes/cables, or TLP058 (8 digital ch each) |
+| FlexChannel 1-4 | COAX-BNC-PROBE | signal | 4 | TekVPI+/TekVPI probes, BNC probes/cables, or TLP058 (8 digital ch each) |
 | Aux In |  | signal | 1 | Auxiliary trigger, <=5 Vrms, 50 Ohm, 400 MHz, edge only |
-| Ref In | BNC | clock | 1 | 10 MHz external reference; 7 Vpp max |
+| Ref In | COAX-BNC | clock | 1 | 10 MHz external reference; 7 Vpp max |
 
 ### Outputs
 
 | Terminal | Connector | Domain | Count | Signal |
 |---|---|---|---:|---|
-| Probe Compensation + Ground | probe-comp tab + ground | signal | 1 | 1 kHz 0-2.5 V, 1 kOhm; lower front right |
-| AUX Out | BNC | signal | 1 | Trigger pulse, 10 MHz reference clock out, or AFG sync |
+| Probe Compensation + Ground | PROBE-COMP | signal | 1 | 1 kHz 0-2.5 V, 1 kOhm; lower front right |
+| AUX Out | COAX-BNC | signal | 1 | Trigger pulse, 10 MHz reference clock out, or AFG sync |
 | AFG Out |  | signal | 1 | Optional AFG signal output |
-| DisplayPort | DisplayPort | video | 1 | 20-pin DisplayPort |
+| DisplayPort | DISPLAYPORT | video | 1 | 20-pin DisplayPort |
 | DVI | DVI | video | 1 | 29-pin DVI |
-| VGA | VGA (DB-15 female) | video | 1 | External monitor |
+| VGA | VGA | video | 1 | External monitor |
 
 ### Connections (control and network)
 
@@ -94,6 +94,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Calibrate_Time` | `:CALibrate:TIME?` | — | NR3 → `…/Reading/Get_Calibrate_Time` | CAL | unverified |
 | `Get_Channel_Coupling` | `:CHANNEL1:COUPLING?` | — | CRD → `…/Reading/Get_Channel_Coupling` | CHANNEL | unverified |
 | `Get_Channel_Range` | `:CHANNEL1:RANGE?` | — | NR3 → `…/Reading/Get_Channel_Range` | CHANNEL | unverified |
+| `Get_Probe_Skew` | `:CHANnel<n>:PROBe:SKEW?` | — | NR3 → `…/Reading/Get_Probe_Skew` | PROB | unverified |
 | `Get_Display_Data` | `:DISPlay:DATA?` | — | BLOCK → `…/Reading/Get_Display_Data` | DISP | unverified |
 | `Get_Display_Label` | `:DISPlay:LABel?` | — | → `…/Reading/Get_Display_Label` | DISP | unverified |
 | `Get_Display_Persistence` | `:DISPlay:PERSistence?` | — | NR3 → `…/Reading/Get_Display_Persistence` | DISP | unverified |
@@ -119,7 +120,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Hardcopy_Format` | `:HARDcopy:FORMat?` | — | CRD → `…/Reading/Get_Hardcopy_Format` | HARD | unverified |
 | `Get_Hardcopy_Grayscale` | `:HARDcopy:GRAYscale?` | — | → `…/Reading/Get_Hardcopy_Grayscale` | HARD | unverified |
 | `Get_Marker_Mode` | `:MARKer:MODE?` | — | CRD → `…/Reading/Get_Marker_Mode` | MARK | unverified |
-| `Get_Marker_Xdelta` | `:MARker:XDELta?` | — | NR3 → `…/Reading/Get_Marker_Xdelta` | MAR | unverified |
+| `Get_Marker_Xdelta` | `:MARKer:XDELta?` | — | NR3 → `…/Reading/Get_Marker_Xdelta` | MAR | unverified |
 | `Get_X_Delta` | `MARKer:XDELta?` | — | NR3 → `…/Reading/Get_X_Delta` | Cursor Deltas |  |
 | `Get_Y_Delta` | `MARKer:YDELta?` | — | NR3 → `…/Reading/Get_Y_Delta` | Cursor Deltas |  |
 | `Get_Measure_Count` | `MEASure:COUNter?` | — | NR1 → `…/Reading/Get_Measure_Count` | MEAS | unverified |
@@ -141,7 +142,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Vtop` | `:MEASure:VTOP?` | — | → `…/Reading/Get_Measure_Vtop` | MEAS | unverified |
 | `Get_Measure_Xmax` | `:MEASure:XMAX?` | — | NR3 → `…/Reading/Get_Measure_Xmax` | MEAS | unverified |
 | `Get_Measure_Xmin` | `:MEASure:XMIN?` | — | NR3 → `…/Reading/Get_Measure_Xmin` | MEAS | unverified |
-| `Get_Probe_Skew` | `PROBe:SKEW?` | — | NR3 → `…/Reading/Get_Probe_Skew` | PROB | unverified |
 | `Get_System_Date` | `:SYSTem:DATE?` | — | → `…/Reading/Get_System_Date` | SYST | unverified |
 | `Get_Error` | `SYSTem:ERRor?` | — | ERROR → `…/Reading/Get_Error` | System Utilities |  |
 | `Read_Error` | `:SYSTem:ERRor?` | — | ERROR → `…/Reading/Read_Error` | Errors and ID |  |
@@ -274,6 +274,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Invert` | `CHANnel<n>:INVert <state>` | `state`: `OFF` · `ON` | — | Analog Channel Settings |  |
 | `Set_Channel_Offset` | `:CHANnel<n>:OFFSet <offset>` | `offset`: numeric V | — | Analog Channel Settings | unverified |
 | `Set_Probe` | `CHANnel<n>:PROBe <atten>` | `atten`: numeric | — | Analog Channel Settings |  |
+| `Set_Probe_Skew` | `:CHANnel<n>:PROBe:SKEW <value>` | `value`: numeric | — | PROB | unverified |
 | `Set_Channel_Scale` | `:CHANnel<n>:SCALe <scale>` | `scale`: numeric V | — | Analog Channel Settings | unverified |
 | `Set_Digital_Display` | `DIGital<n>:DISPlay <state>` | `state`: `OFF` · `ON` | — | Digital Channel (MSO) Settings |  |
 | `Set_Digital_Label` | `DIGital<n>:LABel <label>` | `label`: unknown | — | Digital Channel (MSO) Settings |  |
@@ -332,7 +333,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Set_Measure_Xmax` | `MEASure:XMAX <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Measure_Xmin` | `MEASure:XMIN <value>` | `value`: numeric | — | MEAS | unverified |
 | `Set_Pod_Threshold` | `POD<n>:THReshold <thresh>` | `thresh`: numeric | — | Digital Channel (MSO) Settings |  |
-| `Set_Probe_Skew` | `:PROBe:SKEW <value>` | `value`: numeric | — | PROB | unverified |
 | `Set_System_Date` | `:SYSTem:DATE <value>` | `value`: unknown | — | SYST | unverified |
 | `Set_System_Dsp` | `SYSTem:DSP <string>` | `string`: string | — | SYST | unverified |
 | `Lock_Front_Panel` | `SYSTem:LOCK <state>` | `state`: `OFF` · `ON` | — | System Control |  |
@@ -437,6 +437,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `channel_settings_1` | `:CHANnel1:DISPlay?;:CHANnel1:SCALe?;:CHANnel1:OFFSet?` | — | ×3 → `…/Reading/channel_settings_1` | CHANnel | unverified |
 | `Get_Channel_Range` | `:CHANNEL1:RANGE?` | — | NR3 → `…/Reading/Get_Channel_Range` | CHANNEL | unverified |
 | `channel_settings_2` | `:CHANnel2:DISPlay?;:CHANnel2:SCALe?;:CHANnel2:OFFSet?` | — | ×3 → `…/Reading/channel_settings_2` | CHANnel | unverified |
+| `Get_Probe_Skew` | `:CHANnel<n>:PROBe:SKEW?` | — | NR3 → `…/Reading/Get_Probe_Skew` | PROB | unverified |
 | `Get_Display_Data` | `:DISPlay:DATA?` | — | BLOCK → `…/Reading/Get_Display_Data` | DISP | unverified |
 | `Get_Display_Label` | `:DISPlay:LABel?` | — | → `…/Reading/Get_Display_Label` | DISP | unverified |
 | `Get_Display_Persistence` | `:DISPlay:PERSistence?` | — | NR3 → `…/Reading/Get_Display_Persistence` | DISP | unverified |
@@ -463,7 +464,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Hardcopy_Format` | `:HARDcopy:FORMat?` | — | CRD → `…/Reading/Get_Hardcopy_Format` | HARD | unverified |
 | `Get_Hardcopy_Grayscale` | `:HARDcopy:GRAYscale?` | — | → `…/Reading/Get_Hardcopy_Grayscale` | HARD | unverified |
 | `Get_Marker_Mode` | `:MARKer:MODE?` | — | CRD → `…/Reading/Get_Marker_Mode` | MARK | unverified |
-| `Get_Marker_Xdelta` | `:MARker:XDELta?` | — | NR3 → `…/Reading/Get_Marker_Xdelta` | MAR | unverified |
+| `Get_Marker_Xdelta` | `:MARKer:XDELta?` | — | NR3 → `…/Reading/Get_Marker_Xdelta` | MAR | unverified |
 | `Get_X_Delta` | `MARKer:XDELta?` | — | NR3 → `…/Reading/Get_X_Delta` | Cursor Deltas |  |
 | `Get_Y_Delta` | `MARKer:YDELta?` | — | NR3 → `…/Reading/Get_Y_Delta` | Cursor Deltas |  |
 | `Get_Measure_Count` | `MEASure:COUNter?` | — | NR1 → `…/Reading/Get_Measure_Count` | MEAS | unverified |
@@ -492,7 +493,6 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Get_Measure_Vtop` | `:MEASure:VTOP?` | — | → `…/Reading/Get_Measure_Vtop` | MEAS | unverified |
 | `Get_Measure_Xmax` | `:MEASure:XMAX?` | — | NR3 → `…/Reading/Get_Measure_Xmax` | MEAS | unverified |
 | `Get_Measure_Xmin` | `:MEASure:XMIN?` | — | NR3 → `…/Reading/Get_Measure_Xmin` | MEAS | unverified |
-| `Get_Probe_Skew` | `PROBe:SKEW?` | — | NR3 → `…/Reading/Get_Probe_Skew` | PROB | unverified |
 | `Get_System_Date` | `:SYSTem:DATE?` | — | → `…/Reading/Get_System_Date` | SYST | unverified |
 | `Get_Error` | `SYSTem:ERRor?` | — | ERROR → `…/Reading/Get_Error` | System Utilities |  |
 | `Read_Error` | `:SYSTem:ERRor?` | — | ERROR → `…/Reading/Read_Error` | Errors and ID |  |
@@ -622,7 +622,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Do_Display_Connect` | `DISPlay:CONNect` | — | — | DISP | unverified |
 | `Do_Display_Grid` | `DISPlay:GRID` | — | — | DISP | unverified |
 | `Do_Display_Invert` | `DISPlay:INVerse` | — | — | DISP | unverified |
-| `Do_Display_Line` | `DISPLay:LINE` | — | — | DISPL | unverified |
+| `Do_Display_Line` | `:DISPlay:LINE` | — | — | DISPL | unverified |
 | `Do_Display_Order` | `DISPlay:ORDer` | — | — | DISP | unverified |
 | `Do_Display_Pixel` | `DISPlay:PIXel` | — | — | DISP | unverified |
 | `Do_Display_Position` | `DISPlay:POSition` | — | — | DISP | unverified |
@@ -645,7 +645,7 @@ A read's answer is published on `<box>/Reading/<command>` (the **Out** column be
 | `Do_Marker_Vdelta` | `MARKer:VDELta` | — | — | MARK | unverified |
 | `Do_Measure_Clear` | `MEASure:CLEar` | — | — | MEAS | unverified |
 | `Do_Measure_Lower` | `MEASure:LOWer` | — | — | MEAS | unverified |
-| `Do_Measure_Risetime` | `:MEASure:RISEtime` | — | — | MEAS | unverified |
+| `Do_Measure_Risetime` | `:MEASure:RISetime` | — | — | MEAS | unverified |
 | `Do_Measure_Scratch` | `MEASure:SCRatch` | — | — | MEAS | unverified |
 | `Do_Measure_Tdelta` | `MEASure:TDELta` | — | — | MEAS | unverified |
 | `Do_Measure_Threshold` | `MEASure:THResholds` | — | — | MEAS | unverified |

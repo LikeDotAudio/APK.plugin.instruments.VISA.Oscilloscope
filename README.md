@@ -21,7 +21,7 @@ The **Oscilloscope** instruments of the APK.audio bench, as one thing: 33 models
 | [DHO804](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DHO804.md) | Rigol | 70 MHz 4 Ch (12-bit High Res) | 452 |  | :15202 |
 | [DS1054Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1054Z.md) | Rigol | 50 MHz 4 Ch (The 'Hobbyist Standard') | 452 |  | :15203 |
 | [DS1074Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1074Z.md) | Rigol | 70 MHz 4 Ch | 452 |  | :15204 |
-| [DS1104Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z.md) | Rigol | 100 MHz 4 Ch Digital | 777 | ✅ | :15205 |
+| [DS1104Z](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z.md) | Rigol | 100 MHz 4 Ch Digital | 776 | ✅ | :15205 |
 | [DS1104Z Plus](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS1104Z%20Plus.md) | Rigol | 100 MHz 4 Ch (Upgradable) | 452 |  | :15206 |
 | [DS7014](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DS7014.md) | Rigol | 100 MHz 4 Ch Performance | 452 |  | :15207 |
 | [DSO9064A](Documentation/%F0%9F%A7%A9Manual%20and%20Artifacts/SDK/DSO9064A.md) | HP / Agilent / Keysight | 600 MHz 4 Ch (Infiniium 9000) | 452 |  | :15208 |
