@@ -634,8 +634,8 @@
       "subsystem": "CHANnel"
     },
     "Set_Coupling": {
-      "scpi": "CHANnel<n>:COUPling <coupling>",
-      "scpiFast": "CHAN<n>:COUP <coupling>",
+      "scpi": ":CHANnel<n>:COUPling <coupling>",
+      "scpiFast": ":CHAN<n>:COUP <coupling>",
       "description": "Set Coupling",
       "arg": {
         "kind": "enum",
@@ -652,8 +652,8 @@
       "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:CHANnel<n>:COUPling p. 233). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Display": {
-      "scpi": "CHANnel<n>:DISPlay <state>",
-      "scpiFast": "CHAN<n>:DISP <state>",
+      "scpi": ":CHANnel<n>:DISPlay <state>",
+      "scpiFast": ":CHAN<n>:DISP <state>",
       "description": "Set Display",
       "arg": {
         "kind": "bool",
@@ -720,8 +720,8 @@
       "unverified": true
     },
     "Set_Probe": {
-      "scpi": "CHANnel<n>:PROBe <atten>",
-      "scpiFast": "CHAN<n>:PROB <atten>",
+      "scpi": ":CHANnel<n>:PROBe <atten>",
+      "scpiFast": ":CHAN<n>:PROB <atten>",
       "description": "Set Probe",
       "arg": {
         "kind": "numeric"
@@ -1741,8 +1741,8 @@
       "unverified": true
     },
     "Set_Measure_Source": {
-      "scpi": "MEASure:SOURce <source>",
-      "scpiFast": "MEAS:SOUR <source>",
+      "scpi": ":MEASure:SOURce <source>",
+      "scpiFast": ":MEAS:SOUR <source>",
       "description": "Set Measure Source",
       "arg": {
         "kind": "enum",
@@ -1777,8 +1777,8 @@
       "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:MEASure:SOURce, MSO: DIGital0-15; FUNCtion = MATH). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Measure_Source_CHANnel1": {
-      "scpi": "MEASure:SOURce CHANnel1",
-      "scpiFast": "MEAS:SOUR CHANnel1",
+      "scpi": ":MEASure:SOURce CHANnel1",
+      "scpiFast": ":MEAS:SOUR CHANnel1",
       "description": "Set_Measure_Source → CHANnel1. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1786,8 +1786,8 @@
       "notes": "Individual of selector Set_Measure_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_CHANnel2": {
-      "scpi": "MEASure:SOURce CHANnel2",
-      "scpiFast": "MEAS:SOUR CHANnel2",
+      "scpi": ":MEASure:SOURce CHANnel2",
+      "scpiFast": ":MEAS:SOUR CHANnel2",
       "description": "Set_Measure_Source → CHANnel2. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1795,8 +1795,8 @@
       "notes": "Individual of selector Set_Measure_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital0": {
-      "scpi": "MEASure:SOURce DIGital0",
-      "scpiFast": "MEAS:SOUR DIGital0",
+      "scpi": ":MEASure:SOURce DIGital0",
+      "scpiFast": ":MEAS:SOUR DIGital0",
       "description": "Set_Measure_Source → DIGital0. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1804,8 +1804,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital0 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital1": {
-      "scpi": "MEASure:SOURce DIGital1",
-      "scpiFast": "MEAS:SOUR DIGital1",
+      "scpi": ":MEASure:SOURce DIGital1",
+      "scpiFast": ":MEAS:SOUR DIGital1",
       "description": "Set_Measure_Source → DIGital1. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1813,8 +1813,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital10": {
-      "scpi": "MEASure:SOURce DIGital10",
-      "scpiFast": "MEAS:SOUR DIGital10",
+      "scpi": ":MEASure:SOURce DIGital10",
+      "scpiFast": ":MEAS:SOUR DIGital10",
       "description": "Set_Measure_Source → DIGital10. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1822,8 +1822,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital10 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital11": {
-      "scpi": "MEASure:SOURce DIGital11",
-      "scpiFast": "MEAS:SOUR DIGital11",
+      "scpi": ":MEASure:SOURce DIGital11",
+      "scpiFast": ":MEAS:SOUR DIGital11",
       "description": "Set_Measure_Source → DIGital11. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1831,8 +1831,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital11 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital12": {
-      "scpi": "MEASure:SOURce DIGital12",
-      "scpiFast": "MEAS:SOUR DIGital12",
+      "scpi": ":MEASure:SOURce DIGital12",
+      "scpiFast": ":MEAS:SOUR DIGital12",
       "description": "Set_Measure_Source → DIGital12. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1840,8 +1840,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital12 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital13": {
-      "scpi": "MEASure:SOURce DIGital13",
-      "scpiFast": "MEAS:SOUR DIGital13",
+      "scpi": ":MEASure:SOURce DIGital13",
+      "scpiFast": ":MEAS:SOUR DIGital13",
       "description": "Set_Measure_Source → DIGital13. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1849,8 +1849,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital13 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital14": {
-      "scpi": "MEASure:SOURce DIGital14",
-      "scpiFast": "MEAS:SOUR DIGital14",
+      "scpi": ":MEASure:SOURce DIGital14",
+      "scpiFast": ":MEAS:SOUR DIGital14",
       "description": "Set_Measure_Source → DIGital14. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1858,8 +1858,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital14 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital15": {
-      "scpi": "MEASure:SOURce DIGital15",
-      "scpiFast": "MEAS:SOUR DIGital15",
+      "scpi": ":MEASure:SOURce DIGital15",
+      "scpiFast": ":MEAS:SOUR DIGital15",
       "description": "Set_Measure_Source → DIGital15. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1867,8 +1867,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital15 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital2": {
-      "scpi": "MEASure:SOURce DIGital2",
-      "scpiFast": "MEAS:SOUR DIGital2",
+      "scpi": ":MEASure:SOURce DIGital2",
+      "scpiFast": ":MEAS:SOUR DIGital2",
       "description": "Set_Measure_Source → DIGital2. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1876,8 +1876,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital3": {
-      "scpi": "MEASure:SOURce DIGital3",
-      "scpiFast": "MEAS:SOUR DIGital3",
+      "scpi": ":MEASure:SOURce DIGital3",
+      "scpiFast": ":MEAS:SOUR DIGital3",
       "description": "Set_Measure_Source → DIGital3. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1885,8 +1885,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital3 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital4": {
-      "scpi": "MEASure:SOURce DIGital4",
-      "scpiFast": "MEAS:SOUR DIGital4",
+      "scpi": ":MEASure:SOURce DIGital4",
+      "scpiFast": ":MEAS:SOUR DIGital4",
       "description": "Set_Measure_Source → DIGital4. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1894,8 +1894,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital4 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital5": {
-      "scpi": "MEASure:SOURce DIGital5",
-      "scpiFast": "MEAS:SOUR DIGital5",
+      "scpi": ":MEASure:SOURce DIGital5",
+      "scpiFast": ":MEAS:SOUR DIGital5",
       "description": "Set_Measure_Source → DIGital5. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1903,8 +1903,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital5 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital6": {
-      "scpi": "MEASure:SOURce DIGital6",
-      "scpiFast": "MEAS:SOUR DIGital6",
+      "scpi": ":MEASure:SOURce DIGital6",
+      "scpiFast": ":MEAS:SOUR DIGital6",
       "description": "Set_Measure_Source → DIGital6. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1912,8 +1912,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital6 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital7": {
-      "scpi": "MEASure:SOURce DIGital7",
-      "scpiFast": "MEAS:SOUR DIGital7",
+      "scpi": ":MEASure:SOURce DIGital7",
+      "scpiFast": ":MEAS:SOUR DIGital7",
       "description": "Set_Measure_Source → DIGital7. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1921,8 +1921,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital7 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital8": {
-      "scpi": "MEASure:SOURce DIGital8",
-      "scpiFast": "MEAS:SOUR DIGital8",
+      "scpi": ":MEASure:SOURce DIGital8",
+      "scpiFast": ":MEAS:SOUR DIGital8",
       "description": "Set_Measure_Source → DIGital8. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1930,8 +1930,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital8 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_DIGital9": {
-      "scpi": "MEASure:SOURce DIGital9",
-      "scpiFast": "MEAS:SOUR DIGital9",
+      "scpi": ":MEASure:SOURce DIGital9",
+      "scpiFast": ":MEAS:SOUR DIGital9",
       "description": "Set_Measure_Source → DIGital9. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1939,8 +1939,8 @@
       "notes": "Individual of selector Set_Measure_Source = DIGital9 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_EXTernal": {
-      "scpi": "MEASure:SOURce EXTernal",
-      "scpiFast": "MEAS:SOUR EXTernal",
+      "scpi": ":MEASure:SOURce EXTernal",
+      "scpiFast": ":MEAS:SOUR EXTernal",
       "description": "Set_Measure_Source → EXTernal. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -1948,8 +1948,8 @@
       "notes": "Individual of selector Set_Measure_Source = EXTernal — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Measure_Source_FUNCtion": {
-      "scpi": "MEASure:SOURce FUNCtion",
-      "scpiFast": "MEAS:SOUR FUNCtion",
+      "scpi": ":MEASure:SOURce FUNCtion",
+      "scpiFast": ":MEAS:SOUR FUNCtion",
       "description": "Set_Measure_Source → FUNCtion. Set Measure Source",
       "subsystem": "MEASure",
       "group": "Measurement Settings",
@@ -4206,8 +4206,8 @@
       "subsystem": "WAVeform"
     },
     "Set_Waveform_Format": {
-      "scpi": "WAVeform:FORMat <format>",
-      "scpiFast": "WAV:FORM <format>",
+      "scpi": ":WAVeform:FORMat <format>",
+      "scpiFast": ":WAV:FORM <format>",
       "description": "Set Waveform Format",
       "arg": {
         "kind": "enum",
@@ -4225,8 +4225,8 @@
       "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf), the node's <param> list, unchanged since the 54620/40 (:WAVeform:FORMat). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Waveform_Format_ASCii": {
-      "scpi": "WAVeform:FORMat ASCii",
-      "scpiFast": "WAV:FORM ASCii",
+      "scpi": ":WAVeform:FORMat ASCii",
+      "scpiFast": ":WAV:FORM ASCii",
       "description": "Set_Waveform_Format → ASCii. Set Waveform Format",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4234,8 +4234,8 @@
       "notes": "Individual of selector Set_Waveform_Format = ASCii — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Format_BYTE": {
-      "scpi": "WAVeform:FORMat BYTE",
-      "scpiFast": "WAV:FORM BYTE",
+      "scpi": ":WAVeform:FORMat BYTE",
+      "scpiFast": ":WAV:FORM BYTE",
       "description": "Set_Waveform_Format → BYTE. Set Waveform Format",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4243,8 +4243,8 @@
       "notes": "Individual of selector Set_Waveform_Format = BYTE — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Format_WORD": {
-      "scpi": "WAVeform:FORMat WORD",
-      "scpiFast": "WAV:FORM WORD",
+      "scpi": ":WAVeform:FORMat WORD",
+      "scpiFast": ":WAV:FORM WORD",
       "description": "Set_Waveform_Format → WORD. Set Waveform Format",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4265,8 +4265,8 @@
       "subsystem": "WAVeform"
     },
     "Set_Waveform_Source": {
-      "scpi": "WAVeform:SOURce <source>",
-      "scpiFast": "WAV:SOUR <source>",
+      "scpi": ":WAVeform:SOURce <source>",
+      "scpiFast": ":WAV:SOUR <source>",
       "description": "Set Waveform Source",
       "arg": {
         "kind": "enum",
@@ -4286,8 +4286,8 @@
       "notes": "Options 2026-11-11 (owner: selector AND individuals): Agilent InfiniiVision 6000 Series Programmer's Guide (https://www.cfd.rit.edu/products/manuals/Agilent/oscilloscopes/6000_series_prog_guide.pdf) :WAVeform:SOURce p. 650 less SBUS (v3.00) and BUS1/2 (v4.00). 54641D manual not obtainable; the 6000 guide's 54620/54640 differences (pp. 43-46) and its version log (pp. 21-42) used to drop what came later. Unverified until the bench sends each"
     },
     "Set_Waveform_Source_CHANnel1": {
-      "scpi": "WAVeform:SOURce CHANnel1",
-      "scpiFast": "WAV:SOUR CHANnel1",
+      "scpi": ":WAVeform:SOURce CHANnel1",
+      "scpiFast": ":WAV:SOUR CHANnel1",
       "description": "Set_Waveform_Source → CHANnel1. Set Waveform Source",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4295,8 +4295,8 @@
       "notes": "Individual of selector Set_Waveform_Source = CHANnel1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Source_CHANnel2": {
-      "scpi": "WAVeform:SOURce CHANnel2",
-      "scpiFast": "WAV:SOUR CHANnel2",
+      "scpi": ":WAVeform:SOURce CHANnel2",
+      "scpiFast": ":WAV:SOUR CHANnel2",
       "description": "Set_Waveform_Source → CHANnel2. Set Waveform Source",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4304,8 +4304,8 @@
       "notes": "Individual of selector Set_Waveform_Source = CHANnel2 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Source_FUNCtion": {
-      "scpi": "WAVeform:SOURce FUNCtion",
-      "scpiFast": "WAV:SOUR FUNCtion",
+      "scpi": ":WAVeform:SOURce FUNCtion",
+      "scpiFast": ":WAV:SOUR FUNCtion",
       "description": "Set_Waveform_Source → FUNCtion. Set Waveform Source",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4313,8 +4313,8 @@
       "notes": "Individual of selector Set_Waveform_Source = FUNCtion — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Source_POD1": {
-      "scpi": "WAVeform:SOURce POD1",
-      "scpiFast": "WAV:SOUR POD1",
+      "scpi": ":WAVeform:SOURce POD1",
+      "scpiFast": ":WAV:SOUR POD1",
       "description": "Set_Waveform_Source → POD1. Set Waveform Source",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4322,8 +4322,8 @@
       "notes": "Individual of selector Set_Waveform_Source = POD1 — written by _komand/expand_selectors.py from the selector; edit the selector (its arg.values / arg.labels), not this. Unverified until the bench sends this option."
     },
     "Set_Waveform_Source_POD2": {
-      "scpi": "WAVeform:SOURce POD2",
-      "scpiFast": "WAV:SOUR POD2",
+      "scpi": ":WAVeform:SOURce POD2",
+      "scpiFast": ":WAV:SOUR POD2",
       "description": "Set_Waveform_Source → POD2. Set Waveform Source",
       "subsystem": "WAVeform",
       "group": "Waveform Data Transfer Settings",
@@ -4822,7 +4822,7 @@
       "subsystem": "System"
     },
     "Run": {
-      "scpi": "RUN",
+      "scpi": ":RUN",
       "description": "Run",
       "group": "Root Action Commands",
       "subsystem": "Root",
@@ -4836,8 +4836,8 @@
       "subsystem": "System"
     },
     "Single": {
-      "scpi": "SINGle",
-      "scpiFast": "SING",
+      "scpi": ":SINGle",
+      "scpiFast": ":SING",
       "description": "Single",
       "group": "Root Action Commands",
       "subsystem": "Root",
@@ -4850,7 +4850,7 @@
       "subsystem": "System"
     },
     "Stop": {
-      "scpi": "STOP",
+      "scpi": ":STOP",
       "description": "Stop",
       "group": "Root Action Commands",
       "subsystem": "Root",
@@ -4963,8 +4963,8 @@
       "unverified": true
     },
     "Do_Trigger_Iic": {
-      "scpi": "TRIGger:IIC",
-      "scpiFast": "TRIG:IIC",
+      "scpi": ":TRIGger:IIC",
+      "scpiFast": ":TRIG:IIC",
       "description": "Command Set Organization",
       "subsystem": "TRIG",
       "unverified": true
@@ -5040,8 +5040,8 @@
       "unverified": true
     },
     "Do_Trigger_Spi": {
-      "scpi": "TRIGger:SPI",
-      "scpiFast": "TRIG:SPI",
+      "scpi": ":TRIGger:SPI",
+      "scpiFast": ":TRIG:SPI",
       "description": "Table 5-1",
       "subsystem": "TRIG",
       "unverified": true
@@ -7167,8 +7167,8 @@
       "unverified": true
     },
     "Get_Waveform_Data": {
-      "scpi": "WAVeform:DATA?",
-      "scpiFast": "WAV:DATA?",
+      "scpi": ":WAVeform:DATA?",
+      "scpiFast": ":WAV:DATA?",
       "description": "Get Waveform Data",
       "returns": {
         "count": 1,
