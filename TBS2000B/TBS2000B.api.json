@@ -15954,7 +15954,8 @@
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/measure_1",
           "reading_direction": "out"
         },
-        "unverified": true
+        "unverified": true,
+        "utopia": "reading"
       },
       "measure_2": {
         "command": "measure_2",
@@ -15998,7 +15999,8 @@
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/measure_2",
           "reading_direction": "out"
         },
-        "unverified": true
+        "unverified": true,
+        "utopia": "reading"
       },
       "Get_Math_Statistics": {
         "command": "Get_Math_Statistics",

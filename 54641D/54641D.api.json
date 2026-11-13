@@ -80,10 +80,10 @@
     "do": "Zero-argument execution actions and trigger commands"
   },
   "summary": {
-    "total_commands": 658,
+    "total_commands": 659,
     "get_count": 157,
     "set_count": 374,
-    "nab_count": 177,
+    "nab_count": 178,
     "rig_count": 1,
     "do_count": 106
   },
@@ -15960,7 +15960,8 @@
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/measure_1",
           "reading_direction": "out"
         },
-        "unverified": true
+        "unverified": true,
+        "utopia": "reading"
       },
       "measure_2": {
         "command": "measure_2",
@@ -16004,7 +16005,8 @@
           "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/measure_2",
           "reading_direction": "out"
         },
-        "unverified": true
+        "unverified": true,
+        "utopia": "reading"
       },
       "Get_Math_Statistics": {
         "command": "Get_Math_Statistics",
@@ -19413,6 +19415,95 @@
             ],
             "source": "54641D.qualified.json"
           }
+        }
+      },
+      "UTOPIA": {
+        "command": "UTOPIA",
+        "verb": "nab",
+        "description": "UTOPIA \u2014 the pinnacle of simultaneous capture: the data this unit measures, 2 reading(s) (measure_1, measure_2), each asked for fresh and read, in one message",
+        "scpi": ":MEASure:SOURce CHANnel1;:MEASure:VPP?;:MEASure:VRMS?;:MEASure:FREQuency?;:MEASure:SOURce CHANnel2;:MEASure:VPP?;:MEASure:VRMS?;:MEASure:FREQuency?",
+        "subsystem": "UTOPIA",
+        "group": "UTOPIA",
+        "args": [],
+        "arg": {
+          "kind": "none"
+        },
+        "returns": {
+          "count": 2,
+          "type": "LIST",
+          "separator": ";",
+          "readings": [
+            {
+              "command": "measure_1",
+              "fields": [
+                {
+                  "name": "vpp",
+                  "type": "NR3",
+                  "unit": "V"
+                },
+                {
+                  "name": "vrms",
+                  "type": "NR3",
+                  "unit": "V"
+                },
+                {
+                  "name": "freq",
+                  "type": "NR3",
+                  "unit": "Hz"
+                }
+              ]
+            },
+            {
+              "command": "measure_2",
+              "fields": [
+                {
+                  "name": "vpp",
+                  "type": "NR3",
+                  "unit": "V"
+                },
+                {
+                  "name": "vrms",
+                  "type": "NR3",
+                  "unit": "V"
+                },
+                {
+                  "name": "freq",
+                  "type": "NR3",
+                  "unit": "Hz"
+                }
+              ]
+            }
+          ]
+        },
+        "mqtt": {
+          "topic": "APK.audio/Gui/Komands/Oscilloscope/UTOPIA",
+          "direction": "in",
+          "payload_format": {
+            "command": "UTOPIA"
+          },
+          "reading_topic": "APK.audio/System/Protocols/visa/Device/<type>/<model>/<dev>/Reading/UTOPIA",
+          "reading_direction": "out"
+        },
+        "unverified": true,
+        "utopia": {
+          "readings": [
+            "measure_1",
+            "measure_2"
+          ],
+          "asks": [
+            ":MEASure:SOURce CHANnel1;:MEASure:VPP?;:MEASure:VRMS?;:MEASure:FREQuency?",
+            ":MEASure:SOURce CHANnel2;:MEASure:VPP?;:MEASure:VRMS?;:MEASure:FREQuency?"
+          ],
+          "left_out": [],
+          "ladder": [
+            10,
+            5,
+            3,
+            2,
+            1,
+            0
+          ],
+          "max_command_bytes": 240
         }
       }
     },

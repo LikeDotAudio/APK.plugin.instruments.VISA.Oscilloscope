@@ -6143,7 +6143,8 @@
         ]
       },
       "notes": "The 546xx measurement queries take their channel from :MEASure:SOURce, so that write leads them in the SAME message — set separately, another strip could move the source between the write and the read. No dB query exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
-      "unverified": true
+      "unverified": true,
+      "utopia": "reading"
     },
     "measure_2": {
       "scpi": ":MEASure:SOURce CHANnel2;:MEASure:VPP?;:MEASure:VRMS?;:MEASure:FREQuency?",
@@ -6172,7 +6173,8 @@
         ]
       },
       "notes": "The 546xx measurement queries take their channel from :MEASure:SOURce, so that write leads them in the SAME message — set separately, another strip could move the source between the write and the read. No dB query exists on this firmware — the panel derives dBV from vrms. Authored 2026-08-08 for the tabbed oscilloscope panel; not yet executed against hardware.",
-      "unverified": true
+      "unverified": true,
+      "utopia": "reading"
     },
     "Get_Math_Statistics": {
       "scpi": ":MEASure:SOURce FUNCtion;:MEASure:VPP?;:MEASure:VMAX?;:MEASure:VMIN?;:MEASure:VAVerage?",
